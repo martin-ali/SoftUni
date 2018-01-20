@@ -1,0 +1,10 @@
+{
+    "js": {
+        "type": ["javascript", "json"],
+        "filename": [".jshintrc", ".jsbeautifyrc"],
+        "brace_style": "expand"
+    },
+    "css": {
+        "brace_style": "expand"
+    }
+}

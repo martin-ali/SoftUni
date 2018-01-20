@@ -1,0 +1,14 @@
+{
+  "name": "number-summer-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "author": "Tectonik",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.7.10"
+  }
+}

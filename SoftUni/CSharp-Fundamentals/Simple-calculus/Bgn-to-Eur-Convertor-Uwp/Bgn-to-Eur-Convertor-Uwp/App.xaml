@@ -1,0 +1,8 @@
+﻿<Application
+    x:Class="Bgn_to_Eur_Convertor_Uwp.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Bgn_to_Eur_Convertor_Uwp"
+    RequestedTheme="Dark">
+
+</Application>

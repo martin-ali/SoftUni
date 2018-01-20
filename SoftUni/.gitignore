@@ -1,0 +1,9 @@
+bin/
+obj/
+bower_modules/
+node_modules/
+.vscode/
+.vs/
+packages/
+*.user
+*.suo

@@ -1,0 +1,14 @@
+{
+  "name": "number-summer",
+  "version": "1.0.0",
+  "description": "None",
+  "main": "index.html",
+  "scripts": {
+    "test": "live-server index.html"
+  },
+  "author": "Mois",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}
