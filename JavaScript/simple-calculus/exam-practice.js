@@ -1,9 +1,24 @@
 // jshint esversion:6
 
-function classroom([height, width])
+function trainingLab([height, width])
 {
+    let heightInCm = height * 100;
+    let widthInCm = width * 100;
+    let deskLength = 120;
+    let deskWidth = 70;
+    let desksLostDueToDoor = 1;
+    let desksLostDueToTeacher = 2;
 
+    // V2
+    let row = Math.floor(heightInCm / deskLength);
+    let col = Math.floor((widthInCm - 100) / deskWidth);
+    let result = (row * col) - desksLostDueToDoor - desksLostDueToTeacher;
+
+    return result;
 }
+
+// console.log(trainingLab([15, 8.9]));
+// console.log(trainingLab([8.4, 5.2]));
 
 function vegetableMarket([vegetablePrice, fruitPrice, vegetableWeight, fruitWeight])
 {
