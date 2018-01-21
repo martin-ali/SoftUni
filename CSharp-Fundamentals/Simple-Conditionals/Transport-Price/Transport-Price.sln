@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple-Conditionals-II", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pool-Tubes", "Pool-Tubes\Pool-Tubes.csproj", "{4D04F235-E971-418A-8A23-FD4388B83C2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sleepycat-Tom", "Sleepycat-Tom\Sleepycat-Tom.csproj", "{C821FC87-FA78-4BCD-879C-754ABE36874E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4D04F235-E971-418A-8A23-FD4388B83C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D04F235-E971-418A-8A23-FD4388B83C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D04F235-E971-418A-8A23-FD4388B83C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C821FC87-FA78-4BCD-879C-754ABE36874E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C821FC87-FA78-4BCD-879C-754ABE36874E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C821FC87-FA78-4BCD-879C-754ABE36874E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C821FC87-FA78-4BCD-879C-754ABE36874E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
