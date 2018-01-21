@@ -19,10 +19,26 @@ function tilesRepair()
 
 }
 
-function money()
+function money([numberOfBtc, numberOfCny, commission])
 {
+    let btcToBgnCourse = 1168;
+    let UsdToBgnCourse = 1.76;
+    let EurToBgnCourse = 1.95;
+    let cnyToDollarCourse = 0.15;
 
+    let eurValueOfBtc = (numberOfBtc * btcToBgnCourse);
+    let eurValueOfCny = (numberOfCny * cnyToDollarCourse) * UsdToBgnCourse;
+
+    let valueBeforeCommission = eurValueOfBtc + eurValueOfCny;
+    let valueAfterCommission = valueBeforeCommission - (commission / 100 * valueBeforeCommission);
+    let valueConvertedToEur = valueAfterCommission / EurToBgnCourse;
+
+    let result = (valueConvertedToEur).toFixed(2);
+    return result;
 }
+
+// console.log(money([1, 5, 5]));
+// console.log(money([20, 5678, 2.4]));
 
 function dailyEarnings([workingDaysInMonth, dailyEarnings, bgnToUsdCourse])
 {
