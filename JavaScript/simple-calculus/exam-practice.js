@@ -33,8 +33,8 @@ function money([numberOfBtc, numberOfCny, commission])
     let valueAfterCommission = valueBeforeCommission - (commission / 100 * valueBeforeCommission);
     let valueConvertedToEur = valueAfterCommission / EurToBgnCourse;
 
-    let result = (valueConvertedToEur).toFixed(2);
-    return result;
+    let totalEurosAfterExchange = valueConvertedToEur.toFixed(2);
+    return totalEurosAfterExchange;
 }
 
 // console.log(money([1, 5, 5]));
