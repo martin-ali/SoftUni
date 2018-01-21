@@ -14,10 +14,22 @@ function vegetableMarket([vegetablePrice, fruitPrice, vegetableWeight, fruitWeig
     return totalPriceOfAllItemsInEuros;
 }
 
-function tilesRepair()
+function tilesRepair([lengthOfSideOfCourt, tileWidth, tileLength, benchWidth, benchLength])
 {
+    let courtArea = lengthOfSideOfCourt * lengthOfSideOfCourt;
+    let tileArea = tileLength * tileWidth;
+    let benchArea = benchLength * benchWidth;
 
+    let availableArea = courtArea - benchArea;
+    let tilesNeeded = (availableArea / tileArea).toFixed(2);
+    let timeNeedToLayTiles = (tilesNeeded * 0.2).toFixed(2);
+
+    console.log(tilesNeeded);
+    console.log(timeNeedToLayTiles);
 }
+
+// tilesRepair([20, 5, 4, 1, 2]);
+// tilesRepair([40, 0.8, 0.6, 3, 5]);
 
 function money([numberOfBtc, numberOfCny, commission])
 {
