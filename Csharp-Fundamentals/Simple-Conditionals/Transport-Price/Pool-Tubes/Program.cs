@@ -6,7 +6,6 @@ namespace Pool_Tubes
     {
         static void Main()
         {
-
             //var poolCapacity = 1000;
             //var firstTubeDebit = 100;
             //var secondTubeDebit = 120;
@@ -21,7 +20,6 @@ namespace Pool_Tubes
             double volumeBySecondTube = secondTubeDebit * howLongWorkerIsMissing;
             double poolCurrentVolume = volumeByFirstTube + volumeBySecondTube;
 
-
             if (poolCurrentVolume > poolCapacity)
             {
                 Console.WriteLine($"For {howLongWorkerIsMissing} hours the pool overflows with {poolCurrentVolume - poolCapacity:0.0} liters.");
@@ -30,10 +28,10 @@ namespace Pool_Tubes
             {
                 double poolFullness = (poolCurrentVolume / poolCapacity) * 100;
 
-                double x = (volumeByFirstTube / poolCurrentVolume) * 100;
-                double y = (volumeBySecondTube / poolCurrentVolume) * 100;
+                double percentageVolumeFromFirstTube = (volumeByFirstTube / poolCurrentVolume) * 100;
+                double percentageVolumeBySecondTube = (volumeBySecondTube / poolCurrentVolume) * 100;
 
-                Console.WriteLine($"The pool is {Math.Floor(poolFullness)}% full. Pipe 1: {Math.Floor(x)}%. Pipe 2: {Math.Floor(y)}%.");
+                Console.WriteLine($"The pool is {Math.Floor(poolFullness)}% full. Pipe 1: {Math.Floor(percentageVolumeFromFirstTube)}%. Pipe 2: {Math.Floor(percentageVolumeBySecondTube)}%.");
             }
         }
     }

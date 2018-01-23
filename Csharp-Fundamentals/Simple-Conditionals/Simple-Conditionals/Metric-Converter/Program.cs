@@ -24,7 +24,6 @@ namespace Metric_Converter
             var outputMetric = Console.ReadLine();
 
             double valueInMeters = value / conversionTable[inputMetric];
-
             double valueInOutputMetric = valueInMeters * conversionTable[outputMetric];
 
             Console.WriteLine($"{valueInOutputMetric:0.00000000}");

@@ -40,27 +40,26 @@ namespace Big_Number_to_Text
 
         static void Main()
         {
+            var result = "invalid number";
             var number = int.Parse(Console.ReadLine());
 
-            if (number == 100 || (number >= 0 && number <= 19) || (number % 10) == 0)
+            if (numberToTextMap.ContainsKey(number))
             {
-                var result = numberToTextMap[number];
-                Console.WriteLine(result);
+                var spelledNumber = numberToTextMap[number];
+                result = spelledNumber;
             }
-            else if (number >= 20 && number <= 99)
+            else if (number >= 0 && number <= 100)
             {
-                int wholePart = number - (number % 10);
-                int smallPart = number - wholePart;
+                int tens = number - (number % 10);
+                int singles = number - tens;
 
-                string wholePartText = numberToTextMap[wholePart];
-                string smallPartText = numberToTextMap[smallPart];
+                string tensAsText = numberToTextMap[tens];
+                string singlesAsText = numberToTextMap[singles];
 
-                Console.WriteLine($"{wholePartText} {smallPartText}");
+                result = $"{tensAsText} {singlesAsText}";
             }
-            else
-            {
-                Console.WriteLine("invalid number");
-            }
+
+            Console.WriteLine(result);
         }
     }
 }

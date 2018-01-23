@@ -63,7 +63,7 @@ function smallShop([product, city, quantity])
 
 // console.log(smallShop(['coffee', 'Varna', 2]));
 
-function pointInRectangle([x, y, rx1, ry1, rx2, ry2])
+function pointInRectangle([rx1, ry1, rx2, ry2, x, y])
 {
     let horizonalBoundIsInRectangle = rx1 <= x && x <= rx2;
     let verticalBoundIsInRectangle = ry1 <= y && y <= ry2;
@@ -73,3 +73,4 @@ function pointInRectangle([x, y, rx1, ry1, rx2, ry2])
 }
 
 console.log(pointInRectangle([2, -3, 12, 3, 8, -1]));
+console.log(pointInRectangle([2, -3, 12, 3, 12, 3]));
