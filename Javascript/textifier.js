@@ -1,7 +1,7 @@
 // Old code from ~2yrs ago starts here
 //----------------------------------------------------------------------------------------------------------
-// Made this code to take advantage of as many javascript capabilities as I could jam into it
 
+// Made this code to take advantage of as many javascript capabilities as I could jam into it
 // Problem 8. Number as words --> Bigger version(I experimented around with stuff here)
 function giantWordNumberProcessor(targetNumber)
 {
