@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day-Of-Week", "Day-Of-Week\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animal-Type", "Animal-Type\Animal-Type.csproj", "{252431EC-031D-4B69-BABC-C385C4B1B416}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema", "Cinema\Cinema.csproj", "{D0E6710A-A327-4949-BE85-10ECEBB2CDB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voleyball", "Voleyball\Voleyball.csproj", "{D0D794E4-E9DA-4CA3-9218-C7991FB58825}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{252431EC-031D-4B69-BABC-C385C4B1B416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{252431EC-031D-4B69-BABC-C385C4B1B416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{252431EC-031D-4B69-BABC-C385C4B1B416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E6710A-A327-4949-BE85-10ECEBB2CDB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E6710A-A327-4949-BE85-10ECEBB2CDB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E6710A-A327-4949-BE85-10ECEBB2CDB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E6710A-A327-4949-BE85-10ECEBB2CDB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D794E4-E9DA-4CA3-9218-C7991FB58825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D794E4-E9DA-4CA3-9218-C7991FB58825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D794E4-E9DA-4CA3-9218-C7991FB58825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D794E4-E9DA-4CA3-9218-C7991FB58825}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
