@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Point_In_rectangle
 {
@@ -10,12 +6,19 @@ namespace Point_In_rectangle
     {
         static void Main()
         {
-            var y1 = double.Parse(Console.ReadLine());
-            var x1 = double.Parse(Console.ReadLine());
-            var y2 = double.Parse(Console.ReadLine());
-            var x2 = double.Parse(Console.ReadLine());
+            var ry1 = double.Parse(Console.ReadLine());
+            var rx1 = double.Parse(Console.ReadLine());
+            var ry2 = double.Parse(Console.ReadLine());
+            var rx2 = double.Parse(Console.ReadLine());
             var py = double.Parse(Console.ReadLine());
             var px = double.Parse(Console.ReadLine());
+
+            var xIsInRect = rx1 <= px && px <= rx2;
+            var yIsInRect = ry1 <= py && py <= ry2;
+            var pointIsInRectangle = xIsInRect && yIsInRect;
+
+            var result = pointIsInRectangle ? "Inside" : "Outside";
+            Console.WriteLine(result);
         }
     }
 }
