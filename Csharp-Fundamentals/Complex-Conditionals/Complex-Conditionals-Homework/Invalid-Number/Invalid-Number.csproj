@@ -7,7 +7,7 @@
     <ProjectGuid>{777D8D4D-39E2-48B5-8215-45AB87C0CAB7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Invalid_Number</RootNamespace>
-    <AssemblyName>Invalid_Number</AssemblyName>
+    <AssemblyName>Invalid-Number</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

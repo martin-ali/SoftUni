@@ -7,7 +7,7 @@
     <ProjectGuid>{AB92C8AD-ADF6-4EC0-805E-7977CE76375D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Point_In_rectangle</RootNamespace>
-    <AssemblyName>Point_In_rectangle</AssemblyName>
+    <AssemblyName>Point-In-rectangle</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

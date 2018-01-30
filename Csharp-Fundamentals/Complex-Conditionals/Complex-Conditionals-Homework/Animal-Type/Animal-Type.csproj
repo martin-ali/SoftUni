@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD0F45DF-CC1B-43D1-8530-5CDF8BCA2DE0}</ProjectGuid>
+    <ProjectGuid>{252431EC-031D-4B69-BABC-C385C4B1B416}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Point_Is_On_Rectangle_Border</RootNamespace>
-    <AssemblyName>Point-Is-On-Rectangle-Border</AssemblyName>
+    <RootNamespace>Animal_Type</RootNamespace>
+    <AssemblyName>Animal-Type</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

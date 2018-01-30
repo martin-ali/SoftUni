@@ -7,7 +7,7 @@ namespace Small_Shop
     {
         static void Main()
         {
-            Dictionary<string, Dictionary<string, double>> map = new Dictionary<string, Dictionary<string, double>>()
+            Dictionary<string, Dictionary<string, double>> pricing = new Dictionary<string, Dictionary<string, double>>()
             {
                 ["sofia"] = new Dictionary<string, double>
                 {
@@ -41,7 +41,7 @@ namespace Small_Shop
             var city = Console.ReadLine();
             var quantity = double.Parse(Console.ReadLine());
 
-            var totalPrice = map[city.ToLower()][product.ToLower()] * quantity;
+            var totalPrice = pricing[city.ToLower()][product.ToLower()] * quantity;
             Console.WriteLine(totalPrice);
         }
     }

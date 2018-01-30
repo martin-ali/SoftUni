@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD0F45DF-CC1B-43D1-8530-5CDF8BCA2DE0}</ProjectGuid>
+    <ProjectGuid>{5E48FD50-74B4-458C-8649-F4A200E361C2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Point_Is_On_Rectangle_Border</RootNamespace>
-    <AssemblyName>Point-Is-On-Rectangle-Border</AssemblyName>
+    <RootNamespace>Fruit_Shop</RootNamespace>
+    <AssemblyName>Fruit-Shop</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

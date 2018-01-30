@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD0F45DF-CC1B-43D1-8530-5CDF8BCA2DE0}</ProjectGuid>
+    <ProjectGuid>{BC015E7D-BB0D-4337-BC39-6A8E76BC2092}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Point_Is_On_Rectangle_Border</RootNamespace>
-    <AssemblyName>Point-Is-On-Rectangle-Border</AssemblyName>
+    <RootNamespace>Trade_Commissions</RootNamespace>
+    <AssemblyName>Trade-Commissions</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

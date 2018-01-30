@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DD0F45DF-CC1B-43D1-8530-5CDF8BCA2DE0}</ProjectGuid>
+    <ProjectGuid>{B8EC8149-3621-49CE-BDB8-7B590156A702}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Point_Is_On_Rectangle_Border</RootNamespace>
-    <AssemblyName>Point-Is-On-Rectangle-Border</AssemblyName>
+    <RootNamespace>Day_Of_Week</RootNamespace>
+    <AssemblyName>Day-Of-Week</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
