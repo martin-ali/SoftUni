@@ -11,10 +11,10 @@ namespace Voleyball
         static void Main()
         {
             var yearType = Console.ReadLine().ToLower();
-            var rowCount = int.Parse(Console.ReadLine());
-            var colCount = int.Parse(Console.ReadLine());
+            var numberOfHolidaysInYear = int.Parse(Console.ReadLine());
+            var numberOfWeekends = int.Parse(Console.ReadLine());
 
-            
+
 
             var result = 0;
             Console.WriteLine($"{result:0.00}");
