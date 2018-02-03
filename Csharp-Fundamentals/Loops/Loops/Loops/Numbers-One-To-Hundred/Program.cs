@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Numbers_One_To_Hundred
 {
@@ -10,6 +6,10 @@ namespace Numbers_One_To_Hundred
     {
         static void Main()
         {
+            for (int current = 1; current <= 100; current++)
+            {
+                Console.WriteLine(current);
+            }
         }
     }
 }
