@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Point_In_Figure
 {
@@ -14,12 +10,19 @@ namespace Point_In_Figure
             var px = double.Parse(Console.ReadLine());
             var py = double.Parse(Console.ReadLine());
 
+            //var rectangleSize = 15d;
+            //var px = 29d;
+            //var py = 37d;
+
             string result = "border";
 
-            bool pointIsInsideShape = PointIsInsideRectangle(rectangleSize, rectangleSize, rectangleSize, rectangleSize, px, py)
-                                        && PointIsInsideRectangle(rectangleSize, rectangleSize, rectangleSize, rectangleSize, px, py);
-            bool pointIsOutsideShape = PointIsOutsideRectangle(rectangleSize, rectangleSize, rectangleSize, rectangleSize, px, py)
-                                        && PointIsOutsideRectangle(rectangleSize, rectangleSize, rectangleSize, rectangleSize, px, py);
+            var pointIsInFirstRectangle = PointIsInsideRectangle(0, 0, rectangleSize * 3, rectangleSize, px, py);
+            var pointIsInSecondRectangle = PointIsInsideRectangle(rectangleSize, 0, rectangleSize * 2, rectangleSize * 4, px, py);
+            var pointIsOutsideFirstRectangle = PointIsOutsideRectangle(0, 0, rectangleSize * 3, rectangleSize, px, py);
+            var pointIsOutsideSecondRectangle = PointIsOutsideRectangle(rectangleSize, 0, rectangleSize * 2, rectangleSize * 4, px, py);
+
+            bool pointIsInsideShape = pointIsInFirstRectangle || pointIsInSecondRectangle;
+            bool pointIsOutsideShape = pointIsOutsideFirstRectangle && pointIsOutsideSecondRectangle;
 
             if (pointIsInsideShape)
             {
