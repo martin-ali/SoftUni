@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E7B8F67-0BBD-48F9-B415-95CBAC789D7F}</ProjectGuid>
+    <ProjectGuid>{FE0A714F-9362-4244-8E17-D58F71CBED81}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Max_Number</RootNamespace>
-    <AssemblyName>Max-Number</AssemblyName>
+    <RootNamespace>Equal_Pairs</RootNamespace>
+    <AssemblyName>Equal-Pairs</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

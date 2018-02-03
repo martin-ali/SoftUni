@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E7B8F67-0BBD-48F9-B415-95CBAC789D7F}</ProjectGuid>
+    <ProjectGuid>{AACBE5E1-8C0D-4DEB-BCBD-706DA28F46AE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Max_Number</RootNamespace>
-    <AssemblyName>Max-Number</AssemblyName>
+    <RootNamespace>Odd_Even_Sum</RootNamespace>
+    <AssemblyName>Odd-Even-Sum</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
