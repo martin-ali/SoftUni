@@ -7,13 +7,13 @@ namespace Operations_With_Numbers
     {
         private delegate T ArithmeticDelegate<T>(T x, T y);
 
-        private static Dictionary<char, ArithmeticDelegate<int>> calculate = new Dictionary<char, ArithmeticDelegate<int>>()
+        private static Dictionary<char, ArithmeticDelegate<double>> calculate = new Dictionary<char, ArithmeticDelegate<double>>()
         {
-            ['+'] = new ArithmeticDelegate<int>((x, y) => x + y),
-            ['-'] = new ArithmeticDelegate<int>((x, y) => x - y),
-            ['*'] = new ArithmeticDelegate<int>((x, y) => x * y),
-            ['/'] = new ArithmeticDelegate<int>((x, y) => x / y),
-            ['%'] = new ArithmeticDelegate<int>((x, y) => x % y),
+            ['+'] = new ArithmeticDelegate<double>((x, y) => x + y),
+            ['-'] = new ArithmeticDelegate<double>((x, y) => x - y),
+            ['*'] = new ArithmeticDelegate<double>((x, y) => x * y),
+            ['/'] = new ArithmeticDelegate<double>((x, y) => x / y),
+            ['%'] = new ArithmeticDelegate<double>((x, y) => x % y),
         };
 
         static void Main()
@@ -22,32 +22,24 @@ namespace Operations_With_Numbers
             var secondNumber = int.Parse(Console.ReadLine());
             var operation = Console.ReadLine()[0];
 
-            try
+            if ((operation == '/' || operation == '%') && (firstNumber == 0 || secondNumber == 0))
+            {
+                Console.WriteLine($"Cannot divide {firstNumber} by zero");
+            }
+            else
             {
                 var result = calculate[operation](firstNumber, secondNumber);
-                string additionalInformation;
+                string additionalInformation = "";
 
                 bool operationIsAdditionSubtractionOrMultiplication = "+-*".IndexOf(operation) >= 0;
                 if (operationIsAdditionSubtractionOrMultiplication)
                 {
-                    additionalInformation = result % 2 == 0 ? "even" : "odd";
-                }
-                else if (operation == '/')
-                {
-                    additionalInformation = result % 2 == 0 ? "even" : "odd";
-                }
-                else
-                {
-                    additionalInformation = result % 2 == 0 ? "even" : "odd";
+                    additionalInformation = result % 2 == 0 ? " - even" : " - odd";
                 }
 
-                Console.WriteLine($"{firstNumber} {operation} {secondNumber} = {result} - {additionalInformation}");
+                var resultFormat = (operation == '/') ? "0.00" : "0";
+                Console.WriteLine($"{firstNumber} {operation} {secondNumber} = {result.ToString(resultFormat)}{additionalInformation}");
             }
-            catch (DivideByZeroException)
-            {
-                Console.WriteLine($"Cannot divide {firstNumber} by zero");
-            }
-
         }
     }
 }
