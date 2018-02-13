@@ -6,8 +6,10 @@ function hotelRoom([month, numberOfNights])
     function getStudioDiscounts(month, numberOfNights)
     {
         month = month.toLowerCase();
-        let discount = {
-            may: function(numberOfNights)
+        let discount = function()
+        {
+            let obj = {};
+            obj.may = function(numberOfNights)
             {
                 if (numberOfNights > 7 && numberOfNights <= 14)
                 {
@@ -21,9 +23,9 @@ function hotelRoom([month, numberOfNights])
                 {
                     return 1;
                 }
-            },
-            october: this.may,
-            june: function(numberOfNights)
+            };
+            obj.october = obj.may;
+            obj.june = function(numberOfNights)
             {
                 if (numberOfNights > 14)
                 {
@@ -33,9 +35,11 @@ function hotelRoom([month, numberOfNights])
                 {
                     return 1;
                 }
-            },
-            september: this.june
-        };
+            };
+            obj.september = obj.june;
+
+            return obj;
+        }();
 
         let monthIsInDiscountPeriod = !!discount[month];
         if (monthIsInDiscountPeriod)
@@ -112,5 +116,5 @@ function hotelRoom([month, numberOfNights])
     console.log(`Studio: ${studioFinalPrice} lv.`);
 }
 
-hotelRoom(['august', 20]);
-hotelRoom(['june', 14]);
+hotelRoom(['october', 17]);
+// hotelRoom(['june', 14]);
