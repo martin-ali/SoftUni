@@ -22,7 +22,8 @@ namespace Operations_With_Numbers
             var secondNumber = int.Parse(Console.ReadLine());
             var operation = Console.ReadLine()[0];
 
-            if ((operation == '/' || operation == '%') && (firstNumber == 0 || secondNumber == 0))
+            if ((operation == '/' || operation == '%') 
+                && (firstNumber == 0 || secondNumber == 0))
             {
                 Console.WriteLine($"Cannot divide {firstNumber} by zero");
             }
@@ -34,7 +35,7 @@ namespace Operations_With_Numbers
                 bool operationIsAdditionSubtractionOrMultiplication = "+-*".IndexOf(operation) >= 0;
                 if (operationIsAdditionSubtractionOrMultiplication)
                 {
-                    additionalInformation = result % 2 == 0 ? " - even" : " - odd";
+                    additionalInformation = (result % 2 == 0) ? " - even" : " - odd";
                 }
 
                 var resultFormat = (operation == '/') ? "0.00" : "0";
