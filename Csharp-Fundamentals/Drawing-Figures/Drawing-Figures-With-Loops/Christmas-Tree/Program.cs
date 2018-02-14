@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Christmas_Tree
 {
@@ -12,21 +8,12 @@ namespace Christmas_Tree
         {
             var size = int.Parse(Console.ReadLine());
 
-            for (int current = 1; current <= size; current++)
+            for (int current = 0; current <= size; current++)
             {
-                Console.WriteLine(DrawLineWithIntervalsAndPadding("*", "|", current, size - current));
+                var leaves = new string('*', current);
+                var padding = new string(' ', size - leaves.Length);
+                Console.WriteLine($"{padding}{leaves} | {leaves}");
             }
-
-            for (int current = size - 1; current > 0; current--)
-            {
-            }
-        }
-
-        static string DrawLineWithIntervalsAndPadding(string leaves, string trunk, int size, int length)
-        {
-            var x = "";
-            var rowToWithIntervals = String.Join(" ", x.ToCharArray());
-            return rowToWithIntervals;
         }
     }
 }
