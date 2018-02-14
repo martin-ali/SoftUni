@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Diamond
 {
@@ -10,23 +6,41 @@ namespace Diamond
     {
         static void Main()
         {
+            //var size = 15;
             var size = int.Parse(Console.ReadLine());
 
-            for (int current = 1; current <= size; current++)
+            var roofSize = Math.Ceiling(size / 2m);
+            var baseSize = (int)Math.Floor(size / 2m);
+
+            // Draw top
+            var lastRowLength = 0;
+            for (int current = 0, roofCurrentWidth = size % 2 == 0 ? 2 : 1; current < roofSize; current++, roofCurrentWidth += 2)
             {
-                Console.WriteLine(DrawLineWithIntervalsAndPadding("*", current, size - current));
+                var diamond = "*";
+                var dashes = new string('-', (size - roofCurrentWidth) / 2);
+
+                if (roofCurrentWidth >= 2)
+                {
+                    diamond = $"*{new string('-', roofCurrentWidth - 2)}*";
+                }
+
+                Console.WriteLine($"{dashes}{diamond}{dashes}");
+                lastRowLength = roofCurrentWidth;
             }
 
-            for (int current = size - 1; current > 0; current--)
+            // Draw bottom
+            for (int current = lastRowLength - 2; current > 0; current -= 2)
             {
-                Console.WriteLine(DrawLineWithIntervalsAndPadding("*", current, size - current));
-            }
-        }
+                var diamond = "*";
+                var dashes = new string('-', (size - current) / 2);
 
-        static string DrawLineWithIntervalsAndPadding(string characterToDraw, int drawingLength, int paddingLength)
-        {
-            var rowToDraw = String.Join(" ", new string('*', drawingLength).ToCharArray());
-            return rowToDraw.PadLeft(paddingLength + rowToDraw.Length, '-').PadRight(2*paddingLength + rowToDraw.Length, '-');
+                if (current >= 2)
+                {
+                    diamond = $"*{new string('-', current - 2)}*";
+                }
+
+                Console.WriteLine($"{dashes}{diamond}{dashes}");
+            }
         }
     }
 }
