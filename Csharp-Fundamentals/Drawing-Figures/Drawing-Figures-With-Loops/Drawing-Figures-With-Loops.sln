@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangle-Of-Stars-10x10", "Rectangle-Of-Stars-10x10\Rectangle-Of-Stars-10x10.csproj", "{2405A015-1859-4DC3-B340-A42919ACE90C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2405A015-1859-4DC3-B340-A42919ACE90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2405A015-1859-4DC3-B340-A42919ACE90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2405A015-1859-4DC3-B340-A42919ACE90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2405A015-1859-4DC3-B340-A42919ACE90C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CFB887A-D426-4829-9D5B-E67E2E15A453}
+	EndGlobalSection
+EndGlobal
