@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Voleyball
 {
@@ -10,13 +6,22 @@ namespace Voleyball
     {
         static void Main()
         {
-            // Could not understand problem description, thus I have abandoned this problem 
+            // Forced myself to finish this afterall
             var yearType = Console.ReadLine().ToLower();
             var numberOfHolidaysInYear = int.Parse(Console.ReadLine());
             var numberOfWeekends = int.Parse(Console.ReadLine());
 
-            var result = 0;
-            Console.WriteLine($"{result:0.00}");
+            double WeekendsInSofia = (48 - numberOfWeekends) * (3d / 4d);
+            var gamesInSofiaOnHoliday = numberOfHolidaysInYear * (2d / 3d);
+            double numberOfGamesDuringYear = WeekendsInSofia + numberOfWeekends + gamesInSofiaOnHoliday;
+
+            if (yearType == "leap")
+            {
+                numberOfGamesDuringYear *= 1.15;
+            }
+
+            var result = Math.Floor(numberOfGamesDuringYear);
+            Console.WriteLine(result);
         }
     }
 }
