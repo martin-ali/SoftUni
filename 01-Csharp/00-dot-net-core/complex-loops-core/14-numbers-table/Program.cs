@@ -12,28 +12,22 @@ namespace _14_numbers_table
             for (int row = 0; row < size; row++)
             {
                 var currentRow = new int[size];
-                for (int col = 0, decider = 0; col < size; col++)
+                bool numbersShouldKeepIncresing = true;
+                for (int col = 0, num = 0; col < size; col++)
                 {
-                    var x=0;
-                    var y=true;
+                    var valueOfCol = currentNumber + num;
 
-                    if (currentNumber + col <= size)
+                    if (valueOfCol >= size || numbersShouldKeepIncresing == false)
                     {
-                        y=false;
-                    }
-
-                    if(y)
-                    {
-                        x = currentNumber+decider;
-                        decider++;
+                        numbersShouldKeepIncresing = false;
+                        num--;
                     }
                     else
                     {
-                        x = currentNumber+decider;
-                        decider--;
-                    }    
+                        num++;
+                    }
                     
-                    currentRow[col] = x;
+                    currentRow[col] = valueOfCol;
                 }
 
                 currentNumber++;
