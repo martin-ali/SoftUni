@@ -13,19 +13,17 @@ namespace _14_numbers_table
             {
                 var currentRow = new int[size];
                 bool numbersShouldKeepIncreasing = true;
-                for (int col = 0, num = 0; col < size; col++)
+                for (int col = 0, currentCol = 0, diff = 1; col < size; col++)
                 {
-                    var valueOfCol = currentNumber + num;
+                    var valueOfCol = currentNumber + currentCol;
 
                     if (valueOfCol >= size || numbersShouldKeepIncreasing == false)
                     {
+                        diff = -1;
                         numbersShouldKeepIncreasing = false;
-                        num--;
                     }
-                    else
-                    {
-                        num++;
-                    }
+
+                    currentCol += diff;
                     
                     currentRow[col] = valueOfCol;
                 }
