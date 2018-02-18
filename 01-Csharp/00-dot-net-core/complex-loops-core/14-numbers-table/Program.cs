@@ -12,14 +12,14 @@ namespace _14_numbers_table
             for (int row = 0; row < size; row++)
             {
                 var currentRow = new int[size];
-                bool numbersShouldKeepIncresing = true;
+                bool numbersShouldKeepIncreasing = true;
                 for (int col = 0, num = 0; col < size; col++)
                 {
                     var valueOfCol = currentNumber + num;
 
-                    if (valueOfCol >= size || numbersShouldKeepIncresing == false)
+                    if (valueOfCol >= size || numbersShouldKeepIncreasing == false)
                     {
-                        numbersShouldKeepIncresing = false;
+                        numbersShouldKeepIncreasing = false;
                         num--;
                     }
                     else
