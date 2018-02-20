@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _06_number_in_range_1_to_100
+namespace _11_even_number
 {
     class Program
     {
@@ -8,11 +8,11 @@ namespace _06_number_in_range_1_to_100
         {
             while (true)
             {
-                var num = int.Parse(Console.ReadLine());
-
-                if (1 <= num && num <= 100)
+                var number = double.Parse(Console.ReadLine());
+                bool numberIsEven = number % 2 == 0;
+                if (numberIsEven)
                 {
-                    Console.WriteLine($"The number is: {num}");
+                    Console.WriteLine($"Even number entered: {number}");
                     break;
                 }
                 else
