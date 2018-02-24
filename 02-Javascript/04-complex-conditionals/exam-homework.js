@@ -116,5 +116,5 @@ function hotelRoom([month, numberOfNights])
     console.log(`Studio: ${studioFinalPrice} lv.`);
 }
 
-hotelRoom(['october', 17]);
+// hotelRoom(['october', 17]);
 // hotelRoom(['june', 14]);
