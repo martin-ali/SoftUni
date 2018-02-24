@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animal-Type", "Animal-Type\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cinema", "Cinema\Cinema.csproj", "{D0E6710A-A327-4949-BE85-10ECEBB2CDB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voleyball", "Voleyball\Voleyball.csproj", "{D0D794E4-E9DA-4CA3-9218-C7991FB58825}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Volleyball", "Volleyball\Volleyball.csproj", "{D0D794E4-E9DA-4CA3-9218-C7991FB58825}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point-In-Figure", "Point-In-Figure\Point-In-Figure.csproj", "{6520E25E-A0C2-424D-B88F-C52718B60D9C}"
 EndProject

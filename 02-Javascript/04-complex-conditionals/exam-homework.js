@@ -52,7 +52,7 @@ function hotelRoom([month, numberOfNights])
         }
     }
 
-    function getAppartmentDiscounts(month, numberOfNights)
+    function getApartmentDiscounts(month, numberOfNights)
     {
         if (numberOfNights > 14)
         {
@@ -84,7 +84,7 @@ function hotelRoom([month, numberOfNights])
         return pricing[month] * numberOfNights;
     }
 
-    function getAppartmentPrice(month, numberOfNights)
+    function getApartmentPrice(month, numberOfNights)
     {
         month = month.toLowerCase();
         let pricing = function()
@@ -104,15 +104,15 @@ function hotelRoom([month, numberOfNights])
         return pricing[month] * numberOfNights;
     }
 
-    let appartmentPricing = getAppartmentPrice(month, numberOfNights);
-    let appartmentDiscount = getAppartmentDiscounts(month, numberOfNights);
-    let appartmentFinalPrice = (appartmentPricing * appartmentDiscount).toFixed(2)
+    let apartmentPricing = getApartmentPrice(month, numberOfNights);
+    let apartmentDiscount = getApartmentDiscounts(month, numberOfNights);
+    let apartmentFinalPrice = (apartmentPricing * apartmentDiscount).toFixed(2);
 
     let studioPricing = getStudioPrice(month, numberOfNights);
     let studioDiscount = getStudioDiscounts(month, numberOfNights);
     let studioFinalPrice = (studioPricing * studioDiscount).toFixed(2);
 
-    console.log(`Apartment: ${appartmentFinalPrice} lv.`);
+    console.log(`Apartment: ${apartmentFinalPrice} lv.`);
     console.log(`Studio: ${studioFinalPrice} lv.`);
 }
 
