@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;
 
 namespace histogram
 {
@@ -17,6 +16,7 @@ namespace histogram
                 numbers[i] = int.Parse(Console.ReadLine());
             }
 
+            // Lol, LINQ
             var numbersUnder200 = (numbers.Where(x => x < 200).Count() / (double)size) * 100;
             var numbersBetween200And399 = (numbers.Where(x => 200 <= x && x <= 399).Count() / (double)size) * 100;
             var numbersBetween400And599 = (numbers.Where(x => 400 <= x && x <= 599).Count() / (double)size) * 100;
