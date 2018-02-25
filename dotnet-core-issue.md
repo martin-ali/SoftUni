@@ -11,7 +11,8 @@
 # Method of temporary avoidal
 
 - Using "TERM=xterm dotnet \[command\]" as opposed to "dotnet \[command\]"
-- Temporarily set environment variable
+- Temporarily set environment variable with command "export TERM=xterm dotnet"
+- Not sure exactly what it does
 - Probably a bad idea
-- Should reinstall after this
+- Should reinstall OS after this
 
