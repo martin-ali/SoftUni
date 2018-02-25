@@ -17,12 +17,12 @@ namespace special_numbers
                     {
                         for (int fourth = 1; fourth <= 9; fourth++)
                         {
-                            var magicNumberIsDivisibleByAllDigits = specialNumber % first == 0
+                            var specialNumberIsDivisibleByAllDigits = specialNumber % first == 0
                                     && specialNumber % second == 0
                                     && specialNumber % third == 0
                                     && specialNumber % fourth == 0;
                                     
-                            if (magicNumberIsDivisibleByAllDigits)
+                            if (specialNumberIsDivisibleByAllDigits)
                             {
                                 Console.Write($"{first}{second}{third}{fourth} ");
                             }
