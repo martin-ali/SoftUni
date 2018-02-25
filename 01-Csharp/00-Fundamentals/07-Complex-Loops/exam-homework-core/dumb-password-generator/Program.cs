@@ -13,6 +13,7 @@ namespace dumb_password_generator
             {
                 for (int secondNumber = 1; secondNumber <= n; secondNumber++)
                 {
+                    // Say yeah to the internal presentation of the char type as a number :)
                     for (int firstLetter = 'a'; firstLetter < 'a' + l; firstLetter++)
                     {
                         for (int secondLetter = 'a'; secondLetter < 'a' + l; secondLetter++)
