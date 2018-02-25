@@ -14,5 +14,5 @@
 - Temporarily set environment variable with command "export TERM=xterm dotnet"
 - Not sure exactly what it does
 - Probably a bad idea
-- Should reinstall OS after this
+- Should wipe OS after this
 
