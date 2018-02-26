@@ -12,9 +12,9 @@ namespace draw_butterfly
             int width = (2 * size) - 1;
 
             // Draw top
-            int topHeight = size - 2;
-            string wingStar = new String('*', size - 2);
-            string wingDash = new String('-', size - 2);
+            int wingWidth = size - 2;
+            string wingStar = new String('*', wingWidth);
+            string wingDash = new String('-', wingWidth);
             for (int row = 2; row < size; row++)
             {
                 if (row % 2 == 0)
@@ -28,11 +28,9 @@ namespace draw_butterfly
             }
 
             // Draw mid
-            int midHeight = 1;
             Console.WriteLine($"{new String(' ', size - 1)}@");
 
             // Draw bottom
-            int bottomHeight = size - 2;
             for (int row = 2; row < size; row++)
             {
                 if (row % 2 == 0)
