@@ -1,0 +1,15 @@
+{
+  "name": "dot-and-rectangle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "electron app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.8.2",
+    "jshint": "^2.9.5"
+  }
+}
