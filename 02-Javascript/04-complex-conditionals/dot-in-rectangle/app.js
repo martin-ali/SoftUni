@@ -14,7 +14,8 @@ function createWindow()
     {
         width: 750,
         height: 300,
-        resizable: false
+        resizable: false,
+        darkTheme: true
     });
     win.loadURL(url.format(
     {
@@ -48,7 +49,7 @@ function draw()
     //Create canvas element
     let canvas = document.getElementById("a");
     let context = canvas.getContext("2d");
-    
+
     //Clear canvas window
     context.clearRect(0, 0, canvas.width, canvas.height);
 
