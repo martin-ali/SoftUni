@@ -5,91 +5,89 @@ namespace the_ivanov_family_holiday
 {
     class Program
     {
-        delegate decimal Del(string str);
-
         enum StayLength { Short, Medium, Long };
 
-        enum Age { Adult, Child};
+        enum Age { Adult, Child };
+
+        private static Dictionary<string, Dictionary<StayLength, Dictionary<Age, decimal>>> destinationMap = new Dictionary<string, Dictionary<StayLength, Dictionary<Age, decimal>>>()
+        {
+            ["miami"] = new Dictionary<StayLength, Dictionary<Age, decimal>>()
+            {
+                [StayLength.Short] = new Dictionary<Age, decimal>()
+                {
+                    [Age.Adult] = 24.99m,
+                    [Age.Child] = 14.99m
+                },
+                [StayLength.Medium] = new Dictionary<Age, decimal>()
+                {
+                    [Age.Adult] = 22.99m,
+                    [Age.Child] = 11.99m
+                },
+                [StayLength.Long] = new Dictionary<Age, decimal>()
+                {
+                    [Age.Adult] = 20m,
+                    [Age.Child] = 10m
+                }
+            },
+            ["canary islands"] = new Dictionary<StayLength, Dictionary<Age, decimal>>()
+            {
+                [StayLength.Short] = new Dictionary<Age, decimal>()
+                {
+                    [Age.Adult] = 32.50m,
+                    [Age.Child] = 28.50m
+                },
+                [StayLength.Medium] = new Dictionary<Age, decimal>()
+                {
+                    [Age.Adult] = 30.50m,
+                    [Age.Child] = 25.60m
+                },
+                [StayLength.Long] = new Dictionary<Age, decimal>()
+                {
+                    [Age.Adult] = 28m,
+                    [Age.Child] = 22m
+                }
+            },
+            ["philippines"] = new Dictionary<StayLength, Dictionary<Age, decimal>>()
+            {
+                [StayLength.Short] = new Dictionary<Age, decimal>()
+                {
+                    [Age.Adult] = 42.99m,
+                    [Age.Child] = 39.99m
+                },
+                [StayLength.Medium] = new Dictionary<Age, decimal>()
+                {
+                    [Age.Adult] = 41m,
+                    [Age.Child] = 36m
+                },
+                [StayLength.Long] = new Dictionary<Age, decimal>()
+                {
+                    [Age.Adult] = 38.50m,
+                    [Age.Child] = 32.40m
+                }
+            }
+        };
+
+        private static Dictionary<string, Dictionary<Age, decimal>> transportationMap = new Dictionary<string, Dictionary<Age, decimal>>()
+        {
+            ["train"] = new Dictionary<Age, decimal>()
+            {
+                [Age.Adult] = 22.3m,
+                [Age.Child] = 12.5m
+            },
+            ["bus"] = new Dictionary<Age, decimal>()
+            {
+                [Age.Adult] = 45m,
+                [Age.Child] = 37m
+            },
+            ["airplane"] = new Dictionary<Age, decimal>()
+            {
+                [Age.Adult] = 90m,
+                [Age.Child] = 68.50m
+            },
+        };
 
         static void Main()
         {
-            var destinationMap = new Dictionary<string, Dictionary<StayLength, Dictionary<Age, decimal>>>()
-            {
-                ["miami"] = new Dictionary<StayLength, Dictionary<Age, decimal>>()
-                {
-                    [StayLength.Short] = new Dictionary<Age, decimal>()
-                    {
-                        [Age.Adult] = 24.99m,
-                        [Age.Child] = 14.99m
-                    },
-                    [StayLength.Medium] = new Dictionary<Age, decimal>()
-                    {
-                        [Age.Adult] = 22.99m,
-                        [Age.Child] = 11.99m
-                    },
-                    [StayLength.Long] = new Dictionary<Age, decimal>()
-                    {
-                        [Age.Adult] = 20m,
-                        [Age.Child] = 10m
-                    }
-                },
-                ["canary islands"] = new Dictionary<StayLength, Dictionary<Age, decimal>>()
-                {
-                    [StayLength.Short] = new Dictionary<Age, decimal>()
-                    {
-                        [Age.Adult] = 32.50m,
-                        [Age.Child] = 28.50m
-                    },
-                    [StayLength.Medium] = new Dictionary<Age, decimal>()
-                    {
-                        [Age.Adult] = 30.50m,
-                        [Age.Child] = 25.60m
-                    },
-                    [StayLength.Long] = new Dictionary<Age, decimal>()
-                    {
-                        [Age.Adult] = 28m,
-                        [Age.Child] = 22m
-                    }
-                },
-                ["philippines"] = new Dictionary<StayLength, Dictionary<Age, decimal>>()
-                {
-                    [StayLength.Short] = new Dictionary<Age, decimal>()
-                    {
-                        [Age.Adult] = 42.99m,
-                        [Age.Child] = 39.99m
-                    },
-                    [StayLength.Medium] = new Dictionary<Age, decimal>()
-                    {
-                        [Age.Adult] = 41m,
-                        [Age.Child] = 36m
-                    },
-                    [StayLength.Long] = new Dictionary<Age, decimal>()
-                    {
-                        [Age.Adult] = 38.50m,
-                        [Age.Child] = 32.40m
-                    }
-                }
-            };
-
-            var transportationMap = new Dictionary<string, Dictionary<Age, decimal>>()
-            {
-                ["train"] = new Dictionary<Age, decimal>()
-                {
-                    [Age.Adult] = 22.3m,
-                    [Age.Child] = 12.5m
-                },
-                ["bus"] = new Dictionary<Age, decimal>()
-                {
-                    [Age.Adult] = 45m,
-                    [Age.Child] = 37m
-                },
-                ["airplane"] = new Dictionary<Age, decimal>()
-                {
-                    [Age.Adult] = 90m,
-                    [Age.Child] = 68.50m
-                },
-            };
-
             int numberOfNights = int.Parse(Console.ReadLine());
             string destination = Console.ReadLine().ToLower();
             string transport = Console.ReadLine().ToLower();

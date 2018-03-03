@@ -17,6 +17,7 @@ function createWindow()
         resizable: false,
         darkTheme: true
     });
+    
     win.loadURL(url.format(
     {
         pathname: path.join(__dirname, "index.html"),
