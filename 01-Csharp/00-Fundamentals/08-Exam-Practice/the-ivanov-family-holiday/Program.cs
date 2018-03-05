@@ -9,7 +9,8 @@ namespace the_ivanov_family_holiday
 
         enum Age { Adult, Child };
 
-        private static Dictionary<string, Dictionary<StayLength, Dictionary<Age, decimal>>> destinationMap = new Dictionary<string, Dictionary<StayLength, Dictionary<Age, decimal>>>()
+        private static Dictionary<string, Dictionary<StayLength, Dictionary<Age, decimal>>> destinationPricing
+        = new Dictionary<string, Dictionary<StayLength, Dictionary<Age, decimal>>>()
         {
             ["miami"] = new Dictionary<StayLength, Dictionary<Age, decimal>>()
             {
@@ -67,7 +68,8 @@ namespace the_ivanov_family_holiday
             }
         };
 
-        private static Dictionary<string, Dictionary<Age, decimal>> transportationMap = new Dictionary<string, Dictionary<Age, decimal>>()
+        private static Dictionary<string, Dictionary<Age, decimal>> transportationPricing
+        = new Dictionary<string, Dictionary<Age, decimal>>()
         {
             ["train"] = new Dictionary<Age, decimal>()
             {
@@ -92,14 +94,14 @@ namespace the_ivanov_family_holiday
             string destination = Console.ReadLine().ToLower();
             string transport = Console.ReadLine().ToLower();
 
-            StayLength stay = ConvertNumberOfNightsToStayLength(numberOfNights);
+            StayLength stayLength = ConvertNumberOfNightsToStayLength(numberOfNights);
 
             decimal transportationCost =
-            (transportationMap[transport][Age.Child] * 3)
-            + (transportationMap[transport][Age.Adult] * 2);
+            (transportationPricing[transport][Age.Child] * 3)
+            + (transportationPricing[transport][Age.Adult] * 2);
 
             decimal stayCost = numberOfNights *
-            ((destinationMap[destination][stay][Age.Child] * 3) + (destinationMap[destination][stay][Age.Adult] * 2))
+            ((destinationPricing[destination][stayLength][Age.Child] * 3) + (destinationPricing[destination][stayLength][Age.Adult] * 2))
             * 1.25m;
 
             decimal expense = transportationCost + stayCost;
