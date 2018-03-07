@@ -75,7 +75,7 @@ namespace knight_path
         // The board is technically inverted on its horizontal axis, but I can't find a reason to fix it
         private static void PrintGameBoard(bool[,] board)
         {
-            var boardIsEmpty = false;
+            var boardIsEmpty = true;
             for (int row = 0; row < 8; row++)
             {
                 double num = 0;
@@ -91,11 +91,11 @@ namespace knight_path
                 if (num != 0)
                 {
                     Console.WriteLine(num);
-                    boardIsEmpty = true;
+                    boardIsEmpty = false;
                 }
             }
 
-            if (boardIsEmpty == false)
+            if (boardIsEmpty)
             {
                 Console.WriteLine("[Board is empty]");
             }
