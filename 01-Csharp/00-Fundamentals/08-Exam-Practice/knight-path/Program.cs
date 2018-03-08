@@ -8,8 +8,7 @@ namespace knight_path
     // Dynamic remains near useless
     class Program
     {
-        // The x axis is inverted in this dictionary
-        private static Dictionary<string, (int row, int col)> directions = new Dictionary<string, (int row, int col)>
+        private static Dictionary<string, (int Row, int Col)> directions = new Dictionary<string, (int Row, int Col)>
         {
             ["left up"] = (-1, 2),
             ["left down"] = (1, 2),
@@ -28,7 +27,7 @@ namespace knight_path
         static void Main()
         {
             // Whole thing could be done with bitwise operations, but I avoided that on purpose. 
-            // I just like doing things my own way when I'm learning
+            // I prefer doing things my own way when I'm learning
             // var moves = new List<string>()
             // {
             //     "left down",
@@ -68,8 +67,8 @@ namespace knight_path
             foreach (string move in moves)
             {
                 var newCoordinates = ExecuteCommand(board, move, currentKnightRow, currentKnightCol);
-                currentKnightRow = newCoordinates.x;
-                currentKnightCol = newCoordinates.y;
+                currentKnightRow = newCoordinates.Row;
+                currentKnightCol = newCoordinates.Col;
             }
         }
 
@@ -102,11 +101,11 @@ namespace knight_path
             }
         }
 
-        static (int x, int y) ExecuteCommand(bool[,] board, string command, int currentRow, int currentCol)
+        static (int Row, int Col) ExecuteCommand(bool[,] board, string command, int currentRow, int currentCol)
         {
             var nextMove = directions[command];
-            var newRow = currentRow + nextMove.row;
-            var newCol = currentCol + nextMove.col;
+            var newRow = currentRow + nextMove.Row;
+            var newCol = currentCol + nextMove.Col;
 
             var newCoordinates = (currentRow, currentCol);
             bool movementIsValid = (0 <= newRow && newRow < board.GetLength(0)) && (0 <= newCol && newCol < board.GetLength(0));
