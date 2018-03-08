@@ -3,11 +3,12 @@ using System.Collections.Generic;
 
 namespace knight_path
 {
+    // Tuples da shit, mun!
+    // Should be careful and avoid turning my code into JavaScript with Anonymous Types and Tuples
+    // Dynamic remains near useless
     class Program
     {
-        // Tuples da shit, mun!
-        // Should be careful and avoid turning my code into JavaScript with Anonymous Types and Tuples
-        // Dynamic remains useless
+        // The x axis is inverted in this dictionary
         private static Dictionary<string, (int row, int col)> directions = new Dictionary<string, (int row, int col)>
         {
             ["left up"] = (-1, 2),
