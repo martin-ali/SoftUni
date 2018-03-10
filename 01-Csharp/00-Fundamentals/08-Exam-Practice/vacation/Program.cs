@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace vacation
 {
+    // Forget about dictionaries for now - "Golden Hammer"
     class Program
     {
         enum Budget { Small, Medium, Large }
