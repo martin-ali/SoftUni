@@ -24,8 +24,6 @@ namespace knight_path_bitwise
 
         static void Main()
         {
-            // Whole thing could be done with bitwise operations, but I avoided that on purpose. 
-            // I prefer doing things my own way when I'm learning
             // var moves = new List<string>()
             // {
             //     "left down",
@@ -66,9 +64,9 @@ namespace knight_path_bitwise
             var knight = (Row: 0, Col: 0);
             foreach (var move in moves)
             {
-                var newCoordinates = directions[move];
-                var newRow = knight.Row + newCoordinates.Row;
-                var newCol = knight.Col + newCoordinates.Col;
+                var newDirection = directions[move];
+                var newRow = knight.Row + newDirection.Row;
+                var newCol = knight.Col + newDirection.Col;
                 if (CoordinatesAreValid(newRow, newCol, board))
                 {
                     board[knight.Row] ^= (1 << knight.Col);
