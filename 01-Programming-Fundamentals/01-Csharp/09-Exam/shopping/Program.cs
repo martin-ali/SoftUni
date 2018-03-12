@@ -13,13 +13,13 @@ namespace shopping
             decimal budget = decimal.Parse(Console.ReadLine());
             int chocolateNumber = int.Parse(Console.ReadLine());
             decimal milkQuantity = decimal.Parse(Console.ReadLine());
-            decimal mandarineNumber = (decimal)Math.Floor(chocolateNumber * 0.65);
+            decimal tangerineNumber = (decimal)Math.Floor(chocolateNumber * 0.65);
 
             decimal chocolatePrice = 0.65m;
             decimal milkPrice = 2.7m;
-            decimal mandarinePrice = 0.20m;
+            decimal tangerinePrice = 0.20m;
 
-            var moneyRequired = (chocolateNumber * chocolatePrice) + (milkQuantity * milkPrice) + (mandarineNumber * mandarinePrice);
+            var moneyRequired = (chocolateNumber * chocolatePrice) + (milkQuantity * milkPrice) + (tangerineNumber * tangerinePrice);
             if (budget >= moneyRequired)
             {
                 Console.WriteLine($"You got this, {budget - moneyRequired:0.00} money left!");
