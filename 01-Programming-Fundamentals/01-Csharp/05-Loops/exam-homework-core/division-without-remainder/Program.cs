@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 
 namespace division_without_remainder
@@ -17,7 +17,7 @@ namespace division_without_remainder
             }
 
             var numbersDivisibleBy2 = (numbers.Where(x => x % 2 == 0).Count() / (double)size) * 100;
-            var numbersDivisibleBy3 = (numbers.Where(x => x % 3 ==0).Count() / (double)size) * 100;
+            var numbersDivisibleBy3 = (numbers.Where(x => x % 3 == 0).Count() / (double)size) * 100;
             var numbersDivisibleBy4 = (numbers.Where(x => x % 4 == 0).Count() / (double)size) * 100;
 
             Console.WriteLine($"{numbersDivisibleBy2:0.00}%");
