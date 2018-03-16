@@ -19,7 +19,7 @@ namespace poke_mon
                 pokePower -= distanceBetweenTargets;
                 targetsPoked++;
 
-                if (pokePower * 2 == pokePowerStart && exhaustionFactor > 0)
+                if ((pokePower * 2) == pokePowerStart && exhaustionFactor > 0)
                 {
                     pokePower /= exhaustionFactor;
                 }
