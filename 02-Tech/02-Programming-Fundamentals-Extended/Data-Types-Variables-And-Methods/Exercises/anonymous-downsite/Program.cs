@@ -13,9 +13,11 @@ namespace anonymous_downsite
 
             for (long current = 0; current < numberOfDownedWebsites; current++)
             {
-                var site = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                totalLosses += long.Parse(site[1]) * decimal.Parse(site[2]);
-                Console.WriteLine(site[0]);
+                var rawInfo = Console.ReadLine().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var site = (name: rawInfo[0], visits: long.Parse(rawInfo[1]), pricePerVisit: decimal.Parse(rawInfo[2]));
+
+                totalLosses += site.visits * site.pricePerVisit;
+                Console.WriteLine(site.name);
             }
 
             Console.WriteLine($"Total Loss: {totalLosses:f20}");
