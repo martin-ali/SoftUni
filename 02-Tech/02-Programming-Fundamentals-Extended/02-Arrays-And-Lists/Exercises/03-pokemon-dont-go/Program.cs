@@ -10,7 +10,8 @@ namespace _03_pokemon_dont_go
             var pokemons = Console
                             .ReadLine()
                             .Split(new char[] { ' ' }, StringSplitOptions.None)
-                            .Select(long.Parse).ToList();
+                            .Select(long.Parse)
+                            .ToList();
             var sum = 0l;
 
             while (pokemons.Count > 0)
