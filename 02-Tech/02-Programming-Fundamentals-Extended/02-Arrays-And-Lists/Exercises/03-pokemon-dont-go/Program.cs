@@ -12,7 +12,7 @@ namespace _03_pokemon_dont_go
                             .Split(new char[] { ' ' }, StringSplitOptions.None)
                             .Select(long.Parse)
                             .ToList();
-            var sum = 0l;
+            var sum = 0L;
 
             while (pokemons.Count > 0)
             {
