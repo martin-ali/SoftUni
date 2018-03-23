@@ -14,6 +14,7 @@ namespace currency_check
             decimal levaB = decimal.Parse(Console.ReadLine());
 
             decimal cheapestOption = new decimal[] { rubles, dollars, euros, levaA, levaB }.Min();
+						
             Console.WriteLine($"{cheapestOption:0.00}");
         }
     }
