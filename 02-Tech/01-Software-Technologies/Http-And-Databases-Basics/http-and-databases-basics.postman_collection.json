@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "54907d44-62bb-49fc-8c50-264733ffa5a8",
+		"name": "Exercises: HTTP and Databases Basics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Firebase",
+			"description": "",
+			"item": [
+				{
+					"name": "00 - Create Book With ID",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"10\":\n\t{\n\t\t\"author\":\"Arnold Schw.\",\n\t\t\"title\":\"The terminator\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "https://softuni-tech-books.firebaseio.com/Books/.json",
+							"protocol": "https",
+							"host": [
+								"softuni-tech-books",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"Books",
+								".json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "01 - get Book #1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://softuni-tech-books.firebaseio.com/Books/1/.json",
+							"protocol": "https",
+							"host": [
+								"softuni-tech-books",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"Books",
+								"1",
+								".json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 - Create Book",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"author\":\"Arnold Schw.\",\n\t\"title\":\"The terminator\"\n}"
+						},
+						"url": {
+							"raw": "https://softuni-tech-books.firebaseio.com/Books.json",
+							"protocol": "https",
+							"host": [
+								"softuni-tech-books",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"Books.json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "03 - Patch Book #7",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"year\" : 1981,\n\t\"author\" : \"Not Arnie!\"\n}"
+						},
+						"url": {
+							"raw": "https://softuni-tech-books.firebaseio.com/Books/7/.json",
+							"protocol": "https",
+							"host": [
+								"softuni-tech-books",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"Books",
+								"7",
+								".json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "04 - Change Book #7 Author",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\"New terminator has been assigned. Press escape to escape\""
+						},
+						"url": {
+							"raw": "https://softuni-tech-books.firebaseio.com/Books/7/author/.json",
+							"protocol": "https",
+							"host": [
+								"softuni-tech-books",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"Books",
+								"7",
+								"author",
+								".json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "02 - GitHub issue by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Shinier buttons\",\n\t\"body\":\"Gosho wants frieza buttons\",\n\t\"labels\":[\"enhancement\", \"major\"]\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/Tech-Module-Jan-2018/test-repo/issues/1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"Tech-Module-Jan-2018",
+						"test-repo",
+						"issues",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03 - GitHub Issue",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Tectonik",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\":\"Cooler buttons\",\n  \"body\":\"Pesho wants cooler buttons!\",\n  \"labels\":[\"enchancement\", \"major\"]\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/Tech-Module-Jan-2018/test-repo/issues",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"Tech-Module-Jan-2018",
+						"test-repo",
+						"issues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "04 - Patch Issue",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Tectonik",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Ugly buttons\"\n}"
+				},
+				"url": {
+					"raw": "https://api.github.com/repos/Tech-Module-Jan-2018/test-repo/issues/580",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"repos",
+						"Tech-Module-Jan-2018",
+						"test-repo",
+						"issues",
+						"580"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "01 - GitHub Repos for User Tech-Module- Jan-2018",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://api.github.com/users/Tech-Module-Jan-2018/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"users",
+						"Tech-Module-Jan-2018",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
