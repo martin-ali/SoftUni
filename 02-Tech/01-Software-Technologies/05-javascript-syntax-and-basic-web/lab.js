@@ -23,6 +23,7 @@ function symmetricNumbers([limit])
 
 function sumsByTown(towns)
 {
+    // Could also use map
     const townsOrder = [];
     const townInfo = {};
     for (let current = 0; current < towns.length; ++current)
@@ -63,20 +64,26 @@ function largestThreeNumbers(numbers)
 
 // largestThreeNumbers([10, 30, 15, 20, 50, 5]);
 
-function extractCapitalCaseWords([text])
+function extractCapitalCaseWords(text)
 {
-    const pattern = /(?:\W)[A-Z]+(?:\W)/g;
-    const words = text.split(pattern);
-    "".search
+
+    const pattern = /\b[A-Z]+\b/g;
+    const words = [];
+
+
+    text.forEach(x =>
+    {
+        x.match(pattern).forEach(y => words.push(y));
+    });
 
     console.log(words.join(', '));
 }
 
-extractCapitalCaseWords(
-    [
-        'We start by HTML, CSS, JavaScript, JSON and REST.' +
-        'Later we touch some PHP, MySQL and SQL.' +
-        'Later we play with C#, EF, SQL Server and ASP.NET MVC.' +
-        'Finally, we touch some Java, Hibernate and Spring.MVC.'
-    ]
-);
+// extractCapitalCaseWords(
+//     [
+//         'We start by HTML, CSS, JavaScript, JSON and REST.',
+//         'Later we touch some PHP, MySQL and SQL.',
+//         'Later we play with C#, EF, SQL Server and ASP.NET MVC.',
+//         'Finally, we touch some Java, Hibernate and Spring.MVC.'
+//     ]
+// );
