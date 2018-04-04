@@ -71,7 +71,7 @@ function extractCapitalCaseWords(text)
 
     text.forEach(x =>
     {
-        x.match(pattern).forEach(y => words.push(y));
+        x.match(pattern).forEach(y => words.push(y))
     });
 
     console.log(words.join(', '));
