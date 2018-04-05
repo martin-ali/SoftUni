@@ -5,7 +5,7 @@ function multiplyNumber([number])
     return number * 2;
 }
 
-function multiplyTwoNumber([firstNumber, secondNumber])
+function multiplyTwoNumbers([firstNumber, secondNumber])
 {
     return firstNumber * secondNumber;
 }
