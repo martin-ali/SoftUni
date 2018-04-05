@@ -18,29 +18,28 @@ Traincode!";
 
         static void Main()
         {
-            var input = ReadCommands();
+            var input = ReadInput();
             foreach (var line in input)
             {
-                var moddedLine = Regex.Replace(line, trainPattern, "");
-                if (moddedLine.Length == 0)
+                if (Regex.IsMatch(line, trainPattern))
                 {
                     Console.WriteLine(line);
                 }
             }
         }
 
-        private static IEnumerable<String> ReadCommands()
+        private static IEnumerable<String> ReadInput()
         {
-            var commands = new List<string>();
+            var lines = new List<string>();
 
-            var command = Console.ReadLine();
-            while (command != "Traincode!")
+            var line = Console.ReadLine();
+            while (line != "Traincode!")
             {
-                commands.Add(command);
-                command = Console.ReadLine();
+                lines.Add(line);
+                line = Console.ReadLine();
             }
 
-            return commands;
+            return lines;
         }
     }
 }
