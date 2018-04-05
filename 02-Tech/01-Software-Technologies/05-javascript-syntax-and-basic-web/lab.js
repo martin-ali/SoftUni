@@ -69,9 +69,9 @@ function extractCapitalCaseWords(text)
     const pattern = /\b[A-Z]+\b/g;
     const words = [];
 
-    text.forEach(x =>
+    text.forEach(line =>
     {
-        x.match(pattern).forEach(y => words.push(y))
+        line.match(pattern).forEach(matchedWord => words.push(matchedWord))
     });
 
     console.log(words.join(', '));
