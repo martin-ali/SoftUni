@@ -4,8 +4,8 @@ function symmetricNumbers([limit])
     function isSymmetrical(number)
     {
         const word = String(number);
-        let firstHalf = word.substring(0, Math.floor(word.length / 2));
-        let secondHalf = word.substring(Math.ceil(word.length / 2));
+        const firstHalf = word.substring(0, Math.floor(word.length / 2));
+        const secondHalf = word.substring(Math.ceil(word.length / 2));
 
         if (firstHalf === secondHalf.split('').reverse().join(''))
         {
