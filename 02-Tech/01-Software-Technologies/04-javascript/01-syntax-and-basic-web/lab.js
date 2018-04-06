@@ -66,6 +66,7 @@ function largestThreeNumbers(numbers)
 
 function extractCapitalCaseWords(text)
 {
+    // Why does this work?
     const pattern = /\b[A-Z]+\b/g;
     const words = [];
 
