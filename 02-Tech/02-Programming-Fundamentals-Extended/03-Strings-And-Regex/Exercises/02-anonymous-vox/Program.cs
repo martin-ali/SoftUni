@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace _02_anonymous_vox
@@ -7,7 +8,8 @@ namespace _02_anonymous_vox
     {
         private static string encodedPlaceholderPattern = @"([?:A-Za-z]+)(.+)(?:\1)";
 
-        private static string placeholderPattern = @"(?:{).+?(?:})";
+        // WHy can't I get non-capturing groups to work?? (?:)
+        private static string placeholderPattern = @"{(.+?)}";
 
         private static string testInput = @"ASD___asdfffasd
 Hello_mister,_Hello
@@ -21,34 +23,39 @@ asddvdasd";
 
         static void Main()
         {
-            // var encodedText = Console.ReadLine();
-            var encodedText = testInput;
-            // var placeholders = Console.ReadLine();
-            var placeholders = Regex.Matches("{first}{second}", placeholderPattern);
-            var index = 0;
-            var len = placeholders.Count - 1;
+            // var encodedText = testInput;
+            // var placeholders = Regex.Matches("{first}{second}", placeholderPattern);
 
-            var newText = Regex.Replace(encodedText, encodedPlaceholderPattern, $"$1{placeholders[Clamp(0, index++, len)]}$1");
+            var encodedText = Console.ReadLine();
+            var placeholders = Regex.Matches(Console.ReadLine(), placeholderPattern);
 
-            Console.WriteLine(newText);
+            var currentPlaceholder = 0;
+            var placeholderCount = placeholders.Count - 1;
 
+            var replacedText = Regex.Replace(encodedText, encodedPlaceholderPattern, match =>
+            {
+                var placeholder = placeholders[Clamp(0, currentPlaceholder++, placeholderCount)].Groups[1];
+                var tag = match.Groups[1];
+                return $"{tag}{placeholder}{tag}";
+            });
+
+            Console.WriteLine(replacedText);
         }
 
         private static int Clamp(int min, int value, int max)
         {
-            if (value > max) return max;
-            else if (value < min) return min;
-            else return value;
+            if (value > max)
+            {
+                return max;
+            }
+            else if (value < min)
+            {
+                return min;
+            }
+            else
+            {
+                return value;
+            }
         }
     }
 }
-
-// ASD___asdfffasd
-// Hello_mister,_Hello
-// Whatsup_ddd_sup
-// HeypalHey______how_ya_how_doin_how
-// a.....a
-// b!d!b
-// asdxxxxxasd
-// peshogoshopesho
-// asddvdasd
