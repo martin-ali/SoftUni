@@ -8,7 +8,7 @@
 bower_modules/
 node_modules/
 .vscode/
-
+vendor/
 # User-specific files
 *.suo
 *.user
