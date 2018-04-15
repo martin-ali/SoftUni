@@ -10,9 +10,21 @@
             width: 20px;
             height: 20px;
         }
-    </style> 
+    </style>
 </head>
 <body>
-<!--Write your PHP Script here-->
+	<?php
+
+	for ($row = 0; $row < 256; $row += 51)
+	{
+		for ($col = 0; $col < 10; $col++)
+		{
+			$shade = $row + ($col * 5);
+			echo "<div style='background-color: rgb($shade,$shade,$shade)'></div>";
+		}
+		echo "<br/>";
+	}
+
+	?>
 </body>
 </html>
