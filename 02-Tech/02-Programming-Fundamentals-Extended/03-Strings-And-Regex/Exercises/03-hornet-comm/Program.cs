@@ -39,14 +39,14 @@ namespace _03_hornet_comm
             {
                 if (Regex.IsMatch(input, privateMessagePattern))
                 {
-                    var (code, message) = input.Split(new string[] { " <-> " }, StringSplitOptions.None);
+                    var (code, message) = input.Split(separator: new string[] { " <-> " }, options: StringSplitOptions.None);
                     var result = DecryptPrivateMessage(code, message);
 
                     privateMessages.Add(result);
                 }
                 else if (Regex.IsMatch(input, broadcastPattern))
                 {
-                    var (message, frequency) = input.Split(new string[] { " <-> " }, StringSplitOptions.None);
+                    var (message, frequency) = input.Split(separator: new string[] { " <-> " }, options: StringSplitOptions.None);
                     var result = DecryptBroadcast(frequency, message);
 
                     broadcasts.Add(result);

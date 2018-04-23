@@ -15,7 +15,7 @@ namespace hornet_wings
             var time = wingflaps / 100;
 
             Console.WriteLine($"{distanceTraveled:0.00} m.");
-            Console.WriteLine($"{time+restTime} s.");
+            Console.WriteLine($"{time + restTime} s.");
         }
     }
 }

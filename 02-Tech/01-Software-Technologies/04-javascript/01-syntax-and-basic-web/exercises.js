@@ -88,7 +88,7 @@ function setValues(commands)
     }
 }
 
-// setValues(['3', '0 - 5', '1 - 6', '2 - 7']);
+setValues(['3', '0 - 5', '1 - 6', '2 - 7']);
 // setValues(['5', '0 - 3', '3 - -1', '4 - 2']);
 
 function addRemoveElements(commands)
