@@ -32,10 +32,7 @@ namespace _15_neghbour_wars
                     defender.health += 10;
                 }
 
-                // Switch attacker and defender
-                var temp = attacker;
-                attacker = defender;
-                defender = temp;
+                (attacker, defender) = (defender, attacker);
             }
         }
     }
