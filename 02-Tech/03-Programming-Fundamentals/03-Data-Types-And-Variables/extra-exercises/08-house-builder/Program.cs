@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _08_greater_of_two_values
+namespace _08_house_builder
 {
     class Program
     {
