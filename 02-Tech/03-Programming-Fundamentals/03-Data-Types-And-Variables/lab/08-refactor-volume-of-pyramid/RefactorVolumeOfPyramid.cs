@@ -15,7 +15,7 @@ namespace _08_refactor_volume_of_pyramid
             Console.Write("Height: ");
             double height = double.Parse(Console.ReadLine());
 
-            double volume = (length + width + height) / 3;
+            double volume = (length * width * height) / 3;
             Console.WriteLine($"Pyramid Volume: {volume:F2}");
         }
     }
