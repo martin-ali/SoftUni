@@ -6,7 +6,7 @@ namespace _04_tourist_information
     class TouristInformation
     {
 
-        private static Dictionary<string, double> conversionTable = new Dictionary<string, double>
+        private static Dictionary<string, double> metricValues = new Dictionary<string, double>
         {
             ["miles"] = 1.6,
             ["inches"] = 2.54,
@@ -15,7 +15,7 @@ namespace _04_tourist_information
             ["gallons"] = 3.8
         };
 
-        private static Dictionary<string, string> metricUnitCounterpart = new Dictionary<string, string>
+        private static Dictionary<string, string> metricUnitCounterparts = new Dictionary<string, string>
         {
             ["miles"] = "kilometers",
             ["inches"] = "centimeters",
@@ -28,8 +28,8 @@ namespace _04_tourist_information
         {
             var imperialUnit = Console.ReadLine();
             double valueInImperial = double.Parse(Console.ReadLine());
-            var valueInMetric = valueInImperial * conversionTable[imperialUnit];
-            Console.WriteLine($"{valueInImperial} {imperialUnit} = {valueInMetric:0.00} {metricUnitCounterpart[imperialUnit]}");
+            var valueInMetric = valueInImperial * metricValues[imperialUnit];
+            Console.WriteLine($"{valueInImperial} {imperialUnit} = {valueInMetric:0.00} {metricUnitCounterparts[imperialUnit]}");
         }
     }
 }
