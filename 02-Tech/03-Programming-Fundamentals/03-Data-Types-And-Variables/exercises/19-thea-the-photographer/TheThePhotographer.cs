@@ -6,18 +6,18 @@ namespace _19_thea_the_photographer
     {
         static void Main()
         {
-            long numberOfPicturesTaken = long.Parse(Console.ReadLine());
-            long filterTime = long.Parse(Console.ReadLine());
-            double percentageOfGoodPictures = long.Parse(Console.ReadLine()) / 100.0;
-            long uploadTimePerFilteredPicture = long.Parse(Console.ReadLine());
+            var numberOfPicturesTaken = long.Parse(Console.ReadLine());
+            var filterTime = long.Parse(Console.ReadLine());
+            var percentageOfGoodPictures = long.Parse(Console.ReadLine()) / 100.0;
+            var uploadTimePerFilteredPicture = long.Parse(Console.ReadLine());
 
             var timeTakenToFilter = numberOfPicturesTaken * filterTime;
-            var filteredImages = Math.Ceiling(numberOfPicturesTaken * percentageOfGoodPictures);
-            var timeTakenToUploadPictures = filteredImages * uploadTimePerFilteredPicture;
+            var numberOfFilteredImages = Math.Ceiling(numberOfPicturesTaken * percentageOfGoodPictures);
+            var timeTakenToUploadPictures = numberOfFilteredImages * uploadTimePerFilteredPicture;
 
-            long secondsTaken = (long)(timeTakenToFilter + timeTakenToUploadPictures);
-            var timeTaken = TimeSpan.FromSeconds(secondsTaken);
-            Console.WriteLine(timeTaken.ToString("d\\:hh\\:mm\\:ss"));
+            var secondsTaken = timeTakenToFilter + timeTakenToUploadPictures;
+            var totalTimeTaken = TimeSpan.FromSeconds(secondsTaken);
+            Console.WriteLine(totalTimeTaken.ToString("d\\:hh\\:mm\\:ss"));
         }
     }
 }
