@@ -23,26 +23,32 @@ namespace _09_longer_line
             var thirdPoint = (x: x3, y: y3);
             var fourthPoint = (x: x4, y: y4);
 
-            var secondPointIsCloserThanFirst = DistanceBetweenPoints(secondPoint, (0, 0)) < DistanceBetweenPoints(firstPoint, (0, 0));
+            var longestLine = GetLongestLine(firstPoint, secondPoint, thirdPoint, fourthPoint);
+            Console.WriteLine($"({longestLine.start.x}, {longestLine.start.y})({longestLine.end.x}, {longestLine.end.y})");
+        }
+
+        private static ((double x, double y) start, (double x, double y) end) GetLongestLine((double x, double y) firstLineStart, (double x, double y) firstLineEnd, (double x, double y) secondLineStart, (double x, double y) secondLineEnd)
+        {
+            var secondPointIsCloserThanFirst = DistanceBetweenPoints(firstLineEnd, (0, 0)) < DistanceBetweenPoints(firstLineStart, (0, 0));
             if (secondPointIsCloserThanFirst)
             {
-                (firstPoint, secondPoint) = (secondPoint, firstPoint);
+                (firstLineStart, firstLineEnd) = (firstLineEnd, firstLineStart);
             }
 
-            var fourthPointIsCloserThanThird = DistanceBetweenPoints(fourthPoint, (0, 0)) < DistanceBetweenPoints(thirdPoint, (0, 0));
+            var fourthPointIsCloserThanThird = DistanceBetweenPoints(secondLineEnd, (0, 0)) < DistanceBetweenPoints(secondLineStart, (0, 0));
             if (fourthPointIsCloserThanThird)
             {
-                (thirdPoint, fourthPoint) = (fourthPoint, thirdPoint);
+                (secondLineStart, secondLineEnd) = (secondLineEnd, secondLineStart);
             }
 
-            var firstLine = (start: firstPoint, end: secondPoint);
-            var secondLine = (start: thirdPoint, end: fourthPoint);
+            var firstLine = (start: firstLineStart, end: firstLineEnd);
+            var secondLine = (start: secondLineStart, end: secondLineEnd);
 
-            var firstLineLength = DistanceBetweenPoints(firstPoint, secondPoint);
-            var secondLineLength = DistanceBetweenPoints(thirdPoint, fourthPoint);
+            var firstLineLength = DistanceBetweenPoints(firstLineStart, firstLineEnd);
+            var secondLineLength = DistanceBetweenPoints(secondLineStart, secondLineEnd);
 
             var longestLine = (firstLineLength >= secondLineLength ? firstLine : secondLine);
-            Console.WriteLine($"({longestLine.start.x}, {longestLine.start.y})({longestLine.end.x}, {longestLine.end.y})");
+            return longestLine;
         }
 
         private static double DistanceBetweenPoints((double x, double y) firstPoint, (double x, double y) secondPoint)
