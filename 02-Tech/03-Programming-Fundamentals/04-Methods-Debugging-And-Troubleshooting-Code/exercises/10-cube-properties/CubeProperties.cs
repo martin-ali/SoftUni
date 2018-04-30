@@ -13,20 +13,40 @@ namespace _10_cube_properties
             switch (parameter)
             {
                 case "face":
-                    result = Math.Sqrt(2 * (side * side));
+                    result = GetCubeFaceDiagonal(side);
                     break;
                 case "space":
-                    result = Math.Sqrt(3 * (side * side));
+                    result = GetCubeSpaceDiagonal(side);
                     break;
                 case "volume":
-                    result = Math.Pow(side, 3);
+                    result = GetCubeVolume(side);
                     break;
                 case "area":
-                    result = 6 * (side * side);
+                    result = GetCubeSurfaceArea(side);
                     break;
             }
 
             Console.WriteLine($"{result:0.00}");
+        }
+
+        private static double GetCubeSurfaceArea(double side)
+        {
+            return 6 * (side * side);
+        }
+
+        private static double GetCubeVolume(double side)
+        {
+            return Math.Pow(side, 3);
+        }
+
+        private static double GetCubeSpaceDiagonal(double side)
+        {
+            return Math.Sqrt(3 * (side * side));
+        }
+
+        private static double GetCubeFaceDiagonal(double side)
+        {
+            return Math.Sqrt(2 * (side * side));
         }
     }
 }
