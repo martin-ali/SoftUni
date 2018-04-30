@@ -17,8 +17,8 @@ namespace _11_string_concatenation
             for (int i = 0; i < numberOfLines / 2; i++)
             {
                 // Get line we need
-                var current = Console.ReadLine();
-                builder.Append(current + delimiter);
+                var line = Console.ReadLine();
+                builder.Append(line + delimiter);
 
                 // Waste next line since we don't need it
                 Console.ReadLine();
