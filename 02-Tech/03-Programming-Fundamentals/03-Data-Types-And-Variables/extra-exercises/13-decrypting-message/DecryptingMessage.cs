@@ -10,6 +10,7 @@ namespace _13_decrypting_message
             var key = int.Parse(Console.ReadLine());
             var numberOfLines = int.Parse(Console.ReadLine());
             var decryptedMessageBuilder = new StringBuilder();
+
             for (int current = 0; current < numberOfLines; current++)
             {
                 var encryptedCharacter = char.Parse(Console.ReadLine());

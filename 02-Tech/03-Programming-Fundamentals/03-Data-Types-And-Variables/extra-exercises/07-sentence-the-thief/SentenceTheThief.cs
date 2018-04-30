@@ -10,6 +10,7 @@ namespace _07_sentence_the_thief
             var numeralType = Console.ReadLine();
             var numberOfIds = int.Parse(Console.ReadLine());
             var ids = new long[numberOfIds];
+
             for (int index = 0; index < numberOfIds; index++)
             {
                 ids[index] = long.Parse(Console.ReadLine());
