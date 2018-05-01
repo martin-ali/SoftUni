@@ -8,14 +8,19 @@ namespace _13_factorial
         static void Main()
         {
             var targetFactorial = int.Parse(Console.ReadLine());
-            BigInteger factorial = 1;
+            BigInteger factorial = CalculateFactorial(targetFactorial);
+            Console.WriteLine(factorial);
+        }
 
-            for (int current = 1; current <= targetFactorial; current++)
+        private static BigInteger CalculateFactorial(int target)
+        {
+            BigInteger factorial = 1;
+            for (int current = 1; current <= target; current++)
             {
                 factorial *= current;
             }
 
-            Console.WriteLine(factorial);
+            return factorial;
         }
     }
 }
