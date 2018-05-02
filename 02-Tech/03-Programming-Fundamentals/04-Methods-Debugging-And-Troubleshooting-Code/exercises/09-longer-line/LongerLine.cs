@@ -4,7 +4,6 @@ namespace _09_longer_line
 {
     class LongerLine
     {
-        // FIXME: Refactor the whole thing!
         static void Main()
         {
             // First Line
