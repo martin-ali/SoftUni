@@ -10,14 +10,14 @@ namespace _02_rotate_and_sum
             var arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var numberOfRotations = int.Parse(Console.ReadLine());
 
-            var sumArray = new int[arr.Length];
+            var sum = new int[arr.Length];
             for (int i = 0; i < numberOfRotations; i++)
             {
                 arr = Rotate(arr);
-                sumArray = SequenceSum(sumArray, arr);
+                sum = SequenceSum(sum, arr);
             }
 
-            Console.WriteLine(String.Join(" ", sumArray));
+            Console.WriteLine(String.Join(" ", sum));
         }
 
         private static int[] SequenceSum(int[] firstArray, int[] secondArray)
