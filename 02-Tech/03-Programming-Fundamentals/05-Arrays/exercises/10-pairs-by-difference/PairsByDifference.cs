@@ -16,7 +16,8 @@ namespace _10_pairs_by_difference
                 int current = numbers[i];
                 for (int j = i + 1; j < numbers.Length; j++)
                 {
-                    var currentPairEqualsSum = (current - numbers[j] == difference) || (current - numbers[j] == -difference);
+                    var currentPairEqualsSum = (current - numbers[j] == difference)
+                                            || (current - numbers[j] == -difference);
                     if (currentPairEqualsSum)
                     {
                         numberOfPairs++;
