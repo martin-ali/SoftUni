@@ -20,23 +20,20 @@ namespace _02_manipulate_array
                     case "distinct":
                         {
                             arr = Distinct(arr);
+                            break;
                         }
-
-                        break;
                     case "reverse":
                         {
                             Array.Reverse(arr);
+                            break;
                         }
-
-                        break;
                     case "replace":
                         {
                             var index = int.Parse(command[1]);
                             var newItem = command[2];
                             arr[index] = newItem;
+                            break;
                         }
-
-                        break;
                 }
             }
 
