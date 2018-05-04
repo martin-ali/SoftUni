@@ -9,6 +9,12 @@ namespace _05_compare_char_arrays
             var firstArray = Console.ReadLine().Split(' ');
             var secondArray = Console.ReadLine().Split(' ');
 
+            // Shorter array will always be first
+            if (secondArray.Length < firstArray.Length)
+            {
+                (firstArray, secondArray) = (secondArray, firstArray);
+            }
+
             var secondIsSmaller = false;
             var end = Math.Min(firstArray.Length, secondArray.Length);
             for (int i = 0; i < end; i++)
@@ -25,7 +31,6 @@ namespace _05_compare_char_arrays
                     break;
                 }
             }
-
 
             if (secondIsSmaller)
             {
