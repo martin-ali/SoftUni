@@ -7,23 +7,23 @@ namespace _06_heists
     {
         static void Main()
         {
-            var arr = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            var prices = (jewels: arr[0], gold: arr[1]);
+            var pricing = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var prices = (jewels: pricing[0], gold: pricing[1]);
 
             var moneyLost = 0L;
             var moneyGained = 0L;
-            var command = Console.ReadLine();
-            while (command != "Jail Time")
+            var act = Console.ReadLine();
+            while (act != "Jail Time")
             {
-                var args = command.Split(' ');
-                var loot = args[0];
-                var expenses = int.Parse(args[1]);
+                var heist = act.Split(' ');
+                var loot = heist[0];
+                var expenses = int.Parse(heist[1]);
 
                 moneyGained += loot.Count(item => item.Equals('%')) * prices.jewels;
                 moneyGained += loot.Count(item => item.Equals('$')) * prices.gold;
                 moneyLost += expenses;
 
-                command = Console.ReadLine();
+                act = Console.ReadLine();
             }
 
             if (moneyGained >= moneyLost)
