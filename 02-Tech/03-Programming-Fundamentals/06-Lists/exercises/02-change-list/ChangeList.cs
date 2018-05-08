@@ -7,7 +7,7 @@ namespace _02_change_list
     {
         static void Main()
         {
-            var elements = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+            var numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
 
             var command = Console.ReadLine().Split(' ');
             while (true)
@@ -17,26 +17,26 @@ namespace _02_change_list
                     case "Delete":
                         {
                             var element = int.Parse(command[1]);
-                            elements.RemoveAll(x => x == element);
+                            numbers.RemoveAll(x => x == element);
                             break;
                         }
                     case "Insert":
                         {
                             var element = int.Parse(command[1]);
                             var index = int.Parse(command[2]);
-                            elements.Insert(index, element);
+                            numbers.Insert(index, element);
                             break;
                         }
                     case "Even":
                         {
-                            var result = string.Join(" ", elements.Where(x => (x % 2 == 0)));
-                            Console.WriteLine(result);
+                            var evenNumbers = string.Join(" ", numbers.Where(x => (x % 2 == 0)));
+                            Console.WriteLine(evenNumbers);
                             return;
                         }
                     case "Odd":
                         {
-                            var result = string.Join(" ", elements.Where(x => (x % 2 != 0)));
-                            Console.WriteLine(result);
+                            var oddNumbers = string.Join(" ", numbers.Where(x => (x % 2 != 0)));
+                            Console.WriteLine(oddNumbers);
                             return;
                         }
                 }
