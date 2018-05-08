@@ -45,7 +45,7 @@ namespace _05_array_manipulator
                     case "shift":
                         {
                             var rotations = int.Parse(command[1]);
-                            numbers = numbers.ShiftLeft(rotations);
+                            numbers.ShiftLeft(rotations);
                             break;
                         }
                     case "sumPairs":
@@ -65,25 +65,24 @@ namespace _05_array_manipulator
 
     public static class ListExtensions
     {
-        public static List<int> ShiftLeft(this List<int> arr, int positions)
+        public static void ShiftLeft(this List<int> arr, int positions)
         {
             positions = positions % arr.Count;
 
             // Loop variant
-            // var original = arr.ToList();
-            // for (int i = 0; i < arr.Count; i++)
-            // {
-            //     var newIndex = i + positions;
-            //     if (newIndex >= arr.Count) newIndex -= arr.Count;
-            //     arr[i] = original[newIndex];
-            // }
+            var original = arr.ToList();
+            for (int i = 0; i < arr.Count; i++)
+            {
+                var newIndex = i + positions;
+                if (newIndex >= arr.Count) newIndex -= arr.Count;
+                arr[i] = original[newIndex];
+            }
 
             // LINQ variant
-            var left = arr.Skip(positions);
-            var right = arr.Take(positions);
-            var shiftedArr = left.Concat(right).ToList();
-
-            return arr;
+            // var left = arr.Skip(positions);
+            // var right = arr.Take(positions);
+            // var shiftedArr = left.Concat(right).ToList();
+            // return shiftedArr;
         }
 
         public static List<int> SumPairs(this List<int> arr)
