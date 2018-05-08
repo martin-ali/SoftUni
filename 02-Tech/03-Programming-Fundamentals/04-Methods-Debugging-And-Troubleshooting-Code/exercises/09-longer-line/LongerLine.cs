@@ -4,35 +4,30 @@ namespace _09_longer_line
 {
     class LongerLine
     {
+        private static Point center = new Point(0, 0);
+
         static void Main()
         {
-            // First Line
-            var x1 = double.Parse(Console.ReadLine());
-            var y1 = double.Parse(Console.ReadLine());
-            var x2 = double.Parse(Console.ReadLine());
-            var y2 = double.Parse(Console.ReadLine());
+            var lines = new Line[2];
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var x1 = double.Parse(Console.ReadLine());
+                var y1 = double.Parse(Console.ReadLine());
+                var x2 = double.Parse(Console.ReadLine());
+                var y2 = double.Parse(Console.ReadLine());
 
-            // Second line
-            var x3 = double.Parse(Console.ReadLine());
-            var y3 = double.Parse(Console.ReadLine());
-            var x4 = double.Parse(Console.ReadLine());
-            var y4 = double.Parse(Console.ReadLine());
+                var start = new Point(x1, y1);
+                var end = new Point(x2, y2);
+                var line = new Line(start, end);
+                lines[i] = line;
+            }
 
-            var firstLineStart = new Point(x1, y1);
-            var firstLineEnd = new Point(x2, y2);
-            var secondLineStart = new Point(x3, y3);
-            var secondLineEnd = new Point(x4, y4);
-
-            var firstLine = new Line(start: firstLineStart, end: firstLineEnd);
-            var secondLine = new Line(start: secondLineStart, end: secondLineEnd);
-
-            var longestLine = GetLongestLine(firstLine, secondLine);
-            longestLine = SortLineByDistanceToPoint(longestLine, new Point(0, 0));
+            var longestLine = MaxLengthLine(lines[0], lines[1]);
+            longestLine = OrderPointsByDistanceToPoint(longestLine, center);
             Console.WriteLine($"({longestLine.Start.X}, {longestLine.Start.Y})({longestLine.End.X}, {longestLine.End.Y})");
         }
 
-        // TODO: Needs a better name
-        private static Line SortLineByDistanceToPoint(Line line, Point comparisonPoint)
+        private static Line OrderPointsByDistanceToPoint(Line line, Point comparisonPoint)
         {
             var start = DistanceBetweenPoints(line.Start, comparisonPoint);
             var end = DistanceBetweenPoints(line.End, comparisonPoint);
@@ -46,7 +41,7 @@ namespace _09_longer_line
             return line;
         }
 
-        private static Line GetLongestLine(Line firstLine, Line secondLine)
+        private static Line MaxLengthLine(Line firstLine, Line secondLine)
         {
             var firstLineLength = DistanceBetweenPoints(firstLine.Start, firstLine.End);
             var secondLineLength = DistanceBetweenPoints(secondLine.Start, secondLine.End);
