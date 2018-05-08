@@ -19,6 +19,7 @@ namespace _07_bomb_numbers
                     var start = Math.Max(index - power, 0);
                     var end = Math.Min(index + power, numbers.Count - 1);
 
+                    // Doable with RemoveRange()
                     for (int current = start; current <= end; current++)
                     {
                         numbers[current] = null;
