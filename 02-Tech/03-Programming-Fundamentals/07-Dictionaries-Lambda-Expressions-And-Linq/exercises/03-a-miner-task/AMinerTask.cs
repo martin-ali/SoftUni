@@ -10,7 +10,7 @@ namespace _03_a_miner_task
             var storage = new Dictionary<string, int>();
 
             var line = Console.ReadLine();
-            while (line.Equals("stop") == false)
+            while (line != "stop")
             {
 
                 var resource = line;
