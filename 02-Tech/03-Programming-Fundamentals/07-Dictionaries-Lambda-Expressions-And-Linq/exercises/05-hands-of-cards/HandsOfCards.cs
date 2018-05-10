@@ -54,11 +54,11 @@ namespace _05_hands_of_cards
 
             foreach (var player in playersAndTheirHands)
             {
-                Console.WriteLine($"{player.Key}: {player.Value.Select(card => GetCardPower(card)).Sum()}");
+                Console.WriteLine($"{player.Key}: {player.Value.Select(CardPower).Sum()}");
             }
         }
 
-        private static int GetCardPower(string card)
+        private static int CardPower(string card)
         {
             string suite = card.Substring(0, card.Length - 1);
             char face = card.Last();
