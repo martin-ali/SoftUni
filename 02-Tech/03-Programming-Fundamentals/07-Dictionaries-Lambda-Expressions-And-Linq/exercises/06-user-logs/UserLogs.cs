@@ -9,11 +9,11 @@ namespace _06_user_logs
     {
         static void Main()
         {
-#if DEBUG
+            #if DEBUG
             Console.SetIn(new StreamReader("tests/test1.txt"));
-#endif
+            #endif
 
-            string[] delimiters = new string[] { "IP=", "message=", "user=", " " };
+            var delimiters = new string[] { "IP=", "message=", "user=", " " };
             var usersAndIpAccessCount = new SortedDictionary<string, Dictionary<string, int>>();
 
             var command = Console.ReadLine().Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
