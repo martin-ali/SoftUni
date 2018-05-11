@@ -9,9 +9,9 @@ namespace _09_legendary_farming
     {
         static void Main()
         {
-#if DEBUG
+            #if DEBUG
             Console.SetIn(new StreamReader("tests/test1.txt"));
-#endif
+            #endif
 
 
             var junkMaterials = new SortedDictionary<string, int>();
