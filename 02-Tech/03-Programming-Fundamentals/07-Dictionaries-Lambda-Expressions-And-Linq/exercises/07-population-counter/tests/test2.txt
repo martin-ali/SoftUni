@@ -1,0 +1,6 @@
+Sofia|Bulgaria|1
+Veliko Tarnovo|Bulgaria|2
+London|UK|4
+Rome|Italy|3
+RandomTown|UK|333
+report
