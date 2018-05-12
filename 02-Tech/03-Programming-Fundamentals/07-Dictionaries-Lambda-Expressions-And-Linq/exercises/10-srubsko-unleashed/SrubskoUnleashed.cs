@@ -17,7 +17,6 @@ namespace _10_srubsko_unleashed
             Console.SetIn(new StreamReader("tests/test1.txt"));
             #endif
 
-
             var singersAndProfitsByVenue = new Dictionary<string, Dictionary<string, long>>();
             var line = Console.ReadLine();
             while (line != "End")
