@@ -25,8 +25,8 @@ namespace _03_immune_system
                 var virusStrength = virus.ToCharArray().Select(x => (int)x).Sum() / 3;
                 int secondsToDefeat = (virusStrength * virus.Length) / (encounteredViruses.Contains(virus) ? 3 : 1);
                 var timeToDefeat = TimeSpan.FromSeconds(secondsToDefeat);
-                currentHealth -= secondsToDefeat;
                 var regenerationFactor = currentHealth / 5;
+                currentHealth -= secondsToDefeat;
                 encounteredViruses.Add(virus);
 
                 Console.WriteLine($"Virus {virus}: {virusStrength} => {secondsToDefeat} seconds");
