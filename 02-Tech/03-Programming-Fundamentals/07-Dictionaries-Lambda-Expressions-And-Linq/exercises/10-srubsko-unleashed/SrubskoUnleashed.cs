@@ -18,14 +18,14 @@ namespace _10_srubsko_unleashed
             #endif
 
             var singersAndProfitsByVenue = new Dictionary<string, Dictionary<string, long>>();
-            var line = Console.ReadLine();
-            while (line != "End")
+            var input = Console.ReadLine();
+            while (input != "End")
             {
-                var concert = Regex.Matches(line, inputPattern);
+                var concert = Regex.Matches(input, inputPattern);
                 foreach (Match parameter in concert)
                 {
                     var singer = parameter.Groups[1].ToString();
-                    var venue = parameter.Groups[2].ToString();
+                    var venue = parameter.Groups[2].ToString().Substring(1);
                     var ticketPrice = int.Parse(parameter.Groups[3].ToString());
                     var ticketsCount = int.Parse(parameter.Groups[4].ToString());
                     var profits = ticketPrice * ticketsCount;
@@ -43,12 +43,12 @@ namespace _10_srubsko_unleashed
                     singersAndProfitsByVenue[venue][singer] += profits;
                 }
 
-                line = Console.ReadLine();
+                input = Console.ReadLine();
             }
 
             foreach (var venue in singersAndProfitsByVenue)
             {
-                Console.WriteLine($"{venue.Key.Substring(1)}");
+                Console.WriteLine($"{venue.Key}");
                 var sortedSingers = venue.Value.OrderByDescending(x => x.Value);
                 foreach (var singer in sortedSingers)
                 {
