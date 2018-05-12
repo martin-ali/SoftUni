@@ -1,0 +1,6 @@
+5
+register some0ne CS1234JS
+register vankata JAVA123S
+register vankata AB4142CD
+register housey VR1223EE
+unregister housey

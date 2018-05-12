@@ -1,0 +1,8 @@
+7
+register gosho mm1111XX
+register gosho MM1111xx
+register gosho MMaaaaXX
+unregister gosho
+register gosho MM1111XX
+unregister gosho
+unregister pesho

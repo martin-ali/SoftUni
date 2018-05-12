@@ -1,0 +1,4 @@
+3
+register Pesho CS1234CS
+register Pesho KC4212KS
+register Pesho PO3333OP

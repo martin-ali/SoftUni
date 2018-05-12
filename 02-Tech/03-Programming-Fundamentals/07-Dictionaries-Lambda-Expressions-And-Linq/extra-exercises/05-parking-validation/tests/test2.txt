@@ -1,0 +1,5 @@
+4
+register testUser AA4132BB
+register testuser AA4132BB
+register testuser AA9999BB
+unregister testUser
