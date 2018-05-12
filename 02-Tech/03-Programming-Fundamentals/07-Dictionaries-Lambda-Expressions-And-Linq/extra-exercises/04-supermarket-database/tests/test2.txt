@@ -1,0 +1,6 @@
+Beer 2.40 350
+Water 1.25 200
+IceTea 5.20 100
+Beer 1.20 200
+IceTea 0.50 120
+stocked
