@@ -30,11 +30,11 @@ namespace _09_legendary_farming
 
             while (true)
             {
-                var items = Console.ReadLine().Split(' ');
-                for (int i = 0; i < items.Length; i += 2)
+                var parameters = Console.ReadLine().Split(' ');
+                for (int i = 0; i < parameters.Length; i += 2)
                 {
-                    var quantity = int.Parse(items[i]);
-                    var material = items[i + 1].ToLower();
+                    var quantity = int.Parse(parameters[i]);
+                    var material = parameters[i + 1].ToLower();
 
                     if (keyMaterials.ContainsKey(material))
                     {

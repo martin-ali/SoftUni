@@ -16,11 +16,11 @@ namespace _06_user_logs
             var delimiters = new string[] { "IP=", "message=", "user=", " " };
             var usersAndIpAccessCount = new SortedDictionary<string, Dictionary<string, int>>();
 
-            var command = Console.ReadLine().Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
-            while (command[0] != "end")
+            var parameters = Console.ReadLine().Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+            while (parameters[0] != "end")
             {
-                var ip = command[0];
-                var user = command[2];
+                var ip = parameters[0];
+                var user = parameters[2];
 
                 if (usersAndIpAccessCount.ContainsKey(user) == false)
                 {
@@ -34,7 +34,7 @@ namespace _06_user_logs
 
                 usersAndIpAccessCount[user][ip]++;
 
-                command = Console.ReadLine().Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+                parameters = Console.ReadLine().Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
             }
 
             foreach (var user in usersAndIpAccessCount)

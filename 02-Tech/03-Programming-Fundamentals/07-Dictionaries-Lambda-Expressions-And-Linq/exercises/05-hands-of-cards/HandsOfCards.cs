@@ -35,11 +35,11 @@ namespace _05_hands_of_cards
         {
             var playersAndTheirHands = new Dictionary<string, HashSet<string>>();
 
-            var command = Console.ReadLine().Split(new string[] { ", ", ": " }, StringSplitOptions.RemoveEmptyEntries);
-            while (command[0] != "JOKER")
+            var parameters = Console.ReadLine().Split(new string[] { ", ", ": " }, StringSplitOptions.RemoveEmptyEntries);
+            while (parameters[0] != "JOKER")
             {
-                var name = command[0];
-                var cards = command.Skip(1);
+                var name = parameters[0];
+                var cards = parameters.Skip(1);
                 var hand = new HashSet<string>(cards);
 
                 if (playersAndTheirHands.ContainsKey(name) == false)
@@ -49,7 +49,7 @@ namespace _05_hands_of_cards
 
                 playersAndTheirHands[name].UnionWith(hand);
 
-                command = Console.ReadLine().Split(new string[] { ", ", ": " }, StringSplitOptions.RemoveEmptyEntries);
+                parameters = Console.ReadLine().Split(new string[] { ", ", ": " }, StringSplitOptions.RemoveEmptyEntries);
             }
 
             foreach (var player in playersAndTheirHands)

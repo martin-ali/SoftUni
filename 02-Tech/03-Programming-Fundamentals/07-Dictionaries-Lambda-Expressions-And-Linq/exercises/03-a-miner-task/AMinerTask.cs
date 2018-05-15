@@ -9,11 +9,10 @@ namespace _03_a_miner_task
         {
             var storage = new Dictionary<string, int>();
 
-            var line = Console.ReadLine();
-            while (line != "stop")
+            var input = Console.ReadLine();
+            while (input != "stop")
             {
-
-                var resource = line;
+                var resource = input;
                 var quantity = int.Parse(Console.ReadLine());
 
                 if (storage.ContainsKey(resource) == false)
@@ -22,7 +21,7 @@ namespace _03_a_miner_task
                 }
 
                 storage[resource] += quantity;
-                line = Console.ReadLine();
+                input = Console.ReadLine();
             }
 
             foreach (var resource in storage)

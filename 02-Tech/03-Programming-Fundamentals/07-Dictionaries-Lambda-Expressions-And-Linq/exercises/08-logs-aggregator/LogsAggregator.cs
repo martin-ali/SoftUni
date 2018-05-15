@@ -19,10 +19,10 @@ namespace _08_logs_aggregator
             var sessionDurationsByUser = new Dictionary<string, int>();
             for (int i = 0; i < numberOfLines; i++)
             {
-                var line = Console.ReadLine().Split(' ');
-                var ip = line[0];
-                var user = line[1];
-                var duration = int.Parse(line[2]);
+                var parameters = Console.ReadLine().Split(' ');
+                var ip = parameters[0];
+                var user = parameters[1];
+                var duration = int.Parse(parameters[2]);
 
                 if (ipsByUser.ContainsKey(user) == false)
                 {

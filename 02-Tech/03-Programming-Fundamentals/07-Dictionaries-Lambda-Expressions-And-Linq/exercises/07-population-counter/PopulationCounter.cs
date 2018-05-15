@@ -16,12 +16,12 @@ namespace _07_population_counter
             var countriesCitiesAndPopulations = new Dictionary<string, SortedDictionary<string, long>>();
             var countriesAndTheirPopulation = new Dictionary<string, long>();
 
-            var command = Console.ReadLine().Split('|');
-            while (command[0] != "report")
+            var parameters = Console.ReadLine().Split('|');
+            while (parameters[0] != "report")
             {
-                var city = command[0];
-                var country = command[1];
-                var population = int.Parse(command[2]);
+                var city = parameters[0];
+                var country = parameters[1];
+                var population = int.Parse(parameters[2]);
 
                 if (countriesCitiesAndPopulations.ContainsKey(country) == false)
                 {
@@ -36,7 +36,7 @@ namespace _07_population_counter
                 countriesCitiesAndPopulations[country][city] = population;
                 countriesAndTheirPopulation[country] += population;
 
-                command = Console.ReadLine().Split('|');
+                parameters = Console.ReadLine().Split('|');
             }
 
             var sortedCountries = countriesAndTheirPopulation.OrderByDescending(country => country.Value);

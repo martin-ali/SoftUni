@@ -7,10 +7,10 @@ namespace _04_fix_emails
     {
         static void Main()
         {
-            var command = Console.ReadLine();
-            while (command != "stop")
+            var input = Console.ReadLine();
+            while (input != "stop")
             {
-                var name = command;
+                var name = input;
                 var email = Console.ReadLine();
 
                 string emailLowercase = email.ToLower();
@@ -20,7 +20,7 @@ namespace _04_fix_emails
                     Console.WriteLine($"{name} -> {email}");
                 }
 
-                command = Console.ReadLine();
+                input = Console.ReadLine();
             }
         }
     }

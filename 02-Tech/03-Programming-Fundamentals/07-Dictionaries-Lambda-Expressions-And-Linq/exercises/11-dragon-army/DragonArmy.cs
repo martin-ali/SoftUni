@@ -21,15 +21,15 @@ namespace _11_dragon_army
 
             for (int current = 0; current < numberOfDragons; current++)
             {
-                var line = Console.ReadLine().Split(' ');
+                var parameters = Console.ReadLine().Split(' ');
 
-                var type = line[0];
-                var name = line[1];
+                var type = parameters[0];
+                var name = parameters[1];
                 var dragon =
                 (
-                    damage: DefaultIfNull(line[2], DefaultStats.Damage),
-                    health: DefaultIfNull(line[3], DefaultStats.Health),
-                    armor: DefaultIfNull(line[4], DefaultStats.Armor)
+                    damage: DefaultIfNull(parameters[2], DefaultStats.Damage),
+                    health: DefaultIfNull(parameters[3], DefaultStats.Health),
+                    armor: DefaultIfNull(parameters[4], DefaultStats.Armor)
                 );
 
                 if (dragonsByType.ContainsKey(type) == false)

@@ -9,18 +9,18 @@ namespace _02_phonebook_upgrade
         static void Main()
         {
             var phonebook = new SortedDictionary<string, string>();
-            var command = Console.ReadLine().Split(' ');
-            while (command[0] != ("END"))
+            var parameters = Console.ReadLine().Split(' ');
+            while (parameters[0] != ("END"))
             {
-                if (command[0] == "A")
+                if (parameters[0] == "A")
                 {
-                    var name = command[1];
-                    var number = command[2];
+                    var name = parameters[1];
+                    var number = parameters[2];
                     phonebook[name] = number;
                 }
-                else if (command[0] == "S")
+                else if (parameters[0] == "S")
                 {
-                    var name = command[1];
+                    var name = parameters[1];
                     if (phonebook.ContainsKey(name))
                     {
                         Console.WriteLine($"{name} -> {phonebook[name]}");
@@ -30,7 +30,7 @@ namespace _02_phonebook_upgrade
                         Console.WriteLine($"Contact {name} does not exist.");
                     }
                 }
-                else if (command[0] == "ListAll")
+                else if (parameters[0] == "ListAll")
                 {
                     foreach (var contact in phonebook)
                     {
@@ -38,7 +38,7 @@ namespace _02_phonebook_upgrade
                     }
                 }
 
-                command = Console.ReadLine().Split(' ');
+                parameters = Console.ReadLine().Split(' ');
             }
         }
     }
