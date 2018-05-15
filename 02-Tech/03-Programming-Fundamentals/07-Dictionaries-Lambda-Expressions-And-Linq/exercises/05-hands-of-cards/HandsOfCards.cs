@@ -33,23 +33,23 @@ namespace _05_hands_of_cards
 
         static void Main()
         {
+            string[] separators = new string[] { ", ", ": " };
             var playersAndTheirHands = new Dictionary<string, HashSet<string>>();
 
-            var parameters = Console.ReadLine().Split(new string[] { ", ", ": " }, StringSplitOptions.RemoveEmptyEntries);
+            var parameters = Console.ReadLine().Split(separators, StringSplitOptions.RemoveEmptyEntries);
             while (parameters[0] != "JOKER")
             {
                 var name = parameters[0];
                 var cards = parameters.Skip(1);
-                var hand = new HashSet<string>(cards);
 
                 if (playersAndTheirHands.ContainsKey(name) == false)
                 {
                     playersAndTheirHands[name] = new HashSet<string>();
                 }
 
-                playersAndTheirHands[name].UnionWith(hand);
+                playersAndTheirHands[name].UnionWith(cards);
 
-                parameters = Console.ReadLine().Split(new string[] { ", ", ": " }, StringSplitOptions.RemoveEmptyEntries);
+                parameters = Console.ReadLine().Split(separators, StringSplitOptions.RemoveEmptyEntries);
             }
 
             foreach (var player in playersAndTheirHands)
