@@ -8,7 +8,7 @@ namespace _02_phonebook_upgrade
     {
         static void Main()
         {
-            var phonebook = new Dictionary<string, string>();
+            var phonebook = new SortedDictionary<string, string>();
             var command = Console.ReadLine().Split(' ');
             while (command[0] != ("END"))
             {
@@ -18,7 +18,6 @@ namespace _02_phonebook_upgrade
                     var number = command[2];
                     phonebook[name] = number;
                 }
-
                 else if (command[0] == "S")
                 {
                     var name = command[1];
@@ -31,11 +30,9 @@ namespace _02_phonebook_upgrade
                         Console.WriteLine($"Contact {name} does not exist.");
                     }
                 }
-
                 else if (command[0] == "ListAll")
                 {
-                    var orderedPhonebook = phonebook.OrderBy(x => x.Key);
-                    foreach (var contact in orderedPhonebook)
+                    foreach (var contact in phonebook)
                     {
                         Console.WriteLine($"{contact.Key} -> {contact.Value}");
                     }
