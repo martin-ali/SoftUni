@@ -1,0 +1,9 @@
+4
+Cola-1.25
+Sandwich-2.30
+Bira-0.01
+Bira-2
+Toshko-Bira,3
+Mira-Sandwich,1
+Marto-Kola,2
+end of clients
