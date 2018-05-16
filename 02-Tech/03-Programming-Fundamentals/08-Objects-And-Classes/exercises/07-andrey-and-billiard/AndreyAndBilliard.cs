@@ -46,21 +46,18 @@ namespace _07_andrey_and_billiard
                 input = Console.ReadLine().Split(separators, StringSplitOptions.RemoveEmptyEntries);
             }
 
-            var totalBill = 0m;
             foreach (var customer in customersByName)
             {
                 Console.WriteLine($"{customer.Key}");
-
                 foreach (var product in customer.Value.Orders)
                 {
                     Console.WriteLine($"-- {product.Key} - {product.Value}");
                 }
 
                 Console.WriteLine($"Bill: {customer.Value.Bill:0.00}");
-                totalBill += customer.Value.Bill;
             }
 
-            Console.WriteLine($"Total bill: {totalBill:0.00}");
+            Console.WriteLine($"Total bill: {customersByName.Sum(cust => cust.Value.Bill):0.00}");
         }
     }
 
