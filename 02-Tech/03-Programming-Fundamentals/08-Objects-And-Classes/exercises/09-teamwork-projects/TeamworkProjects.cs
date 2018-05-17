@@ -60,11 +60,11 @@ namespace _09_teamwork_projects
                 input = Console.ReadLine().Split(new string[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
             }
 
-            var validTeams = teamsByName
+            var teamsToKeep = teamsByName
                                 .Where(team => team.Value.Members.Count > 0)
                                 .OrderByDescending(team => team.Value.Members.Count);
 
-            foreach (var team in validTeams)
+            foreach (var team in teamsToKeep)
             {
                 Console.WriteLine(team.Key);
                 Console.WriteLine($"- {team.Value.Creator}");
