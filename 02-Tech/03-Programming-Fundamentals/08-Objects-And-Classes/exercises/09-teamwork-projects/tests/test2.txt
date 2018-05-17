@@ -1,0 +1,10 @@
+3
+Tatyana-CloneClub
+Helena-CloneClub
+Trifon-AiNaBira
+Pesho->aiNaBira
+Pesho->AiNaBira
+Tatyana->Leda
+PeshO->AiNaBira
+Cossima->CloneClub
+end of assignment
