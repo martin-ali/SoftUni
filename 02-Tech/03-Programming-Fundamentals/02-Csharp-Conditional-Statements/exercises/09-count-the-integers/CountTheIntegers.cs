@@ -7,16 +7,8 @@ namespace _09_count_the_integers
         static void Main()
         {
             var totalNumbersReceived = 0;
-            while (true)
+            while (int.TryParse(Console.ReadLine(), out int number))
             {
-                var number = 0;
-                var input = Console.ReadLine();
-
-                if (int.TryParse(input, out number) == false)
-                {
-                    break;
-                }
-
                 totalNumbersReceived++;
             }
 
