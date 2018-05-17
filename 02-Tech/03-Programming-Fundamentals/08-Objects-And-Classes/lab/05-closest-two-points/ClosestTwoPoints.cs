@@ -26,7 +26,7 @@ namespace _05_closest_two_points
                 points.Add(new Point(x, y));
             }
 
-            var info = (start: points[0], end: points[1], distance: points[0].DistanceTo(points[1]));
+            var shortest = (start: points[0], end: points[1], distance: points[0].DistanceTo(points[1]));
             points = points.OrderBy(p => center.DistanceTo(p)).ToList();
             for (int i = 1; i < points.Count; i++)
             {
@@ -34,15 +34,15 @@ namespace _05_closest_two_points
                 Point previous = points[i - 1];
                 var distance = current.DistanceTo(previous);
 
-                if (distance < info.distance)
+                if (distance < shortest.distance)
                 {
-                    info = (previous, current, distance);
+                    shortest = (previous, current, distance);
                 }
             }
 
-            Console.WriteLine($"{info.distance:0.000}");
-            Console.WriteLine(info.start);
-            Console.WriteLine(info.end);
+            Console.WriteLine($"{shortest.distance:0.000}");
+            Console.WriteLine(shortest.start);
+            Console.WriteLine(shortest.end);
         }
     }
 
