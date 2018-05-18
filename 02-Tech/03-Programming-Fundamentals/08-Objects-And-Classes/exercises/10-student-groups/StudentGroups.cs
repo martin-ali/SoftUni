@@ -32,7 +32,7 @@ namespace _10_student_groups
                 townData = studentData;
             }
 
-            var groups = DistributeStudentsIntoGroups(towns);
+            var groups = Group.DistributeStudentsIntoGroups(towns);
 
             Console.WriteLine($"Created {groups.Count} groups in {towns.Count} towns:");
 
@@ -41,28 +41,6 @@ namespace _10_student_groups
                 var studentMails = group.Students.Select(student => student.Email);
                 Console.WriteLine($"{group.Town.Name} => {string.Join(", ", studentMails)}");
             }
-        }
-
-        private static List<Group> DistributeStudentsIntoGroups(List<Town> towns)
-        {
-            var groups = new List<Group>();
-            foreach (var town in towns.OrderBy(t => t.Name))
-            {
-                var townStudents = town
-                                    .Students
-                                    .OrderBy(st => st.RegistrationDate)
-                                    .ThenBy(st => st.Name)
-                                    .ThenBy(st => st.Email);
-
-                var groupCount = (int)Math.Ceiling((double)town.Students.Count / town.SeatCount);
-                for (int i = 0; i < groupCount; i++)
-                {
-                    var studentGroup = townStudents.Skip(i * town.SeatCount).Take(town.SeatCount).ToList();
-                    groups.Add(new Group(town, studentGroup));
-                }
-            }
-
-            return groups;
         }
     }
 
@@ -139,5 +117,27 @@ namespace _10_student_groups
         public Town Town { get; private set; }
 
         public List<Student> Students { get; private set; } = new List<Student>();
+
+        public static List<Group> DistributeStudentsIntoGroups(List<Town> towns)
+        {
+            var groups = new List<Group>();
+            foreach (var town in towns.OrderBy(t => t.Name))
+            {
+                var townStudents = town
+                                    .Students
+                                    .OrderBy(st => st.RegistrationDate)
+                                    .ThenBy(st => st.Name)
+                                    .ThenBy(st => st.Email);
+
+                var groupCount = (int)Math.Ceiling((double)town.Students.Count / town.SeatCount);
+                for (int i = 0; i < groupCount; i++)
+                {
+                    var studentGroup = townStudents.Skip(i * town.SeatCount).Take(town.SeatCount).ToList();
+                    groups.Add(new Group(town, studentGroup));
+                }
+            }
+
+            return groups;
+        }
     }
 }
