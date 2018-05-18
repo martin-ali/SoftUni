@@ -108,7 +108,7 @@ namespace _10_student_groups
 
     internal class Group
     {
-        public Group(Town town, List<Student> students)
+        public Group(Town town, IEnumerable<Student> students)
         {
             this.Town = town;
             this.Students = students;
@@ -116,28 +116,28 @@ namespace _10_student_groups
 
         public Town Town { get; private set; }
 
-        public List<Student> Students { get; private set; } = new List<Student>();
+        public IEnumerable<Student> Students { get; private set; } = new List<Student>();
 
         public static List<Group> DistributeStudentsIntoGroups(List<Town> towns)
         {
-            var groups = new List<Group>();
+            var groupedStudents = new List<Group>();
             foreach (var town in towns.OrderBy(t => t.Name))
             {
-                var townStudents = town
-                                    .Students
-                                    .OrderBy(st => st.RegistrationDate)
-                                    .ThenBy(st => st.Name)
-                                    .ThenBy(st => st.Email);
+                var orderedTownStudents = town
+                                            .Students
+                                            .OrderBy(st => st.RegistrationDate)
+                                            .ThenBy(st => st.Name)
+                                            .ThenBy(st => st.Email);
 
                 var groupCount = (int)Math.Ceiling((double)town.Students.Count / town.SeatCount);
                 for (int i = 0; i < groupCount; i++)
                 {
-                    var studentGroup = townStudents.Skip(i * town.SeatCount).Take(town.SeatCount).ToList();
-                    groups.Add(new Group(town, studentGroup));
+                    var studentGroup = orderedTownStudents.Skip(i * town.SeatCount).Take(town.SeatCount);
+                    groupedStudents.Add(new Group(town, studentGroup));
                 }
             }
 
-            return groups;
+            return groupedStudents;
         }
     }
 }
