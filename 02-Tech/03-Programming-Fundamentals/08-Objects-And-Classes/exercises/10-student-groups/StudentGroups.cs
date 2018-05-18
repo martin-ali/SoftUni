@@ -15,21 +15,21 @@ namespace _10_student_groups
 #endif
 
             var towns = new List<Town>();
-            var townData = Console.ReadLine();
-            while (townData != "End")
+            var input = Console.ReadLine();
+            while (input != "End")
             {
-                var town = Town.Read(townData);
-                var studentData = Console.ReadLine();
-                while (studentData.Contains("|"))
+                var town = Town.Read(input);
+                input = Console.ReadLine();
+
+                while (input.Contains("|"))
                 {
-                    var student = Student.Read(studentData);
+                    var student = Student.Read(input);
                     town.Students.Add(student);
 
-                    studentData = Console.ReadLine();
+                    input = Console.ReadLine();
                 }
 
                 towns.Add(town);
-                townData = studentData;
             }
 
             var groups = Group.DistributeStudentsIntoGroups(towns);
