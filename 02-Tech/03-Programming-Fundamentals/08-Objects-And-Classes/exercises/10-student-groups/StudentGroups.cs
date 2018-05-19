@@ -46,13 +46,6 @@ namespace _10_student_groups
 
     internal class Student
     {
-        public Student(string name, string email, DateTime registrationDate)
-        {
-            Name = name;
-            Email = email;
-            RegistrationDate = registrationDate;
-        }
-
         public string Name { get; private set; }
 
         public string Email { get; private set; }
@@ -67,23 +60,17 @@ namespace _10_student_groups
             var email = studentData[2];
             var registrationDate = DateTime.ParseExact(studentData[3], "d-MMM-yyyy", CultureInfo.InvariantCulture);
 
-            return new Student(name, email, registrationDate);
-        }
-
-        public override string ToString()
-        {
-            return $"Name: {this.Name}, Email: {this.Email}, Registration date: {this.RegistrationDate:dd-MMM-yyyy}";
+            return new Student
+            {
+                Name = name,
+                Email = email,
+                RegistrationDate = registrationDate
+            };
         }
     }
 
     internal class Town
     {
-        public Town(string name, int seatsCount)
-        {
-            this.Name = name;
-            this.SeatCount = seatsCount;
-        }
-
         public string Name { get; private set; }
 
         public int SeatCount { get; private set; }
@@ -97,23 +84,16 @@ namespace _10_student_groups
             var townName = data[0];
             var seatCount = int.Parse(data[1]);
 
-            return new Town(townName, seatCount);
-        }
-
-        public override string ToString()
-        {
-            return $"Name: {this.Name}, Seat count: {this.SeatCount}";
+            return new Town
+            {
+                Name = townName,
+                SeatCount = seatCount
+            };
         }
     }
 
     internal class Group
     {
-        public Group(Town town, IEnumerable<Student> students)
-        {
-            this.Town = town;
-            this.Students = students;
-        }
-
         public Town Town { get; private set; }
 
         public IEnumerable<Student> Students { get; private set; } = new List<Student>();
@@ -133,7 +113,7 @@ namespace _10_student_groups
                 for (int i = 0; i < groupCount; i++)
                 {
                     var studentGroup = orderedTownStudents.Skip(i * town.SeatCount).Take(town.SeatCount);
-                    groupedStudents.Add(new Group(town, studentGroup));
+                    groupedStudents.Add(new Group { Town = town, Students = studentGroup });
                 }
             }
 
