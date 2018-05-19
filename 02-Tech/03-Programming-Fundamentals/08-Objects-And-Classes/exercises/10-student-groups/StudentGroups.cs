@@ -100,7 +100,7 @@ namespace _10_student_groups
 
         public static List<Group> DistributeStudentsIntoGroups(List<Town> towns)
         {
-            var groupedStudents = new List<Group>();
+            var groups = new List<Group>();
             foreach (var town in towns.OrderBy(t => t.Name))
             {
                 var orderedTownStudents = town
@@ -110,14 +110,14 @@ namespace _10_student_groups
                                             .ThenBy(st => st.Email);
 
                 var groupCount = (int)Math.Ceiling((double)town.Students.Count / town.SeatCount);
-                for (int i = 0; i < groupCount; i++)
+                for (int currentGroup = 0; currentGroup < groupCount; currentGroup++)
                 {
-                    var studentGroup = orderedTownStudents.Skip(i * town.SeatCount).Take(town.SeatCount);
-                    groupedStudents.Add(new Group { Town = town, Students = studentGroup });
+                    var studentGroup = orderedTownStudents.Skip(currentGroup * town.SeatCount).Take(town.SeatCount);
+                    groups.Add(new Group { Town = town, Students = studentGroup });
                 }
             }
 
-            return groupedStudents;
+            return groups;
         }
     }
 }
