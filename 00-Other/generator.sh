@@ -6,8 +6,6 @@
 #   PARAMETERS: 1 - the text string to pad (no default)
 #               2 - how long the padded string is to be (default 80)
 #               3 - the character to pad with (default '-')
-#               4 - the side to pad on, L or R  or C for centre (default R)
-#      RETURNS: Nothing
 #===============================================================================
 pad () {
     local text=${1?Usage: pad text [length] [character] [L|R|C]}
@@ -25,7 +23,7 @@ pad () {
     echo "${line}${text}"
 }
 
-items=(
+projects=(
     "Convert from Base-10 to Base-N"
     "Convert from Base-N to Base-10"
     "Unicode Characters"
@@ -37,21 +35,18 @@ items=(
     "Melrah Shake"
 )
 
-len=${#items[@]}
-# echo ${#items[@]}
-
-# for i in ${items[@]}
-for i in {0..8}
+index=1
+for i in "${projects[@]}"
 do
-    projectNumber=$(($i+1))
-    indexLength=$((2-${#projectNumber}))
-    nameLowercase=${items[$i],,}
+    indexLength=$((2-${#index}))
+    nameLowercase=${i,,}
     nameHyphenized=${nameLowercase//\ /-}
-    nameUnpadded=$(($projectNumber))-${nameHyphenized}
+    nameUnpadded=$index-$nameHyphenized
     padding=$((indexLength+${#nameUnpadded}))
-    namePadded=$(pad ${nameUnpadded} ${padding} '0')
+    namePadded=$(pad $nameUnpadded $padding '0')
     #
-    echo ${namePadded}
+    echo $namePadded
+    ((index++))
+    # dotnet new console -o ${namePadded}
     # echo ${padding} - ${#nameUnpadded} - ${indexLength} - ${#i}
-    # dotnet new console -o $(($i+1))-${items[$i]}
 done
