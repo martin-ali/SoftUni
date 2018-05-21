@@ -9,26 +9,26 @@ namespace _01_convert_from_base_10_to_base_n
     {
         static void Main()
         {
-            var input = Console.ReadLine().Split(' ').Select(BigInteger.Parse).ToArray();
-            var toBase = input[0];
-            var decimalNumber = input[1];
+            var input = Console.ReadLine().Split(' ');
+            var number = BigInteger.Parse(input[1]);
+            var toBase = int.Parse(input[0]);
 
-            var nBaseNumber = ConvertToBaseN(decimalNumber, toBase);
+            var nBaseNumber = ConvertBase10ToBaseN(number, toBase);
 
             Console.WriteLine(nBaseNumber);
         }
 
-        private static string ConvertToBaseN(BigInteger decimalNumber, BigInteger toBase)
+        private static string ConvertBase10ToBaseN(BigInteger decimalNumber, int toBase)
         {
-            var nBaseNumber = "";
+            var BaseNNumber = "";
             while (decimalNumber > 0)
             {
                 var remainder = decimalNumber % toBase;
                 decimalNumber /= toBase;
-                nBaseNumber = remainder + nBaseNumber;
+                BaseNNumber = remainder + BaseNNumber;
             }
 
-            return nBaseNumber;
+            return BaseNNumber;
         }
     }
 }
