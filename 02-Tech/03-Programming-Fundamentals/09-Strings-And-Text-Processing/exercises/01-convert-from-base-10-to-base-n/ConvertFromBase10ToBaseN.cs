@@ -13,22 +13,22 @@ namespace _01_convert_from_base_10_to_base_n
             var toBase = input[0];
             var decimalNumber = input[1];
 
-            var nBaseNumber = ConvertToBinary(decimalNumber, toBase);
+            var nBaseNumber = ConvertToBaseN(decimalNumber, toBase);
 
             Console.WriteLine(nBaseNumber);
         }
 
-        private static string ConvertToBinary(BigInteger decimalNumber, BigInteger toBase)
+        private static string ConvertToBaseN(BigInteger decimalNumber, BigInteger toBase)
         {
-            var binaryNumber = "";
+            var nBaseNumber = "";
             while (decimalNumber > 0)
             {
                 var remainder = decimalNumber % toBase;
                 decimalNumber /= toBase;
-                binaryNumber = remainder + binaryNumber;
+                nBaseNumber = remainder + nBaseNumber;
             }
 
-            return binaryNumber;
+            return nBaseNumber;
         }
     }
 }
