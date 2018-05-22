@@ -28,6 +28,7 @@ namespace _06_sum_big_numbers
             var secondDigits = secondNumber.PadLeft(length, '0').Select(x => int.Parse(x.ToString())).ToArray();
             var result = new Stack<int>();
 
+            // Doable with Zip()
             var remainder = 0;
             for (long i = firstDigits.Length - 1; i >= 0; i--)
             {
