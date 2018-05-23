@@ -13,7 +13,6 @@ namespace _09_legendary_farming
             Console.SetIn(new StreamReader("tests/test1.txt"));
             #endif
 
-
             var junkMaterials = new SortedDictionary<string, int>();
             var keyMaterials = new SortedDictionary<string, int>
             {
