@@ -24,13 +24,8 @@ namespace _06_sum_big_numbers
         {
             var length = Math.Max(firstNumber.Length, secondNumber.Length);
 
-<<<<<<< Updated upstream
             var firstNumberDigits = firstNumber.PadLeft(length, '0');
             var secondNumberDigits = secondNumber.PadLeft(length, '0');
-=======
-            var firstNumberDigits = firstNumber.TrimStart('0').PadLeft(length, '0');
-            var secondNumberDigits = secondNumber.TrimStart('0').PadLeft(length, '0');
->>>>>>> Stashed changes
             var result = new Stack<int>();
 
             // Doable with Zip()
