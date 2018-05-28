@@ -1,22 +1,26 @@
 ﻿using System;
+using System.IO;
 using System.Text.RegularExpressions;
 
 namespace _01_extract_emails
 {
     class ExtractEmails
     {
-        // ([A-z0-9]+[.-_]?)@([A-z.-]+)
-        private static readonly string EmailPattern = $"{UserPattern}@{HostPattern}";
+        private static readonly string userPattern = @" [a-z0-9]+([-_.][a-z0-9]+)*";
 
-        private static readonly string UserPattern = $"x";
+        private static readonly string hostPattern = @"[a-z0-9-]+(\.[a-z0-9-]+)+";
 
-        private static readonly string HostPattern = $"x";
+        private static readonly string validEmailPattern = $"{userPattern}@{hostPattern}";
 
         static void Main()
         {
+            #if DEBUG
+            Console.SetIn(new StreamReader("test.txt"));
+            #endif
+
             var text = Console.ReadLine();
-            var emails = Regex.Matches(text, EmailPattern);
-            foreach (Match email in emails)
+            var validEmails = Regex.Matches(text, validEmailPattern);
+            foreach (Match email in validEmails)
             {
                 Console.WriteLine(email);
             }
