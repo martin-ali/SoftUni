@@ -9,9 +9,9 @@ namespace _06_sum_big_numbers
     {
         static void Main()
         {
-#if DEBUG
+            #if DEBUG
             Console.SetIn(new StreamReader($"tests/test2.txt"));
-#endif
+            #endif
 
             var firstNumber = Console.ReadLine().TrimStart('0');
             var secondNumber = Console.ReadLine().TrimStart('0');
