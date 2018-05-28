@@ -9,9 +9,9 @@ namespace _06_sum_big_numbers
     {
         static void Main()
         {
-            #if DEBUG
+#if DEBUG
             Console.SetIn(new StreamReader($"tests/test2.txt"));
-            #endif
+#endif
 
             var firstNumber = Console.ReadLine().TrimStart('0');
             var secondNumber = Console.ReadLine().TrimStart('0');
@@ -24,15 +24,17 @@ namespace _06_sum_big_numbers
         {
             var length = Math.Max(firstNumber.Length, secondNumber.Length);
 
-            var firstDigits = firstNumber.PadLeft(length, '0').Select(x => int.Parse(x.ToString())).ToArray();
-            var secondDigits = secondNumber.PadLeft(length, '0').Select(x => int.Parse(x.ToString())).ToArray();
+            var firstNumberDigits = firstNumber.PadLeft(length, '0');
+            var secondNumberDigits = secondNumber.PadLeft(length, '0');
             var result = new Stack<int>();
 
             // Doable with Zip()
             var remainder = 0;
-            for (long i = firstDigits.Length - 1; i >= 0; i--)
+            for (int i = firstNumberDigits.Length - 1; i >= 0; i--)
             {
-                var sum = firstDigits[i] + secondDigits[i] + remainder;
+                var firstNumberDigit = firstNumberDigits[i] - 48;
+                var secondNumberDigit = secondNumberDigits[i] - 48;
+                var sum = firstNumberDigit + secondNumberDigit + remainder;
 
                 if (sum > 9)
                 {
