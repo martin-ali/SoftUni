@@ -13,8 +13,8 @@ namespace _06_sum_big_numbers
             Console.SetIn(new StreamReader($"tests/test2.txt"));
 #endif
 
-            var firstNumber = Console.ReadLine().TrimStart('0');
-            var secondNumber = Console.ReadLine().TrimStart('0');
+            var firstNumber = Console.ReadLine();
+            var secondNumber = Console.ReadLine();
 
             var sum = SumBigIntegers(firstNumber, secondNumber);
             Console.WriteLine(sum);
@@ -24,8 +24,13 @@ namespace _06_sum_big_numbers
         {
             var length = Math.Max(firstNumber.Length, secondNumber.Length);
 
+<<<<<<< Updated upstream
             var firstNumberDigits = firstNumber.PadLeft(length, '0');
             var secondNumberDigits = secondNumber.PadLeft(length, '0');
+=======
+            var firstNumberDigits = firstNumber.TrimStart('0').PadLeft(length, '0');
+            var secondNumberDigits = secondNumber.TrimStart('0').PadLeft(length, '0');
+>>>>>>> Stashed changes
             var result = new Stack<int>();
 
             // Doable with Zip()
