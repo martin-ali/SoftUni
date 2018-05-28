@@ -11,6 +11,7 @@ namespace _03_unicode_characters
             {
                 Console.Write(GetUnicodeRepresentation(input[i]).ToLower());
             }
+
             Console.WriteLine();
         }
 
