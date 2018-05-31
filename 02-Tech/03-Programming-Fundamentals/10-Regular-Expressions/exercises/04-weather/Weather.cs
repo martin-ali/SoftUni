@@ -15,26 +15,26 @@ namespace _04_weather
             #endif
 
             var pattern = new Regex(@"([A-Z]{2})(\d+\.\d*)([A-Za-z]+)\|(.*)$");
-            var cityInformation = new Dictionary<string, (float temperature, string weatherType)>();
+            var weatherByCity = new Dictionary<string, (float temperature, string weatherType)>();
 
             var input = Console.ReadLine();
             while (input != "end")
             {
-                var weatherInformation = pattern.Match(input);
-                if (weatherInformation.Success)
+                var weatherInformationMatch = pattern.Match(input);
+                if (weatherInformationMatch.Success)
                 {
-                    var city = weatherInformation.Groups[1].Value;
-                    var temperature = float.Parse(weatherInformation.Groups[2].Value);
-                    var weather = weatherInformation.Groups[3].Value;
+                    var city = weatherInformationMatch.Groups[1].Value;
+                    var temperature = float.Parse(weatherInformationMatch.Groups[2].Value);
+                    var weather = weatherInformationMatch.Groups[3].Value;
 
-                    cityInformation[city] = (temperature, weather);
+                    weatherByCity[city] = (temperature, weather);
                 }
 
                 input = Console.ReadLine();
             }
 
-            var orderedCities = cityInformation.OrderBy(city => city.Value.temperature);
-            foreach (var city in orderedCities)
+            var orderedWeatherByCity = weatherByCity.OrderBy(city => city.Value.temperature);
+            foreach (var city in orderedWeatherByCity)
             {
                 Console.WriteLine($"{city.Key} => {city.Value.temperature:0.00} => {city.Value.weatherType}");
             }
