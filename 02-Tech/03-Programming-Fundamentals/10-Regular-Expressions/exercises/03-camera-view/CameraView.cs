@@ -11,10 +11,13 @@ namespace _03_camera_view
             var arguments = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var elements = Console.ReadLine().Split("|<");
 
+            int length = arguments[1];
+            int startIndex = arguments[0];
+
             var result = new List<string>();
             foreach (var element in elements.Skip(1))
             {
-                string view = string.Join("", element.Skip(arguments[0]).Take(arguments[1]));
+                string view = element.Substring(startIndex, Math.Clamp(length, 0, element.Length - startIndex));
                 result.Add(view);
             }
 
