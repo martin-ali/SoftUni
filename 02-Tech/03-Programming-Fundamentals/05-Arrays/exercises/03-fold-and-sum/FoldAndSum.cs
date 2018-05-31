@@ -25,7 +25,7 @@ namespace _03_fold_and_sum
             // }
 
             // LINQ method
-            var sum = firstRow.Select((element, index) => element + secondRow[index]);
+            var sum = firstRow.Zip(secondRow, (first, second) => first + second);
 
             Console.WriteLine(string.Join(" ", sum));
         }
