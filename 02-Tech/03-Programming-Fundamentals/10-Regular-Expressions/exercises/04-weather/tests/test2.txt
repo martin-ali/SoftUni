@@ -1,0 +1,6 @@
+invalidKA31.41|sunny|
+validCA12.41Rainy|absad
+gfASFasASPA31.21cloudy|asd
+YA21.51sunny|
+sadL21.41rainy|adas
+end
