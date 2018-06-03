@@ -1,0 +1,6 @@
+Most Frequent Number
+Index of Letters
+Count of Symbols
+Max Sequence of Equal Elements
+Fix Emails
+Advertisement Message
