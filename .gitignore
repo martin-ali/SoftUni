@@ -6,7 +6,9 @@
 
 # Personal additions
 bower_modules/
+bower_components/
 node_modules/
+jspm_packages/
 .vscode/
 vendor/
 # User-specific files
