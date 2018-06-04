@@ -17,7 +17,7 @@ namespace _04_roli_the_coder
 
         static void Main()
         {
-            var eventDataById = new Dictionary<string, (string name, HashSet<string> participants)>();
+            var eventDataById = new Dictionary<string, (string name, SortedSet<string> participants)>();
 
             var input = Console.ReadLine();
             while (input != "Time for Code")
@@ -31,7 +31,7 @@ namespace _04_roli_the_coder
 
                     if (eventDataById.ContainsKey(id) == false)
                     {
-                        eventDataById[id] = (eventName, new HashSet<string>());
+                        eventDataById[id] = (eventName, new SortedSet<string>());
                     }
 
                     if (eventDataById[id].name == eventName)
@@ -50,8 +50,7 @@ namespace _04_roli_the_coder
             {
                 Console.WriteLine($"{@event.Value.name} - {@event.Value.participants.Count}");
 
-                var orderedParticipants = @event.Value.participants.OrderBy(p => p);
-                foreach (var participant in orderedParticipants)
+                foreach (var participant in @event.Value.participants)
                 {
                     Console.WriteLine(participant);
                 }
