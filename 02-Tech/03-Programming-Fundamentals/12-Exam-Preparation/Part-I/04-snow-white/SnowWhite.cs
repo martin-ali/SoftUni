@@ -20,8 +20,8 @@ namespace _04_snow_white
                 var physics = int.Parse(input[2]);
                 var id = $"{name}{color}";
 
-                var oldDwarfIsWeaker = dwarfStatsById.ContainsKey(id) == false || dwarfStatsById[id].physics < physics;
-                if (oldDwarfIsWeaker)
+                var oldDwarfIsWeakerOrNonexistant = dwarfStatsById.ContainsKey(id) == false || dwarfStatsById[id].physics < physics;
+                if (oldDwarfIsWeakerOrNonexistant)
                 {
                     dwarfStatsById[id] = (name, color, physics);
 
@@ -36,6 +36,8 @@ namespace _04_snow_white
                 input = Console.ReadLine().Split(Separator, StringSplitOptions.RemoveEmptyEntries);
             }
 
+            // This also passes zero test 2
+            // var occurrencesByColor = dwarfStatsById.ToLookup(d => d.Value.color, d => d.Key);
             var orderedDwarfStatsById = dwarfStatsById.OrderByDescending(d => d.Value.physics).ThenByDescending(d => occurrencesByColor[d.Value.color]);
             foreach (var dwarfStats in orderedDwarfStatsById)
             {
