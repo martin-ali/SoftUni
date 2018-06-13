@@ -24,17 +24,15 @@ namespace _06_sum_big_numbers
         {
             var length = Math.Max(firstNumber.Length, secondNumber.Length);
 
-            var firstNumberDigits = firstNumber.PadLeft(length, '0');
-            var secondNumberDigits = secondNumber.PadLeft(length, '0');
+            var firstDigits = firstNumber.PadLeft(length, '0').Select(x => int.Parse(x.ToString())).ToArray();
+            var secondDigits = secondNumber.PadLeft(length, '0').Select(x => int.Parse(x.ToString())).ToArray();
             var result = new Stack<int>();
 
             // Doable with Zip()
             var remainder = 0;
-            for (int i = firstNumberDigits.Length - 1; i >= 0; i--)
+            for (long i = firstDigits.Length - 1; i >= 0; i--)
             {
-                var firstNumberDigit = firstNumberDigits[i] - 48;
-                var secondNumberDigit = secondNumberDigits[i] - 48;
-                var sum = firstNumberDigit + secondNumberDigit + remainder;
+                var sum = firstDigits[i] + secondDigits[i] + remainder;
 
                 if (sum > 9)
                 {
@@ -51,7 +49,7 @@ namespace _06_sum_big_numbers
 
             if (remainder == 1) result.Push(remainder);
 
-            return string.Join("", result);
+            return string.Join("", result).TrimStart('0');
         }
     }
 }
