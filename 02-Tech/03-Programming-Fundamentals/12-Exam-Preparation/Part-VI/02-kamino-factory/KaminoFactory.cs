@@ -15,15 +15,14 @@ namespace _02_kamino_factory
             for (int sample = 1; input != "Clone them!"; sample++, input = Console.ReadLine())
             {
                 var dna = input.Replace("!", "");
-                var subSeq = LongestSubsequenceLength(dna);
+                var sequence = LongestSubsequenceLength(dna);
 
-                dnaSequences.Add((subSeq.length, subSeq.start, subSeq.sum, sample, dna));
+                dnaSequences.Add((sequence.length, sequence.start, sequence.sum, sample, dna));
             }
 
-            var bestDna = dnaSequences.OrderBy(s => s.length).ThenBy(s => s.start).ThenByDescending(s => s.sum).First();
+            var bestDna = dnaSequences.OrderByDescending(s => s.length).ThenBy(s => s.start).ThenByDescending(s => s.sum).First();
             Console.WriteLine($"Best DNA sample {bestDna.sample} with sum: {bestDna.sum}.");
             Console.WriteLine(string.Join(" ", bestDna.sequence.ToCharArray()));
-            Console.WriteLine(1);
         }
 
         private static (int length, int start, int sum) LongestSubsequenceLength(string dna)
