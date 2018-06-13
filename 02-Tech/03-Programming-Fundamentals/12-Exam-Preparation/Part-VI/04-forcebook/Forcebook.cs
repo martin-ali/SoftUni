@@ -9,10 +9,10 @@ namespace _04_forcebook
     {
         static void Main()
         {
-#if DEBUG
+            #if DEBUG
             var testNumber = Console.ReadLine();
             Console.SetIn(new StreamReader($"tests/test{testNumber}.txt"));
-#endif
+            #endif
 
             var forceUsersBySide = new SortedDictionary<string, List<string>>();
 
@@ -26,7 +26,7 @@ namespace _04_forcebook
                     var side = query[0];
                     var user = query[1];
 
-                    bool forceUserExists = forceUsersBySide.Any(fu => fu.Value.Contains(user));
+                    bool forceUserExists = forceUsersBySide.Any(f => f.Value.Contains(user));
                     if (forceUserExists == false)
                     {
                         if (forceUsersBySide.ContainsKey(side) == false)
@@ -44,7 +44,7 @@ namespace _04_forcebook
                     var user = query[0];
                     var side = query[1];
 
-                    forceUsersBySide.Any(fu => fu.Value.Remove(user));
+                    forceUsersBySide.Any(f => f.Value.Remove(user));
 
                     if (forceUsersBySide.ContainsKey(side) == false)
                     {
@@ -52,7 +52,6 @@ namespace _04_forcebook
                     }
 
                     forceUsersBySide[side].Add(user);
-
                     Console.WriteLine($"{user} joins the {side} side!");
                 }
 
@@ -60,13 +59,13 @@ namespace _04_forcebook
             }
 
             var orderedForceUsersBySide = forceUsersBySide
-                                            .Where(fu => fu.Value.Count > 0)
-                                            .OrderByDescending(fu => fu.Value.Count);
+                                            .Where(f => f.Value.Count > 0)
+                                            .OrderByDescending(f => f.Value.Count);
 
             foreach (var side in orderedForceUsersBySide)
             {
                 Console.WriteLine($"Side: {side.Key}, Members: {side.Value.Count}");
-                foreach (var forceUser in side.Value.OrderBy(fu => fu))
+                foreach (var forceUser in side.Value.OrderBy(f => f))
                 {
                     Console.WriteLine($"! {forceUser}");
                 }

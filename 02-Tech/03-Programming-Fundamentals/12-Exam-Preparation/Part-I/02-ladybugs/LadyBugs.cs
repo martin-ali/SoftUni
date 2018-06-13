@@ -8,9 +8,9 @@ namespace _02_ladybugs
     {
         static void Main()
         {
-#if DEBUG
+            #if DEBUG
             Console.SetIn(new StreamReader("tests/test4.txt"));
-#endif
+            #endif
 
             var fieldSize = int.Parse(Console.ReadLine());
             var initialPositions = Console
