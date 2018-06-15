@@ -8,14 +8,13 @@ namespace _04_winning_ticket
     {
         static void Main()
         {
-#if DEBUG
+            #if DEBUG
             Console.SetIn(new StreamReader("test.txt"));
-#endif
+            #endif
 
-            var sixToNine = @"{6,9}";
-            var winningTicket = $@"(@{sixToNine}|#{sixToNine}|\${sixToNine}|\^{sixToNine})";
-            var winningTicketPattern = new Regex($@"({winningTicket})");
+            var sixToNineTimes = @"{6,9}";
             var twentyTimes = @"{20}";
+            var winningTicketPattern = new Regex($@"(@{sixToNineTimes}|#{sixToNineTimes}|\${sixToNineTimes}|\^{sixToNineTimes})");
             var jackpotTicketPattern = new Regex($@"@{twentyTimes}|#{twentyTimes}|\${twentyTimes}|\^{twentyTimes}");
             var tickets = Regex.Split(Console.ReadLine(), @"\s*,\s*");
 
