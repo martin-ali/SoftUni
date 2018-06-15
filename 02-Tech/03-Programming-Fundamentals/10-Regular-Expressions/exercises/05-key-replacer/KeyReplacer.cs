@@ -8,9 +8,9 @@ namespace _05_key_replacer
     {
         static void Main()
         {
-            var keys = Regex.Split(Console.ReadLine(), @"[|</].*[|</]");
-            var pattern = new Regex($"{keys.First()}(.*?){keys.Last()}");
+            var keys = Console.ReadLine().Split(new char[] { '<', '|', '\\' }, StringSplitOptions.RemoveEmptyEntries);
             var text = Console.ReadLine();
+            var pattern = new Regex($"{keys.First()}(.*?){keys.Last()}");
 
             var matches = pattern.Matches(text).Select(m => m.Groups[1].Value);
             var message = string.Concat(matches);
