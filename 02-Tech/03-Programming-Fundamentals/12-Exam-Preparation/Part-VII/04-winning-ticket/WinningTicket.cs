@@ -13,29 +13,33 @@ namespace _04_winning_ticket
 #endif
 
             var sixToNine = @"{6,9}";
-            var group = $@"(@{sixToNine}|#{sixToNine}|\${sixToNine}|\^{sixToNine})";
-            var winningTicketPattern = new Regex($@"({group}).*\1");
-            var twenty = @"{20}";
-            var jackpotTicketPattern = new Regex($@"@{twenty}|#{twenty}|\${twenty}|\^{twenty}");
+            var winningTicket = $@"(@{sixToNine}|#{sixToNine}|\${sixToNine}|\^{sixToNine})";
+            var winningTicketPattern = new Regex($@"({winningTicket})");
+            var twentyTimes = @"{20}";
+            var jackpotTicketPattern = new Regex($@"@{twentyTimes}|#{twentyTimes}|\${twentyTimes}|\^{twentyTimes}");
             var tickets = Regex.Split(Console.ReadLine(), @"\s*,\s*");
 
             foreach (var ticket in tickets)
             {
-                var jackpotTicket = jackpotTicketPattern.Match(ticket);
-                var winningTicket = winningTicketPattern.Match(ticket);
-
                 if (ticket.Length != 20)
                 {
                     Console.WriteLine("invalid ticket");
+                    continue;
                 }
-                else if (jackpotTicket.Success)
+
+                var jackpotTicket = jackpotTicketPattern.Match(ticket);
+                var left = winningTicketPattern.Match(ticket, 0, 10);
+                var right = winningTicketPattern.Match(ticket, 10);
+
+                if (jackpotTicket.Success)
                 {
                     Console.WriteLine($"ticket \"{ticket}\" - 10{jackpotTicket.Value[0]} Jackpot!");
                 }
-                else if (winningTicket.Success)
+                else if (left.Success && right.Success)
                 {
-                    int length = Math.Min(winningTicket.Groups[2].Length, winningTicket.Groups[1].Length);
-                    Console.WriteLine($"ticket \"{ticket}\" - {length}{winningTicket.Groups[2].Value[0]}");
+                    var winner = left.Length < right.Length ? left : right;
+                    int length = Math.Min(winner.Groups[1].Length, winner.Groups[1].Length);
+                    Console.WriteLine($"ticket \"{ticket}\" - {length}{winner.Groups[1].Value[0]}");
                 }
                 else
                 {
