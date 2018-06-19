@@ -47,11 +47,11 @@ namespace _02_softuni_karaoke
                                             .OrderByDescending(p => p.Value.Count)
                                             .ThenBy(p => p.Key);
 
-                foreach (var performer in orderedAwardsByPerformer)
+                foreach (var performerAwards in orderedAwardsByPerformer)
                 {
-                    Console.WriteLine($"{performer.Key}: {performer.Value.Count} awards");
+                    Console.WriteLine($"{performerAwards.Key}: {performerAwards.Value.Count} awards");
 
-                    var awards = performer.Value.OrderBy(a => a);
+                    var awards = performerAwards.Value.OrderBy(a => a);
                     foreach (var award in awards)
                     {
                         Console.WriteLine($"--{award}");
