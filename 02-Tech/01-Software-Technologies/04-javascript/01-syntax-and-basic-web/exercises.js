@@ -191,20 +191,10 @@ function storingObject(commands)
         const commandRaw = commands[current].split(' -> ');
         const [name, age, grade] = commandRaw;
 
-        students.push(
-        {
-            name,
-            age,
-            grade
-        });
+        students.push({ name, age, grade });
     }
 
-    students.forEach((
-    {
-        name,
-        age,
-        grade
-    }) =>
+    students.forEach(({ name, age, grade }) =>
     {
         console.log(`Name: ${name}\nAge: ${age}\nGrade: ${grade}`);
     });
@@ -217,12 +207,7 @@ function deserializeJson(lines)
     for (let current = 0; current < lines.length; ++current)
     {
         const deserializedObj = JSON.parse(lines[current]);
-        const
-        {
-            name,
-            age,
-            date
-        } = deserializedObj;
+        const { name, age, date } = deserializedObj;
 
         console.log(`Name: ${name}\nAge: ${age}\nDate: ${date}`);
     }
