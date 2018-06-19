@@ -15,13 +15,13 @@
 	if (isset($_GET['num']))
 	{
 		$end = intval($_GET['num']);
-		$factoriel = 1;
+		$factorial = 1;
 		for ($current = 1; $current <= $end; $current++)
 		{
-			$factoriel *= $current;
+			$factorial *= $current;
 		}
 
-		echo $factoriel;
+		echo $factorial;
 	}
 
 	?>
