@@ -15,7 +15,8 @@ namespace _02_ladybugs
             var fieldSize = int.Parse(Console.ReadLine());
             var initialPositions = Console
                                     .ReadLine()
-                                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse)
+                                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries)
+                                    .Select(int.Parse)
                                     .Where(x => CoordinatesAreValid(x, fieldSize));
 
             var field = new byte[fieldSize];
@@ -55,9 +56,9 @@ namespace _02_ladybugs
             Console.WriteLine(result);
         }
 
-        private static bool CoordinatesAreValid(int ladybug, int end)
+        private static bool CoordinatesAreValid(int index, int end)
         {
-            return (0 <= ladybug && ladybug < end);
+            return (0 <= index && index < end);
         }
     }
 }
