@@ -17,15 +17,10 @@ namespace _03_regexmon
             {
                 var match = current.Match(text);
 
-                if (match.Success)
-                {
-                    Console.WriteLine(match.Value);
-                    text = text.Substring(match.Index);
-                }
-                else
-                {
-                    break;
-                }
+                if (match.Success == false) break;
+
+                Console.WriteLine(match.Value);
+                text = text.Substring(match.Index);
 
                 (current, next) = (next, current);
             }
