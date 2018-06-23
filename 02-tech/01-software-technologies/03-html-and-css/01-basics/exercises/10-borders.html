@@ -1,27 +1,47 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="utf-8" />
-        <title>Borders</title>
-        <style>
-            body {
-                background-color: darkgray;
-                color: wheat;
-            }
-        </style>
-    </head>
+<head>
+    <title>Borders</title>
+    <style>
+        .border {
+            background-color: darkgray;
+            border: 5px solid;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 25px;
+        }
 
-    <body>
-        <p style="text-align: center; border-style: solid; border-width: 5px; border-color: red; border-radius: 10px; background-color: gray">
-            <span style="color: red">Red</span> border
-        </p>
-        <p style="text-align: center; border-style: solid; border-width: 5px; border-color: green; border-radius: 10px; background-color: gray">
-            <span style="color: green">Green</span> border
-        </p>
-        <p style="text-align: center; border-style: solid; border-width: 5px; border-color: blue; border-radius: 10px; background-color: gray">
-            <span style="color: blue"> Blue</span> border
-        </p>
-    </body>
+        .blueText {
+            color: blue;
+        }
+
+        .redText {
+            color: red;
+        }
+
+        .greenText {
+            color: green;
+        }
+
+        .blueBorder {
+            border-color: blue;
+        }
+
+        .redBorder {
+            border-color: red;
+        }
+
+        .greenBorder {
+            border-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="border redBorder"><span class="redText">Red</span> Border</p>
+    <p class="border greenBorder"><span class="greenText">Green</span> Border</p>
+    <p class="border blueBorder"><span class="blueText">Blue</span> Border</p>
+</body>
 
 </html>
