@@ -1,0 +1,9 @@
+7
+1000 = F1rstL3gion -> Aisers:15000
+500 = F1rstL3gion -> Aisers:1000
+200 = F1rstL3gion -> Guards:2000
+2000 = Second!egion -> Guards:2000
+1500 = Second!egion -> Aisers:15000
+2500 = Second!egion -> Spies:2000
+1000 = Forked_Ones -> Guards:10000000
+Guards

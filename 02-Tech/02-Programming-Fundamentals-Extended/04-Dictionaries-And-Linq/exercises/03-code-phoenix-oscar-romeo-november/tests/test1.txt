@@ -1,0 +1,7 @@
+Mozilla -> Tony
+Tony -> Godzilla
+Mozilla -> Dony
+Tony -> Franzilla
+Mozilla -> Mony
+Tony -> Mozilla
+Blaze it!

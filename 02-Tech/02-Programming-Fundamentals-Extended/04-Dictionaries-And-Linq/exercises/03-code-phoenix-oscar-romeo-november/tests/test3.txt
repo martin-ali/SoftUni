@@ -1,0 +1,10 @@
+Ivan -> Pesho
+Ivan -> Gosho
+Ivan -> Stamat
+Ivan -> Kon
+Kon -> Kuche
+Kon -> Kotka
+Kon -> Ptitsa
+Kon -> Ivan
+Kon -> Ivan
+Blaze it!

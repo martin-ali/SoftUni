@@ -1,0 +1,13 @@
+FireBird -> FireMane
+Phoenix -> FireVoid
+FireVoid -> FireMane
+FireSnow -> FireMane
+Phoenix -> FireBird
+FireMane -> FireBird
+FireMane -> FireVoid
+Phoenix -> FireSnow
+FireMane -> FireSnow
+FireMane -> FireMane
+Phoenix -> FireMane
+Phoenix -> FireVoid
+Blaze it!

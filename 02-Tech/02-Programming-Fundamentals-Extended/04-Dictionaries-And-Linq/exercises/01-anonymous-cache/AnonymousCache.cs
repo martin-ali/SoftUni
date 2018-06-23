@@ -15,7 +15,7 @@ namespace _01_anonymous_cache
         }
     }
 
-    class Program
+    class AnonymousCache
     {
         public static void Main()
         {
