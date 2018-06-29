@@ -9,12 +9,12 @@ namespace _04_hornet_assault
         {
             var beehives = Console
                             .ReadLine()
-                            .Split(new char[] { ' ' }, StringSplitOptions.None)
+                            .Split()
                             .Select(long.Parse)
                             .ToList();
             var hornets = Console
                             .ReadLine()
-                            .Split(new char[] { ' ' }, StringSplitOptions.None)
+                            .Split()
                             .Select(long.Parse)
                             .ToList();
 
