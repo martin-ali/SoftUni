@@ -1,0 +1,9 @@
+Data Types, Objects, Lists, Exercise:Databases, Exercise:Lists
+Add:Databases
+Insert:Arrays:0
+Remove:Lists
+Exercise:Databases
+Exercise:Databases
+Exercise:Databases
+Exercise:Lists
+course start

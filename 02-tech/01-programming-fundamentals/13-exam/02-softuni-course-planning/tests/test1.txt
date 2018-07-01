@@ -1,0 +1,5 @@
+Data Types, Objects, Lists
+Add:Databases
+Insert:Arrays:0
+Remove:Lists
+course start
