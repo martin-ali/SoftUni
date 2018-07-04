@@ -10,29 +10,20 @@
 			"description": "",
 			"item": [
 				{
-					"name": "00 - Create Book With ID",
+					"name": "00 - All Books",
 					"request": {
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n\t\"10\":\n\t{\n\t\t\"author\":\"Arnold Schw.\",\n\t\t\"title\":\"The terminator\"\n\t}\n}"
-						},
+						"method": "GET",
+						"header": [],
+						"body": {},
 						"url": {
-							"raw": "https://softuni-tech-books.firebaseio.com/Books/.json",
+							"raw": "https://{{firebaseId}}.firebaseio.com/.json",
 							"protocol": "https",
 							"host": [
-								"softuni-tech-books",
+								"{{firebaseId}}",
 								"firebaseio",
 								"com"
 							],
 							"path": [
-								"Books",
 								".json"
 							]
 						}
@@ -40,16 +31,16 @@
 					"response": []
 				},
 				{
-					"name": "01 - get Book #1",
+					"name": "01 - Get Book #1",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "https://softuni-tech-books.firebaseio.com/Books/1/.json",
+							"raw": "https://{{firebaseId}}.firebaseio.com/Books/1/.json",
 							"protocol": "https",
 							"host": [
-								"softuni-tech-books",
+								"{{firebaseId}}",
 								"firebaseio",
 								"com"
 							],
@@ -74,18 +65,19 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"author\":\"Arnold Schw.\",\n\t\"title\":\"The terminator\"\n}"
+							"raw": "{\n    \"author\": \"New Title\",\n    \"title\": \"New Author\"\n}"
 						},
 						"url": {
-							"raw": "https://softuni-tech-books.firebaseio.com/Books.json",
+							"raw": "https://{{firebaseId}}.firebaseio.com/Books/.json",
 							"protocol": "https",
 							"host": [
-								"softuni-tech-books",
+								"{{firebaseId}}",
 								"firebaseio",
 								"com"
 							],
 							"path": [
-								"Books.json"
+								"Books",
+								".json"
 							]
 						}
 					},
@@ -103,13 +95,13 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"year\" : 1981,\n\t\"author\" : \"Not Arnie!\"\n}"
+							"raw": "{\n\t\"year\": 1981,\n\t\"author\": \"New Author\"\n}"
 						},
 						"url": {
-							"raw": "https://softuni-tech-books.firebaseio.com/Books/7/.json",
+							"raw": "https://{{firebaseId}}.firebaseio.com/Books/7/.json",
 							"protocol": "https",
 							"host": [
-								"softuni-tech-books",
+								"{{firebaseId}}",
 								"firebaseio",
 								"com"
 							],
@@ -137,10 +129,10 @@
 							"raw": "\"New terminator has been assigned. Press escape to escape\""
 						},
 						"url": {
-							"raw": "https://softuni-tech-books.firebaseio.com/Books/7/author/.json",
+							"raw": "https://{{firebaseId}}.firebaseio.com/Books/7/author/.json",
 							"protocol": "https",
 							"host": [
-								"softuni-tech-books",
+								"{{firebaseId}}",
 								"firebaseio",
 								"com"
 							],
@@ -153,8 +145,61 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "05 - Create Book With ID",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"13\":\n\t{\n\t    \"author\":\"Arnold Schw.\",\n\t    \"title\":\"The terminator\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "https://{{firebaseId}}.firebaseio.com/Books/.json",
+							"protocol": "https",
+							"host": [
+								"{{firebaseId}}",
+								"firebaseio",
+								"com"
+							],
+							"path": [
+								"Books",
+								".json"
+							]
+						}
+					},
+					"response": []
 				}
 			]
+		},
+		{
+			"name": "01 - GitHub Repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://api.github.com/users/{{techModuleRepo}}/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"users",
+						"{{techModuleRepo}}",
+						"repos"
+					]
+				}
+			},
+			"response": []
 		},
 		{
 			"name": "02 - GitHub issue by ID",
@@ -163,7 +208,8 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json"
+						"value": "application/json",
+						"disabled": true
 					}
 				],
 				"body": {
@@ -171,7 +217,7 @@
 					"raw": "{\n\t\"title\":\"Shinier buttons\",\n\t\"body\":\"Gosho wants frieza buttons\",\n\t\"labels\":[\"enhancement\", \"major\"]\n}"
 				},
 				"url": {
-					"raw": "https://api.github.com/repos/Tech-Module-Jan-2018/test-repo/issues/1",
+					"raw": "https://api.github.com/repos/{{techModuleRepo}}/TestRepository/issues/1",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -180,8 +226,8 @@
 					],
 					"path": [
 						"repos",
-						"Tech-Module-Jan-2018",
-						"test-repo",
+						"{{techModuleRepo}}",
+						"TestRepository",
 						"issues",
 						"1"
 					]
@@ -197,7 +243,7 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "password",
+							"value": "73957395aA",
 							"type": "string"
 						},
 						{
@@ -216,10 +262,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"title\":\"Cooler buttons\",\n  \"body\":\"Pesho wants cooler buttons!\",\n  \"labels\":[\"enchancement\", \"major\"]\n}"
+					"raw": "{\n\t\"title\":\"Cooler buttons\",\n\t\"body\":\"Pesho wants cooler buttons!\",\n\t\"labels\":[\"enhancement\", \"major\"]\n}"
 				},
 				"url": {
-					"raw": "https://api.github.com/repos/Tech-Module-Jan-2018/test-repo/issues",
+					"raw": "https://api.github.com/repos/{{techModuleRepo}}/TestRepository/issues",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -228,8 +274,8 @@
 					],
 					"path": [
 						"repos",
-						"Tech-Module-Jan-2018",
-						"test-repo",
+						"{{techModuleRepo}}",
+						"TestRepository",
 						"issues"
 					]
 				}
@@ -244,7 +290,7 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "password",
+							"value": "73957395aA",
 							"type": "string"
 						},
 						{
@@ -266,7 +312,7 @@
 					"raw": "{\n\t\"title\":\"Ugly buttons\"\n}"
 				},
 				"url": {
-					"raw": "https://api.github.com/repos/Tech-Module-Jan-2018/test-repo/issues/580",
+					"raw": "https://api.github.com/repos/{{techModuleRepo}}/TestRepository/issues/325",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -275,33 +321,10 @@
 					],
 					"path": [
 						"repos",
-						"Tech-Module-Jan-2018",
-						"test-repo",
+						"{{techModuleRepo}}",
+						"TestRepository",
 						"issues",
-						"580"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "01 - GitHub Repos for User Tech-Module- Jan-2018",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://api.github.com/users/Tech-Module-Jan-2018/repos",
-					"protocol": "https",
-					"host": [
-						"api",
-						"github",
-						"com"
-					],
-					"path": [
-						"users",
-						"Tech-Module-Jan-2018",
-						"repos"
+						"325"
 					]
 				}
 			},
