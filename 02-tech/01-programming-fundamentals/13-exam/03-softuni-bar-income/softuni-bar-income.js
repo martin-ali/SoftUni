@@ -14,11 +14,8 @@ function solve(orders)
         const match = validOrderRegex.exec(order);
         if (match)
         {
-            const customer = match[1];
-            const product = match[2];
-            const quantity = +match[3];
-            const price = +match[4];
-            const bill = price * quantity;
+            const [_, customer, product, quantity, price] = match;
+            const bill = (+price) * (+quantity);
 
             console.log(`${customer}: ${product} - ${bill.toFixed(2)}`);
 
