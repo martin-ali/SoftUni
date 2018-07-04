@@ -26,15 +26,15 @@ function solve(entries)
     const sortedPointsByUser = [...pointsByUser.keys()]
         .sort((a, b) =>
         {
-            if (pointsByUser.get(a) == pointsByUser.get(b))
-            {
-                // Ascending by name
-                return a.localeCompare(b);
-            }
-            else
+            if (pointsByUser.get(a) != pointsByUser.get(b))
             {
                 // Descending by points
                 return pointsByUser.get(b) - pointsByUser.get(a);
+            }
+            else
+            {
+                // Ascending by name
+                return a.localeCompare(b);
             }
         });
     for (let user of sortedPointsByUser)
@@ -46,15 +46,15 @@ function solve(entries)
     const sortedSubmissionsByLanguage = [...Object.keys(submissionsByLanguage)]
         .sort((a, b) =>
         {
-            if (submissionsByLanguage[a] == submissionsByLanguage[b])
+            if (submissionsByLanguage[a] != submissionsByLanguage[b])
             {
-                // Ascending by language
-                return a.localeCompare(b);
+                // Descending by submissions
+                return submissionsByLanguage[b] - submissionsByLanguage[a];
             }
             else
             {
-                // Descending ny submissions
-                return submissionsByLanguage[b] - submissionsByLanguage[a];
+                // Ascending by language
+                return a.localeCompare(b);
             }
         });
     for (let language of sortedSubmissionsByLanguage)
