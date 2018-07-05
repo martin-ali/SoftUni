@@ -1,3 +1,4 @@
+// jshint esversion:6
 function solve(entries)
 {
     const submissionsByLanguage = {};

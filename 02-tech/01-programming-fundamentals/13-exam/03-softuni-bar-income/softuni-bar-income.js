@@ -1,3 +1,4 @@
+// jshint esversion:6
 function solve(orders)
 {
     // %([A-Z][a-z]+)%.*<(\w+)>.*\|(\d+)\|\D*(\d+(\.\d+)?)\$
