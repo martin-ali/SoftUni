@@ -31,11 +31,7 @@ function sumsByTown(towns)
     const townInfo = {};
     for (let current = 0; current < towns.length; ++current)
     {
-        const
-        {
-            town,
-            income
-        } = JSON.parse(towns[current]);
+        const { town, income } = JSON.parse(towns[current]);
 
         if (townsOrder.indexOf(town) < 0)
         {
