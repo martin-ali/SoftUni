@@ -1,7 +1,7 @@
 // jshint esversion:6
 function symmetricNumbers([limit])
 {
-    function isSymmetrical(number)
+    function isSymmetric(number)
     {
         const word = String(number);
         const firstHalf = word.substring(0, Math.floor(word.length / 2));
@@ -17,7 +17,10 @@ function symmetricNumbers([limit])
 
     for (let current = 1; current <= limit; ++current)
     {
-        if (isSymmetrical(current)) console.log(current);
+        if (isSymmetric(current))
+        {
+            console.log(current);
+        }
     }
 }
 
