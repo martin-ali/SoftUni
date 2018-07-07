@@ -1,5 +1,4 @@
 // jshint esversion:6
-
 function multiplyNumberBy2([number])
 {
     return number * 2
@@ -50,18 +49,18 @@ function printNumbersNTo1([n])
     }
 }
 
-function printLines(commands)
+function printLines(lines)
 {
-    commands.pop()
-    for (const command of commands)
+    const end = lines.indexOf('stop')
+    for (let i = 0; i < end; ++i)
     {
-        console.log(command)
+        console.log(lines[i])
     }
 }
 
 function printNumbersReversed(numbers)
 {
-    for (let number of numbers.reverse())
+    for (const number of numbers.reverse())
     {
         console.log(number)
     }
@@ -69,13 +68,13 @@ function printNumbersReversed(numbers)
 
 // printNumbersReversed([1, 2, 3, 4, 5])
 
-function setValuesToIndexesInArray(commands)
+function setValuesToIndexesInArray(indexValuePairs)
 {
-    commands.shift()
-    const numbers = []
-    for (const command of commands)
+    const length = Number(indexValuePairs.shift())
+    const numbers = new Array(length)
+    for (const pair of indexValuePairs)
     {
-        const [index, value] = command.split(' - ')
+        const [index, value] = pair.split(' - ')
         numbers[+index] = +value
     }
 
@@ -85,12 +84,13 @@ function setValuesToIndexesInArray(commands)
     }
 }
 
+setValuesToIndexesInArray(['2', '0 - 5', '0 - 6', '0 - 7'])
 // setValuesToIndexesInArray(['3', '0 - 5', '1 - 6', '2 - 7'])
 // setValuesToIndexesInArray(['5', '0 - 3', '3 - -1', '4 - 2'])
 
 function addRemoveElements(commands)
 {
-    let numbers = []
+    const numbers = []
     const execute = {
         add: (x) => numbers.push(x),
         remove: (indexToSkip) =>
@@ -204,7 +204,7 @@ function serializeJson(lines)
 
         if (key === 'age' || key === 'grade')
         {
-            value = +value
+            value = Number(value)
         }
 
         obj[key] = value
