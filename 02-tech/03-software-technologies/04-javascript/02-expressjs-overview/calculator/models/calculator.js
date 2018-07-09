@@ -8,7 +8,6 @@ function Calculator(leftOperand, operator, rightOperand)
     this.calculateResult = () =>
     {
         let result = 0;
-
         switch (this.operator)
         {
             case '+':
@@ -23,7 +22,7 @@ function Calculator(leftOperand, operator, rightOperand)
             case '/':
                 result = this.leftOperand / this.rightOperand;
                 break;
-            case 'pow':
+            case '^':
                 result = this.leftOperand ** this.rightOperand;
                 break;
         }
