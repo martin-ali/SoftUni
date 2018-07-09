@@ -93,12 +93,12 @@ function addRemoveElements(commands)
     const numbers = []
     const execute = {
         add: (x) => numbers.push(x),
-        remove: (indexToSkip) =>
+        remove: (indexToRemove) =>
         {
-            const indexIsValid = 0 <= indexToSkip && indexToSkip < commands.length
+            const indexIsValid = 0 <= indexToRemove && indexToRemove < commands.length
             if (indexIsValid)
             {
-                numbers.splice(indexToSkip, 1)
+                numbers.splice(indexToRemove, 1)
             }
         }
     }
