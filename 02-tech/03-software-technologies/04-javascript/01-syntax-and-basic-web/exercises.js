@@ -51,7 +51,7 @@ function printNumbersNTo1([n])
 
 function printLines(lines)
 {
-    const end = lines.indexOf('stop')
+    const end = lines.indexOf('Stop')
     for (let i = 0; i < end; ++i)
     {
         console.log(lines[i])
@@ -84,7 +84,7 @@ function setValuesToIndexesInArray(indexValuePairs)
     }
 }
 
-setValuesToIndexesInArray(['2', '0 - 5', '0 - 6', '0 - 7'])
+// setValuesToIndexesInArray(['2', '0 - 5', '0 - 6', '0 - 7'])
 // setValuesToIndexesInArray(['3', '0 - 5', '1 - 6', '2 - 7'])
 // setValuesToIndexesInArray(['5', '0 - 3', '3 - -1', '4 - 2'])
 
@@ -169,17 +169,11 @@ function multipleValuesForKey(keyValuePairs)
 
 function storingObject(lines)
 {
-    const students = []
     for (const line of lines)
     {
         const [name, age, grade] = line.split(' -> ')
-        students.push({ name, age, grade })
-    }
-
-    students.forEach(({ name, age, grade }) =>
-    {
         console.log(`Name: ${name}\nAge: ${age}\nGrade: ${grade}`)
-    })
+    }
 }
 
 // storingObject(['Pesho -> 13 -> 6.00', 'Ivan -> 12 -> 5.57', 'Toni -> 13 -> 4.90'])
@@ -188,8 +182,8 @@ function deserializeJson(lines)
 {
     for (const line of lines)
     {
-        const deserializedObj = JSON.parse(line)
-        const { name, age, date } = deserializedObj
+        const deserializedData = JSON.parse(line)
+        const { name, age, date } = deserializedData
 
         console.log(`Name: ${name}\nAge: ${age}\nDate: ${date}`)
     }
