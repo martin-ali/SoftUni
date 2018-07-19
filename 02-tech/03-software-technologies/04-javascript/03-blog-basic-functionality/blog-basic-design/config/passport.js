@@ -1,3 +1,4 @@
+// jshint esversion:6
 const passport = require('passport');
 const localPassport = require('passport-local');
 const User = require('../models').User;
@@ -15,7 +16,7 @@ const authenticateUser = (username, password, done) =>
 
             return done(null, user);
         });
-}
+};
 
 module.exports = () =>
 {
@@ -44,6 +45,6 @@ module.exports = () =>
                 }
 
                 return done(null, user);
-            })
-    })
+            });
+    });
 };

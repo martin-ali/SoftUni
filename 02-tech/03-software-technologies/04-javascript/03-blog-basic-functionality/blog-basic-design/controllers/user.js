@@ -1,3 +1,4 @@
+// jshint esversion:6
 const User = require('../models').User;
 const encryption = require('../utilities/encryption');
 
@@ -11,7 +12,7 @@ const userController = {
             {
                 const { email, fullName } = user.dataValues;
                 response.render('user/details', { username: email, fullName });
-            })
+            });
     },
     // detailsGet: (request, response) =>
     // {
@@ -85,7 +86,7 @@ const userController = {
 
                 if (errorMessage)
                 {
-                    registerArguments.error = errorMessage
+                    registerArguments.error = errorMessage;
                     response.render('user/register', registerArguments);
                 }
                 else
@@ -116,9 +117,9 @@ const userController = {
 
                                 response.redirect('/');
                             });
-                        })
+                        });
                 }
-            })
+            });
     }
 };
 

@@ -14,9 +14,32 @@
                     {{this.User.fullName}}
                 </small>
 
+                <h4>Comments:</h4>
+                {{#if this.Comments}} {{#each this.Comments}}
+                <div class="comment">
+                    <p>
+                        Comment:
+                        <a href="/comment/details/{{this.id}}">{{content}}</a>
+                    </p>
+                    <small class="author">
+                        Author:
+                        <a href="/user/details/{{this.User.id}}">
+                            {{this.User.email}}
+                        </a>
+                    </small>
+                </div>
+                {{/each}} {{else}}
+                <div class="comment">
+                    <p>No comments yet!</p>
+                </div>
+                {{/if}}
+
                 <footer>
                     <div class="pull-right">
-                        <a class="btn btn-default btn-xs" href="/">Back &raquo;</a>
+                        {{#if userLogged}}
+                        <a class="btn btn-default btn-xs" href="/comment/create/{{id}}">Add comment</a>
+                        {{/if}}
+                        <a class="btn btn-default btn-xs" href="/">Back &laquo;</a>
                     </div>
                 </footer>
             </article>

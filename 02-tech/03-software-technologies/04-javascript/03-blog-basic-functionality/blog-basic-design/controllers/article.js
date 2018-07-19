@@ -1,4 +1,6 @@
+// jshint esversion:6
 const Article = require('../models').Article;
+const Comment = require('../models').Comment;
 const User = require('../models').User;
 
 const articleController = {
@@ -50,7 +52,7 @@ const articleController = {
         const id = request.params.id;
 
         Article
-            .findById(id, { include: [{ model: User }] })
+            .findById(id, { include: [{ model: User }, { model: Comment, include: [{ model: User }] }] })
             .then((article) =>
             {
                 if (!article)
@@ -61,6 +63,7 @@ const articleController = {
                 }
 
                 // article.dataValues -> article properties
+                article.dataValues.userLogged = !!request.user;
                 response.render('article/details', article.dataValues);
             });
     }

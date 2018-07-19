@@ -1,3 +1,4 @@
+// jshint esversion:6
 const Sequelize = require('sequelize');
 const encryption = require('../utilities/encryption');
 
@@ -40,11 +41,17 @@ function createUser(sequelize, dataTypes)
         const passwordIsCorrect = (inputPasswordHash === this.passwordHash);
 
         return passwordIsCorrect;
-    }
+    };
 
     User.associate = (models) =>
     {
         User.hasMany(models.Article,
+        {
+            foreignKey: 'authorId',
+            sourceKey: 'id'
+        });
+
+        User.hasMany(models.Comment,
         {
             foreignKey: 'authorId',
             sourceKey: 'id'

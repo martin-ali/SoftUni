@@ -1,15 +1,10 @@
+// jshint esversion:6
 const Sequelize = require('sequelize');
 
-function createArticle(sequelize, dataTypes)
+function createComment(sequelize, dataTypes)
 {
-    const Article = sequelize.define('Article',
+    const Comment = sequelize.define('Comment',
     {
-        title:
-        {
-            type: Sequelize.STRING,
-            allowNull: false,
-            required: true
-        },
         content:
         {
             type: Sequelize.STRING,
@@ -28,16 +23,22 @@ function createArticle(sequelize, dataTypes)
         timestamps: false
     });
 
-    Article.associate = (models) =>
+    Comment.associate = (models) =>
     {
-        Article.belongsTo(models.User,
+        Comment.belongsTo(models.Article,
         {
-            foreignKey: 'authorIf',
+            foreignKey: 'articleId',
+            targetKey: 'id'
+        });
+
+        Comment.belongsTo(models.User,
+        {
+            foreignKey: 'authorId',
             targetKey: 'id'
         });
     };
 
-    return Article;
+    return Comment;
 }
 
-module.exports = createArticle;
+module.exports = createComment;

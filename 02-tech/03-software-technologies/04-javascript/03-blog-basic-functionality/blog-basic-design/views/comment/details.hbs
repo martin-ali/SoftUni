@@ -1,0 +1,27 @@
+<div class="container body-content">
+    <div class="row">
+        <div class="col-md-12">
+            <article>
+                <header>
+                    <h2>Comment Details</h2>
+                </header>
+
+                <p>
+                    {{content}}
+                </p>
+
+                <small class="author">
+                    <a href="/user/details/{{this.authorId}}">
+                        {{this.User.email}}
+                    </a>
+                </small>
+
+                <footer>
+                    <div class="pull-right">
+                        <a class="btn btn-default btn-xs" href="/article/details/{{this.articleId}}">Back &raquo;</a>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </div>
+</div>

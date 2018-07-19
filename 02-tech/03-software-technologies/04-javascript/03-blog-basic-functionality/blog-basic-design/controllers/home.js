@@ -1,3 +1,4 @@
+// jshint esversion:6
 const Article = require('../models').Article;
 const User = require('../models').User;
 

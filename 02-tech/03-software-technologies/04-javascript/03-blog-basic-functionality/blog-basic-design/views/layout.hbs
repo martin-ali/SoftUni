@@ -4,6 +4,7 @@
     <head>
         <title>SoftUni Blog</title>
         <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel='stylesheet' href='/stylesheets/commentStyles.css' />
         <script type="text/javascript" src="/javascripts/jquery-3.3.1.js"></script>
         <script src="/javascripts/bootstrap.js"></script>
     </head>
@@ -50,7 +51,11 @@
             </div>
         </header>
 
-        {{{body}}}
+        {{#if error}}
+        <div class="alert alert-danger">
+            {{error}}
+        </div>
+        {{/if}} {{{body}}}
 
         <footer>
             <div class="container modal-footer">

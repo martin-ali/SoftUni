@@ -1,3 +1,4 @@
+// jshint esversion:6
 const path = require('path');
 
 module.exports = {
@@ -11,6 +12,6 @@ module.exports = {
             "database": "blogjs",
             "host": "127.0.0.1",
             "dialect": "mysql"
-        },
+        }
     }
-}
+};

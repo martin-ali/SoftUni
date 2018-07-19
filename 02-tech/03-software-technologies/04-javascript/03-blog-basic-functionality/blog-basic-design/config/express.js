@@ -1,3 +1,4 @@
+// jshint esversion:6
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -8,7 +9,7 @@ const passport = require('passport');
 module.exports = (app, config) =>
 {
     // View engine
-    app.set('views', path.join(config.rootFolder, '/views'))
+    app.set('views', path.join(config.rootFolder, '/views'));
     app.set('view engine', 'hbs');
 
     // This makes the content in the "public" folder accessible for every user.

@@ -1,3 +1,4 @@
+// jshint esversion:6
 const Sequelize = require('sequelize');
 
 function createArticle(sequelize, dataTypes)
@@ -30,9 +31,15 @@ function createArticle(sequelize, dataTypes)
 
     Article.associate = (models) =>
     {
+        Article.hasMany(models.Comment,
+        {
+            foreignKey: 'articleId',
+            sourceKey: 'id'
+        });
+
         Article.belongsTo(models.User,
         {
-            foreignKey: 'authorIf',
+            foreignKey: 'authorId',
             targetKey: 'id'
         });
     };

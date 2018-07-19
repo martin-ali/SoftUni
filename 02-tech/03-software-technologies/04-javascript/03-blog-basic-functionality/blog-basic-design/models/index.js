@@ -1,5 +1,4 @@
-'use strict';
-
+// jshint esversion:6
 const fileSystem = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');

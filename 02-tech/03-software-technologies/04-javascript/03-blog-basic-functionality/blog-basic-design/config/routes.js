@@ -1,6 +1,8 @@
+// jshint esversion:6
 const homeController = require('../controllers').home;
 const userController = require('../controllers').user;
 const articleController = require('../controllers').article;
+const commentController = require('../controllers').comment;
 
 module.exports = (app) =>
 {
@@ -19,4 +21,8 @@ module.exports = (app) =>
     app.get('/user/logout', userController.logout);
 
     app.get('/user/details/:id', userController.detailsGet);
+
+    app.get('/comment/details/:id', commentController.detailsGet);
+    app.get('/comment/create/:id', commentController.createGet);
+    app.post('/comment/create/:id', commentController.createPost);
 };
