@@ -16,7 +16,7 @@
 <?php
 if (isset($_GET['num']))
 {
-	$num = intval($_GET['num']);
-	echo $num * 2;
+	$number = intval($_GET['num']);
+	echo $number * 2;
 }
 ?>

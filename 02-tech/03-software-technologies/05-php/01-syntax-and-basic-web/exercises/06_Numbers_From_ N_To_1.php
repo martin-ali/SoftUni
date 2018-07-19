@@ -10,15 +10,18 @@
         N: <input type="text" name="num"/>
         <input type="submit"/>
     </form>
-	<?php
-	if (isset($_GET['num']))
-	{
-		$num = intval($_GET['num']);
-		for ($i = $num; $i >= 1; $i--)
-		{
-			echo $i . ' ';
-		}
-	}
-	?>
 </body>
 </html>
+<?php
+if (isset($_GET['num']))
+{
+	$limit = intval($_GET['num']);
+	$numbers = array();
+	for ($number = $limit; $number >= 0; $number--)
+	{
+		$numbers[] = $number;
+	}
+
+	echo implode(' ', $numbers);
+}
+?>

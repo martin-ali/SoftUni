@@ -14,17 +14,16 @@
 </head>
 <body>
 	<?php
-
-	for ($row = 0; $row < 256; $row += 51)
+	for ($row = 0; $row < 5; $row++)
 	{
 		for ($col = 0; $col < 10; $col++)
 		{
-			$shade = $row + ($col * 5);
-			echo "<div style='background-color: rgb($shade,$shade,$shade)'></div>";
+			$color = ($row * 51) + ($col * 5);
+			echo "<div style='background-color: rgb($color, $color, $color)'></div>";
 		}
-		echo "<br/>";
-	}
 
+		echo '<br/>';
+	}
 	?>
 </body>
 </html>

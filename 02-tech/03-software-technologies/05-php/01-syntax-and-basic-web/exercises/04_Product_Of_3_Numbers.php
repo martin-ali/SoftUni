@@ -12,43 +12,33 @@
         Z: <input type="text" name="num3"/>
         <input type="submit"/>
     </form>
-	<?php
-	if (isset($_GET['num1']) &&
-		isset($_GET['num2']) &&
-		isset($_GET['num2']))
-	{
-		$num1 = intval($_GET['num1']);
-		$num2 = intval($_GET['num2']);
-		$num3 = intval($_GET['num3']);
-
-		$numbers = array($num1, $num2, $num3);
-
-		$zeroContained = false;
-		$resultSign = true;
-		foreach ($numbers as $number)
-		{
-			if ($number === 0)
-			{
-				$zeroContained = true;
-				break;
-			}
-
-			// Don't need to count, just flip a variable
-			if ($number < 0)
-			{
-				$resultSign = !$resultSign;
-			}
-		}
-
-		if ($zeroContained || $resultSign)
-		{
-			echo 'Positive';
-		}
-		else
-		{
-			echo 'Negative';
-		}
-	}
-	?>
 </body>
 </html>
+<?php
+if (isset($_GET['num1']) &&
+	isset($_GET['num2']) &&
+	isset($_GET['num3']))
+{
+	$firstNumber = intval($_GET['num1']);
+	$secondNumber = intval($_GET['num2']);
+	$thirdNumber = intval($_GET['num3']);
+
+	$resultIsPositive = true;
+	$numbers = array($firstNumber, $secondNumber, $thirdNumber);
+	foreach ($numbers as $number)
+	{
+		if ($number < 0)
+		{
+			$resultIsPositive = !$resultIsPositive;
+		}
+        elseif ($number === 0)
+		{
+			$resultIsPositive = true;
+			break;
+		}
+	}
+
+	$result = $resultIsPositive ? 'Positive' : 'Negative';
+	echo $result;
+}
+?>

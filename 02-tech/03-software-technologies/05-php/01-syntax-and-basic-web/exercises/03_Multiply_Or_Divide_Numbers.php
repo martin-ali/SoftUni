@@ -11,22 +11,23 @@
         M: <input type="text" name="num2"/>
         <input type="submit"/>
     </form>
-    <!--Write your PHP Script here-->
 </body>
 </html>
 <?php
 if (isset($_GET['num1']) && isset($_GET['num2']))
 {
-	$num1 = intval($_GET['num1']);
-	$num2 = intval($_GET['num2']);
+	$firstNumber = $_GET['num1'];
+	$secondNumber = $_GET['num2'];
 
-	if ($num1 > $num2)
+	if ($firstNumber > $secondNumber)
 	{
-		echo $num1 / $num2;
+		$result = $firstNumber / $secondNumber;
 	}
 	else
 	{
-		echo $num1 * $num2;
+		$result = $firstNumber * $secondNumber;
 	}
+
+	echo $result;
 }
 ?>

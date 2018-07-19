@@ -10,40 +10,34 @@
         N: <input type="text" name="num"/>
         <input type="submit"/>
     </form>
-	<?php
-
-	function isPrime(int $number): int
-	{
-		$numberIsPrime = true;
-
-		for ($current = 2; $current < $number; $current++)
-		{
-			if ($number % $current == 0)
-			{
-				$numberIsPrime = false;
-				break;
-			}
-		}
-
-		return $numberIsPrime;
-	}
-
-	if (isset($_GET['num']))
-	{
-		// Sqrt also possible
-		$num = intval($_GET['num']);
-		$numbers = array();
-
-		for ($current = $num; $current > 0; $current--)
-		{
-			if (isPrime($current))
-			{
-				$numbers[] = $current;
-			}
-		}
-
-		echo implode(' ', $numbers);
-	}
-	?>
 </body>
 </html>
+<?php
+if (isset($_GET['num']))
+{
+	$primesCount = intval($_GET['num']);
+	$primes = range(0, $primesCount + 1, 1);
+	$primes[0] = false;
+	$primes[1] = false;
+
+	for ($primeCandidate = 2; $primeCandidate < count($primes); $primeCandidate++)
+	{
+		if ($primes[$primeCandidate])
+		{
+			$primes[$primeCandidate] = $primeCandidate;
+
+			for ($primeToRemove = $primeCandidate * 2; $primeToRemove < count($primes); $primeToRemove += $primeCandidate)
+			{
+				$primes[$primeToRemove] = false;
+			}
+		}
+	}
+
+	$primesFiltered = array_filter($primes, function ($primeCandidate)
+	{
+		return !!$primeCandidate;
+	});
+
+	echo implode("\n", array_reverse($primesFiltered));
+}
+?>

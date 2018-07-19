@@ -10,23 +10,21 @@
         N: <input type="text" name="num"/>
         <input type="submit"/>
     </form>
-	<?php
-
-	if (isset($_GET['num']))
-	{
-		$num = intval($_GET['num']);
-		$numbers = array();
-		for ($current = $num; $current >= 1; $current--)
-		{
-			if ($num % $current !== 0)
-			{
-				$numbers[] = $current;
-			}
-		}
-
-		echo implode(' ', $numbers);
-	}
-
-	?>
 </body>
 </html>
+<?php
+if (isset($_GET['num']))
+{
+	$number = intval($_GET['num']);
+	$notDivisorNumbers = array();
+	for ($divisor = $number; $divisor >= 1; $divisor--)
+	{
+		if ($number % $divisor != 0)
+		{
+			$notDivisorNumbers[] = $divisor;
+		}
+	}
+
+	echo implode(' ', $notDivisorNumbers);
+}
+?>

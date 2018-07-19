@@ -11,19 +11,17 @@
         <input type="submit"/>
     </form>
 	<?php
-
 	if (isset($_GET['num']))
 	{
-		$end = intval($_GET['num']);
+		$limit = intval($_GET['num']);
 		$factorial = 1;
-		for ($current = 1; $current <= $end; $current++)
+		for ($current = 2; $current <= $limit; $current++)
 		{
 			$factorial *= $current;
 		}
 
 		echo $factorial;
 	}
-
 	?>
 </body>
 </html>

@@ -10,27 +10,21 @@
         N: <input type="text" name="num"/>
         <input type="submit"/>
     </form>
-	<?php
-
-	function sumLastThreeNumbers(array $arr): int
-	{
-		$sum = array_sum(array_slice($arr, -3, 3, true));
-		return intval($sum);
-	}
-
-	if (isset($_GET['num']))
-	{
-		$num = intval($_GET['num']);
-		$tribonacciNumbers = array(0, 1, 1);
-
-		for ($current = 1; $current < $num; $current++)
-		{
-			$tribonacciNumbers[] = sumLastThreeNumbers($tribonacciNumbers);
-		}
-
-		echo implode(' ', $tribonacciNumbers);
-	}
-
-	?>
 </body>
 </html>
+<?php
+if (isset($_GET['num']))
+{
+	$tribonacci = intval($_GET['num']);
+	$tribonacciNumbers = array(1, 1, 2);
+	for ($current = count($tribonacciNumbers); $current < $tribonacci; $current++)
+	{
+		$currentTribonacci = $tribonacciNumbers[$current - 1]
+			+ $tribonacciNumbers[$current - 2]
+			+ $tribonacciNumbers[$current - 3];
+		$tribonacciNumbers[] = $currentTribonacci;
+	}
+
+	echo implode(' ', $tribonacciNumbers);
+}
+?>
