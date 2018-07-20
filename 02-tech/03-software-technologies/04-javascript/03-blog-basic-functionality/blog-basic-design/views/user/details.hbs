@@ -10,6 +10,32 @@
                     Full Name: {{fullName}}
                 </p>
 
+                <h4>Articles by user:</h4>
+                {{#if articles}} {{#each articles}}
+                <div class="alternatingRows modal-header">
+                    <a href="/article/details/{{id}}">
+                        {{title}} ({{date}})
+                    </a>
+                </div>
+                {{/each}} {{else}}
+                <div class="modal-header">
+                    <p>User has not written any articles yet!</p>
+                </div>
+                {{/if}}
+
+                <h4>Comments by user:</h4>
+                {{#if comments}} {{#each comments}}
+                <div class="alternatingRows modal-header">
+                    <a href="/article/details/{{this.Article.id}}">
+                        For: {{Article.title}} ({{date}})
+                    </a>
+                </div>
+                {{/each}} {{else}}
+                <div class="modal-header">
+                    <p>User has not commented yet!</p>
+                </div>
+                {{/if}}
+
                 <footer>
                     <div class="pull-right">
                         <a class="btn btn-default btn-xs" href="/">Back &raquo;</a>

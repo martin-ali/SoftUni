@@ -18,6 +18,9 @@
 
                 <footer>
                     <div class="pull-right">
+                        {{#if userIsAuthor}}
+                        <a class="btn btn-default btn-xs" href="/comment/edit/{{id}}">Edit</a>
+                        {{/if}}
                         <a class="btn btn-default btn-xs" href="/article/details/{{this.articleId}}">Back &raquo;</a>
                     </div>
                 </footer>

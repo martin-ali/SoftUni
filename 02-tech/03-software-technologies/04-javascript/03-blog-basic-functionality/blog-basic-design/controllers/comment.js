@@ -25,7 +25,6 @@ const homeController = {
 
         if (errorMessage)
         {
-            console.log(errorMessage);
             response.render('comment/create', { error: errorMessage, content, articleId });
             return;
         }
@@ -37,7 +36,7 @@ const homeController = {
             .create(commentArguments)
             .then((comment) =>
             {
-                response.redirect('/');
+                response.redirect(`/article/details/${articleId}`);
             })
             .catch((error) =>
             {
@@ -61,9 +60,74 @@ const homeController = {
                     response.render('/');
                 }
 
+                comment.dataValues.userIsAuthor = (request.hasOwnProperty('user') && comment.dataValues.authorId === request.user.id);
                 response.render('comment/details', comment.dataValues);
             });
 
+    },
+    editGet: (request, response) =>
+    {
+        const id = request.params.id;
+
+        Comment
+            .findById(id, { include: [{ model: User }] })
+            .then((comment) =>
+            {
+                if (!comment)
+                {
+                    const errorMessage = 'Comment does not exist';
+
+                    response.render('/');
+                }
+
+                comment.dataValues.userIsAuthor = (request.hasOwnProperty('user') && comment.dataValues.authorId === request.user.id);
+                comment.dataValues.userLogged = !!request.user;
+                response.render('comment/edit', comment.dataValues);
+            });
+    },
+    editPost: (request, response) =>
+    {
+        const articleArguments = request.body;
+        const content = articleArguments.content;
+        const id = request.params.id;
+
+        Comment
+            .findById(id)
+            .then((comment) =>
+            {
+                const editorIsAuthor = (comment.dataValues.authorId === request.user.id);
+                let errorMessage = '';
+                if (!request.isAuthenticated()) // Is there a logged user
+                {
+                    errorMessage = 'You need to be logged in to edit comments!';
+                }
+                else if (!content)
+                {
+                    errorMessage = 'Invalid content!';
+                }
+                else if (!editorIsAuthor)
+                {
+                    errorMessage = 'You can only edit your own comments!';
+                }
+
+                if (errorMessage)
+                {
+                    response.render('comment/edit', { content, error: errorMessage });
+                    return;
+                }
+
+                Comment
+                    .update({ content }, { where: { id, authorId: request.user.id }, returning: true })
+                    .then((comment) =>
+                    {
+                        response.redirect(`/comment/details/${id}`);
+                    })
+                    .catch((error) =>
+                    {
+                        console.error(error.message);
+                        response.render('comment/edit', { content, error: error.message });
+                    });
+            });
     }
 };
 

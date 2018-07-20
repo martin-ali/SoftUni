@@ -1,5 +1,8 @@
 // jshint esversion:6
 const User = require('../models').User;
+const Article = require('../models').Article;
+const Comment = require('../models').Comment;
+const date = require('../utilities/date');
 const encryption = require('../utilities/encryption');
 
 const userController = {
@@ -7,11 +10,14 @@ const userController = {
     {
         const id = request.params.id;
         User
-            .findById(id)
+            .findById(id, { include: [{ model: Article }, { model: Comment, include: { model: Article } }] })
             .then(user =>
             {
                 const { email, fullName } = user.dataValues;
-                response.render('user/details', { username: email, fullName });
+                const articles = user.dataValues.Articles.map(date.mapInternalDate);
+                const comments = user.dataValues.Comments.map(date.mapInternalDate);
+
+                response.render('user/details', { username: email, fullName, articles, comments });
             });
     },
     // detailsGet: (request, response) =>
