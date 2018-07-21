@@ -34,8 +34,6 @@ class CalculatorController extends Controller
 			return $this->render('calculator/index.html.twig',
 				[
 					'result' => $result,
-
-
 					'calculator' => $calculator,
 					'form' => $form->createView()
 				]);
