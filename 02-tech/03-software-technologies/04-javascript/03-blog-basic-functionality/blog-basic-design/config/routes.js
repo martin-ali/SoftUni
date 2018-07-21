@@ -37,5 +37,5 @@ module.exports = (app) =>
     app.post('/comment/create/:id', commentController.createPost);
 
     app.get('/comment/edit/:id', commentController.editGet);
-    app.post('/comment/edit/:id', commentController.editPost);
+    app.post('/comment/edit/:id', commentController.editPost); // Need to find way to use put
 };

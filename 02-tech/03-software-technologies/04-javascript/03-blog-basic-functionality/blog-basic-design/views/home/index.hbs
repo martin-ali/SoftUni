@@ -23,4 +23,10 @@
         </div>
         {{/each}}
     </div>
+
+    <footer class="text-center row modal-header">
+        {{#each pages as |page|}}
+        <a class="btn btn-default" href="/page/{{page}}">{{page}}</a>
+        {{/each}}
+    </footer>
 </div>
