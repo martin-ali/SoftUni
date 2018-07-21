@@ -20,11 +20,6 @@ const userController = {
                 response.render('user/details', { username: email, fullName, articles, comments });
             });
     },
-    // detailsGet: (request, response) =>
-    // {
-    //     const { email, fullName } = request.user.dataValues;
-    //     response.render('user/details', { username: email, fullName });
-    // },
     loginGet: (request, response) =>
     {
         response.render('user/login');
