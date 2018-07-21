@@ -3,7 +3,7 @@ const date = {
     /**
      * @param {object} model
      *
-     * @returns {object}
+     * @returns {string}
      */
     mapInternalDate: (model) =>
     {

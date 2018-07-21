@@ -7,6 +7,9 @@ const environment = process.env.NODE_ENV || 'development';
 const configuration = require(`${__dirname}/../config/config.js`).database[environment];
 const database = {};
 
+/**
+ * @type { Sequelize.Sequelize }
+ */
 let sequelize;
 if (configuration.use_env_variable)
 {

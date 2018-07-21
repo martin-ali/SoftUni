@@ -1,6 +1,12 @@
 // jshint esversion:6
 const Sequelize = require('sequelize');
 
+/**
+ *
+ * @param {Sequelize.Sequelize} sequelize
+ * @param {*} dataTypes
+ * @returns { Sequelize.Model }
+ */
 function createComment(sequelize, dataTypes)
 {
     const Comment = sequelize.define('Comment',
@@ -9,6 +15,7 @@ function createComment(sequelize, dataTypes)
         {
             type: Sequelize.STRING,
             allowNull: false,
+            // @ts-ignore
             required: true
         },
         date:

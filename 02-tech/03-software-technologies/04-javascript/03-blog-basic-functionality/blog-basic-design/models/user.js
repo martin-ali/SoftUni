@@ -2,6 +2,12 @@
 const Sequelize = require('sequelize');
 const encryption = require('../utilities/encryption');
 
+/**
+ *
+ * @param {Sequelize.Sequelize} sequelize
+ * @param {*} dataTypes
+ * @returns { Sequelize.Model }
+ */
 function createUser(sequelize, dataTypes)
 {
     const User = sequelize.define('User',
@@ -9,6 +15,7 @@ function createUser(sequelize, dataTypes)
         email:
         {
             type: Sequelize.STRING,
+            // @ts-ignore
             required: true,
             unique: true,
             allowNull: false

@@ -1,6 +1,12 @@
 // jshint esversion:6
 const Sequelize = require('sequelize');
 
+/**
+ *
+ * @param {Sequelize.Sequelize} sequelize
+ * @param {*} dataTypes
+ * @returns { Sequelize.Model }
+ */
 function createArticle(sequelize, dataTypes)
 {
     const Article = sequelize.define('Article',
@@ -9,6 +15,7 @@ function createArticle(sequelize, dataTypes)
         {
             type: Sequelize.STRING,
             allowNull: false,
+            // @ts-ignore
             required: true
         },
         content:
