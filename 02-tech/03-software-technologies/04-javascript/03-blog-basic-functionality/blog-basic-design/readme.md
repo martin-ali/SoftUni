@@ -6,7 +6,7 @@
 
 ### Usage
 
-    - Just run copy the contents of "sampleDatabase.sql" into HeidiSQL and run it as a query
+- Just run copy the contents of "sampleDatabase.sql" into HeidiSQL and run it as a query
 
 ## Accounts
 
@@ -22,4 +22,5 @@
 - [x] Missing error added in layout
 - [x] Add edit article and comment system
 - [x] Edit article and comment system took longer than expected
+- [x] Delete article system
 - [x] Add paging system (Bottom?)
