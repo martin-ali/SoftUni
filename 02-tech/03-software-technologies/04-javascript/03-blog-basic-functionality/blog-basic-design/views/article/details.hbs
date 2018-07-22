@@ -37,7 +37,8 @@
                 <footer>
                     <div class="pull-right">
                         {{#if userLogged}} {{#if userIsAuthor}}
-                        <a class="btn btn-default btn-xs" href="/article/edit/{{id}}">Edit</a>
+                        <a class="btn btn-warning btn-xs" href="/article/edit/{{id}}">Edit</a>
+                        <a class="btn btn-danger btn-xs" href="/article/delete/{{id}}">Delete</a>
                         {{/if}}
                         <a class="btn btn-default btn-xs" href="/comment/create/{{id}}">Add comment</a>
                         {{/if}}

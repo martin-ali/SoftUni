@@ -79,7 +79,7 @@ const articleController = {
                 {
                     const errorMessage = 'Article does not exist';
 
-                    response.render('/');
+                    response.render('home/index', { error: errorMessage });
                 }
 
                 article.dataValues.userLogged = !!request.user;
@@ -131,6 +131,68 @@ const articleController = {
                     {
                         console.error(error.message);
                         response.render('article/edit', { title, content, error: error.message });
+                    });
+            });
+    },
+    deleteGet: (request, response) =>
+    {
+        const id = request.params.id;
+
+        Article
+            .findById(id)
+            .then((article) =>
+            {
+                if (!article)
+                {
+                    const errorMessage = 'Article does not exist';
+
+                    response.render('home/index', { error: errorMessage });
+                }
+
+                article.dataValues.userLogged = !!request.user;
+                response.render('article/delete', article.dataValues);
+            });
+    },
+    deletePost: (request, response) =>
+    {
+        const articleArguments = request.body;
+        const { title, content } = articleArguments;
+        const id = request.params.id;
+
+        Article
+            .findById(id)
+            .then((article) =>
+            {
+                const editorIsAuthor = (article.dataValues.authorId === request.user.id);
+                let errorMessage = '';
+                if (!request.isAuthenticated()) // Is there a logged user
+                {
+                    errorMessage = 'You need to be logged in to remove articles!';
+                }
+                else if (!editorIsAuthor)
+                {
+                    errorMessage = 'You can only delete your own articles!';
+                }
+
+                if (errorMessage)
+                {
+                    response.render('article/delete', { title, content, error: errorMessage });
+                    return;
+                }
+
+                Comment.destroy({ where: { articleId: id } });
+                // Comment.destroy({ where: { articleId: null } });
+
+                Article
+                    .destroy({ where: { id, authorId: request.user.id } })
+                    .then(() =>
+                    {
+                        response.redirect('/');
+                    })
+                    .catch((error) =>
+                    {
+                        console.error(error.message);
+                        response.render('article/delete', { title, content, error: error.message });
                     });
             });
     }

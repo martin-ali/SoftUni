@@ -21,6 +21,9 @@ module.exports = (app) =>
     app.get('/article/edit/:id', articleController.editGet);
     app.post('/article/edit/:id', articleController.editPost); // No put :(
 
+    app.get('/article/delete/:id', articleController.deleteGet);
+    app.post('/article/delete/:id', articleController.deletePost);
+
     app.get('/article/details/:id', articleController.detailsGet);
 
     app.get('/user/register', userController.registerGet);
