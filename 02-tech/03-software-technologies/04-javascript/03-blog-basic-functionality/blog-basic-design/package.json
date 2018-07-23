@@ -4,7 +4,8 @@
     "private": true,
     "scripts":
     {
-        "start": "node ./bin/start"
+        "start": "node bin/start",
+        "test": "nodemon bin/start.js"
     },
     "dependencies":
     {
@@ -16,6 +17,7 @@
         "http-errors": "~1.6.2",
         "morgan": "~1.9.0",
         "mysql2": "^1.5.3",
+        "nodemon": "^1.18.3",
         "passport": "^0.4.0",
         "passport-local": "^1.0.0",
         "sequelize": "^4.37.3"
