@@ -20,19 +20,24 @@ else
     sequelize = new Sequelize(configuration.database, configuration.username, configuration.password, configuration);
 }
 
-fileSystem
-    .readdirSync(__dirname)
-    .filter(file =>
-    {
-        return (file.indexOf('.') !== 0)
-            && (file !== basename)
-            && (file.slice(-3) === '.js');
-    })
-    .forEach(file =>
-    {
-        const model = sequelize.import(path.join(__dirname, file));
-        database[model.name] = model;
-    });
+// fileSystem
+//     .readdirSync(__dirname)
+//     .filter(file =>
+//     {
+//         return (file.indexOf('.') !== 0)
+//             && (file !== basename)
+//             && (file.slice(-3) === '.js');
+//     })
+//     .forEach(file =>
+//     {
+//         const model = sequelize.import(path.join(__dirname, file));
+//         database[model.name] = model;
+//     });
+
+// Prefer this for intellisense
+database.Article = sequelize.import(path.join(__dirname, 'article.js'));
+database.Comment = sequelize.import(path.join(__dirname, 'comment.js'));
+database.User = sequelize.import(path.join(__dirname, 'user.js'));
 
 Object.keys(database).forEach(modelName =>
 {
@@ -44,10 +49,7 @@ Object.keys(database).forEach(modelName =>
 
 const models = Object.keys(database);
 
-/**
- *
- * @param {array} models
- */
+/** @param {string[]} models */
 async function create(models)
 {
     console.log('Initializing...');
