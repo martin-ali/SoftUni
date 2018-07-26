@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 class UserController extends Controller
 {
 	/**
-	 * @Route("register", name="user_register")
+	 * @Route("/user/register", name="user_register")
 	 * @param Request $request
 	 * @return \Symfony\Component\HttpFoundation\Response
 	 */
@@ -25,14 +25,15 @@ class UserController extends Controller
 
 		if ($form->isSubmitted())
 		{
-			$password = $this
+			$encryptedPassword = $this
 				->get("security.password_encoder")
 				->encodePassword($user, $user->getPassword());
 
-			$user->setPassword($password);
+			$user->setPassword($encryptedPassword);
 
 			$entityManager = $this->getDoctrine()->getManager();
 			$entityManager->persist($user);
+			// Save changes
 			$entityManager->flush();
 
 			return $this->redirectToRoute("security_login");
@@ -43,7 +44,24 @@ class UserController extends Controller
 	}
 
 	/**
-	 * @Route("/profile", name="user_profile")
+	 * @Route("/user/profile/{id}", name="user_public_profile")
+	 * @param Request $request
+	 * @param $id
+	 * @return \Symfony\Component\HttpFoundation\Response
+	 */
+	public function publicProfile(Request $request, $id)
+	{
+		$user = $this
+			->getDoctrine()
+			->getRepository(User::class)
+			->find($id);
+
+		return $this->render("user/details.html.twig",
+			["user" => $user]);
+	}
+
+	/**
+	 * @Route("/user/profile", name="user_profile")
 	 * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
 	 * @return \Symfony\Component\HttpFoundation\Response
 	 */

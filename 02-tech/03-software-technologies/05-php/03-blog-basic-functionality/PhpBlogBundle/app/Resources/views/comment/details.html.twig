@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-12">
+                <comment>
+                    <header>
+                        <h2>Comment Details</h2>
+                    </header>
+
+                    <p>
+                        {{ comment.content }}
+                    </p>
+
+                    <small class="author">
+                        {{ comment.author }}
+                    </small>
+
+                    <footer>
+                        <div class="pull-right">
+                            {% if userIsAuthor %}
+                            <a class="btn btn-danger btn-xs" href="{{ path('comment_delete', {"id":comment.id }) }}">delete</a>
+                            <a class="btn btn-warning btn-xs" href="{{ path('comment_edit', {"id":comment.id }) }}">edit</a>
+                            {% endif %}
+                            <a class="btn btn-default btn-xs" href="{{ path('article_details', {"id":comment.articleId}) }}">back &raquo;</a>
+                        </div>
+                    </footer>
+                </comment>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

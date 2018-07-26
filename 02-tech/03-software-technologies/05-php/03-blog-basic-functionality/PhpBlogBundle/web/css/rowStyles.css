@@ -1,0 +1,3 @@
+.alternatingRows:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}

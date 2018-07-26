@@ -17,6 +17,7 @@ class User implements UserInterface
 	public function __construct()
 	{
 		$this->articles = new ArrayCollection();
+		$this->comments = new ArrayCollection();
 	}
 
 	/**
@@ -55,6 +56,13 @@ class User implements UserInterface
 	 * @ORM\OneToMany(targetEntity="PhpBlogBundle\Entity\Article", mappedBy="author")
 	 */
 	private $articles;
+
+	/**
+	 * @var ArrayCollection
+	 *
+	 * @ORM\OneToMany(targetEntity="PhpBlogBundle\Entity\Comment", mappedBy="author")
+	 */
+	private $comments;
 
 	/**
 	 * Get id
@@ -201,6 +209,14 @@ class User implements UserInterface
 	}
 
 	/**
+	 * @return \Doctrine\Common\Collections\Collection
+	 */
+	public function getComments()
+	{
+		return $this->comments;
+	}
+
+	/**
 	 * @param \PhpBlogBundle\Entity\Article $article
 	 *
 	 * @return User
@@ -208,6 +224,18 @@ class User implements UserInterface
 	public function addPost(Article $article)
 	{
 		$this->articles[] = $article;
+
+		return $this;
+	}
+
+	/**
+	 * @param \PhpBlogBundle\Entity\Comment $comment
+	 *
+	 * @return User
+	 */
+	public function addComment(Comment $comment)
+	{
+		$this->comments[] = $comment;
 
 		return $this;
 	}

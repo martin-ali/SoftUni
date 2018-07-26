@@ -3,9 +3,43 @@
 {% block body_id 'profile' %}
 
 {% block main %}
-    <div>
-        {{ user.email }}
-        <br>
-        {{ user.fullName }}
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-12">
+                <article>
+                    <header>
+                        <h2>Username: {{ user.email }}</h2>
+                    </header>
+
+                    <p>
+                        Full Name: {{ user.fullName }}
+                    </p>
+
+                    <h4>Articles by user:</h4>
+                    {% for article in user.articles %}
+                        <div class="alternatingRows modal-header">
+                            <a href="{{ path('article_details', {'id':article.id}) }}">
+                                {{ article.title }} ({{ article.dateAdded|date("d/m/y") }})
+                            </a>
+                        </div>
+                    {% endfor %}
+
+                    <h4>Comments by user:</h4>
+                    {% for comment in user.comments %}
+                        <div class="alternatingRows modal-header">
+                            <a href="{{ path('comment_details', {'id':comment.id}) }}">
+                                {{ comment.article.title }}: {{ comment.content }} ({{ comment.dateAdded|date("d/m/y") }})
+                            </a>
+                        </div>
+                    {% endfor %}
+
+                    <footer>
+                        <div class="pull-right">
+                            <a class="btn btn-default btn-xs" href="/">Back &raquo;</a>
+                        </div>
+                    </footer>
+                </article>
+            </div>
+        </div>
     </div>
 {% endblock %}

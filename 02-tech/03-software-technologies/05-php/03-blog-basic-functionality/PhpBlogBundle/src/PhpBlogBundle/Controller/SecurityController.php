@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class SecurityController extends Controller
 {
 	/**
-	 * @Route("/login", name="security_login")
+	 * @Route("/security/login", name="security_login")
 	 * @return \Symfony\Component\HttpFoundation\Response
 	 */
 	public function login()
@@ -17,7 +17,7 @@ class SecurityController extends Controller
 	}
 
 	/**
-	 * @Route("logout", name="security_logout")
+	 * @Route("/security/logout", name="security_logout")
 	 * @return int
 	 */
 	public function logout()

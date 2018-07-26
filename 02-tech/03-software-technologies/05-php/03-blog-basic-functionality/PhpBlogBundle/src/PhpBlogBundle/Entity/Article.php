@@ -2,6 +2,7 @@
 
 namespace PhpBlogBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -15,6 +16,7 @@ class Article
 	public function __construct()
 	{
 		$this->dateAdded = new \DateTime('now');
+		$this->comments = new ArrayCollection();
 	}
 
 	/**
@@ -63,9 +65,16 @@ class Article
 	 * @var User
 	 *
 	 * @ORM\ManyToOne(targetEntity="PhpBlogBundle\Entity\User", inversedBy="articles")
-	 * @ORM\JoinColumn(name="authorId",referencedColumnName="id")
+	 * @ORM\JoinColumn(name="authorId", referencedColumnName="id")
 	 */
 	private $author;
+
+	/**
+	 * @var ArrayCollection
+	 *
+	 * @ORM\OneToMany(targetEntity="PhpBlogBundle\Entity\Comment", mappedBy="article")
+	 */
+	private $comments;
 
 	/**
 	 * Get id
@@ -205,6 +214,26 @@ class Article
 	public function setAuthor(User $author = null)
 	{
 		$this->author = $author;
+
+		return $this;
+	}
+
+	/**
+	 * @return \Doctrine\Common\Collections\Collection
+	 */
+	public function getComments()
+	{
+		return $this->comments;
+	}
+
+	/**
+	 * @param \PhpBlogBundle\Entity\Comment $comment
+	 *
+	 * @return Article
+	 */
+	public function addComment(Comment $comment)
+	{
+		$this->comments[] = $comment;
 
 		return $this;
 	}

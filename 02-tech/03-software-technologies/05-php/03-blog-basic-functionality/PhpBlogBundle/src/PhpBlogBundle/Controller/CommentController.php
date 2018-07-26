@@ -3,67 +3,82 @@
 namespace PhpBlogBundle\Controller;
 
 use PhpBlogBundle\Entity\Article;
-use PhpBlogBundle\Form\ArticleType;
+use PhpBlogBundle\Entity\Comment;
+use PhpBlogBundle\Form\CommentType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Bridge\Doctrine\Tests\Fixtures\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class ArticleController extends Controller
+class CommentController extends Controller
 {
 	/**
-	 * @Route("/article/create", name="article_create")
+	 * @Route("/comment/create/{articleId}", name="comment_create")
 	 * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
 	 * @param Request $request
+	 * @param $articleId
 	 * @return \Symfony\Component\HttpFoundation\Response
 	 */
-	public function create(Request $request)
+	public function create(Request $request, $articleId)
 	{
-		$article = new Article();
+		$comment = new Comment();
 
-		$form = $this->createForm(ArticleType::class, $article);
+		$form = $this->createForm(CommentType::class, $comment);
 		$form->handleRequest($request);
 
 		if ($form->isSubmitted() && $form->isValid())
 		{
 			// Automatically maps authorId
-			$article->setAuthor($this->getUser());
+			$comment->setAuthor($this->getUser());
+
+			$article = $this
+				->getDoctrine()
+				->getRepository(Article::class)
+				->find($articleId);
+			$article->addComment($comment);
+			$comment->setArticle($article);
 
 			$entityManager = $this->getDoctrine()->getManager();
+			$entityManager->persist($comment);
 			$entityManager->persist($article);
 			$entityManager->flush();
 
-			return $this->redirectToRoute("blog_index");
+			return $this->redirectToRoute("article_details", ["id" => $articleId]);
 		}
 
-		return $this->render("article/create.html.twig",
-			["form" => $form->createView()]);
+		return $this->render("comment/create.html.twig",
+			[
+				"articleId" => $articleId,
+				"form" => $form->createView()
+			]);
 	}
 
 	/**
-	 * @Route("/article/details/{id}", name="article_details")
+	 * @Route("/comment/details/{id}", name="comment_details")
 	 * @param $id
 	 * @return \Symfony\Component\HttpFoundation\Response
 	 */
 	public function details($id)
 	{
-		$article = $this
+		$comment = $this
 			->getDoctrine()
-			->getRepository(Article::class)
+			->getRepository(Comment::class)
 			->find($id);
 
 		$userIsAuthor = $this->getUser()
-			&& $this->getUser()->getId() === $article->getAuthorId();
+			&& $this->getUser()->getId() === $comment->getAuthorId();
 
-		return $this->render("article/details.html.twig",
+		return $this->render("comment/details.html.twig",
 			[
 				"userIsAuthor" => $userIsAuthor,
-				"article" => $article
+				"articleId" => $comment->getId(),
+				"comment" => $comment
 			]);
 	}
 
 	/**
-	 * @Route("/article/edit/{id}", name="article_edit")
+	 * @Route("/comment/edit/{id}", name="comment_edit")
 	 * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
 	 * @param Request $request
 	 * @param $id
@@ -72,33 +87,33 @@ class ArticleController extends Controller
 	public function edit(Request $request, $id)
 	{
 		$userId = $this->getUser()->getId();
-		$article = $this
+		$comment = $this
 			->getDoctrine()
-			->getRepository(Article::class)
+			->getRepository(Comment::class)
 			->find($id);
 
-		$form = $this->createForm(ArticleType::class, $article);
+		$form = $this->createForm(CommentType::class, $comment);
 		$form->handleRequest($request);
 
-		$userIsAuthor = ($article->getAuthorId() === $userId);
+		$userIsAuthor = ($comment->getAuthorId() === $userId);
 		if ($form->isSubmitted() && $form->isValid() && $userIsAuthor)
 		{
 			$entityManager = $this->getDoctrine()->getManager();
-			$entityManager->merge($article);
+			$entityManager->merge($comment);
 			$entityManager->flush();
 
-			return $this->redirectToRoute("blog_index");
+			return $this->redirectToRoute("comment_details", ["id" => $id]);
 		}
 
-		return $this->render("article/edit.html.twig",
+		return $this->render("comment/edit.html.twig",
 			[
-				"article" => $article,
+				"comment" => $comment,
 				"form" => $form->createView()
 			]);
 	}
 
 	/**
-	 * @Route("/article/delete/{id}", name="article_delete")
+	 * @Route("/comment/delete/{id}", name="comment_delete")
 	 * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
 	 * @param Request $request
 	 * @param $id
@@ -107,27 +122,27 @@ class ArticleController extends Controller
 	public function delete(Request $request, $id)
 	{
 		$userId = $this->getUser()->getId();
-		$article = $this
+		$comment = $this
 			->getDoctrine()
-			->getRepository(Article::class)
+			->getRepository(Comment::class)
 			->find($id);
 
-		$form = $this->createForm(ArticleType::class, $article);
+		$form = $this->createForm(CommentType::class, $comment);
 		$form->handleRequest($request);
 
-		$userIsAuthor = ($article->getAuthorId() === $userId);
+		$userIsAuthor = ($comment->getAuthorId() === $userId);
 		if ($form->isSubmitted() && $form->isValid() && $userIsAuthor)
 		{
 			$entityManager = $this->getDoctrine()->getManager();
-			$entityManager->remove($article);
+			$entityManager->remove($comment);
 			$entityManager->flush();
 
 			return $this->redirectToRoute("blog_index");
 		}
 
-		return $this->render("article/delete.html.twig",
+		return $this->render("comment/delete.html.twig",
 			[
-				"article" => $article,
+				"comment" => $comment,
 				"form" => $form->createView()
 			]);
 	}
