@@ -1,4 +1,7 @@
-.checkout
-=========
+# Issues
 
-A Symfony project created on March 5, 2018, 6:07 pm.
+## Issue about clearing cache
+
+- Delete "var" folder
+- Delete and reinstall "vendor" folder
+- Run "php bin/console cache:clear"
