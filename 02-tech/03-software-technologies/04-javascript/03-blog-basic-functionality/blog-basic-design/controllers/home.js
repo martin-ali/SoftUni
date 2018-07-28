@@ -7,34 +7,32 @@ const homeController = {
     {
         response.redirect('/page/1');
     },
-    indexPageGet: (request, response) =>
+    pageGet: async (request, response) =>
     {
         const page = request.params.page >= 1
             ? Number(request.params.page)
             : 1;
-        Article
-            .findAndCountAll(
+
+        const articleData = await Article.findAndCountAll(
+        {
+            offset: ((page - 1) * 6),
+            limit: 6,
+            include: [
             {
-                offset: ((page - 1) * 6),
-                limit: 6,
-                include: [
-                {
-                    model: User
-                }]
-            })
-            .then((articleData) =>
-            {
-                const { rows: articles, count: articleCount } = articleData;
+                model: User
+            }]
+        });
 
-                const pages = [page - 1, page, page + 1];
+        const { rows: articles, count: articleCount } = articleData;
 
-                if (pages[0] < 1) pages.shift();
+        const pages = [page - 1, page, page + 1];
 
-                const articlesLeft = articleCount - (page * 6);
-                if (articlesLeft <= 0) pages.pop();
+        if (pages[0] < 1) pages.shift();
 
-                response.render('home/index', { articles, pages });
-            });
+        const articlesLeft = articleCount - (page * 6);
+        if (articlesLeft <= 0) pages.pop();
+
+        response.render('home/index', { articles, pages });
     }
 };
 

@@ -13,7 +13,7 @@ const commentController = require('../controllers').comment;
 module.exports = (app) =>
 {
     app.get('/', homeController.indexGet);
-    app.get('/page/:page', homeController.indexPageGet);
+    app.get('/page/:page', homeController.pageGet);
 
     app.get('/article/create', articleController.createGet);
     app.post('/article/create', articleController.createPost);
