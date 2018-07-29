@@ -4,7 +4,7 @@ const Comment = require('../models').Comment;
 const User = require('../models').User;
 
 const articleController = {
-    createGet: (request, response) =>
+    createGet: async (request, response) =>
     {
         response.render('article/create');
     },

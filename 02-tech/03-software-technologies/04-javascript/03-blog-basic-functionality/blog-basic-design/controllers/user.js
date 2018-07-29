@@ -17,7 +17,7 @@ const userController = {
 
         response.render('user/details', { username: email, fullName, articles, comments });
     },
-    loginGet: (request, response) =>
+    loginGet: async (request, response) =>
     {
         response.render('user/login');
     },
@@ -48,12 +48,12 @@ const userController = {
                 response.redirect('/');
             });
     },
-    logout: (request, response) =>
+    logout: async (request, response) =>
     {
         request.logOut();
         response.redirect('/');
     },
-    registerGet: (request, response) =>
+    registerGet: async (request, response) =>
     {
         response.render('./user/register');
     },

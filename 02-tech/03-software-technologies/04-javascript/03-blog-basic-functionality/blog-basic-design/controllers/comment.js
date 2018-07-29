@@ -3,7 +3,7 @@ const Comment = require('../models').Comment;
 const User = require('../models').User;
 
 const homeController = {
-    createGet: (request, response) =>
+    createGet: async (request, response) =>
     {
         response.render('comment/create', { articleId: request.params.id });
     },

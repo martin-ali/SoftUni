@@ -3,7 +3,7 @@ const Article = require('../models').Article;
 const User = require('../models').User;
 
 const homeController = {
-    indexGet: (request, response) =>
+    indexGet: async (request, response) =>
     {
         response.redirect('/page/1');
     },
