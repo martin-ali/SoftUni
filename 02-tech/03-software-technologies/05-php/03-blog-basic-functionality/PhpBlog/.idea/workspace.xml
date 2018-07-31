@@ -2,13 +2,124 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddb60d82-a1ae-4184-99d8-e720cd18a26d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../PhpBlog/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../.directory" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.directory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../04-javascript/03-blog-basic-functionality/blog-basic-design/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../04-javascript/03-blog-basic-functionality/blog-basic-design/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../02-mvc-and-symfony/exercises/Calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../02-mvc-and-symfony/exercises/Calculator/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PhpBlogBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PhpBlog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/PhpBlog.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/33af4b70-9401-4c4e-9263-6416f8898244.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/dataSources/33af4b70-9401-4c4e-9263-6416f8898244.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07824c9aab75bf52de2f00afa8cdc7ac77ef121e" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/0/7/07824c9aab75bf52de2f00afa8cdc7ac77ef121e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/097603ca450965955300d2bae7a6e7405b274a21" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/0/9/097603ca450965955300d2bae7a6e7405b274a21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/1644de5eade25a44c3b1dcf9848fbab4b4f7144f" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/1/6/1644de5eade25a44c3b1dcf9848fbab4b4f7144f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/c/1c96251db6093f84b85b3503caa45c1de1c64b54" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/1/c/1c96251db6093f84b85b3503caa45c1de1c64b54" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/238ad6afef77f2ae055e3b033bf944050927b095" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/2/3/238ad6afef77f2ae055e3b033bf944050927b095" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/2432df5096c4157dce90049bf0e826ce2a4015c8" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/2/4/2432df5096c4157dce90049bf0e826ce2a4015c8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/28484363ab9a625cb3de5d9fd9edb940ab1e9542" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/2/8/28484363ab9a625cb3de5d9fd9edb940ab1e9542" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/28b08a50610b49c6c11baea9ab239fb3c1498f69" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/2/8/28b08a50610b49c6c11baea9ab239fb3c1498f69" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/2925eabe80abbbb4e02978e00d6c9ca1d1823674" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/2/9/2925eabe80abbbb4e02978e00d6c9ca1d1823674" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/32f52550acb5074923c0619d4deb7829721136e0" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/3/2/32f52550acb5074923c0619d4deb7829721136e0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/3957b91a0d8450cea0115cfd5af69eac90d75897" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/3/9/3957b91a0d8450cea0115cfd5af69eac90d75897" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3bd6cb1f44ab9949439cee87cddc6105c8aa1df8" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/3/b/3bd6cb1f44ab9949439cee87cddc6105c8aa1df8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f7873bbc4b169ac0acf645797538748dfb611f3" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/3/f/3f7873bbc4b169ac0acf645797538748dfb611f3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f79eef1a81ce0d47c2d6bc58f3e4847588ed4c9" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/3/f/3f79eef1a81ce0d47c2d6bc58f3e4847588ed4c9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b6f2061b4c44694513cbaa252848e3f5fbb2d1f" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/4/b/4b6f2061b4c44694513cbaa252848e3f5fbb2d1f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/5838b5674fc61ac92b4c7237ed719607963fb25c" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/5/8/5838b5674fc61ac92b4c7237ed719607963fb25c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d54aaae523526327d05222543e142285bb4f795" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/5/d/5d54aaae523526327d05222543e142285bb4f795" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5ffe58c9712b766d0f109e73f4513d7cc8f07e10" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/5/f/5ffe58c9712b766d0f109e73f4513d7cc8f07e10" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6c30951a4011e400e45fb1c7e6e1a15c2918860c" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/6/c/6c30951a4011e400e45fb1c7e6e1a15c2918860c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e9e3ef0d9a0c0f006f38c3ef44fba9e16085bd5" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/6/e/6e9e3ef0d9a0c0f006f38c3ef44fba9e16085bd5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/7270b499560e3a55dc3f189a06bd2239a2af5a13" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/7/2/7270b499560e3a55dc3f189a06bd2239a2af5a13" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/4/74de42e2648f5349ddc09a8bc337de81552c8774" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/7/4/74de42e2648f5349ddc09a8bc337de81552c8774" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/7673ea17f5d51252e653df1c99066301b6e1c779" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/7/6/7673ea17f5d51252e653df1c99066301b6e1c779" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/8662aea77eb80a4e8bdc20cccd63747f3326428e" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/8/6/8662aea77eb80a4e8bdc20cccd63747f3326428e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/9673bbe7690bf25b47479de5fd1c1171121cb049" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/9/6/9673bbe7690bf25b47479de5fd1c1171121cb049" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a9e6c5cfd86202f44c239cc589a4dfd6207531ca" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/a/9/a9e6c5cfd86202f44c239cc589a4dfd6207531ca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b782e1180543b6d1c9e4ab46345cfc37e6d631af" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/b/7/b782e1180543b6d1c9e4ab46345cfc37e6d631af" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bc3a2fbb5cb185d03578311443633d462a4a757e" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/b/c/bc3a2fbb5cb185d03578311443633d462a4a757e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd004dee79a325732f5f838e36f50a8f6327efcd" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/b/d/bd004dee79a325732f5f838e36f50a8f6327efcd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bda9b5f1d331a676a455e5b7f6d59955c1329366" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/b/d/bda9b5f1d331a676a455e5b7f6d59955c1329366" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c2dee10206f9c735411a8ea47db890dc7c3466b1" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/c/2/c2dee10206f9c735411a8ea47db890dc7c3466b1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/cedc84e4eec54c095ab331c77b8973ebbd50a691" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/c/e/cedc84e4eec54c095ab331c77b8973ebbd50a691" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/ddf0045779d7ab452b6daa230cb4f0f36b869b66" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/d/d/ddf0045779d7ab452b6daa230cb4f0f36b869b66" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de6ef74eaac983d8f4a8eed5e247c0d3e9e296c2" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/d/e/de6ef74eaac983d8f4a8eed5e247c0d3e9e296c2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de9437d293911eb3f53080307d3ad5633fc8b4dc" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/d/e/de9437d293911eb3f53080307d3ad5633fc8b4dc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1dcb9ca77cac8aea46f6b16d0d55024ef0e9cbb" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/e/1/e1dcb9ca77cac8aea46f6b16d0d55024ef0e9cbb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e240571fb41cc7a842d1e53892d7e37fec7b178b" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/e/2/e240571fb41cc7a842d1e53892d7e37fec7b178b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e31cc8c746e5a595750d402b2a718ca19541c8f3" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/e/3/e31cc8c746e5a595750d402b2a718ca19541c8f3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb996e7ec61afeefac276f6cff0d7f06c283b448" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/e/b/eb996e7ec61afeefac276f6cff0d7f06c283b448" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/ebf51fa29b875f7a4ed61da576e39c93620cf4a6" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/e/b/ebf51fa29b875f7a4ed61da576e39c93620cf4a6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/d/ed49aa1684b680ccbf694aa3f0cff8e9db2df413" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/e/d/ed49aa1684b680ccbf694aa3f0cff8e9db2df413" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/symfony2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppCache.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/AppCache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/article/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/article/delete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/delete.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/article/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/details.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/article/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/blog/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/blog/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/comment/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/comment/create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/comment/delete.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/comment/delete.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/comment/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/comment/details.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/comment/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/comment/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/form/fields.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/form/fields.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/user/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/user/details.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/user/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/Resources/views/user/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bootstrap.php.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/config/config_dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config_prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/config/config_prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config_test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/config/config_test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/config/parameters.yml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing_dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/config/routing_dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/config/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/app/config/services.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/phpunit.xml.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Controller/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Entity/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Entity/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Form/ArticleType.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Form/ArticleType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Form/CommentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Form/CommentType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Form/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/PhpBlogBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/PhpBlogBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Repository/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Repository/ArticleRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Repository/CommentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Repository/CommentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PhpBlogBundle/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/app_dev.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/app_dev.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/apple-touch-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/bootstrap-datetimepicker.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/css/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/rowStyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/css/rowStyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/bootstrap-datetimepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/js/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/jquery-3.3.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/js/jquery-3.3.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/js/moment.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/js/moment.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../PhpBlog/web/robots.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +153,7 @@
     <session id="-591094090">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.opened" value="2" />
@@ -50,13 +161,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="1" />
+          <entry key="php" value="2" />
           <entry key="twig" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="1" />
+          <entry key="PHP" value="2" />
           <entry key="Twig" value="1" />
         </counts>
       </usages-collector>
@@ -75,7 +186,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/article/details.html.twig">
+        <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/details.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="760">
               <caret line="38" column="105" selection-start-line="38" selection-start-column="105" selection-end-line="38" selection-end-column="105" />
@@ -84,10 +195,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Controller/ArticleController.php">
+        <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/ArticleController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="424">
-              <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
               <folding>
                 <element signature="e#44#77#0#PHP" expanded="true" />
               </folding>
@@ -96,28 +207,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/article/delete.html.twig">
+        <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/delete.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="99" selection-start-line="18" selection-start-column="99" selection-end-line="18" selection-end-column="99" />
+            <state relative-caret-position="340">
+              <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Controller/DefaultController.php">
+        <entry file="file://$PROJECT_DIR$/../PhpBlog/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#44#103#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="612">
+              <caret line="43" column="102" selection-start-line="43" selection-start-column="102" selection-end-line="43" selection-end-column="102" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/comment/details.html.twig">
+        <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/comment/details.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="580">
               <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
@@ -252,7 +360,9 @@
     <option name="width" value="1270" />
     <option name="height" value="1023" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -263,29 +373,29 @@
           <expand>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
@@ -293,7 +403,7 @@
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
@@ -301,7 +411,7 @@
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
@@ -309,7 +419,7 @@
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
@@ -317,7 +427,7 @@
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
@@ -325,25 +435,25 @@
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PhpBlog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PhpBlog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="PhpBlogBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
@@ -369,11 +479,11 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Resources/views/comment" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Resources/views/user" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Resources/views/comment" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -389,7 +499,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="PHP_Blog" type="PhpLocalRunConfigurationType" factoryName="PHP Console" singleton="true" path="$PROJECT_DIR$/bin/console" scriptParameters="server:run">
+    <configuration name="PHP_Blog" type="PhpLocalRunConfigurationType" factoryName="PHP Console" singleton="true" path="$PROJECT_DIR$/../PhpBlog/bin/console" scriptParameters="server:run">
       <method v="2" />
     </configuration>
   </component>
@@ -412,12 +522,12 @@
       <workItem from="1532604191813" duration="6958000" />
       <workItem from="1532620597285" duration="15816000" />
       <workItem from="1533069391174" duration="92000" />
-      <workItem from="1533069534668" duration="153000" />
+      <workItem from="1533069534668" duration="463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54651000" />
+    <option name="totallyTimeSpent" value="54961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -430,7 +540,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="1682" height="1029" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.249694" />
@@ -439,8 +548,8 @@
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32827735" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.19417475" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32725322" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19313304" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -458,7 +567,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.1750306" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="4" visible="true" weight="0.1750306" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
@@ -497,21 +606,21 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/PhpBlogBundle.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/PhpBlogBundle.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="27" column="87" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
@@ -519,18 +628,18 @@
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_defines.php" />
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php" />
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php" />
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="12" column="96" lean-forward="true" selection-start-line="12" selection-start-column="96" selection-end-line="12" selection-end-column="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml.dist">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
@@ -538,14 +647,14 @@
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/http/http3.php" />
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Repository/UserRepository.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Repository/UserRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-300">
           <caret line="31" column="17" lean-forward="true" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
@@ -553,22 +662,22 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/user/register.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/user/register.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="46" column="27" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php" />
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/vendor/symfony/symfony/src/Symfony/Component/HttpFoundation/Request.php" />
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="24" column="27" lean-forward="true" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
@@ -581,191 +690,184 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/33af4b70-9401-4c4e-9263-6416f8898244/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery-3.3.1.min.js">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/web/js/jquery-3.3.1.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="1" selection-start-column="1" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.js">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/web/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="539">
           <caret line="3458" column="27" selection-start-line="3458" selection-start-column="27" selection-end-line="3458" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Form/UserType.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Form/UserType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Form/ArticleType.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Form/ArticleType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Form/CommentType.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Form/CommentType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Controller/HomeController.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/rowStyles.css">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/web/css/rowStyles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Controller/SecurityController.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/SecurityController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Repository/ArticleRepository.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Repository/ArticleRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Entity/Comment.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Entity/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
           <caret line="200" column="6" selection-start-line="200" selection-start-column="6" selection-end-line="200" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="65" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Entity/Article.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Entity/Article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="224" column="5" selection-start-line="224" selection-start-column="5" selection-end-line="224" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/blog/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/blog/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Controller/UserController.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/comment/delete.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/comment/delete.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="22" column="88" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/comment/edit.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/comment/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/comment/create.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/comment/create.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/user/details.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/user/details.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="327">
           <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/form/fields.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/form/fields.html.twig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/security/login.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/security/login.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
           <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-472">
           <caret line="31" column="58" lean-forward="true" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/create.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/create.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/details.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/details.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="38" column="105" selection-start-line="38" selection-start-column="105" selection-end-line="38" selection-end-column="105" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/comment/details.html.twig">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/comment/details.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Controller/CommentController.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/CommentController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/article/delete.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="99" selection-start-line="18" selection-start-column="99" selection-end-line="18" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Controller/ArticleController.php">
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/src/PhpBlogBundle/Controller/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
-          <caret line="29" column="50" lean-forward="true" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
           <folding>
             <element signature="e#44#77#0#PHP" expanded="true" />
           </folding>
@@ -774,11 +876,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PhpBlogBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="121">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
-            <element signature="e#44#103#0#PHP" expanded="true" />
+            <element signature="e#44#101#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/app/Resources/views/article/delete.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../PhpBlog/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="43" column="102" selection-start-line="43" selection-start-column="102" selection-end-line="43" selection-end-column="102" />
         </state>
       </provider>
     </entry>
