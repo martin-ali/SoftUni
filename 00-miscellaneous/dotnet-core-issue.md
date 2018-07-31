@@ -1,4 +1,4 @@
- 
+
 # Issues encountered with DotNet Core
 
 ## Dotnet run fails
@@ -21,7 +21,7 @@
 
 ### Description
 
-- Omnisharp shits the bed after detecting Mono
+- Omnisharp fails after detecting Mono
 
 ### Cause
 
