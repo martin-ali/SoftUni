@@ -3,7 +3,7 @@ package exercises;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MaxSequenceOfEqualElements
+public class x07MaxSequenceOfEqualElements
 {
     public static void main(String[] args)
     {

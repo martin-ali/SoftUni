@@ -3,7 +3,7 @@ package exercises;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class EqualSums
+public class x11EqualSums
 {
     public static void main(String[] args)
     {

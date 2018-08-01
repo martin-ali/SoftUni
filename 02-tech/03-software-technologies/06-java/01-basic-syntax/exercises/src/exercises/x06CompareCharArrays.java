@@ -2,7 +2,7 @@ package exercises;
 
 import java.util.Scanner;
 
-public class CompareCharArrays
+public class x06CompareCharArrays
 {
     public static void main(String[] args)
     {

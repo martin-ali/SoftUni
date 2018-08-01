@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class MostFrequentNumber
+public class x09MostFrequentNumber
 {
     public static void main(String[] args)
     {

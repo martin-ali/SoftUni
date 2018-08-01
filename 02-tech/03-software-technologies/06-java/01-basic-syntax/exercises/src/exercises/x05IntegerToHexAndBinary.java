@@ -2,7 +2,7 @@ package exercises;
 
 import java.util.Scanner;
 
-public class IntegerToHexAndBinary
+public class x05IntegerToHexAndBinary
 {
     public static void main(String[] args)
     {

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class MaxSequenceOfIncreasingElements
+public class x08MaxSequenceOfIncreasingElements
 {
     public static void main(String[] args)
     {

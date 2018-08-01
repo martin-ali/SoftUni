@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class ReverseCharacters
+public class x03ReverseCharacters
 {
     public static void main(String[] args)
     {

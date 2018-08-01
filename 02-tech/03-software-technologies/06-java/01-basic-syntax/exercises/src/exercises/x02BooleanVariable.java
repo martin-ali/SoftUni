@@ -2,13 +2,13 @@ package exercises;
 
 import java.util.Scanner;
 
-public class VariableFromHex
+public class x02BooleanVariable
 {
     public static void main(String[] args)
     {
         Scanner console = new Scanner(System.in);
-        Integer number = console.nextInt(16);
+        String booleanVariable = console.nextBoolean() ? "Yes" : "No";
 
-        System.out.println(number);
+        System.out.println(booleanVariable);
     }
 }

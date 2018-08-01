@@ -2,7 +2,7 @@ package exercises;
 
 import java.util.Scanner;
 
-public class IndexOfLetters
+public class x10IndexOfLetters
 {
     public static void main(String[] args)
     {

@@ -3,7 +3,7 @@ package exercises;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class VowelOrDigit
+public class x04VowelOrDigit
 {
     public static void main(String[] args)
     {
