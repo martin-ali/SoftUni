@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b57654c7-1482-4dea-9e57-c829cdeffbf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/MvcDemo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/MvcDemo/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/.idea/exercises.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/x18Phonebook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/x19PhonebookUpgrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/x20CountWorkingDays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/x21AdvertisementMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/src/exercises/x22IntersectionOfCircles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/softuni/entity/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../.directory" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.directory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../04-javascript/03-blog-basic-functionality/blog-basic-design/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../04-javascript/03-blog-basic-functionality/blog-basic-design/config/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../01-basic-syntax/exercises/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../01-basic-syntax/exercises/out/production/exercises/exercises/x16UrlParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../01-basic-syntax/exercises/out/production/exercises/exercises/x16UrlParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/softuni/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/softuni/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/base-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/base-layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/views/calculatorForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/views/calculatorForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/softuni/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/softuni/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/base-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/base-layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/views/calculatorForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/views/calculatorForm.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,14 +28,15 @@
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="3" />
           <entry key="iml" value="1" />
-          <entry key="java" value="2" />
+          <entry key="java" value="3" />
           <entry key="properties" value="1" />
           <entry key="xml" value="3" />
         </counts>
@@ -51,15 +45,16 @@
         <counts>
           <entry key="HTML" value="3" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="3" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="HTML" value="23" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="11" />
+          <entry key="JAVA" value="576" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -68,8 +63,9 @@
       <usages-collector id="statistics.php.composer.command.options" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="html" value="23" />
           <entry key="iml" value="1" />
-          <entry key="java" value="11" />
+          <entry key="java" value="576" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.rename.constructor" />
@@ -83,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CalculatorJava.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="720">
               <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
             </state>
           </provider>
@@ -101,7 +97,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/base-layout.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -111,23 +111,18 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/views/calculatorForm.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/softuni/CalculatorApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            <state relative-caret-position="1220">
+              <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/softuni/controller/HomeController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/softuni/CalculatorApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="120">
+              <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,15 +131,50 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/softuni/controller/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/softuni/entity/Calculator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
-              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&amp;lt;</find>
+      <find>&amp;gt;</find>
+      <find>&amp;quot;</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
@@ -154,6 +184,9 @@
       <list>
         <option value="$PROJECT_DIR$/CalculatorJava.iml" />
         <option value="$PROJECT_DIR$/src/main/java/com/softuni/CalculatorApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/views/calculatorForm.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/base-layout.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/softuni/entity/Calculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/softuni/controller/HomeController.java" />
       </list>
     </option>
@@ -175,10 +208,9 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1802" />
-    <option name="y" value="199" />
-    <option name="width" value="843" />
-    <option name="height" value="676" />
+    <option name="x" value="673" />
+    <option name="width" value="827" />
+    <option name="height" value="666" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -188,6 +220,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,9 +291,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,7 +304,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533301965243" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533329643648" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -309,14 +341,15 @@
       <updated>1533298009623</updated>
       <workItem from="1533298011249" duration="2535000" />
       <workItem from="1533302920652" duration="3392000" />
+      <workItem from="1533326439834" duration="2891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5927000" />
+    <option name="totallyTimeSpent" value="8818000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1679" y="0" width="1282" height="1025" extended-state="6" />
+    <frame x="-1" y="22" width="1682" height="1029" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
@@ -328,7 +361,7 @@
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32964602" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,7 +382,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="9" visible="true" weight="0.24959481" />
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="9" visible="true" weight="0.18849449" />
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
   </component>
@@ -362,7 +395,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/CalculatorJava.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="720">
           <caret line="36" column="32" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
         </state>
       </provider>
@@ -373,33 +406,51 @@
     <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/base-layout.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/views/calculatorForm.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/softuni/CalculatorApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/views/calculatorForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1220">
+          <caret line="61" column="34" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/base-layout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="52" lean-forward="true" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softuni/entity/Calculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/softuni/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        <state relative-caret-position="400">
+          <caret line="29" column="11" lean-forward="true" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/softuni/CalculatorApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
