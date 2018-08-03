@@ -2,25 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6120af5f-a7e6-42b4-8d05-190864257615" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exercises/x14FitString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x15CensorEmailAddress.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x16UrlParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x17ChangeToUppercase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/.idea/exercises.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/x18Phonebook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/x19PhonebookUpgrade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/x20CountWorkingDays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/x21AdvertisementMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/x22IntersectionOfCircles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/x23AverageGrades.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/x24BookLibrary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exercises/x25BookLibraryModification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../02-basic-web/Calculator/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../.directory" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.directory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../04-javascript/03-blog-basic-functionality/blog-basic-design/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../04-javascript/03-blog-basic-functionality/blog-basic-design/config/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/BombNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/BooleanVariable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/CompareCharArrays.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/EqualSums.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/IndexOfLetters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/IntegerToHexAndBinary.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/MaxSequenceOfEqualElements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/MaxSequenceOfIncreasingElements.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/MostFrequentNumber.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/ReverseCharacters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/VariableFromHex.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/VowelOrDigit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/x16UrlParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exercises/exercises/x16UrlParser.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,36 +37,47 @@
     <session id="-552113801">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="70" />
-          <entry key="java" value="4734" />
+          <entry key="dummy" value="80" />
+          <entry key="java" value="10216" />
+          <entry key="md" value="186" />
           <entry key="txt" value="20" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4734" />
-          <entry key="PLAIN_TEXT" value="90" />
+          <entry key="JAVA" value="10216" />
+          <entry key="Markdown" value="186" />
+          <entry key="PLAIN_TEXT" value="100" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="class" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="17" />
+          <entry key="java" value="60" />
+          <entry key="md" value="1" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="17" />
+          <entry key="JAVA" value="60" />
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -76,52 +91,16 @@
       <usages-collector id="statistics.spring.boot.mvc.usages" />
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="exercises" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x12BombNumbers.java">
+        <entry file="file://$PROJECT_DIR$/src/exercises/x24BookLibrary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x13ReverseString.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x14FitString.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x15CensorEmailAddress.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x16UrlParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+            <state relative-caret-position="529">
+              <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,55 +109,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x17ChangeToUppercase.java">
+        <entry file="file://$PROJECT_DIR$/src/exercises/x25BookLibraryModification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="23" column="76" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x08MaxSequenceOfIncreasingElements.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x10IndexOfLetters.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x09MostFrequentNumber.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/exercises/x03ReverseCharacters.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+            <state relative-caret-position="58">
+              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,6 +129,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&amp;lt;</find>
+      <find>&amp;gt;</find>
+      <find>&amp;quot;</find>
+      <find>`</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
   </component>
@@ -205,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/basics/company/Main.java" />
         <option value="$PROJECT_DIR$/src/exercises/company/Main.java" />
         <option value="$PROJECT_DIR$/src/exercises/vart.java" />
-        <option value="$PROJECT_DIR$/src/exercises/Main.java" />
         <option value="$PROJECT_DIR$/src/exercises/Rolf.java" />
         <option value="$PROJECT_DIR$/src/exercises/VariableInHex.java" />
         <option value="$PROJECT_DIR$/src/exercises/VariableFromHex.java" />
@@ -228,6 +169,23 @@
         <option value="$PROJECT_DIR$/src/exercises/x15CensorEmailAddress.java" />
         <option value="$PROJECT_DIR$/src/exercises/x16UrlParser.java" />
         <option value="$PROJECT_DIR$/src/exercises/x17ChangeToUppercase.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x18Phonebook.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x19PhonebookUpgrade.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x21AdvertisementMessage.java" />
+        <option value="$PROJECT_DIR$/src/exercises/Point.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x07MaxSequenceOfEqualElements.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x20CountWorkingDays.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x22IntersectionOfCircles.java" />
+        <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/src/exercises/Library.java" />
+        <option value="$PROJECT_DIR$/src/exercises/Circle.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x25BookLibraryUpgraded.java" />
+        <option value="$PROJECT_DIR$/src/exercises/Student.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x23AverageGrades.java" />
+        <option value="$PROJECT_DIR$/src/exercises/Book.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x24BookLibrary.java" />
+        <option value="$PROJECT_DIR$/src/exercises/Main.java" />
+        <option value="$PROJECT_DIR$/src/exercises/x25BookLibraryModification.java" />
       </list>
     </option>
   </component>
@@ -237,15 +195,21 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="467" />
-    <option name="y" value="157" />
-    <option name="width" value="851" />
-    <option name="height" value="681" />
+    <option name="x" value="1447" />
+    <option name="y" value="22" />
+    <option name="width" value="827" />
+    <option name="height" value="666" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -278,17 +242,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533162149094" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533326265394" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../02-basic-web/Calculator" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -302,7 +266,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.x16UrlParser">
+  <component name="RunManager" selected="Application.x25BookLibraryModification">
     <configuration name="Main" type="Application" factoryName="Application" singleton="true" temporary="true">
       <option name="MAIN_CLASS_NAME" value="exercises.x11EqualSums" />
       <module name="exercises" />
@@ -312,12 +276,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="x16UrlParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="exercises.x16UrlParser" />
+    <configuration name="x25BookLibraryModification" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercises.x25BookLibraryModification" />
       <module name="exercises" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="exercises.*" />
+          <option name="PATTERN" value="exercises.x23AverageGrades" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -327,11 +291,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.Main" />
-      <item itemvalue="Application.x16UrlParser" />
+      <item itemvalue="Application.x25BookLibraryModification" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.x16UrlParser" />
+        <item itemvalue="Application.x25BookLibraryModification" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -347,12 +311,17 @@
       <option name="presentableId" value="Default" />
       <updated>1533050964384</updated>
       <workItem from="1533050974096" duration="13054000" />
-      <workItem from="1533154574242" duration="7412000" />
+      <workItem from="1533154574242" duration="7511000" />
+      <workItem from="1533194001669" duration="11051000" />
+      <workItem from="1533249222835" duration="406000" />
+      <workItem from="1533297963776" duration="42000" />
+      <workItem from="1533308732407" duration="13762000" />
+      <workItem from="1533325224268" duration="1038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20466000" />
+    <option name="totallyTimeSpent" value="46864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="22" width="1682" height="1029" extended-state="6" />
@@ -363,11 +332,11 @@
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Favorites" order="5" side_tool="true" weight="0.3298217" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29867256" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.545354" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3329646" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31333333" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -375,7 +344,37 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32964602" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.18584071" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32986537" />
+      <window_info anchor="right" content_ui="combo" id="Project" order="9" weight="0.20685434" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20353982" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3141593" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32964602" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.18666667" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -385,8 +384,8 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="right" content_ui="combo" id="Project" order="9" visible="true" weight="0.14749081" />
-    </layout>
+      <window_info active="true" anchor="right" content_ui="combo" id="Project" order="9" visible="true" weight="0.15667075" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -409,18 +408,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercises/x06CompareCharArrays.java">
+    <entry file="file://$PROJECT_DIR$/src/exercises/input.txt" />
+    <entry file="file://$PROJECT_DIR$/src/exercises/x12BombNumbers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        <state relative-caret-position="180">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercises/input.txt" />
+    <entry file="file://$PROJECT_DIR$/src/exercises/x14FitString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x18Phonebook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x19PhonebookUpgrade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="52" column="14" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x04VowelOrDigit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/exercises/x01VariableFromHex.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x03ReverseCharacters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -431,43 +472,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercises/x04VowelOrDigit.java">
+    <entry file="file://$PROJECT_DIR$/src/exercises/x06CompareCharArrays.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercises/x11EqualSums.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="380">
+          <caret line="22" column="56" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exercises/x07MaxSequenceOfEqualElements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="18" column="48" lean-forward="true" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exercises/x08MaxSequenceOfIncreasingElements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="175">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x09MostFrequentNumber.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -478,47 +507,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercises/x09MostFrequentNumber.java">
+    <entry file="file://$PROJECT_DIR$/src/exercises/x11EqualSums.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercises/x03ReverseCharacters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercises/x12BombNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="520">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exercises/x13ReverseString.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="340">
           <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercises/x14FitString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -531,18 +530,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exercises/x16UrlParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
+        <state relative-caret-position="195">
           <caret line="11" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x17ChangeToUppercase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x21AdvertisementMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="100">
+            <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x20CountWorkingDays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x22IntersectionOfCircles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar!/java/util/function/Function.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1520">
+          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x23AverageGrades.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/exercises/x17ChangeToUppercase.java">
+    <entry file="file://$PROJECT_DIR$/src/exercises/x24BookLibrary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="23" column="76" selection-start-line="23" selection-start-column="76" selection-end-line="23" selection-end-column="76" />
+        <state relative-caret-position="529">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/exercises/x25BookLibraryModification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
