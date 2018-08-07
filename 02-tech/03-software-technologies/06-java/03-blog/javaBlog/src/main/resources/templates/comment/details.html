@@ -17,7 +17,7 @@
 
                         <div class="pull-right">
 
-                            <th:block sec:authorize="isAuthenticated()">
+                            <th:block th:if="${userIsAuthor}">
                                 <a class="btn btn-success btn-xs" th:href="@{/comment/edit/{id}(id = ${comment.id})}">Edit</a>
                                 <a class="btn btn-danger btn-xs" th:href="@{/comment/delete/{id}(id = ${comment.id})}">Delete</a>
                             </th:block>

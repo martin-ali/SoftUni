@@ -31,6 +31,31 @@ public class CommentController
     @Autowired
     private UserRepository userRepository;
 
+    private User getCurrentUser()
+    {
+        if (SecurityContextHolder.getContext().getAuthentication().getCredentials() != null)
+        {
+            return null;
+        }
+
+        UserDetails userDetails = (UserDetails) SecurityContextHolder
+                .getContext()
+                .getAuthentication()
+                .getPrincipal();
+
+        User user = this.userRepository.findByEmail(userDetails.getUsername());
+
+        return user;
+    }
+
+    private Boolean commentUserIsAuthor(Integer commentId)
+    {
+        Integer commentAuthorId = this.commentRepository.findOne(commentId).getAuthor().getId();
+        User user = this.getCurrentUser();
+
+        return user != null && (commentAuthorId.equals(user.getId()));
+    }
+
     @GetMapping("/details/{id}")
     public String details(Model model, @PathVariable Integer id)
     {
@@ -41,6 +66,7 @@ public class CommentController
 
         Comment comment = this.commentRepository.findOne(id);
 
+        model.addAttribute("userIsAuthor", this.commentUserIsAuthor(id));
         model.addAttribute("comment", comment);
         model.addAttribute("view", "comment/details");
 
@@ -61,12 +87,7 @@ public class CommentController
     @PreAuthorize("isAuthenticated()")
     public String createProcess(CommentBindingModel commentModel, @PathVariable Integer articleId)
     {
-        UserDetails userDetails = (UserDetails) SecurityContextHolder
-                .getContext()
-                .getAuthentication()
-                .getPrincipal();
-
-        User user = this.userRepository.findByEmail(userDetails.getUsername());
+        User user = getCurrentUser();
         Article article = this.articleRepository.findOne(articleId);
 
         Comment comment = new Comment(commentModel.getContent(), user, article);
@@ -79,7 +100,7 @@ public class CommentController
     @PreAuthorize("isAuthenticated()")
     public String edit(Model model, @PathVariable Integer id)
     {
-        if (!this.commentRepository.exists(id))
+        if (!this.commentRepository.exists(id) || !this.commentUserIsAuthor(id))
         {
             return "redirect:/";
         }
@@ -96,7 +117,7 @@ public class CommentController
     @PreAuthorize("isAuthenticated()")
     public String editProcess(CommentBindingModel commentModel, @PathVariable Integer id)
     {
-        if (!this.commentRepository.exists(id))
+        if (!this.commentRepository.exists(id) || !this.commentUserIsAuthor(id))
         {
             return "redirect:/";
         }
@@ -113,7 +134,7 @@ public class CommentController
     @PreAuthorize("isAuthenticated()")
     public String delete(Model model, @PathVariable Integer id)
     {
-        if (!this.commentRepository.exists(id))
+        if (!this.commentRepository.exists(id) || !this.commentUserIsAuthor(id))
         {
             return "redirect:/";
         }
@@ -130,7 +151,7 @@ public class CommentController
     @PreAuthorize("isAuthenticated()")
     public String deleteProcess(@PathVariable Integer id)
     {
-        if (!this.commentRepository.exists(id))
+        if (!this.commentRepository.exists(id) || !this.commentUserIsAuthor(id))
         {
             return "redirect:/";
         }

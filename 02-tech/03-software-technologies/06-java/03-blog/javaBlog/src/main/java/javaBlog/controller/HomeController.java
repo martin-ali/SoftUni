@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.Comparator;
 import java.util.List;
 
 @Controller
@@ -19,6 +20,7 @@ public class HomeController
     public String index(Model model)
     {
         List<Article> articles = this.articleRepository.findAll();
+        articles.sort(Comparator.comparing(Article::getId));
 
         model.addAttribute("view", "home/index");
         model.addAttribute("articles", articles);

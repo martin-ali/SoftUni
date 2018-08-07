@@ -84,7 +84,7 @@ public class UserController
 
     @GetMapping("/profile")
     @PreAuthorize("isAuthenticated()")
-    public String profile(Model model)
+    public String privateProfile(Model model)
     {
         UserDetails principal = (UserDetails) SecurityContextHolder
                 .getContext()
@@ -100,7 +100,7 @@ public class UserController
     }
 
     @GetMapping("/user/{id}")
-    public String profile(Model model, @PathVariable Integer id)
+    public String publicProfile(Model model, @PathVariable Integer id)
     {
         User user = this.userRepository.findOne(id);
 

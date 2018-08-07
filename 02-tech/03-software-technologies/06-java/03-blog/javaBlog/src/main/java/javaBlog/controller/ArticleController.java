@@ -2,6 +2,7 @@ package javaBlog.controller;
 
 import javaBlog.bindingModel.ArticleBindingModel;
 import javaBlog.entity.Article;
+import javaBlog.entity.Comment;
 import javaBlog.entity.User;
 import javaBlog.repository.ArticleRepository;
 import javaBlog.repository.CommentRepository;
@@ -17,6 +18,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.Comparator;
+import java.util.stream.Stream;
+
 @Controller
 @RequestMapping("/article")
 public class ArticleController
@@ -30,6 +34,31 @@ public class ArticleController
     @Autowired
     private UserRepository userRepository;
 
+    private User getCurrentUser()
+    {
+        if (SecurityContextHolder.getContext().getAuthentication().getCredentials() != null)
+        {
+            return null;
+        }
+
+        UserDetails userDetails = (UserDetails) SecurityContextHolder
+                .getContext()
+                .getAuthentication()
+                .getPrincipal();
+
+        User user = this.userRepository.findByEmail(userDetails.getUsername());
+
+        return user;
+    }
+
+    private Boolean articleUserIsAuthor(Integer articleId)
+    {
+        Integer articleAuthorId = this.articleRepository.findOne(articleId).getAuthor().getId();
+        User user = this.getCurrentUser();
+
+        return user != null && (articleAuthorId.equals(user.getId()));
+    }
+
     @GetMapping("/details/{id}")
     public String details(Model model, @PathVariable Integer id)
     {
@@ -39,8 +68,13 @@ public class ArticleController
         }
 
         Article article = this.articleRepository.findOne(id);
+        Stream<Comment> comments = article
+                .getComments()
+                .stream()
+                .sorted(Comparator.comparing(Comment::getId));
 
-        model.addAttribute("comments", article.getComments());
+        model.addAttribute("userIsAuthor", this.articleUserIsAuthor(id));
+        model.addAttribute("comments", comments);
         model.addAttribute("article", article);
         model.addAttribute("view", "article/details");
 
@@ -59,11 +93,7 @@ public class ArticleController
     @PreAuthorize("isAuthenticated()")
     public String createProcess(ArticleBindingModel articleModel)
     {
-        UserDetails userDetails = (UserDetails) SecurityContextHolder
-                .getContext()
-                .getAuthentication()
-                .getPrincipal();
-        User user = this.userRepository.findByEmail(userDetails.getUsername());
+        User user = this.getCurrentUser();
 
         Article article = new Article(articleModel.getTitle(), articleModel.getContent(), user);
         this.articleRepository.saveAndFlush(article);
@@ -75,7 +105,7 @@ public class ArticleController
     @PreAuthorize("isAuthenticated()")
     public String edit(Model model, @PathVariable Integer id)
     {
-        if (!this.articleRepository.exists(id))
+        if (!this.articleRepository.exists(id) || !this.articleUserIsAuthor(id))
         {
             return "redirect:/";
         }
@@ -92,7 +122,7 @@ public class ArticleController
     @PreAuthorize("isAuthenticated()")
     public String editProcess(ArticleBindingModel articleModel, @PathVariable Integer id)
     {
-        if (!this.articleRepository.exists(id))
+        if (!this.articleRepository.exists(id) || !this.articleUserIsAuthor(id))
         {
             return "redirect:/";
         }
@@ -110,7 +140,7 @@ public class ArticleController
     @PreAuthorize("isAuthenticated()")
     public String delete(Model model, @PathVariable Integer id)
     {
-        if (!this.articleRepository.exists(id))
+        if (!this.articleRepository.exists(id) || !articleUserIsAuthor(id))
         {
             return "redirect:/";
         }
@@ -127,12 +157,11 @@ public class ArticleController
     @PreAuthorize("isAuthenticated()")
     public String deleteProcess(@PathVariable Integer id)
     {
-        if (!this.articleRepository.exists(id))
+        if (this.articleRepository.exists(id) && this.articleUserIsAuthor(id))
         {
-            return "redirect:/";
+            this.articleRepository.delete(id);
         }
 
-        this.articleRepository.delete(id);
 
         return "redirect:/";
     }

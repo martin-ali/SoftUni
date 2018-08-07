@@ -34,9 +34,12 @@ public class Article
     @Transient
     public String getSummary()
     {
-        int length= Math.min(this.content.length(), 50);
-        String summary =  this.content.substring(0, length) + "...";
-        return summary;
+        if (this.content.length() > 50)
+        {
+            return this.content.substring(50) + "...";
+        }
+
+        return this.content;
     }
 
     @Id
