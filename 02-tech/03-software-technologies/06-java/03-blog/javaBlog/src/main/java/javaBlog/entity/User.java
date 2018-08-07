@@ -18,6 +18,8 @@ public class User
 
     private Set<Article> articles;
 
+    private Set<Comment> comments;
+
     private Set<Role> roles;
 
     public User()
@@ -32,6 +34,7 @@ public class User
 
         this.roles = new HashSet<>();
         this.articles = new HashSet<>();
+        this.comments = new HashSet<>();
     }
 
     public void addRole(Role role)
@@ -105,6 +108,17 @@ public class User
     public void setArticles(Set<Article> articles)
     {
         this.articles = articles;
+    }
+
+    @OneToMany(mappedBy = "author")
+    public Set<Comment> getComments()
+    {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments)
+    {
+        this.comments = comments;
     }
 }
 

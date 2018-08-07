@@ -1,6 +1,8 @@
 package javaBlog.entity;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "articles")
@@ -14,6 +16,8 @@ public class Article
 
     private User author;
 
+    private Set<Comment> comments;
+
     public Article()
     {
     }
@@ -23,13 +27,16 @@ public class Article
         this.title = title;
         this.content = content;
         this.author = author;
+
+        this.comments = new HashSet<>();
     }
 
     @Transient
     public String getSummary()
     {
-        // TODO: FIX
-        return this.getContent().substring(Math.min(this.getContent().length(), 100)) + "...";
+        int length= Math.min(this.content.length(), 50);
+        String summary =  this.content.substring(0, length) + "...";
+        return summary;
     }
 
     @Id
@@ -76,5 +83,16 @@ public class Article
     public void setAuthor(User author)
     {
         this.author = author;
+    }
+
+    @OneToMany(mappedBy = "article", orphanRemoval = true)
+    public Set<Comment> getComments()
+    {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments)
+    {
+        this.comments = comments;
     }
 }

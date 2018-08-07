@@ -2,9 +2,7 @@
 
 ## TODO
 
+- [x] Public user details
 - [x] User details with comments and articles
-- [x] Comment system
-- [x] Properly validate who can edit articles(Author ot admin)
-- [x] Comment editing
-- [x] Comment deletion
-- [x] Article deletion system
+- [x] Comment system with creation, editing, details, and deletion
+- [ ] Properly validate who can edit articles(Author ot admin)

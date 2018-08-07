@@ -1,7 +1,8 @@
 package javaBlog.controller;
 
-import javaBlog.bindingModel.ArticleBindingModel;
+import javaBlog.bindingModel.CommentBindingModel;
 import javaBlog.entity.Article;
+import javaBlog.entity.Comment;
 import javaBlog.entity.User;
 import javaBlog.repository.ArticleRepository;
 import javaBlog.repository.CommentRepository;
@@ -18,8 +19,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/article")
-public class ArticleController
+@RequestMapping("/comment")
+public class CommentController
 {
     @Autowired
     private CommentRepository commentRepository;
@@ -33,92 +34,94 @@ public class ArticleController
     @GetMapping("/details/{id}")
     public String details(Model model, @PathVariable Integer id)
     {
-        if (!this.articleRepository.exists(id))
+        if (!this.commentRepository.exists(id))
         {
             return "redirect:/";
         }
 
-        Article article = this.articleRepository.findOne(id);
+        Comment comment = this.commentRepository.findOne(id);
 
-        model.addAttribute("comments", article.getComments());
-        model.addAttribute("article", article);
-        model.addAttribute("view", "article/details");
+        model.addAttribute("comment", comment);
+        model.addAttribute("view", "comment/details");
 
         return "base-layout";
     }
 
-    @GetMapping("/create")
+    @GetMapping("/create/{articleId}")
     @PreAuthorize("isAuthenticated()")
-    public String create(Model model)
+    public String create(Model model, @PathVariable Integer articleId)
     {
-        model.addAttribute("view", "article/create");
+        model.addAttribute("articleId", articleId);
+        model.addAttribute("view", "comment/create");
+
         return "base-layout";
     }
 
-    @PostMapping("/create")
+    @PostMapping("/create/{articleId}")
     @PreAuthorize("isAuthenticated()")
-    public String createProcess(ArticleBindingModel articleModel)
+    public String createProcess(CommentBindingModel commentModel, @PathVariable Integer articleId)
     {
         UserDetails userDetails = (UserDetails) SecurityContextHolder
                 .getContext()
                 .getAuthentication()
                 .getPrincipal();
+
         User user = this.userRepository.findByEmail(userDetails.getUsername());
+        Article article = this.articleRepository.findOne(articleId);
 
-        Article article = new Article(articleModel.getTitle(), articleModel.getContent(), user);
-        this.articleRepository.saveAndFlush(article);
+        Comment comment = new Comment(commentModel.getContent(), user, article);
+        this.commentRepository.saveAndFlush(comment);
 
-        return "redirect:/";
+        return "redirect:/article/details/" + articleId;
     }
 
     @GetMapping("/edit/{id}")
     @PreAuthorize("isAuthenticated()")
     public String edit(Model model, @PathVariable Integer id)
     {
-        if (!this.articleRepository.exists(id))
+        if (!this.commentRepository.exists(id))
         {
             return "redirect:/";
         }
 
-        Article article = this.articleRepository.findOne(id);
+        Comment comment = this.commentRepository.findOne(id);
 
-        model.addAttribute("article", article);
-        model.addAttribute("view", "article/edit");
+        model.addAttribute("comment", comment);
+        model.addAttribute("view", "comment/edit");
 
         return "base-layout";
     }
 
     @PostMapping("/edit/{id}")
     @PreAuthorize("isAuthenticated()")
-    public String editProcess(ArticleBindingModel articleModel, @PathVariable Integer id)
+    public String editProcess(CommentBindingModel commentModel, @PathVariable Integer id)
     {
-        if (!this.articleRepository.exists(id))
+        if (!this.commentRepository.exists(id))
         {
             return "redirect:/";
         }
 
-        Article article = this.articleRepository.findOne(id);
-        article.setContent(articleModel.getContent());
-        article.setTitle(articleModel.getTitle());
+        Comment comment = this.commentRepository.findOne(id);
+        comment.setContent(commentModel.getContent());
 
-        this.articleRepository.saveAndFlush(article);
+        this.commentRepository.saveAndFlush(comment);
 
-        return "redirect:/article/details/" + id;
+        return "redirect:/comment/details/" + id;
     }
 
     @GetMapping("/delete/{id}")
     @PreAuthorize("isAuthenticated()")
     public String delete(Model model, @PathVariable Integer id)
     {
-        if (!this.articleRepository.exists(id))
+        if (!this.commentRepository.exists(id))
         {
             return "redirect:/";
         }
 
-        Article article = this.articleRepository.findOne(id);
+        Comment comment = this.commentRepository.findOne(id);
 
-        model.addAttribute("article", article);
-        model.addAttribute("view", "article/delete");
+        model.addAttribute("comment", comment);
+        model.addAttribute("view", "comment/delete");
 
         return "base-layout";
     }
@@ -127,13 +130,14 @@ public class ArticleController
     @PreAuthorize("isAuthenticated()")
     public String deleteProcess(@PathVariable Integer id)
     {
-        if (!this.articleRepository.exists(id))
+        if (!this.commentRepository.exists(id))
         {
             return "redirect:/";
         }
 
-        this.articleRepository.delete(id);
+        int articleId = this.commentRepository.getOne(id).getArticle().getId();
+        this.commentRepository.delete(id);
 
-        return "redirect:/";
+        return "redirect:/article/details/" + articleId;
     }
 }

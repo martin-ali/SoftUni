@@ -1,13 +1,52 @@
-<main>
-    <div class="container body-container">
-        <div class="row">
-            <div id="main" class="col-sm-9">
-                <div>
-                    <span th:text="${user.email}"></span>
-                    <br/>
-                    <span th:text="${user.fullName}"></span>
-                </div>
-            </div>
+<div class="container body-content">
+    <div class="row">
+        <div class="col-md-12">
+            <article>
+                <header>
+                    <h2 th:text="${'Username: ' + user.email}"></h2>
+                </header>
+
+                <p th:text="${'Full Name: ' + user.fullName}"></p>
+
+                <h4>Articles by user:</h4>
+
+                <th:block th:if="${!user.articles.empty}"
+                          th:each="article : ${user.articles}">
+                    <div class="alternatingRows modal-header">
+                        <a th:href="@{/article/details/{id}(id=${article.id})}"
+                           th:text="${article.title}">
+                        </a>
+                    </div>
+                </th:block>
+
+                <th:block th:if="${user.articles.empty}">
+                    <div class="modal-header">
+                        <p>User has not written any articles yet!</p>
+                    </div>
+                </th:block>
+
+                <h4>Comments by user:</h4>
+                <th:block th:if="${!user.comments.empty}"
+                          th:each="comment : ${user.comments}">
+                    <div class="alternatingRows modal-header">
+                        <a th:href="@{/comment/details/{id}(id=${comment.id})}"
+                           th:text="${comment.content}">
+                        </a>
+                    </div>
+                </th:block>
+
+                <th:block th:if="${user.comments.empty}">
+                    <div class="modal-header">
+                        <p>User has not commented yet!</p>
+                    </div>
+                </th:block>
+
+                <footer>
+                    <div class="pull-right">
+                        <a class="btn btn-default btn-xs" href="/">Back &raquo;</a>
+                    </div>
+                </footer>
+            </article>
         </div>
     </div>
-</main>
+</div>

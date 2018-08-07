@@ -14,10 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -95,6 +92,17 @@ public class UserController
                 .getPrincipal();
 
         User user = this.userRepository.findByEmail(principal.getUsername());
+
+        model.addAttribute("user", user);
+        model.addAttribute("view", "user/profile");
+
+        return "base-layout";
+    }
+
+    @GetMapping("/user/{id}")
+    public String profile(Model model, @PathVariable Integer id)
+    {
+        User user = this.userRepository.findOne(id);
 
         model.addAttribute("user", user);
         model.addAttribute("view", "user/profile");

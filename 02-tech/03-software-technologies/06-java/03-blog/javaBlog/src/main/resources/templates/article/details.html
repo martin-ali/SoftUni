@@ -11,13 +11,35 @@
 
                     <small class="author" th:text="${article.author.fullName}"></small>
 
+                    <h4>Comments:</h4>
+
+                    <th:block th:if="${!article.comments.empty}"
+                            th:each="comment : ${article.comments}">
+                    <div class="alternatingRows modal-header">
+                        <p>
+                            <a th:href="@{/comment/details/{id}(id=${comment.id})}"
+                                th:text="${comment.content}"></a>
+                        </p>
+                        <small class="author">
+                            Author:
+                            <a th:href="@{/user/{id}(id=${comment.author.id})}"
+                                th:text="${comment.author.email}">
+                            </a>
+                        </small>
+                    </div>
+                    </th:block>
+                    <th:block th:if="${article.comments.empty}">
+                    <div class="alternatingRows">
+                        <p>No comments yet!</p>
+                    </div>
+                    </th:block>
+
                     <footer>
-
                         <div class="pull-right">
-
                             <th:block sec:authorize="isAuthenticated()">
                                 <a class="btn btn-success btn-xs" th:href="@{/article/edit/{id}(id = ${article.id})}">Edit</a>
                                 <a class="btn btn-danger btn-xs" th:href="@{/article/delete/{id}(id = ${article.id})}">Delete</a>
+                                <a class="btn btn-default btn-xs" th:href="@{/comment/create/{id}(id = ${article.id})}">Add comment</a>
                             </th:block>
                             <a class="btn btn-default btn-xs" th:href="@{/}">back &laquo;</a>
                         </div>

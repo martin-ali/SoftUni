@@ -16,42 +16,46 @@ public class UserBindingModel
     @NotNull
     private String confirmPassword;
 
+    @NotNull
     public String getEmail()
     {
         return email;
     }
 
-    public void setEmail(String email)
+    public void setEmail(@NotNull String email)
     {
         this.email = email;
     }
 
+    @NotNull
     public String getFullName()
     {
         return fullName;
     }
 
-    public void setFullName(String fullName)
+    public void setFullName(@NotNull String fullName)
     {
         this.fullName = fullName;
     }
 
+    @NotNull
     public String getPassword()
     {
         return password;
     }
 
-    public void setPassword(String password)
+    public void setPassword(@NotNull String password)
     {
         this.password = password;
     }
 
+    @NotNull
     public String getConfirmPassword()
     {
         return confirmPassword;
     }
 
-    public void setConfirmPassword(String confirmPassword)
+    public void setConfirmPassword(@NotNull String confirmPassword)
     {
         this.confirmPassword = confirmPassword;
     }
