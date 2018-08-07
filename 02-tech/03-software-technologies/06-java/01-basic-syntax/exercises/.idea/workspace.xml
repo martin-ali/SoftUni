@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6120af5f-a7e6-42b4-8d05-190864257615" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/.idea/exercises.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x18Phonebook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x19PhonebookUpgrade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x20CountWorkingDays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x21AdvertisementMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x22IntersectionOfCircles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x23AverageGrades.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x24BookLibrary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exercises/x25BookLibraryModification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../02-basic-web/Calculator/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../.directory" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.directory" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../04-javascript/03-blog-basic-functionality/blog-basic-design/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../04-javascript/03-blog-basic-functionality/blog-basic-design/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/exercises/exercises/x16UrlParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/exercises/exercises/x16UrlParser.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,7 +16,7 @@
     <session id="-552113801">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -111,8 +90,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/exercises/x25BookLibraryModification.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+            <state relative-caret-position="262">
+              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -249,7 +228,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533326265394" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533326430804" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../02-basic-web/Calculator" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="copyright" />
@@ -316,15 +295,15 @@
       <workItem from="1533249222835" duration="406000" />
       <workItem from="1533297963776" duration="42000" />
       <workItem from="1533308732407" duration="13762000" />
-      <workItem from="1533325224268" duration="1038000" />
+      <workItem from="1533325224268" duration="1210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46864000" />
+    <option name="totallyTimeSpent" value="47036000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="22" width="1682" height="1029" extended-state="6" />
+    <frame x="1679" y="0" width="1282" height="1025" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
@@ -335,7 +314,7 @@
       <window_info id="Favorites" order="5" side_tool="true" weight="0.3298217" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3329646" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33444443" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31333333" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -630,8 +609,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/exercises/x25BookLibraryModification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        <state relative-caret-position="262">
+          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
