@@ -10,8 +10,8 @@ using System;
 namespace BookLibrary.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180808150231_initial")]
-    partial class initial
+    [Migration("20180808201628_RemoveAuthorRequired")]
+    partial class RemoveAuthorRequired
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -199,7 +199,7 @@ namespace BookLibrary.Migrations
             modelBuilder.Entity("BookLibrary.Models.Book", b =>
                 {
                     b.HasOne("BookLibrary.Models.ApplicationUser", "Author")
-                        .WithMany()
+                        .WithMany("Books")
                         .HasForeignKey("AuthorId");
                 });
 

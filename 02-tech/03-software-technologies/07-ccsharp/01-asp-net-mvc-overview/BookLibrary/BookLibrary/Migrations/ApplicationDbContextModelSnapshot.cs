@@ -198,7 +198,7 @@ namespace BookLibrary.Migrations
             modelBuilder.Entity("BookLibrary.Models.Book", b =>
                 {
                     b.HasOne("BookLibrary.Models.ApplicationUser", "Author")
-                        .WithMany()
+                        .WithMany("Books")
                         .HasForeignKey("AuthorId");
                 });
 

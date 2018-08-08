@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace BookLibrary.Migrations
 {
-    public partial class initial : Migration
+    public partial class RemoveAuthorRequired : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
