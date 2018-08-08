@@ -24,15 +24,18 @@ namespace CalculatorApp.Models
 
         public void CalculateResult()
         {
-            var actions = new Dictionary<char, Func<decimal, decimal, decimal>>
+            var a = this.LeftOperand;
+            var b = this.RightOperand;
+
+            var compute = new Dictionary<char, Func<decimal>>
             {
-                ['+'] = (a, b) => a + b,
-                ['-'] = (a, b) => a - b,
-                ['*'] = (a, b) => a * b,
-                ['/'] = (a, b) => a / b
+                ['+'] = () => a + b,
+                ['-'] = () => a - b,
+                ['*'] = () => a * b,
+                ['/'] = () => a / b
             };
 
-            if (actions.ContainsKey(Operator)) Result = actions[Operator](LeftOperand, RightOperand);
+            if (compute.ContainsKey(Operator)) Result = compute[Operator]();
         }
     }
 }
