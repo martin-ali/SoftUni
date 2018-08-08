@@ -24,13 +24,13 @@
             @Html.DisplayFor(model => model.Description)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.AuthorId)
+            @Html.DisplayNameFor(model => model.Author.FullName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.AuthorId)
+            @Html.DisplayFor(model => model.Author.FullName)
         </dd>
     </dl>
-    
+
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-default" /> |
