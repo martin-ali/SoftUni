@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookLibrary.Data;
 using BookLibrary.Models;
-using Microsoft.AspNetCore.Identity;
 
 namespace BookLibrary.Controllers
 {
@@ -15,20 +14,16 @@ namespace BookLibrary.Controllers
     {
         private readonly ApplicationDbContext _context;
 
-        private readonly UserManager<ApplicationUser> UserManager;
-
-        private Task<ApplicationUser> GetCurrentUserAsync() => this.UserManager.GetUserAsync(HttpContext.User);
-
-        public BooksController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public BooksController(ApplicationDbContext context)
         {
             _context = context;
-            this.UserManager = userManager;
         }
 
         // GET: Books
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Books.ToListAsync());
+            var applicationDbContext = _context.Books.Include(b => b.Author);
+            return View(await applicationDbContext.ToListAsync());
         }
 
         // GET: Books/Details/5
@@ -40,6 +35,7 @@ namespace BookLibrary.Controllers
             }
 
             var book = await _context.Books
+                .Include(b => b.Author)
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (book == null)
             {
@@ -52,11 +48,12 @@ namespace BookLibrary.Controllers
         // GET: Books/Create
         public IActionResult Create()
         {
+            ViewData["AuthorId"] = new SelectList(_context.Users, "Id", "Id");
             return View();
         }
 
         // POST: Books/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -64,14 +61,11 @@ namespace BookLibrary.Controllers
         {
             if (ModelState.IsValid)
             {
-                ApplicationUser user = await GetCurrentUserAsync();
-                var userId = user.Id;
-                book.AuthorId = userId;
-
                 _context.Add(book);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AuthorId"] = new SelectList(_context.Users, "Id", "Id", book.AuthorId);
             return View(book);
         }
 
@@ -88,11 +82,12 @@ namespace BookLibrary.Controllers
             {
                 return NotFound();
             }
+            ViewData["AuthorId"] = new SelectList(_context.Users, "Id", "Id", book.AuthorId);
             return View(book);
         }
 
         // POST: Books/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -123,6 +118,7 @@ namespace BookLibrary.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["AuthorId"] = new SelectList(_context.Users, "Id", "Id", book.AuthorId);
             return View(book);
         }
 
@@ -135,6 +131,7 @@ namespace BookLibrary.Controllers
             }
 
             var book = await _context.Books
+                .Include(b => b.Author)
                 .SingleOrDefaultAsync(m => m.Id == id);
             if (book == null)
             {
