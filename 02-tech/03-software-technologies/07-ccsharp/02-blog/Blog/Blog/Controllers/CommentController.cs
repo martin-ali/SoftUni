@@ -82,7 +82,8 @@ namespace Blog.Controllers
             this.context.Comments.Add(comment);
             this.context.SaveChanges();
 
-            return RedirectToAction(nameof(Details), new { comment.Id });
+            // return RedirectToAction(nameof(Details), new { comment.Id });
+            return RedirectToAction("Details", "Article", new { id = comment.ArticleId });
         }
 
         [HttpGet]
@@ -124,7 +125,8 @@ namespace Blog.Controllers
             this.context.Comments.Update(comment);
             this.context.SaveChanges();
 
-            return RedirectToAction(nameof(Details), new { comment.Id });
+            // return RedirectToAction(nameof(Details), new { comment.Id });
+            return RedirectToAction("Details", "Article", new { id = comment.ArticleId });
         }
 
         [HttpGet]
@@ -162,7 +164,8 @@ namespace Blog.Controllers
             this.context.Comments.Remove(comment);
             this.context.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            // return RedirectToAction("Index", "Home");
+            return RedirectToAction("Details", "Article", new { id = comment.ArticleId });
         }
     }
 }
