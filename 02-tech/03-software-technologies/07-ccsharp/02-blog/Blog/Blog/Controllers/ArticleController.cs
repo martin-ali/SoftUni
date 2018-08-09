@@ -67,7 +67,7 @@ namespace Blog.Controllers
                             .Articles
                             .Include(a => a.Author)
                             .Include(a => a.Comments)
-                            .ThenInclude(c => c.Author)
+                                .ThenInclude(c => c.Author)
                             .FirstOrDefault(a => a.Id == id);
 
             if (article == null) return NotFound();
