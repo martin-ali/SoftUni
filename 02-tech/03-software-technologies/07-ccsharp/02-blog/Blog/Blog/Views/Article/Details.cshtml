@@ -1,0 +1,62 @@
+@model Blog.Models.Article
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="container">
+    <article>
+        <header>
+            <h2>
+                @Model.Title
+            </h2>
+        </header>
+        <p>
+            @Html.DisplayFor(model => model.Content)
+        </p>
+        <small class="author">
+            -- author @Html.DisplayFor(model => model.Author.FullName)
+        </small>
+
+        <h4>Comments:</h4>
+        @if (Model.Comments.Count > 0)
+        {
+            @foreach (var comment in Model.Comments)
+            {
+                <div class="alternatingRows modal-header">
+                    <p>
+                        <!-- <a href="/comment/details/{{id}}">{{content}}</a> -->
+                        <a asp-controller="Comment" asp-action="Details" asp-route-id="@comment.Id">@comment.Content</a>
+                    </p>
+                    <small class="author">
+                        Author:
+                        <!-- <a href="/user/details/{{this.User.id}}"> -->
+                        <a href="#">
+                            @comment.Author.UserName
+                        </a>
+                    </small>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="alternatingRows">
+                <p>No comments yet!</p>
+            </div>
+        }
+
+
+        <footer class="pull-right">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a class="btn btn-primary btn-xs" asp-controller="Comment" asp-action="Create" asp-route-articleId="@Model.Id">Add Comment</a>
+            }
+            @if (User.IsInRole("Admin") || Model.IsAuthor(User.Identity.Name))
+            {
+                <a class="btn btn-success btn-xs" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                <a class="btn btn-danger btn-xs" asp-action="Delete" asp-route-id="@Model.Id">Delete</a>
+            }
+            <a class="btn btn-default btn-xs" asp-action="Index">Back</a>
+        </footer>
+    </article>
+</div>

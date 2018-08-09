@@ -1,0 +1,27 @@
+@model Blog.Models.CommentViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container">
+    <div class="well">
+        <h2>Create Comment</h2>
+        <form asp-action="Create" class="form-horizontal">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label col-sm-4"></label>
+                <textarea asp-for="Content" class="form-control" rows="7"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+
+            <input hidden asp-for="ArticleId"></input>
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <a asp-action="Index" class="btn btn-default">Cancel</a>
+                    <input type="submit" value="Create" class="btn btn-success" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
