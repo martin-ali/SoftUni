@@ -9,7 +9,7 @@ using System;
 
 namespace BookLibrary.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(BookLibraryDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -18,7 +18,7 @@ namespace BookLibrary.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026");
 
-            modelBuilder.Entity("BookLibrary.Models.ApplicationUser", b =>
+            modelBuilder.Entity("BookLibrary.Models.User", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
@@ -197,7 +197,7 @@ namespace BookLibrary.Migrations
 
             modelBuilder.Entity("BookLibrary.Models.Book", b =>
                 {
-                    b.HasOne("BookLibrary.Models.ApplicationUser", "Author")
+                    b.HasOne("BookLibrary.Models.User", "Author")
                         .WithMany("Books")
                         .HasForeignKey("AuthorId");
                 });
@@ -212,7 +212,7 @@ namespace BookLibrary.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("BookLibrary.Models.ApplicationUser")
+                    b.HasOne("BookLibrary.Models.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -220,7 +220,7 @@ namespace BookLibrary.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("BookLibrary.Models.ApplicationUser")
+                    b.HasOne("BookLibrary.Models.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -233,7 +233,7 @@ namespace BookLibrary.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("BookLibrary.Models.ApplicationUser")
+                    b.HasOne("BookLibrary.Models.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -241,7 +241,7 @@ namespace BookLibrary.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("BookLibrary.Models.ApplicationUser")
+                    b.HasOne("BookLibrary.Models.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);

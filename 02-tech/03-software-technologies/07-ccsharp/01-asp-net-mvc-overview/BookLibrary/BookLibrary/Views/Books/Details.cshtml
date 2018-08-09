@@ -1,7 +1,7 @@
 ﻿@model BookLibrary.Models.Book
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = $"{Model.Title}";
 }
 
 <h2>Details</h2>
@@ -29,7 +29,6 @@
         <dd>
             @Html.DisplayFor(model => model.Author.FullName)
         </dd>
-
     </dl>
 </div>
 <div>

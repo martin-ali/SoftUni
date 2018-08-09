@@ -10,16 +10,16 @@ namespace BookLibrary.Models
         // [Key]
         public int Id { get; set; }
 
-        // [Required]
+        [Required(ErrorMessage = "Book cannot exist without a title.")]
         // [MaxLength(50)]
         public string Title { get; set; }
 
-        // [Required]
+        [Required]
         public string Description { get; set; }
 
         // string?
         public string AuthorId { get; set; }
 
-        public ApplicationUser Author { get; set; }
+        public User Author { get; set; }
     }
 }

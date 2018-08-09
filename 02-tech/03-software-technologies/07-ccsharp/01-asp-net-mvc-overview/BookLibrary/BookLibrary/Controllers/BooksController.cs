@@ -8,28 +8,30 @@ using Microsoft.EntityFrameworkCore;
 using BookLibrary.Data;
 using BookLibrary.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookLibrary.Controllers
 {
+    // [Route("/Books")]
     public class BooksController : Controller
     {
         #region My code
-        private readonly ApplicationDbContext context;
+        private readonly BookLibraryDbContext context;
 
-        private readonly UserManager<ApplicationUser> userManager;
+        private readonly UserManager<User> userManager;
 
-        public BooksController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        public BooksController(BookLibraryDbContext context, UserManager<User> userManager)
         {
             this.context = context;
             this.userManager = userManager;
         }
 
-        public Task<ApplicationUser> GetCurrentUserAsync()
+        public Task<User> GetCurrentUserAsync()
         {
             return this.userManager.GetUserAsync(HttpContext.User);
         }
 
-        // [HttpGet]
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
             var books = await this
@@ -42,29 +44,30 @@ namespace BookLibrary.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [Authorize]
         // [Route("/books/create")]
-        public async Task<IActionResult> Create(Book book)
+        public async Task<IActionResult> Create(Book book)  // BookViewModel
         {
             var user = await this.GetCurrentUserAsync();
 
-            if (ModelState.IsValid
-                && !string.IsNullOrWhiteSpace(book.Title)
-                && !string.IsNullOrWhiteSpace(book.Description))
+            if (ModelState.IsValid == false)
             {
-                book.AuthorId = user.Id;
-                this.context.Books.Add(book);
-                this.context.SaveChanges();
-
-                return RedirectToAction(nameof(Index));
+                return View(book);
             }
 
-            return View(book);
+            book.AuthorId = user.Id;
+            this.context.Books.Add(book);
+            this.context.SaveChanges();
+
+            // return RedirectToAction(nameof(Index));
+            return RedirectToAction(nameof(Details), new { book.Id });
         }
 
         [HttpGet]
@@ -85,6 +88,7 @@ namespace BookLibrary.Controllers
 
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Edit(int id)
         {
             // if (id == null) return NotFound();
@@ -97,27 +101,27 @@ namespace BookLibrary.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         // [Route("/books/edit/{id}")]
         public async Task<IActionResult> Edit(int id, Book BookEdited)
         {
-            if (ModelState.IsValid
-                && !string.IsNullOrWhiteSpace(BookEdited.Title)
-                && !string.IsNullOrWhiteSpace(BookEdited.Description))
+            if (ModelState.IsValid == false)
             {
-                var bookOld = await this.context.Books.FirstAsync(b => b.Id == id);
-                bookOld.Title = BookEdited.Title;
-                bookOld.Description = BookEdited.Description;
-
-                this.context.Books.Update(bookOld);
-                await this.context.SaveChangesAsync();
-
-                return RedirectToAction(nameof(Index));
+                return View(BookEdited);
             }
 
-            return View(BookEdited);
+            var bookOld = await this.context.Books.FirstAsync(b => b.Id == id);
+            bookOld.Title = BookEdited.Title;
+            bookOld.Description = BookEdited.Description;
+
+            this.context.Books.Update(bookOld);
+            await this.context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Delete(int id)
         {
             // if (id == null) return NotFound();
@@ -134,6 +138,7 @@ namespace BookLibrary.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> Delete(Book book)
         {
             this.context.Books.Remove(book);
@@ -146,11 +151,11 @@ namespace BookLibrary.Controllers
         #region Scaffolded stuff
         // private readonly ApplicationDbContext context;
 
-        // private readonly UserManager<ApplicationUser> userManager;
+        // private readonly UserManager<User> userManager;
 
-        // private Task<ApplicationUser> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
+        // private Task<User> GetCurrentUserAsync() => userManager.GetUserAsync(HttpContext.User);
 
-        // public BooksController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
+        // public BooksController(ApplicationDbContext context, UserManager<User> userManager)
         // {
         //     this.context = context;
         //     this.userManager = userManager;
@@ -198,7 +203,7 @@ namespace BookLibrary.Controllers
         // {
         //     if (ModelState.IsValid)
         //     {
-        //         ApplicationUser user = await GetCurrentUserAsync();
+        //         User user = await GetCurrentUserAsync();
         //         string id = user.Id;
         //         book.AuthorId = id;
 

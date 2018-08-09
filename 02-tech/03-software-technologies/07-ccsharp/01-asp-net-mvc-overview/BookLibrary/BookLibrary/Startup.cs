@@ -26,11 +26,11 @@ namespace BookLibrary
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<BookLibraryDbContext>(options =>
                 options.UseMySQL(Configuration.GetConnectionString("MySqlConnection")));
 
             services
-            .AddIdentity<ApplicationUser, IdentityRole>(options =>
+            .AddIdentity<User, IdentityRole>(options =>
             {
                 var password = options.Password;
                 password.RequiredLength = 1;
@@ -39,7 +39,7 @@ namespace BookLibrary
                 password.RequireNonAlphanumeric = false;
                 password.RequireDigit = false;
             })
-            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddEntityFrameworkStores<BookLibraryDbContext>()
             .AddDefaultTokenProviders();
 
             // Add application services.
