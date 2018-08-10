@@ -1,0 +1,5 @@
+{
+    "brace_style": "expand,preserve-inline",
+    "operator_position": "preserve-newline",
+    "jslint_happy": true
+}
