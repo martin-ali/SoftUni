@@ -31,7 +31,7 @@ class CatController extends Controller
 	{
 		$cat = new Cat();
 
-		$form = $this->createForm(Cat::class, $cat);
+		$form = $this->createForm(CatType::class, $cat);
 		$form->handleRequest($request);
 
 		if ($form->isSubmitted() && $form->isValid())

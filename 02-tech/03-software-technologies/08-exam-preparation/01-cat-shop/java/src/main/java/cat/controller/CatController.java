@@ -26,7 +26,6 @@ public class CatController
     @GetMapping("/")
     public String index(Model model)
     {
-
         List<Cat> cats = this.catRepository.findAll();
 
         model.addAttribute("view", "cat/index");
