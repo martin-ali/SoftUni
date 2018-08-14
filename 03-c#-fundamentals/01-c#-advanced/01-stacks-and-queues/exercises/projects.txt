@@ -1,0 +1,11 @@
+Reverse Numbers with a Stack
+Basic Stack Operations
+Maximum Element
+Basic Queue Operations
+Calculate Sequence with Queue
+Truck Tour
+Balanced Parentheses
+Recursive Fibonacci
+Stack Fibonacci
+Simple Text Editor
+Poisonous Plants
