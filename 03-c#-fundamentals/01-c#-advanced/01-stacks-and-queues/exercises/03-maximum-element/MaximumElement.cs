@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace _03_maximum_element
 {
@@ -10,9 +11,10 @@ namespace _03_maximum_element
         {
             var commandCount = int.Parse(Console.ReadLine());
             var elements = new Stack<int>();
+            var maxElementsBuilder = new StringBuilder();
+            var maxElements = new Stack<int>();
+            maxElements.Push(int.MinValue);
 
-            var maxStack = new Stack<int>();
-            maxStack.Push(int.MinValue);
             for (int i = 0; i < commandCount; i++)
             {
                 var commandParts = Console.ReadLine().Split();
@@ -23,24 +25,27 @@ namespace _03_maximum_element
                     var element = int.Parse(commandParts[1]);
                     elements.Push(element);
 
-                    if (element >= maxStack.Peek())
+                    if (element >= maxElements.Peek())
                     {
-                        maxStack.Push(element);
+                        maxElements.Push(element);
                     }
                 }
                 else if (command == "2" && elements.Count > 0)
                 {
                     var element = elements.Pop();
-                    if (maxStack.Peek() == element)
+                    if (maxElements.Peek() == element)
                     {
-                        maxStack.Pop();
+                        maxElements.Pop();
                     }
                 }
                 else if (command == "3")
                 {
-                    Console.WriteLine(maxStack.Peek());
+                    maxElementsBuilder.AppendLine(maxElements.Peek().ToString());
+                    // builder.Append($"{maxStack.Peek()}{Environment.NewLine}");
                 }
             }
+
+            Console.WriteLine(maxElementsBuilder.ToString());
         }
     }
 }
