@@ -1,0 +1,6 @@
+Reverse Strings
+Simple Calculator
+Decimal to Binary Converter
+Matching Brackets
+Hot Potato
+Traffic Light
