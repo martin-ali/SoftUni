@@ -34,8 +34,7 @@ namespace Blog.Controllers
             return this
                     .context
                     .Users
-                    .Where(u => u.UserName == this.User.Identity.Name)
-                    .First();
+                    .First(u => u.UserName == this.User.Identity.Name);
         }
 
         [HttpGet]
@@ -83,7 +82,7 @@ namespace Blog.Controllers
             this.context.SaveChanges();
 
             // return RedirectToAction(nameof(Details), new { comment.Id });
-            return RedirectToAction("Details", "Article", new { id = comment.ArticleId });
+            return RedirectToAction(nameof(Details), nameof(Article), new { id = comment.ArticleId });
         }
 
         [HttpGet]
@@ -126,7 +125,7 @@ namespace Blog.Controllers
             this.context.SaveChanges();
 
             // return RedirectToAction(nameof(Details), new { comment.Id });
-            return RedirectToAction("Details", "Article", new { id = comment.ArticleId });
+            return RedirectToAction(nameof(Details), nameof(Article), new { id = comment.ArticleId });
         }
 
         [HttpGet]
@@ -165,7 +164,7 @@ namespace Blog.Controllers
             this.context.SaveChanges();
 
             // return RedirectToAction("Index", "Home");
-            return RedirectToAction("Details", "Article", new { id = comment.ArticleId });
+            return RedirectToAction(nameof(Details), nameof(Article), new { id = comment.ArticleId });
         }
     }
 }
