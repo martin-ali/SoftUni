@@ -45,7 +45,6 @@ const homeController = {
     },
     detailsGet: async (request, response) =>
     {
-
         const id = request.params.id;
 
         try
