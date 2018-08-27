@@ -18,34 +18,30 @@ namespace _11_poisonous_plants
                         .ReadLine()
                         .Split(' ')
                         .Select(int.Parse)
-                        .ToList();
+                        .ToArray();
 
-            var day = 0;
-            var plantsHaveDied = true;
-            while (plantsHaveDied)
+            var daysToDeath = new int[plants.Length];
+            var previousPlantIndexes = new Stack<int>();
+            previousPlantIndexes.Push(0);
+
+            for (int index = 1; index < plants.Length; index++)
             {
-                plantsHaveDied = false;
-                for (int i = plants.Count - 1; i > 0; i--)
+                var lastDay = 0;
+                while (previousPlantIndexes.Count > 0
+                    && plants[previousPlantIndexes.Peek()] >= plants[index])
                 {
-                    if (plants[i - 1] < plants[i])
-                    {
-                        plants[i] = -1;
-                        plantsHaveDied = true;
-                    }
+                    lastDay = Math.Max(lastDay, daysToDeath[previousPlantIndexes.Pop()]);
                 }
 
-                if (plantsHaveDied)
+                if (previousPlantIndexes.Count > 0)
                 {
-                    day++;
-                    plants.RemoveAll(x => x < 0);
+                    daysToDeath[index] = lastDay + 1;
                 }
+
+                previousPlantIndexes.Push(index);
             }
 
-            Console.WriteLine(day);
+            Console.WriteLine(daysToDeath.Max());
         }
     }
 }
-/*
-7
-6 5 8 4 7 10 9
- */
