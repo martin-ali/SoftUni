@@ -1,0 +1,12 @@
+Matrix of Palindromes
+Diagonal Difference
+2x2 Squares in Matrix
+Maximal Sum
+Rubiks Matrix
+Target Practice
+Lego Blocks
+Radioactive Mutant Vampire Bunnies
+Crossfire
+The Heigan Dance
+Parking System
+String Matrix Rotation
