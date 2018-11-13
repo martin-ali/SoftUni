@@ -1,0 +1,5 @@
+Pesho Misho Jica
+Add filter;Starts with;P
+Add filter;Starts with;M
+Remove filter;Starts with;M
+Print

@@ -1,0 +1,4 @@
+1 2 3 4 5
+Exclude;Sum Left;1
+Reverse;Sum Left;1
+Forge
