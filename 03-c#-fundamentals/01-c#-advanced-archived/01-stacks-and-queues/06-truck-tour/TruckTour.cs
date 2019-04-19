@@ -35,7 +35,7 @@ namespace _06_truck_tour
                     }
                 }
 
-                // Start at different pump every time
+                // Start at a different pump every time
                 var endPoint = circle.Dequeue();
                 circle.Enqueue(endPoint);
 

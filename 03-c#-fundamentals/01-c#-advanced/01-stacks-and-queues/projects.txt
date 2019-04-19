@@ -1,11 +1,12 @@
-Reverse Numbers with a Stack
 Basic Stack Operations
-Maximum Element
 Basic Queue Operations
-Calculate Sequence with Queue
+Maximum and Minimum Element
+Fast Food
+Fashion Boutique
+Auto Repair and Service
 Truck Tour
 Balanced Parentheses
-Recursive Fibonacci
-Stack Fibonacci
 Simple Text Editor
-Poisonous Plants
+Crossroads
+Key Revolver
+Cups and Bottles
