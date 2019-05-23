@@ -1,0 +1,10 @@
+Diagonal Difference
+2x2 Squares in Matrix
+Maximal Sum
+Matrix shuffling
+Snake Moves
+Bomb the Basement
+Knight Game
+Bombs
+Miner
+Radioactive Mutant Vampire Bunnies
