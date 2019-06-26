@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace Heroes
 {
@@ -19,7 +20,9 @@ namespace Heroes
 
         public override string ToString()
         {
-            return $"Hero: {this.Name} - {this.Level}lvl{Environment.NewLine}{this.Item}";
+            var profile = $"Hero: {this.Name} - {this.Level}lvl{Environment.NewLine}{this.Item}".Trim();
+
+            return profile;
         }
     }
 }

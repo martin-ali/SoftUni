@@ -1,8 +1,11 @@
+using System;
+using System.Text;
+
 namespace Heroes
 {
     public class Item
     {
-        internal Item(int strength, int ability, int intelligence)
+        public Item(int strength, int ability, int intelligence)
         {
             this.Strength = strength;
             this.Ability = ability;
@@ -17,10 +20,12 @@ namespace Heroes
 
         public override string ToString()
         {
-            return $@"Item:
- * Strength: {this.Strength}
- * Ability: {this.Ability}
- * Intelligence: {this.Intelligence}";
+            var description = $"Item:{Environment.NewLine}"
+            + $"  * Strength: {this.Strength}{Environment.NewLine}"
+            + $"  * Ability: {this.Ability}{Environment.NewLine}"
+            + $"  * Intelligence: {this.Intelligence}";
+
+            return description;
         }
     }
 }

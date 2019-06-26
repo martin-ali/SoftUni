@@ -1,54 +1,51 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace Heroes
 {
     public class HeroRepository
     {
-        private List<Hero> data;
+        private List<Hero> heroes;
 
         public HeroRepository()
         {
-            this.data = new List<Hero>();
+            this.heroes = new List<Hero>();
         }
 
-        public int Count
-        {
-            get
-            {
-                return this.data.Count;
-            }
-        }
+        public int Count => this.heroes.Count;
 
         public void Add(Hero hero)
         {
-            this.data.Add(hero);
+            this.heroes.Add(hero);
         }
 
         public void Remove(string name)
         {
-            this.data.RemoveAll(hero => hero.Name == name);
+            this.heroes.RemoveAll(hero => hero.Name == name);
         }
 
         public Hero GetHeroWithHighestStrength()
         {
-            return this.data.OrderByDescending(hero => hero.Item.Strength).First();
+            return this.heroes.OrderByDescending(hero => hero.Item.Strength).First();
         }
 
         public Hero GetHeroWithHighestAbility()
         {
-            return this.data.OrderByDescending(hero => hero.Item.Ability).First();
+            return this.heroes.OrderByDescending(hero => hero.Item.Ability).First();
         }
 
         public Hero GetHeroWithHighestIntelligence()
         {
-            return this.data.OrderByDescending(hero => hero.Item.Intelligence).First();
+            return this.heroes.OrderByDescending(hero => hero.Item.Intelligence).First();
         }
 
         public override string ToString()
         {
-            return string.Join(Environment.NewLine, this.data);
+            var heroesListed = string.Join(Environment.NewLine, this.heroes);
+
+            return heroesListed;
         }
     }
 }
