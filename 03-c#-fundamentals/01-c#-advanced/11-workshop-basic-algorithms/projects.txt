@@ -1,0 +1,7 @@
+Reverse Array
+Recursive Factorial
+Sum of Coins
+Set Cover
+Merge Sort
+Quicksort
+Binary Search
