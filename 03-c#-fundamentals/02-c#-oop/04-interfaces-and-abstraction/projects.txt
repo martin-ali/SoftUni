@@ -1,0 +1,10 @@
+Define an Interface IPerson
+Multiple Implementation
+Ferrari
+Telephony
+Border Control
+Birthday Celebrations
+Food Shortage
+Military Elite
+Collection Hierarchy
+Explicit Interfaces

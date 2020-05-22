@@ -1,0 +1,7 @@
+Pizza Bulgarian
+Dough White Chewy 100
+Topping Sirene 50
+Topping Cheese 50
+Topping Krenvirsh 20
+Topping Meat 10
+END
