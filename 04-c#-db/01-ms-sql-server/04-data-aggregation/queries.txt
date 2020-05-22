@@ -1,0 +1,19 @@
+Records Count
+Longest Magic Wand
+Longest Magic Wand per Deposit Groups
+Smallest Deposit Group per Magic Wand Size
+Deposits Sum
+Deposits Sum for Ollivander Family
+Deposits Filter
+Deposit Charge
+Age Groups
+First Letter
+Average Interest
+Rich Wizard Poor Wizard
+Departments Total Salaries
+Employees Minimum Salaries
+Employees Average Salaries
+Employees Maximum Salaries
+Employees Count Salaries
+3rd Highest Salary
+Salary Challenge

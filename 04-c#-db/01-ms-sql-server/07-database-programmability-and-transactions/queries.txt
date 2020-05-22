@@ -1,0 +1,23 @@
+Employees with Salary Above 35000
+Employees with Salary Above Number
+Town Names Starting With
+Employees from Town
+Salary Level Function
+Employees by Salary Level
+Define Function
+Delete Employees and Departments
+Find Full Name
+People with Balance Higher Than
+Future Value Function
+Calculating Interest
+Scalar Function Cash in User Games Odd Rows
+Create Table Logs
+Create Table Emails
+Deposit Money
+Withdraw Money
+Money Transfer
+Queries for Diablo Database
+Trigger
+Massive Shopping
+Employees with Three Projects
+Delete Employees

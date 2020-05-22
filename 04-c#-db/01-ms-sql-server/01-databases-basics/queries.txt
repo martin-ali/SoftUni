@@ -1,0 +1,24 @@
+Create Database
+Create Tables
+Alter Minions Table
+Insert Records in Both Tables
+Truncate Table Minions
+Drop All Tables
+Create Table People
+Create Table Users
+Change Primary Key
+Add Check Constraint
+Set Default Value of a Field
+Set Unique Field
+Movies Database
+Car Rental Database
+Hotel Database
+Create SoftUni Database
+Backup Database
+Basic Insert
+Basic Select All Fields
+Basic Select All Fields and Order Them
+Basic Select Some Fields
+Increase Employees Salary
+Decrease Tax Rate
+Delete All Records

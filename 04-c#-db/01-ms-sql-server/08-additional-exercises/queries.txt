@@ -1,0 +1,14 @@
+Number of Users for Email Provider
+All User in Games
+Users in Games with Their Items
+User in Games with Their Statistics
+All Items with Greater than Average Statistics
+Display All Items with Information about Forbidden Game Type
+Buy Items for User in Game
+Peaks and Mountains
+Peaks with Their Mountain Country and Continent
+Rivers by Country
+Count of Countries by Currency
+Population and Area by Continent
+Monasteries by Country
+Monasteries by Continents and Countries

@@ -1,0 +1,25 @@
+Examine the Databases
+Find All Information About Departments
+Find all Department Names
+Find Salary of Each Employee
+Find Full Name of Each Employee
+Find Email Address of Each Employee
+Find All Different Employee’s Salaries
+Find all Information About Employees
+Find Names of All Employees by Salary in Range
+Find Names of All Employees
+Find All Employees Without Manager
+Find All Employees with Salary More Than 50000
+Find 5 Best Paid Employees
+Find All Employees Except Marketing
+Sort Employees Table
+Create View Employees with Salaries
+Create View Employees with Job Titles
+Distinct Job Titles
+Find First 10 Started Projects
+Last 7 Hired Employees
+Increase Salaries
+All Mountain Peaks
+Biggest Countries by Population
+Countries and Currency
+All Diablo Characters

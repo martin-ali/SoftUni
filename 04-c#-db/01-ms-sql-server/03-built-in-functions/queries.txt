@@ -1,0 +1,19 @@
+Find Names of All Employees by First Name
+Find Names of All employees by Last Name
+Find First Names of All Employees
+Find All Employees Except Engineers
+Find Towns with Name Length
+Find Towns Starting With
+Find Towns Not Starting With
+Create View Employees Hired After 2000 Year
+Length of Last Name
+Rank Employees by Salary
+Find All Employees with Rank 2
+Countries Holding A 3 or More Times
+Mix of Peak and River Names
+Games from 2011 and 2012 year
+User Email Providers
+Get Users with IP Address Like Pattern
+Show All Games with Duration and Part of the Day
+Orders Table
+People Table

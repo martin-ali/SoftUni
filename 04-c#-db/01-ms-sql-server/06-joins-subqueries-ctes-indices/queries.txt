@@ -1,0 +1,18 @@
+Employee Address
+Addresses with Towns
+Sales Employee
+Employee Departments
+Employees Without Project
+Employees Hired After
+Employees with Project
+Employee 24
+Employee Manager
+Employee Summary
+Min Average Salary
+Highest Peaks in Bulgaria
+Count Mountain Ranges
+Countries with Rivers
+Continents and Currencies
+Countries without any Mountains
+Highest Peak and Longest River by Country
+Highest Peak Name and Elevation by Country

@@ -1,0 +1,4 @@
+SELECT [Name]
+FROM [Towns]
+WHERE Len(Name) BETWEEN 5 AND 6
+ORDER BY [Name]

@@ -1,0 +1,9 @@
+One To One Relationship
+One To Many Relationship
+Many To Many Relationship
+Self Referencing
+Online Store Database
+University Database
+SoftUni Design
+Geography Design
+Peaks in Rila
