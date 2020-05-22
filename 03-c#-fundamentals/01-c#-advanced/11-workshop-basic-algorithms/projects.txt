@@ -1,4 +1,4 @@
-Reverse Array
+Reverse Array Sum
 Recursive Factorial
 Sum of Coins
 Set Cover
