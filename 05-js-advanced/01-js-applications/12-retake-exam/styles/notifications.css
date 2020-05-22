@@ -1,0 +1,10 @@
+#notifications {
+    position: fixed;
+    z-index: 1;
+    margin: 10px;
+}
+
+#notifications>div {
+    border-radius: 5px;
+    font-size: xx-large;
+}

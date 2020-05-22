@@ -1,0 +1,12 @@
+<header>
+    <h1><a class="home" href="#/{{#if isLogged}}home{{else}}users/login{{/if}}">SoftWiki</a></h1>
+    <nav class="nav-buttons">
+        {{#if isLogged}}
+            <a href="#/articles/create">Create</a>
+            <a href="#/users/logout">Logout</a>
+        {{else}}
+            <a href="#/users/login">Login</a>
+            <a href="#/users/register">Register</a>
+        {{/if}}
+    </nav>
+</header>

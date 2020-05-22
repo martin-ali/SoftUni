@@ -1,0 +1,27 @@
+<div style="margin: 0 auto; margin-bottom:7%; margin-top:7%;" class="modal-content col-lg-6">
+    <div class="modal-header info-color white-text">
+        <h4 class="title">
+            <i class="fa fa-pencil-alt"></i> Delete your cause</h4>
+    </div>
+    <div class="modal-body">
+        <form method="" action="" onclick="return false">
+            <label for="defaultFormNameModalEx">Your cause</label>
+            <input disabled name="cause" type="text" id="defaultFormNameModalEx" class="form-control form-control-sm"
+                value="{{cause.cause}}">
+            <br>
+            <label for="defaultFormEmailModalEx">Your cause picture...</label>
+            <input disabled name="pictureUrl" type="text" id="defaultFormEmailModalEx"
+                class="form-control form-control-sm" value="{{cause.pictureUrl}}">
+            <br>
+            <label for="defaultFormSubjectModalEx">Your needed funds...</label>
+            <input disabled name="neededFunds" type="text" id="defaultFormSubjectModalEx"
+                class="form-control form-control-sm" value="{{cause.neededFunds}}" <br>
+            <label for="defaultFormMessageModalEx">Your cause description...</label>
+            <textarea disabled name="description" style="resize: none; height: 150px;" type="text"
+                id="defaultFormMessageModalEx" class="md-textarea form-control">{{cause.description}}</textarea>
+            <div class="text-center mt-4 mb-2">
+                <button type="submit" class="btn btn-danger">Close</button>
+            </div>
+        </form>
+    </div>
+</div>

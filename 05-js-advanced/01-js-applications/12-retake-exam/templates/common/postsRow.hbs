@@ -1,0 +1,11 @@
+<section class="second-section">
+    <h3>Posts</h3>
+    <hr>
+    <div class="posts-row">
+        {{#each posts}}
+            {{#with this}}
+                {{> postSummary}}
+            {{/with}}
+        {{/each}}
+    </div>
+</section>

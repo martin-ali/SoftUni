@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/notifications.css">
+    <title>MyBlog</title>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script src="./scripts/firebase.js"></script>
+
+    <!-- Modules -->
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src="./node_modules/sammy/lib/sammy.js"></script>
+    <script src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+
+    <!-- Scripts -->
+    <script src="./scripts/database.js" type="module"></script>
+    <script src="./scripts/authentication.js" type="module"></script>
+    <script src="./scripts/routes.js" type="module"></script>
+    <script src="./scripts/controllers/base-controller.js" type="module"></script>
+    <script src="./scripts/controllers/users-controller.js" type="module"></script>
+    <script src="./scripts/controllers/home-controller.js" type="module"></script>
+    <script src="./scripts/controllers/posts-controller.js" type="module"></script>
+    <script src="./scripts/app.js" type="module"></script>
+</head>
+
+<body>
+    <div id="notifications"></div>
+    <div id="root"></div>
+</body>
+
+</html>

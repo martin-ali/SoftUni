@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Books</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <button id="loadBooks">LOAD ALL BOOKS</button>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Isbn</th>
+                <th>Tags</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <form onsubmit="return false" id="createBook">
+        <h3>FORM</h3>
+        <label>TITLE</label>
+        <input type="title" name="title" placeholder="Title...">
+        <label>AUTHOR</label>
+        <input type="title" name="author" placeholder="Author...">
+        <label>ISBN</label>
+        <input type="title" name="isbn" placeholder="Isnb...">
+        <label>TAGS</label>
+        <input type="title" name="tags" placeholder="Tags, separated by a comma and space...">
+        <button id="submit">Submit</button>
+        <button id="cancelCreate">Cancel</button>
+    </form>
+
+    <form onsubmit="return false" id="editBook">
+        <h3>FORM</h3>
+        <label>ID</label>
+        <input type="title" name="id" disabled>
+        <label>TITLE</label>
+        <input type="title" name="title">
+        <label>AUTHOR</label>
+        <input type="title" name="author">
+        <label>ISBN</label>
+        <input type="title" name="isbn">
+        <label>TAGS</label>
+        <input type="title" name="tags">
+        <button id="edit">Edit</button>
+        <button id="cancelEdit">Cancel</button>
+    </form>
+
+    <script src="./database.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

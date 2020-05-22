@@ -1,0 +1,20 @@
+{{#if isLogged}}
+    <section id="home-logged">
+        <section class="first-section">
+            <section class="background-container">
+                {{> createPost}}
+            </section>
+        </section>
+        {{> postsRow}}
+    </section>
+{{else}}
+    <section id="home">
+        <section class="background-container">
+            <h1>Welcome to MyBlog!</h1>
+            <div class="auth-buttons">
+                <a href="#/login">Login</a>
+                <a href="#/register">Register</a>
+            </div>
+        </section>
+    </section>
+{{/if}}

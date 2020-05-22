@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DonUni</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+
+    <div id="main"></div>
+
+    <!-- Node Modules -->
+    <script defer src="./node_modules/jquery/dist/jquery.js"></script>
+    <script defer src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script defer src="./node_modules/sammy/lib/sammy.js"></script>
+    <script defer src="./node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <script defer src="./node_modules/popper.js/dist/umd/popper.js"></script>
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- ./ deferNode Modules -->
+
+    <!-- Helpers -->
+    <script defer src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script defer type="module" src="./scripts/firebase.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.13.1/firebase-auth.js"></script>
+    <script defer type="module" src="./scripts/notificationHandler.js"></script>
+    <script defer type="module" src="./scripts/authentication.js"></script>
+    <script defer type="module" src="./scripts/database.js"></script>
+    <script defer type="module" src="./scripts/helpers.js"></script>
+    <!-- ./Helpers -->
+
+    <!-- Controllers -->
+    <script defer type="module" src="./scripts/controller.js"></script>
+    <!-- ./Controllers -->
+
+    <!-- APP -->
+    <script defer type="module" src="./scripts/app.js"></script>
+    <!-- ./APP -->
+
+</body>
+
+</html>
