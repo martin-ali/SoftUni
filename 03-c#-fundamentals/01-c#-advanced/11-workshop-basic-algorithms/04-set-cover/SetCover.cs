@@ -30,7 +30,7 @@ public class SetCover
     {
         var chosenSets = new List<int[]>();
 
-        while (universe.Count>0)
+        while (universe.Count > 0)
         {
             var set = sets
                         .OrderByDescending(s => s.Count(universe.Contains))

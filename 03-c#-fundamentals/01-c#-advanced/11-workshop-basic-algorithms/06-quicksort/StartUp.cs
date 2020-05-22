@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace _06_quicksort
 {
-    class StartUp
+    class Startup
     {
         static void Main()
         {
@@ -24,6 +24,7 @@ namespace _06_quicksort
             // Console.WriteLine(string.Join(' ', items.OrderBy(x => x)));
         }
 
+        // In the same file :(
         public class QuickSorter<T> where T : IComparable<T>
         {
             public void Sort(T[] items)
@@ -42,6 +43,7 @@ namespace _06_quicksort
                 }
 
                 var middle = (start + end) / 2;
+                // TODO: change way of choosing pivot
                 var pivot = items[middle];
 
                 var smallerAndEqual = new Queue<T>();
@@ -50,6 +52,7 @@ namespace _06_quicksort
                 for (int i = start; i <= end; i++)
                 {
                     if (i == middle) continue;
+
                     var item = items[i];
                     if (item.CompareTo(pivot) < 0)
                     {
@@ -77,10 +80,10 @@ namespace _06_quicksort
                     items[index++] = item;
                 }
 
-                var x = smallerAndEqual.Count;
+                var newStart = start + smallerAndEqual.Count;
 
-                Sort(items, start, start + x - 1);
-                Sort(items, start + x + 1, end);
+                Sort(items, start, newStart - 1);
+                Sort(items, newStart + 1, end);
             }
         }
     }

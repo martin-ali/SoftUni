@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace _05_merge_sort
 {
-    class StartUp
+    class Startup
     {
         static void Main()
         {
