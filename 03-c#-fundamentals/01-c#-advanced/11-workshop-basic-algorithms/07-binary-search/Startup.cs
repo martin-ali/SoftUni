@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace _07_binary_search
 {
-    class Program
+    class Startup
     {
         static void Main()
         {
