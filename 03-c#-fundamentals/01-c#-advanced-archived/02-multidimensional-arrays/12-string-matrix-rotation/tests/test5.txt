@@ -1,4 +1,0 @@
-Rotate(810)
-js
-exam
-END

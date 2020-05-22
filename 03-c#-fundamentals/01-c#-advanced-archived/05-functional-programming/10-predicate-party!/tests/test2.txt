@@ -1,4 +1,0 @@
-Pesho
-Double StartsWith Pesh
-Double EndsWith esho
-Party!

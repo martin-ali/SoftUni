@@ -1,4 +1,0 @@
-Pesho Misho Slav
-Add filter;Starts with;P
-Add filter;Starts with;M
-Print
