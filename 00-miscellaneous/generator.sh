@@ -38,7 +38,7 @@ pad() {
 }
 
 # currentDir=$(dirname "$0")
-currentDir=/home/tectonik/Desktop/SoftUni/02-Tech/03-Programming-Fundamentals/10-Regular-Expressions/extra-exercises/
+currentDir=/mnt/c/Users/marto/Desktop/SoftUni/03-c#-fundamentals/01-c#-advanced/02-multidimensional-arrays/
 cd $currentDir
 
 readarray -t projects <"$currentDir/projects.txt"
@@ -51,8 +51,8 @@ for i in "${projects[@]}"; do
 
 	index=$(pad $current 2 0 L)
 
-	echo $index-$project
-	# dotnet new console -o $index-$project
+	# echo $index-$project
+	dotnet new console -o $index-$project
 	((current++))
 done
 # echo $BASH_SOURCE
