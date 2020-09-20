@@ -89,3 +89,49 @@
 - Up to 2048 characters
 - Structure - (protocol)://(subdomain).(domain/host):(port)/(resource)?(query string)#(fragment)
 - Escaped by % encoding
+
+## Asynchronous Processing
+
+## Misc
+
+- Port header
+- Difference between asynchronous and multi-threaded programming
+- Multitasking
+- Handles
+    - Open resources
+
+## Process
+
+- Priority
+
+## Thread
+
+- Main thread
+    - Usually the UI thread
+    - When it dies, it terminates the whole process
+- Call stack (memory area)
+    - Contains all method calls
+    - Variables
+- Current instruction
+- Memory
+- 1MB stack
+- Child threads are owned by their parent thread
+- A connection between threads is done using a variable of type Thread
+- Thread C# class
+- Thread creation is slow
+- Race conditions
+- Lock
+    - Object
+        - Unique identifier
+    - Monitor
+- Worker threads ignore try-catch
+    - Exceptions cannot be handled outside a thread
+
+## Promises
+
+## Task
+
+- Task scheduler
+- Not a thread, but rather a unit of work to be done
+- Generally tasks > threads in terms of efficiency and performance
+- Uses Thread under the hood
