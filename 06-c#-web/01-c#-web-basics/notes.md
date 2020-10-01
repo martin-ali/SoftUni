@@ -4,7 +4,7 @@
 
 - AHK press E for melee, hold E to interact
 - Началото на есента и началото на зимата има много позиции
-- Януари е чудесен момент да си търся работас
+- Януари е чудесен момент да си търся работа
 - admin@nikolay.it
 
 ## HTTP Protocol
@@ -92,7 +92,7 @@
 
 ## Asynchronous Processing
 
-## Misc
+### Misc
 
 - Port header
 - Difference between asynchronous and multi-threaded programming
@@ -100,11 +100,11 @@
 - Handles
     - Open resources
 
-## Process
+### Process
 
 - Priority
 
-## Thread
+### Thread
 
 - Main thread
     - Usually the UI thread
@@ -127,11 +127,69 @@
 - Worker threads ignore try-catch
     - Exceptions cannot be handled outside a thread
 
-## Promises
+### Promises
 
-## Task
+### Task
 
 - Task scheduler
 - Not a thread, but rather a unit of work to be done
 - Generally tasks > threads in terms of efficiency and performance
 - Uses Thread under the hood
+
+### Parallelism
+
+- Data parallelism
+- Degree of parallelism
+
+### Concurrency
+
+- Thread-safe collections
+
+## Web Server - State Management
+
+### Misc
+
+- All timezones are converted to UTC
+    - Unix timestamp
+    - RTC
+- Browsers will create additional requests for favicons if one isn't provided
+
+### Cookies
+
+- Saved by browser
+- Sent in a header every time
+- Session management
+- Personalization
+- Tracking
+- Headers
+    - Set-Cookie
+    - Cookie
+- Structure
+    - Key
+    - Value
+    - Attribute (optional)
+- Scope
+    - Path
+    - Domain
+    - judge.softuni.bg
+    - softuni.bg
+    - .softuni.bg
+- Lifetime
+- Security
+- Storage
+    - RDBMS
+        - Usually SQLite
+- Encrypted cookies are encrypted and decrypted on the server. The browser stores and sends the encrypted version
+
+### Session
+
+- Cookie
+- Session store
+
+## Workshop
+
+- .NET standard
+    - Usable everywhere
+    - Always use this
+- C# strings are always unicode (2 bytes per symbol)
+- using statics
