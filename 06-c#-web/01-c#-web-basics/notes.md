@@ -191,5 +191,72 @@
 - .NET standard
     - Usable everywhere
     - Always use this
-- C# strings are always unicode (2 bytes per symbol)
+- C# strings are always unicode
+    - 2 bytes per symbol
 - using statics
+
+## MVC Introduction
+
+### Misc
+
+- Architectural design pattern
+- DbContext (repository)
+- Entity
+- Services
+    - Example: GetLast5ForumPosts
+    - Template services
+    - Microservices *important*
+- DTO (data transfer object)
+- MVVM
+- Single page application (SPA)
+- Multi page application (MPA)
+- Right click -> Properties -> Copy always
+    - For non-code files
+    - Otherwise the compiler ignores it
+
+### Model
+
+- *Data*
+- Manipulation rules
+- Validation rules
+- Persistent data encapsulation
+- Data access layer
+
+### View
+
+- *Presentation*
+- Templates
+- Used to generate HTML
+- Defines UI
+- Master views
+    - layouts
+- Sub-views
+    - partial views
+    - controls
+
+### Controller
+
+- *Function*
+- Core components
+- Processes requests
+- Handles
+    - Communication with the user
+    - Application flow
+    - Application-specific logic
+- Actions
+
+### Easily getting caller method
+
+Example 1:
+```C#
+public string GetCallerMethodName([CallerMemberName]string callerName = null)
+{
+    return callerName;
+}
+```
+
+Example 2:
+```C#
+public HttpResponse View([CallerMemberName]string path = null)
+{ ... }
+```
