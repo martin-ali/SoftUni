@@ -245,7 +245,7 @@
     - Application-specific logic
 - Actions
 
-### Easily getting caller method
+### Easily getting caller method name
 
 Example 1:
 ```C#
@@ -260,3 +260,21 @@ Example 2:
 public HttpResponse View([CallerMemberName]string path = null)
 { ... }
 ```
+
+## MVC Advanced - View Engine
+
+### Misc
+
+- XUnit
+- NUnit
+- Roslyn
+    - NuGet -> Microsoft.CSharp.Analyzer
+- .NET Standard
+    - Най-малко общо кратно между .NET Core и .NET Framework
+- coreclr.dll
+- Streams have to be used as if they have a reading head
+    - Once we're done writing, if we start to read, the reading will start from the position we stopped at
+
+### HTML
+
+### ViewModel
