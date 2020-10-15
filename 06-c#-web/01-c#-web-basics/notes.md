@@ -186,7 +186,7 @@
 - Cookie
 - Session store
 
-## Workshop
+## Workshop 1
 
 - .NET standard
     - Usable everywhere
@@ -278,3 +278,10 @@ public HttpResponse View([CallerMemberName]string path = null)
 ### HTML
 
 ### ViewModel
+
+## Workshop 2
+
+- All controller actions are public
+- HTML form method
+    - If GET, then data is appended to URL
+    - If POST, then data is sent as body
