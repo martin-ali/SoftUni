@@ -14,7 +14,5 @@ namespace Git.Services
         public void DeleteById(string commitId);
 
         public Commit GetById(string id);
-
-        public CommitCreaterepositoryViewModel GetRepositoryById(string id);
     }
 }

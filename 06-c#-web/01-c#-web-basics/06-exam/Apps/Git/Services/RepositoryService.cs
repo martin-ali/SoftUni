@@ -47,5 +47,12 @@ namespace Git.Services
 
             return publicRepositories;
         }
+
+        public Repository GetById(string id)
+        {
+            var repository = this.database.Repositories.Find(id);
+
+            return repository;
+        }
     }
 }

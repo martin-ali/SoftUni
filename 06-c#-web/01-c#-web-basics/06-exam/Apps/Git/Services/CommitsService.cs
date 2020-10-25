@@ -59,18 +59,6 @@ namespace Git.Services
             return commit;
         }
 
-        public CommitCreaterepositoryViewModel GetRepositoryById(string id)
-        {
-            var repository = this.database.Repositories.Find(id);
-            var repositoryViewModel = new CommitCreaterepositoryViewModel
-            {
-                RepositoryId = repository.Id,
-                RepositoryName = repository.Name
-            };
-
-            return repositoryViewModel;
-        }
-
         public void DeleteById(string commitId)
         {
             var commit = this.database.Commits.Find(commitId);

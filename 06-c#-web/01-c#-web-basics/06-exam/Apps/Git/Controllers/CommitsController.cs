@@ -3,16 +3,19 @@ namespace Git.Controllers
     using Git.Common;
     using Git.Services;
     using Git.ViewModels.Commits;
+    using Git.ViewModels.Repositories;
     using SUS.HTTP;
     using SUS.MvcFramework;
 
     public class CommitsController : Controller
     {
         private readonly ICommitsService commitsService;
+        private readonly IRepositoriesService repositoriesService;
 
-        public CommitsController(ICommitsService commitsService)
+        public CommitsController(ICommitsService commitsService, IRepositoriesService repositoriesService)
         {
             this.commitsService = commitsService;
+            this.repositoriesService = repositoriesService;
         }
 
         public HttpResponse All()
@@ -33,7 +36,13 @@ namespace Git.Controllers
                 return this.Redirect("/");
             }
 
-            var commitCreateViewModel = this.commitsService.GetRepositoryById(id);
+            var repository = this.repositoriesService.GetById(id);
+            var commitCreateViewModel = new CommitCreaterepositoryViewModel
+            {
+                RepositoryId = repository.Id,
+                RepositoryName = repository.Name
+            };
+
             return this.View(commitCreateViewModel);
         }
 
