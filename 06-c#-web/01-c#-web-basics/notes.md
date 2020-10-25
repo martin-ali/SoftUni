@@ -285,3 +285,47 @@ public HttpResponse View([CallerMemberName]string path = null)
 - HTML form method
     - If GET, then data is appended to URL
     - If POST, then data is sent as body
+
+## MVC Advanced - IOC and Data Binding
+
+- SOLID
+- Dependency container
+    - Dependency dictionary
+    - Create instance
+- In ASP.NET action parameters come from the request (data binding)
+    - Query parameters
+    - Form parameters
+- Data binding
+- Convert.ChangeType()
+- View model
+    - Transfers data to views
+- Input model
+    - Gets data from view
+    - Opposite of view model
+
+## Workshop 3
+
+- Services
+    - They use the database through given parameters
+    - Don't deal with requests or responses
+- Controller -> Service -> Database
+
+### Packages
+
+- Microsoft.EntityFrameworkCore.SqlServer
+    - For database
+- Microsoft.EntityFrameworkCore.Design
+    - For console commands
+
+### Do not forget
+
+- Set up the default startup project in Visual Studio
+- Set up "copy always" for all static files
+    - Views
+    - Css
+- Delete bin and obj
+- Migrations
+- Use logic to check validity and not attributes
+- Check every page if user is logged
+- Hidden inputs for the id and stuff
+- Register the services
