@@ -19,6 +19,14 @@
     - Server-side
 - Middleware
 
+### Service Types
+
+- Scoped
+    - New instance every request
+- Transient
+    - New instance every single time it's needed
+- Static
+
 ### Razor
 
 - View engine
@@ -69,3 +77,69 @@
 - Niki's template
 - Used during hiring
 - RequireConfirmedAccount
+- In ASP.NET MVC projects, the connection string defaults to localdb
+- SQL injection
+- Script injection
+- Cross-site scripting
+- Sanitizer
+
+## Razor Views
+
+### Misc
+
+- Partial views
+- HTML Helpers
+- Client gets only HTML
+    - All logic is handled server-side
+- Views have access to loads of stuff
+- HSTS
+
+### Special Files
+
+- _Layout
+    - @RenderBody()
+    - this.Layout
+- _ViewStart
+- _ViewImports
+- _ViewStart
+
+### Keywords
+
+- @using
+- @model
+- @inject
+- @addTagHelper
+- @section
+
+### Transfer to view
+
+- ViewBag
+    - Dynamic
+    - Global
+- ViewData
+    - Dictionary
+    - Global
+- ViewModel
+    - Better due to
+        - Obvious description of data
+        - Intellisense
+        - Compilation errors
+- ViewBag and ViewData are connected and share data
+
+### Interpretation
+
+- Special symbols are HTML encoded
+    - Can be avoided with @Html.Raw(data)
+- String joined to @ is automatically interpreted as an email
+    - Due to legacy reasons
+    - Avoided with brackets ()
+- To put a literal @, use @@
+- @ -> code
+- @: -> text
+- Code by default unless a tag or @:
+
+### Execution order
+
+- Action
+- View
+- Layout
