@@ -13,6 +13,8 @@ node_modules/
 jspm_packages/
 .vscode/
 vendor/
+bin/
+obj/
 # User-specific files
 *.suo
 *.user
