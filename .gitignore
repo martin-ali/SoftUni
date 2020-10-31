@@ -15,6 +15,8 @@ jspm_packages/
 vendor/
 bin/
 obj/
+.tmp.drivedownload/
+*.driveupload
 # User-specific files
 *.suo
 *.user
@@ -233,5 +235,3 @@ _Pvt_Extensions
 desktop.ini
 
 # More
-.tmp.drivedownload/
-*.driveupload

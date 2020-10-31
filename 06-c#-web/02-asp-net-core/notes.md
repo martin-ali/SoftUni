@@ -82,6 +82,9 @@
 - Script injection
 - Cross-site scripting
 - Sanitizer
+- Users can differ in roles and data? Link to other table with the additional data
+- Hangfire
+- Must be hosted
 
 ## Razor Views
 
