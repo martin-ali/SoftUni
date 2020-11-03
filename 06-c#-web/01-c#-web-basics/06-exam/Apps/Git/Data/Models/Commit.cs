@@ -1,6 +1,7 @@
 namespace Git.Data.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
     using Git.Common;
 
     public class Commit
@@ -12,8 +13,11 @@ namespace Git.Data.Models
 
         public string Id { get; set; }
 
+        [Required]
+        [MinLength(5)]
         public string Description { get; set; }
 
+        [Required]
         public DateTime CreatedOn { get; set; }
 
         public string CreatorId { get; set; }
