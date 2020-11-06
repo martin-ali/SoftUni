@@ -96,6 +96,11 @@
     - All logic is handled server-side
 - Views have access to loads of stuff
 - HSTS
+- [DataType(DataType.MultilineText)]
+- HTML helpers
+    - Superseded by tag helpers
+- Tag helpers
+    - asp-for
 
 ### Special Files
 
@@ -112,6 +117,7 @@
 - @model
 - @inject
 - @addTagHelper
+    - Can add custom tag helpers
 - @section
 
 ### Transfer to view
@@ -128,6 +134,48 @@
         - Intellisense
         - Compilation errors
 - ViewBag and ViewData are connected and share data
+
+### HTML Helpers
+
+- Tag helpers supersede these
+- this.Html
+    - .Editor()
+        - .ForModel()
+    - .BeginForm()
+    - .Partial
+        - .PartialAsync()
+- @Html.ActionLink()
+
+### Tag Helpers
+
+- Use these instead of HTML Helpers
+- <partial>
+    - Model
+    - Name
+
+### View Components
+
+- Partial view with attached code
+- Shorthand possible
+    - </> as instead of <></>
+- Parts
+    - Class
+        - ViewComponent
+    - Result
+        - View
+- Invoke
+    - IViewComponentResult
+    - InvokeAsync()
+- Don't handle requests
+- Typically initialize model
+- Views location
+    - Shared
+        - Components
+            - RegisteredStudentSomeDataViewModel
+                - default.cshtml
+- Usage
+    - In code: MyCoolViewComponent
+    - In cshtml: my-cool-view-component
 
 ### Interpretation
 
