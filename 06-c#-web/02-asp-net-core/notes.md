@@ -194,3 +194,211 @@
 - Action
 - View
 - Layout
+
+## Application Flow, Filters, and Middleware
+
+### Misc
+
+- TempData
+- Controller
+    - [Authorize(Role = "Admin")]
+    - ControllerContext
+        - ActionDescriptor
+        - HttpContext
+        - ModelState
+        - RouteData
+        - ValidProviderFactories
+- Request
+    - Id
+        - For logging
+    - Context
+- Configuration providers
+    - appsettings.json
+        - .Development
+        - .Production
+    - launchsettings.json
+- Don't forget to put  the project in the dev environment to get pretty error visualizations
+
+#### Environments
+- Dev
+    -  Development
+- Test
+    - Testing & verification
+- Stage
+    - Customer tests
+- Production
+    - Release
+
+### Application Flow
+
+- Request
+- Middleware
+    - HTTP pipeline components
+- Routing
+    - Action
+    - Page
+- Controller initialization
+    - Controller factory
+    - Controller action invoker
+- Action execution
+    - Model binding
+    - Model validation
+    - Action
+        - Filters
+        - Execution
+        - filters
+        - result
+- Result execution
+    - Result
+        - Filters
+        - Execution
+        - Filters
+- View engine
+- Response
+
+### Error Handling
+
+- Exception filter
+- Model validation
+    - ModelState
+- Custom exception handling
+    - app.UseExceptionHandler()
+        - For exceptions
+    - app.UseExceptionHandlerWithReExecute()
+        - For non-exception errors
+- Status code pages
+    - app.UseStatusCodePagesWithRedirects()
+
+### Middleware
+
+- Software assembled into an app pipeline
+- Each component
+    - Handles requests and responses
+    - Chooses whether to pass on to the next component or short-circuit
+    - Can perform work before or after the next component in the pipeline
+    - At invocation it receives the next component in the pipeline to decide whether to invoke it or not
+        - Action<HttpContext, RequestDelegate> requestDelegate
+    RequestDelegates build the pipeline
+- Custom middleware class
+- Registered in Configure()
+
+#### Types
+
+- Use()
+    - Can short-circuit
+    - Can pass to the next one
+    - Can do work before or after the next one
+- Run()
+    - Terminates the pipeline
+    - Runs last
+- Map()
+    - Branches the pipeline
+
+#### Examples
+
+```C#
+public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
+{
+    // Route
+    app.Map("/welcome", app =>
+    {
+        app.UseWelcomePage();
+
+        app.Map("/someRoute", app => ...);
+        app.Run(...);
+    });
+
+    // RequestDelegate 1
+    app.Use(async (context, next)=>
+    {
+        await context.Response.WriteAsync("1");
+        await next();
+        await context.Response.WriteAsync("4");
+    });
+
+    // RequestDelegate 2
+    app.Use(async (context, next)=>
+    {
+        await context.Response.WriteAsync("2");
+        await next();
+        await context.Response.WriteAsync("3");
+    });
+
+    // Always runs last
+    app.Run(async (request)=>
+    {
+        await context.Response.WriteAsync("Always last");
+    });
+}
+```
+
+### Filters
+
+#### Misc
+
+- Run code before or after specific stages in the __Request Processing Pipeline__
+- Come after the middleware
+- Can be registered as an attribute
+    - Put on controller, it applies to all actions
+    - Can be put on a single action
+- TypeFilterAttribute
+- ServiceFilterAttribute
+- Pattern: Chain of responsibility
+- Can be
+    - Synchronous
+        - OnExecuting
+        - OnExecuted
+    - Asynchronous
+        - OnExecutionAsync
+
+#### Registration
+
+- Global
+    - Before and after every action
+    - Startup.cs -> services.AddControllersWithViews(configure => configure.Filters.Add(new MyCustomFilter()));
+    - Startup.cs -> services.AddControllersWithViews(configure => configure.Filters.Add(typeof (MyCustomFilter)));
+- Attribute
+    - : ActionFilterAttribute
+    - : ExceptionFilterAttribute
+    - : ResultFilterAttribute
+    - : FormatFilterAttribute
+
+#### Types
+
+- Authorization
+    - : IAuthorizationFilter
+    - OnAuthorization
+- Resource
+    - : IResourceFilter
+    - OnResourceExecuting
+    - OnResourceExecuted
+- Action
+    - : IActionFilter
+    - OnActionExecuting
+    - OnActionExecuted
+- Exception
+    - : IExceptionFilter
+    - OnExceptionExecuting
+    - OnExceptionExecuted
+- Result
+    - : IResultFilter
+    - OnResultExecuting
+    - OnResultExecuted
+
+#### Flow
+
+- Request
+- Middleware
+- Authorization filters
+- Resource filters
+- Model binding/validation
+- Action filters
+- Action invocation
+- Action filters
+- Exception filters
+- Result filters
+- Result
+- Result filters
+- Resource filters
+- Authorization filters
+- Response
