@@ -59,6 +59,12 @@
     - HLS
 - Newline - always \r\n
 
+### Types
+
+- GET
+- POST
+    - Unlike GET, has a body
+
 ### Web
 
 - UTF-8
