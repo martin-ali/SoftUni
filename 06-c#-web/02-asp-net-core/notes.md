@@ -85,6 +85,7 @@
 - Users can differ in roles and data? Link to other table with the additional data
 - Hangfire
 - Must be hosted
+- Set UpdatedOn and CreatedOn on SaveChanges()
 
 ## Razor Views
 
@@ -402,3 +403,64 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Resource filters
 - Authorization filters
 - Response
+
+## Working with data
+
+### Misc
+
+- Unobtrusive javascript
+- Validation
+    - Server-side -> __always__
+    - Client-side -> __optional__
+- [MinLength()] always needs [Required]
+    - Otherwise empty string is valid
+- Model validation attributes
+- validationContext -> class : ValidationAttribute
+    - GetService()
+    - Dependency injection
+- RedirectToAction(nameof(controller))
+- IFormFile
+- IWebHostEnvironment
+- IValidatableObject
+
+### Model Binding
+
+- HTTP request -> action method parameters
+- Parameter name -> property name
+    - From input name
+- Query parameter
+- Data sources (key : value)
+    - Form values
+        - enctype
+            - urlencoded
+            - multipart/form-data
+                - For files
+    - Route values
+    - Query strings
+    - Others
+        - Headers
+            - [FromHeader]
+            - [FromHeader("header-name)]
+        - Cookies
+        - Sessions
+    - [FromService]
+    - [FromForm]
+    - [FromBody]
+    - [ModelBinder]
+    - [Bind]
+- ModelState
+    - IsValid
+    - ModelStateEntry
+        - Errors
+    - No exceptions, only errors
+        - Invalid values are replaced by default
+    - __All__ properties are validated
+- Fills in arrays with query parameters
+- asp-for
+- asp-validation-summary
+- [Display]
+- [DataType]
+- asp-items
+    - @Html.GetEnumSelectList<MyEnum>()
+- Client-side validation
+    - <partial name="_ValidationScriptsPartial" />
