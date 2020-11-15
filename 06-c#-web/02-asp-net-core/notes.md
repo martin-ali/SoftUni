@@ -464,3 +464,32 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
     - @Html.GetEnumSelectList<MyEnum>()
 - Client-side validation
     - <partial name="_ValidationScriptsPartial" />
+
+## Workshop 1
+
+- DTO vs ViewModel
+    - DTO is used by services
+    - ViewModel is used by views
+- aps-append-version
+    - Cache invalidation
+- Controller -> Service -> Repository -> Entity Framework
+- No tracking - EF stops tracking them
+
+### Web
+#### Infrastructure
+    - TagHelpers
+    - Filters
+    - Middleware
+    - Validation attributes
+    - Not directly related to presentation, controllers, or views
+#### Areas
+- Controllers and views
+- {MyArea}/Controller/Action
+### Tests
+### Data
+    - DbContext
+    - Migrations
+### Services
+    - Business logic
+#### Data
+    - Services that deal with data
