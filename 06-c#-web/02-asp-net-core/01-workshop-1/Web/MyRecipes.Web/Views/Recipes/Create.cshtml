@@ -48,11 +48,21 @@
 
 @section Scripts {
     <script>
-           var ingredientIndex = 0;
+        let ingredientIndex = 1;
         function AddMoreIngredients() {
-            $("#IngredientsContainer").
-                append("<div class='form-control'>Name: <input type='text' name='Ingredients[" + ingredientIndex + "].IngredientName' /> Quantity: <input type='text' name='Ingredients[" + ingredientIndex +"].Quantity' /></div>");
-            ingredientIndex++;
+
+            let ingredientNumber = `ingredient${ingredientIndex}`;
+
+            let nameLabel = $(`<label for='${ingredientIndex}'>Name</label>`);
+            let nameInput = $(`<input class="" type='text' name='Ingredients[${ingredientIndex}].IngredientName' id='${ingredientIndex}input' />`);
+
+            let quantityLabel = $(`<label for='${ingredientIndex}'>Quantity</label>`);
+            let quantityInput = $(`<input class="" type='text' name='Ingredients[${ingredientIndex}].Quantity' id='${ingredientIndex}quantity' />`);
+
+            let ingredientsRow=$("<div class='col-md-6 form-control clearfix'></div>");
+            ingredientsRow.append(nameLabel, nameInput, quantityLabel, quantityInput);
+
+            $("#IngredientsContainer").append(ingredientsRow);
         }
     </script>
 }
