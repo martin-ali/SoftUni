@@ -1,7 +1,5 @@
 # ASP.NET Core
-
 ## Introduction
-
 - APS (Active Server Pages)
 - Compared to ASP.NET MVC
     - Much less coupled to libraries
@@ -20,7 +18,6 @@
 - Middleware
 
 ### Service Types
-
 - Scoped
     - New instance every request
 - Transient
@@ -28,12 +25,10 @@
 - Static
 
 ### Razor
-
 - View engine
 - Avoid ViewBag and ViewData
 
 ### Controller
-
 - Inherits Controller class
 - Action
 - Not static
@@ -50,24 +45,19 @@
         - Using ":"
 
 #### Attributes
-
 - [FromHeader]
 - [NonAction]
 - [ActionName]
 
 ### Validation
-
 - ModelState.IsValid()
 
 ### Identity
-
 - Authentication
 - Authorization
 
 ## Razor Views
-
 ### Misc
-
 - Partial views
 - HTML Helpers
 - Client gets only HTML
@@ -81,7 +71,6 @@
     - asp-for
 
 ### Special Files
-
 - _Layout
     - @RenderBody()
     - this.Layout
@@ -90,7 +79,6 @@
 - _ViewStart
 
 ### Keywords
-
 - @using
 - @model
 - @inject
@@ -99,7 +87,6 @@
 - @section
 
 ### Transfer to view
-
 - ViewBag
     - Dynamic
     - Global
@@ -114,7 +101,6 @@
 - ViewBag and ViewData are connected and share data
 
 ### HTML Helpers
-
 - Tag helpers supersede these
 - this.Html
     - .Editor()
@@ -125,14 +111,12 @@
 - @Html.ActionLink()
 
 ### Tag Helpers
-
 - Use these instead of HTML Helpers
 - <partial>
     - Model
     - Name
 
 ### View Components
-
 - Partial view with attached code
 - Shorthand possible
     - </> as instead of <></>
@@ -156,7 +140,6 @@
     - In cshtml: my-cool-view-component
 
 ### Interpretation
-
 - Special symbols are HTML encoded
     - Can be avoided with @Html.Raw(data)
 - String joined to @ is automatically interpreted as an email
@@ -168,15 +151,12 @@
 - Code by default unless a tag or @:
 
 ### Execution order
-
 - Action
 - View
 - Layout
 
 ## Application Flow, Filters, and Middleware
-
 ### Misc
-
 - TempData
 - Controller
     - [Authorize(Role = "Admin")]
@@ -208,7 +188,6 @@
     - Release
 
 ### Application Flow
-
 - Request
 - Middleware
     - HTTP pipeline components
@@ -235,7 +214,6 @@
 - Response
 
 ### Error Handling
-
 - Exception filter
 - Model validation
     - ModelState
@@ -248,7 +226,6 @@
     - app.UseStatusCodePagesWithRedirects()
 
 ### Middleware
-
 - Software assembled into an app pipeline
 - Each component
     - Handles requests and responses
@@ -261,7 +238,6 @@
 - Registered in Configure()
 
 #### Types
-
 - Use()
     - Can short-circuit
     - Can pass to the next one
@@ -273,7 +249,6 @@
     - Branches the pipeline
 
 #### Examples
-
 ```C#
 public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 {
@@ -311,9 +286,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 ```
 
 ### Filters
-
 #### Misc
-
 - Run code before or after specific stages in the __Request Processing Pipeline__
 - Come after the middleware
 - Can be registered as an attribute
@@ -330,7 +303,6 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
         - OnExecutionAsync
 
 #### Registration
-
 - Global
     - Before and after every action
     - Startup.cs -> services.AddControllersWithViews(configure => configure.Filters.Add(new MyCustomFilter()));
@@ -342,7 +314,6 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
     - : FormatFilterAttribute
 
 #### Types
-
 - Authorization
     - : IAuthorizationFilter
     - OnAuthorization
@@ -364,7 +335,6 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
     - OnResultExecuted
 
 #### Flow
-
 - Request
 - Middleware
 - Authorization filters
@@ -382,9 +352,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Response
 
 ## Working with data
-
 ### Misc
-
 - Unobtrusive javascript
 - Validation
     - Server-side -> __always__
@@ -401,7 +369,6 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - IValidatableObject
 
 ### Model Binding
-
 - HTTP request -> action method parameters
 - Parameter name -> property name
     - From input name
@@ -443,7 +410,6 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
     - <partial name="_ValidationScriptsPartial" />
 
 ## Workshop 1
-
 - DTO vs ViewModel
     - DTO is used by services
     - ViewModel is used by views
@@ -472,7 +438,6 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
     - Services that deal with data
 
 ## Web API
-
 ### Important JS Frameworks
 - Angular
 - Vue.js
