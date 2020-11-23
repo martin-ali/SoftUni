@@ -470,3 +470,103 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
     - Business logic
 #### Data
     - Services that deal with data
+
+## Web API
+
+### Important JS Frameworks
+- Angular
+- Vue.js
+- React
+
+### Misc
+- Fonts
+    - Icon only fonts
+- RoleManager
+- db.Entry()
+- JWT
+
+### JSON
+- Scripting language
+    - Executed line by line
+- JavaScript object notation
+- Open file format
+- Common
+- MIME
+    - application/json
+- Extension
+    - .json
+- No schemas
+- No namespaces
+
+### XML
+- Extensible markup language
+- MIME
+    - application/xml (current)
+    - text/xml (old)
+- Extension
+    - .xml
+- Schemas
+- Namespaces
+- XHTML
+
+### JavaScript
+- HTML
+- CSS
+- TypeScript
+
+### AJAX
+- Asynchronous JavaScript and XML
+- XHR
+    - XmlHttpRequest
+
+### ASP.NET Core Web API
+- [assembly: ApiController]
+- [ApiController]
+    - Filters
+    - Automatic validation and BadRequest(400) on bad data
+        - ModelStateInvalidFilter
+    - Automatic Binding
+    - Additional functionality
+- Route("api/[controller]")
+    - Necessary
+    - API controller actions always execute on the same controller route
+- [HttpPost("{id}")]
+- Normal controllers inherit Controller
+- API controllers inherit ControllerBase
+- Validation attibutes on actions
+- Complex types
+    - Searched in body as json
+- Primitive types
+    - Searched in query string
+- .AddXmlSerializerFormatters()
+- [Authorize]
+- [ProducesResponseType(200)]
+- OData
+    - [EnableQuery()]
+- OpenApi
+- return this.CreatedAtAction(parameters...)
+
+### Angular
+- SPA
+- PWA
+- Mobile (native)
+    - Cordova
+    - Ionic
+- Desktop
+    - Electron
+- Two-way data-binding
+
+### CORS
+- Cross-origin resource sharing
+- Browser only feature
+- Origin
+    - Address schema
+    - Domain/host
+    - Port
+- Allows specific sites to make calls (Unlike SOP)
+- SOP
+    - Prevents making requests to domains other than the one that served the page
+- Configuration
+    - Startup.cs
+- Web app and web API on different addresses?
+    - Enable CORS
