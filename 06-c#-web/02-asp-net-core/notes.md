@@ -64,29 +64,6 @@
 - Authentication
 - Authorization
 
-## Project Defense
-
-- Not necessary to be responsive
-- Ideas:
-    - Learning system
-    - Social network
-    - Spotify
-    - Online store
-- Facebook course group for examples
-- Hosted online or locally is fine
-- Niki's template
-- Used during hiring
-- RequireConfirmedAccount
-- In ASP.NET MVC projects, the connection string defaults to localdb
-- SQL injection
-- Script injection
-- Cross-site scripting
-- Sanitizer
-- Users can differ in roles and data? Link to other table with the additional data
-- Hangfire
-- Must be hosted
-- Set UpdatedOn and CreatedOn on SaveChanges()
-
 ## Razor Views
 
 ### Misc
