@@ -535,3 +535,123 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
     - Startup.cs
 - Web app and web API on different addresses?
     - Enable CORS
+
+## Security and identity
+
+### Misc
+- PageModel
+- IHttpContextAccessor
+    - Accessing user in service
+        - Not a good way. Avoid
+
+### Security
+
+#### SQL Injection
+- Escaping
+- Parameterized queries
+- Interpolated string
+- Never concatenate raw strings
+
+#### Cross-Site Scripting (XSS)
+- [IgnoreAntiForgeryToken]
+- Never trust user data
+- When unescaped user data is accepted by the server
+    - Allows code to be sent
+- Avoid HTML.Raw()
+- Set cookie as HTTP only
+- Use Razor
+- Data should be:
+    - Encoded
+    - Parsed
+    - Validated
+    - Checked for malicious content
+- Encoding
+    - Services
+        - HtmlEncoder
+        - JavaScriptEncoder
+        - UrlEncoder
+    - Static
+        - WebUtility.HtmlEncode & .HtmlDecode
+        - WebUtility.UrlEncode & .UrlDecode
+- Libraries
+    - HtmlSanitizer
+
+#### Parameter Tampering
+- Manipulation of parameters exchanged between client and server
+    - Example: Looping through all values for given parameter
+
+#### Cross-Site Request Forgery
+- SameSite cookie parameter
+- Request verification token
+    - [ValidateAntiForgeryToken]
+    - configure.Filters.Add(new AutoValidateAutoForgeryToken())
+
+#### DDoS
+
+#### Insufficient Access Control
+- [Authorize(Role="MyRole")]
+
+#### Too Much Information In Errors
+
+#### Missing SSL / Man In The Middle
+
+#### Phishing / Social Engineering
+
+### Identity
+- [AllowAnonymous]
+- [Authorize(Roles = "Admin")]
+    - On action
+    - On controller
+    - On parent controller - all inheritors get the attribute
+    - Attribute on action is prioritized over attribute on controller
+- GDPR
+- Microsoft.AspNetCore.Identity.EntityFrameworkCore
+- Microsoft.AspNetCore.Identity.UI
+- services.AddDefaultIdentity
+- UseAuthentication
+- Users
+    - SignInManager
+    - UserManager
+        - Use this when dealing with users
+    - RoleManager
+- Roles are recorded in cookies, so re-login if you change their roles
+- .AddRoles<IdentityRole>()
+
+#### Claims
+- Key-value pairs
+- Additional information only some user have
+- Policy-based
+
+#### Policies
+- options.AddPolicy()
+
+#### Extending And Scaffolding
+- Files in project take precedence over files from libraries
+
+### Authentication
+- UseAuthorization
+- Types
+    - Cookie-based
+    - Windows auth
+    - Cloud-based
+
+### JWT
+- JSON web token
+- ConfigureServices()
+    - Middleware
+- Header instead of cookie
+- Common in REST
+- Used for representing claims between two parties
+- Encrypted
+- Stateless
+- Structure
+    - Headers
+    - Payload (data)
+    - Verification signature
+    - Separated by "."
+
+### Social Accounts
+- External login provider
+- Third party manages the sign-in
+- Example: "Login with Google"
+- Example: Microsoft.AspNetCore.Authentication.Facebook
