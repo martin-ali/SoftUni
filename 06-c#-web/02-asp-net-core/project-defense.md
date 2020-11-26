@@ -24,3 +24,8 @@
 - Product reviews
 - Add web API
 - Need to know a JS framework when I start job-hunting
+- Upload appsettings.Development to GitHub
+- Don't upload appsettings.Production to GitHub
+- Admin panel
+- Email service: SendGrid
+- Scaffolding
