@@ -29,3 +29,4 @@
 - Admin panel
 - Email service: SendGrid
 - Scaffolding
+- ProcessorInfo table with ProductId?
