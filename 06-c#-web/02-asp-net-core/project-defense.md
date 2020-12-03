@@ -30,3 +30,6 @@
 - Email service: SendGrid
 - Scaffolding
 - ProcessorInfo table with ProductId?
+- Testing
+    - Minimum desired: 80%
+    - Best case: 95%

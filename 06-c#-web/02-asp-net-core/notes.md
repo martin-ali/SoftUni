@@ -655,3 +655,109 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Third party manages the sign-in
 - Example: "Login with Google"
 - Example: Microsoft.AspNetCore.Authentication.Facebook
+
+## Testing
+
+### Misc
+- Testing features before delivering to clients
+- Testing business logic first and foremost
+- Services are important
+- Different application components are tested differently
+- Test types
+    - Unit tests
+    - Integration testing
+    - End-to-End testing
+- AAA
+    - Arrange
+    - Act
+    - Assert
+
+### Test levels
+#### Unit
+    - Specific code in a component
+#### Component
+    - Specific component
+#### Integration
+    - Whether multiple components work together
+#### System
+    - The system as a whole
+#### Regression
+    - Previously fixed bugs won't reappear
+#### Acceptance
+    - Client's requirements
+#### Performance / Load / Stress
+    - Performance
+        - Are queries executed in a given time
+    - Load
+        - App should work even under heavy stress
+    - Stress
+        - Abnormal situations
+        - App appears over our app
+        - Battery testing
+        - Server restarting
+        - Etc
+#### Security
+    - Security flaws
+    - Both automated and manual testing
+#### Other
+    - Manual
+    - Automation
+    - UI
+    - Smoke
+        - Happy path
+    - Black box
+        - Testing with no access to the code base
+    - End-to-End
+    - A/B
+        - Separate into groups
+
+### Approaches
+- Code-first
+    - Fast
+    - Flexible
+- Test-first
+    - Tests based on code
+    - Quality
+    - Edge cases
+    - Complicated
+    - Initial delay
+
+### Unit Testing
+- xUnit
+- Tests should be independent from each other
+
+#### Mocking
+- Moq
+
+#### In-Memory Database
+- Microsoft.EntityFrameworkCore.InMemory
+- Non-relational
+- No relations
+
+### Integration Testing
+- Components function correctly at the infrastructure level
+- Components work together correctly and return expected results
+- More complicated than unit tests
+- Microsoft.AspNetCore.Mvc.Testing
+
+### Selenium
+- Web browser simulation
+- Headless
+- Drivers
+    - Chrome
+    - Firefox
+    - Edge
+    - Internet Explorer
+    - Etc
+- Portable
+- Automates browsers
+- Verify browser and package version match
+
+#### Integration
+
+### MyTested.AspNetCore.Mvc
+- Controller testing
+- Automatic resolving of test dependencies
+- Fluent API
+- Strongly-typed extensions
+- Built-in mocks
