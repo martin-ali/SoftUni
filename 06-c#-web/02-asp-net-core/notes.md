@@ -761,3 +761,89 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Fluent API
 - Strongly-typed extensions
 - Built-in mocks
+
+## Project Architecture
+
+### Misc
+- Stateless service
+    - Takes data and returns response without reading or writing anywhere
+- Serverless
+    - One action
+
+### Design
+- Web vs Desktop vs Mobile vs IoT
+#### Multi-Page App
+#### Single-Page App
+
+### Architecture
+#### Monolithic
+- Single-tiered apps
+- UI and data code are combined
+- Simplest architecture
+- Easy deployment and maintenance
+    - Due to lack of modularity and complexity
+- For small and mid-sized projects
+
+#### Service-Oriented
+- Split project into smaller applications
+- Communication over SOAP/XML/WS
+- All services share data store
+- Services do multiple activities in the scope of a single functionality
+
+#### Microservices
+- Lots of small applications
+- Direct communication between microservices
+- Services can be deployed independently
+- Microservices have their own data stores
+- Docker
+- Kubernetes
+
+### ASP.NET Core MVC vs Razor Pages
+#### Razor Pages
+- MVVM
+- Combines model and controller into page model
+- Similar to view component
+- Single responsibility
+- For simple applications
+- Razor page
+    - View template (.cshtml)
+    - Code behind (.cs) as the controller
+
+### Automapper
+- Works by matching property names and types
+- ConfigureServices
+
+### Repository Pattern
+- Encapsulates data access logic
+- You define one repository per entity
+    - Example: StudentRepository
+- Interface IRepository
+
+### Database and ORM
+#### ORM
+- Object relational mapper
+- Layer between DB and application
+- Maps data to relational objects
+- Unit of work (DbContext)
+- Tracks changes
+- Performance cost
+
+#### Dapper
+- Micro ORM
+    - Limited functionality
+- High performance
+- String queries
+    - Close to the metal
+
+#### Databases
+- Very important decision in development
+- Types
+    - Relational
+        - Use SQL
+        - Performance penalty due to checks
+    - Non-relational
+        - Faster
+        - Dynamic schema
+        - No triggers
+            - Data and type may differ from record to record
+        - No data validation
