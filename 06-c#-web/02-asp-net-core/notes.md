@@ -847,3 +847,138 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
         - No triggers
             - Data and type may differ from record to record
         - No data validation
+
+## Advanced Topics
+
+### Misc
+- Post-Redirect-Get design pattern
+    - Should be used
+
+### Host Class
+- At minimum, configures a server and request pipeline
+- Can also set up
+    - Logging
+    - Dependency injection
+    - Configuration
+- Configured in entry point
+- Accepts the startup file
+- IHostBuilder
+- Kestrel
+    - ASP.NET Core integrated web server
+    - CreateDefaultBuilder()
+
+### Logging
+- Event log
+- Log filters
+- Minimum log level
+- Log levels
+    - Not technology specific
+- Logging providers
+    - Possibly multiple
+- appsettings.json
+
+#### Structure
+- ILogger
+    - Create log messages
+    - ILoggerFactory
+    - Create ILogger instances
+- ILoggerProvider
+    - How and where logs go
+    - Format of the logger
+
+### Cache
+- ASP.NET Core supports different caches
+#### IMemoryCache
+- In-memory
+- Service
+    - services.AddMemoryCache()
+- MemoryCacheEntryOptions
+    - SlidingExpiration
+- When running out of memory, the server will start to evict items from the cache regardless of expiration
+
+#### IDistributedCache
+- Microsoft.Extensions.Caching.SqlServer
+- Shared by multiple servers
+- Usually stored in a database
+- Connection string
+- Tag helper <cache></cache>
+
+#### HTTP Response Cache
+- Cache-control
+- You can't force a browser to cache, but you can force it to not cache
+
+### Sessions
+- Unique identifier that stores data
+- Temporary user data storage
+- Session ID
+- Backed by server cache
+
+### TempData
+- Store data until reading
+    - Keep()
+    - Peek()
+- Cookies(default) or Session
+- TempData providers
+- This.TempData[]
+
+### Areas
+- Areas folder
+- Visual Studio -> Add -> Area
+- Order a large number of components into folders
+- Areas include:
+    - Controllers
+    - Models
+    - Views
+- [Area("...")]
+- >2:50 video
+- ViewImports
+
+### Performance
+- DotTrace
+- Low-hanging fruit
+- Use async/await
+- Enable compression
+    - services.AddResponseCompression()
+    - app.UseResponseCompression()
+- Reduce HTTP Requests
+    - Bundling
+		- bundleconfig.json
+		- BuildBundlerMinifier
+- Minification
+- HTTP/2 over SSL
+	- Enabled by default
+- Multiplexing
+- Load CSS first
+	- Put CSS in the head
+- Load JS last
+	- Put JS in the body
+- CDN
+- Caching pages
+
+### SEO
+- Single-page apps are difficult to crawl and sometimes ignored by Google
+- Meaningful URLs
+	- Slug
+- Useful metadata
+	- Title
+	- keywords
+		- <meta name="keywords"></meta>
+	- Description
+
+### GDPR
+- General Data Protection Regulation
+- EU directive
+- Addresses data protection and privacy
+- Private data
+	- Anything that can be used to uniquely identify someone
+- ASP.NET Core APIs
+- Rights to provide:
+	- To be informed
+	- Access
+	- Rectification
+	- Erasure
+	- Restrict processing
+	- Portability
+	- Object
+	- Related to automatic decision making
+	- Cookie consent
