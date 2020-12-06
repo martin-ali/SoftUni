@@ -2,26 +2,26 @@
 ## Introduction
 - APS (Active Server Pages)
 - Compared to ASP.NET MVC
-    - Much less coupled to libraries
-    - Not as monolithic
-    - Uses NuGet for all components
-    - Much faster
-    - Not as tied to monolithic components
-        - Modular
-    - Uses JSON instead of XML by default
+	- Much less coupled to libraries
+	- Not as monolithic
+	- Uses NuGet for all components
+	- Much faster
+	- Not as tied to monolithic components
+		- Modular
+	- Uses JSON instead of XML by default
 - View components
 - Convention over configuration
 - Model binding
 - Model validation
-    - Client-side
-    - Server-side
+	- Client-side
+	- Server-side
 - Middleware
 
 ### Service Types
 - Scoped
-    - New instance every request
+	- New instance every request
 - Transient
-    - New instance every single time it's needed
+	- New instance every single time it's needed
 - Static
 
 ### Razor
@@ -34,15 +34,15 @@
 - Not static
 - Can return *anything*
 - Routing
-    - Conventional
-        - Recommended
-    - Attribute routing
-        - Not recommended
-        - Makes tracing valid routes difficult
-        - Harder debugging
-    - The "/" symbol overrides the controller route
-    - Constraint
-        - Using ":"
+	- Conventional
+		- Recommended
+	- Attribute routing
+		- Not recommended
+		- Makes tracing valid routes difficult
+		- Harder debugging
+	- The "/" symbol overrides the controller route
+	- Constraint
+		- Using ":"
 
 #### Attributes
 - [FromHeader]
@@ -61,19 +61,19 @@
 - Partial views
 - HTML Helpers
 - Client gets only HTML
-    - All logic is handled server-side
+	- All logic is handled server-side
 - Views have access to loads of stuff
 - HSTS
 - [DataType(DataType.MultilineText)]
 - HTML helpers
-    - Superseded by tag helpers
+	- Superseded by tag helpers
 - Tag helpers
-    - asp-for
+	- asp-for
 
 ### Special Files
 - _Layout
-    - @RenderBody()
-    - this.Layout
+	- @RenderBody()
+	- this.Layout
 - _ViewStart
 - _ViewImports
 - _ViewStart
@@ -83,68 +83,68 @@
 - @model
 - @inject
 - @addTagHelper
-    - Can add custom tag helpers
+	- Can add custom tag helpers
 - @section
 
 ### Transfer to view
 - ViewBag
-    - Dynamic
-    - Global
+	- Dynamic
+	- Global
 - ViewData
-    - Dictionary
-    - Global
+	- Dictionary
+	- Global
 - ViewModel
-    - Better due to
-        - Obvious description of data
-        - Intellisense
-        - Compilation errors
+	- Better due to
+		- Obvious description of data
+		- Intellisense
+		- Compilation errors
 - ViewBag and ViewData are connected and share data
 
 ### HTML Helpers
 - Tag helpers supersede these
 - this.Html
-    - .Editor()
-        - .ForModel()
-    - .BeginForm()
-    - .Partial
-        - .PartialAsync()
+	- .Editor()
+		- .ForModel()
+	- .BeginForm()
+	- .Partial
+		- .PartialAsync()
 - @Html.ActionLink()
 
 ### Tag Helpers
 - Use these instead of HTML Helpers
 - <partial>
-    - Model
-    - Name
+	- Model
+	- Name
 
 ### View Components
 - Partial view with attached code
 - Shorthand possible
-    - </> as instead of <></>
+	- </> as instead of <></>
 - Parts
-    - Class
-        - ViewComponent
-    - Result
-        - View
+	- Class
+		- ViewComponent
+	- Result
+		- View
 - Invoke
-    - IViewComponentResult
-    - InvokeAsync()
+	- IViewComponentResult
+	- InvokeAsync()
 - Don't handle requests
 - Typically initialize model
 - Views location
-    - Shared
-        - Components
-            - RegisteredStudentSomeDataViewModel
-                - default.cshtml
+	- Shared
+		- Components
+			- RegisteredStudentSomeDataViewModel
+				- default.cshtml
 - Usage
-    - In code: MyCoolViewComponent
-    - In cshtml: my-cool-view-component
+	- In code: MyCoolViewComponent
+	- In cshtml: my-cool-view-component
 
 ### Interpretation
 - Special symbols are HTML encoded
-    - Can be avoided with @Html.Raw(data)
+	- Can be avoided with @Html.Raw(data)
 - String joined to @ is automatically interpreted as an email
-    - Due to legacy reasons
-    - Avoided with brackets ()
+	- Due to legacy reasons
+	- Avoided with brackets ()
 - To put a literal @, use @@
 - @ -> code
 - @: -> text
@@ -159,129 +159,129 @@
 ### Misc
 - TempData
 - Controller
-    - [Authorize(Role = "Admin")]
-    - ControllerContext
-        - ActionDescriptor
-        - HttpContext
-        - ModelState
-        - RouteData
-        - ValidProviderFactories
+	- [Authorize(Role = "Admin")]
+	- ControllerContext
+		- ActionDescriptor
+		- HttpContext
+		- ModelState
+		- RouteData
+		- ValidProviderFactories
 - Request
-    - Id
-        - For logging
-    - Context
+	- Id
+		- For logging
+	- Context
 - Configuration providers
-    - appsettings.json
-        - .Development
-        - .Production
-    - launchsettings.json
+	- appsettings.json
+		- .Development
+		- .Production
+	- launchsettings.json
 - Don't forget to put  the project in the dev environment to get pretty error visualizations
 
 #### Environments
 - Dev
-    -  Development
+	-  Development
 - Test
-    - Testing & verification
+	- Testing & verification
 - Stage
-    - Customer tests
+	- Customer tests
 - Production
-    - Release
+	- Release
 
 ### Application Flow
 - Request
 - Middleware
-    - HTTP pipeline components
+	- HTTP pipeline components
 - Routing
-    - Action
-    - Page
+	- Action
+	- Page
 - Controller initialization
-    - Controller factory
-    - Controller action invoker
+	- Controller factory
+	- Controller action invoker
 - Action execution
-    - Model binding
-    - Model validation
-    - Action
-        - Filters
-        - Execution
-        - filters
-        - result
+	- Model binding
+	- Model validation
+	- Action
+		- Filters
+		- Execution
+		- filters
+		- result
 - Result execution
-    - Result
-        - Filters
-        - Execution
-        - Filters
+	- Result
+		- Filters
+		- Execution
+		- Filters
 - View engine
 - Response
 
 ### Error Handling
 - Exception filter
 - Model validation
-    - ModelState
+	- ModelState
 - Custom exception handling
-    - app.UseExceptionHandler()
-        - For exceptions
-    - app.UseExceptionHandlerWithReExecute()
-        - For non-exception errors
+	- app.UseExceptionHandler()
+		- For exceptions
+	- app.UseExceptionHandlerWithReExecute()
+		- For non-exception errors
 - Status code pages
-    - app.UseStatusCodePagesWithRedirects()
+	- app.UseStatusCodePagesWithRedirects()
 
 ### Middleware
 - Software assembled into an app pipeline
 - Each component
-    - Handles requests and responses
-    - Chooses whether to pass on to the next component or short-circuit
-    - Can perform work before or after the next component in the pipeline
-    - At invocation it receives the next component in the pipeline to decide whether to invoke it or not
-        - Action<HttpContext, RequestDelegate> requestDelegate
-    RequestDelegates build the pipeline
+	- Handles requests and responses
+	- Chooses whether to pass on to the next component or short-circuit
+	- Can perform work before or after the next component in the pipeline
+	- At invocation it receives the next component in the pipeline to decide whether to invoke it or not
+		- Action<HttpContext, RequestDelegate> requestDelegate
+	RequestDelegates build the pipeline
 - Custom middleware class
 - Registered in Configure()
 
 #### Types
 - Use()
-    - Can short-circuit
-    - Can pass to the next one
-    - Can do work before or after the next one
+	- Can short-circuit
+	- Can pass to the next one
+	- Can do work before or after the next one
 - Run()
-    - Terminates the pipeline
-    - Runs last
+	- Terminates the pipeline
+	- Runs last
 - Map()
-    - Branches the pipeline
+	- Branches the pipeline
 
 #### Examples
 ```C#
 public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 {
-    // Route
-    app.Map("/welcome", app =>
-    {
-        app.UseWelcomePage();
+	// Route
+	app.Map("/welcome", app =>
+	{
+		app.UseWelcomePage();
 
-        app.Map("/someRoute", app => ...);
-        app.Run(...);
-    });
+		app.Map("/someRoute", app => ...);
+		app.Run(...);
+	});
 
-    // RequestDelegate 1
-    app.Use(async (context, next)=>
-    {
-        await context.Response.WriteAsync("1");
-        await next();
-        await context.Response.WriteAsync("4");
-    });
+	// RequestDelegate 1
+	app.Use(async (context, next)=>
+	{
+		await context.Response.WriteAsync("1");
+		await next();
+		await context.Response.WriteAsync("4");
+	});
 
-    // RequestDelegate 2
-    app.Use(async (context, next)=>
-    {
-        await context.Response.WriteAsync("2");
-        await next();
-        await context.Response.WriteAsync("3");
-    });
+	// RequestDelegate 2
+	app.Use(async (context, next)=>
+	{
+		await context.Response.WriteAsync("2");
+		await next();
+		await context.Response.WriteAsync("3");
+	});
 
-    // Always runs last
-    app.Run(async (request)=>
-    {
-        await context.Response.WriteAsync("Always last");
-    });
+	// Always runs last
+	app.Run(async (request)=>
+	{
+		await context.Response.WriteAsync("Always last");
+	});
 }
 ```
 
@@ -290,49 +290,49 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Run code before or after specific stages in the __Request Processing Pipeline__
 - Come after the middleware
 - Can be registered as an attribute
-    - Put on controller, it applies to all actions
-    - Can be put on a single action
+	- Put on controller, it applies to all actions
+	- Can be put on a single action
 - TypeFilterAttribute
 - ServiceFilterAttribute
 - Pattern: Chain of responsibility
 - Can be
-    - Synchronous
-        - OnExecuting
-        - OnExecuted
-    - Asynchronous
-        - OnExecutionAsync
+	- Synchronous
+		- OnExecuting
+		- OnExecuted
+	- Asynchronous
+		- OnExecutionAsync
 
 #### Registration
 - Global
-    - Before and after every action
-    - Startup.cs -> services.AddControllersWithViews(configure => configure.Filters.Add(new MyCustomFilter()));
-    - Startup.cs -> services.AddControllersWithViews(configure => configure.Filters.Add(typeof (MyCustomFilter)));
+	- Before and after every action
+	- Startup.cs -> services.AddControllersWithViews(configure => configure.Filters.Add(new MyCustomFilter()));
+	- Startup.cs -> services.AddControllersWithViews(configure => configure.Filters.Add(typeof (MyCustomFilter)));
 - Attribute
-    - : ActionFilterAttribute
-    - : ExceptionFilterAttribute
-    - : ResultFilterAttribute
-    - : FormatFilterAttribute
+	- : ActionFilterAttribute
+	- : ExceptionFilterAttribute
+	- : ResultFilterAttribute
+	- : FormatFilterAttribute
 
 #### Types
 - Authorization
-    - : IAuthorizationFilter
-    - OnAuthorization
+	- : IAuthorizationFilter
+	- OnAuthorization
 - Resource
-    - : IResourceFilter
-    - OnResourceExecuting
-    - OnResourceExecuted
+	- : IResourceFilter
+	- OnResourceExecuting
+	- OnResourceExecuted
 - Action
-    - : IActionFilter
-    - OnActionExecuting
-    - OnActionExecuted
+	- : IActionFilter
+	- OnActionExecuting
+	- OnActionExecuted
 - Exception
-    - : IExceptionFilter
-    - OnExceptionExecuting
-    - OnExceptionExecuted
+	- : IExceptionFilter
+	- OnExceptionExecuting
+	- OnExceptionExecuted
 - Result
-    - : IResultFilter
-    - OnResultExecuting
-    - OnResultExecuted
+	- : IResultFilter
+	- OnResultExecuting
+	- OnResultExecuted
 
 #### Flow
 - Request
@@ -355,14 +355,14 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 ### Misc
 - Unobtrusive javascript
 - Validation
-    - Server-side -> __always__
-    - Client-side -> __optional__
+	- Server-side -> __always__
+	- Client-side -> __optional__
 - [MinLength()] always needs [Required]
-    - Otherwise empty string is valid
+	- Otherwise empty string is valid
 - Model validation attributes
 - validationContext -> class : ValidationAttribute
-    - GetService()
-    - Dependency injection
+	- GetService()
+	- Dependency injection
 - RedirectToAction(nameof(controller))
 - IFormFile
 - IWebHostEnvironment
@@ -371,71 +371,71 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 ### Model Binding
 - HTTP request -> action method parameters
 - Parameter name -> property name
-    - From input name
+	- From input name
 - Query parameter
 - Data sources (key : value)
-    - Form values
-        - enctype
-            - urlencoded
-            - multipart/form-data
-                - For files
-    - Route values
-    - Query strings
-    - Others
-        - Headers
-            - [FromHeader]
-            - [FromHeader("header-name)]
-        - Cookies
-        - Sessions
-    - [FromService]
-    - [FromForm]
-    - [FromBody]
-    - [ModelBinder]
-    - [Bind]
+	- Form values
+		- enctype
+			- urlencoded
+			- multipart/form-data
+				- For files
+	- Route values
+	- Query strings
+	- Others
+		- Headers
+			- [FromHeader]
+			- [FromHeader("header-name)]
+		- Cookies
+		- Sessions
+	- [FromService]
+	- [FromForm]
+	- [FromBody]
+	- [ModelBinder]
+	- [Bind]
 - ModelState
-    - IsValid
-    - ModelStateEntry
-        - Errors
-    - No exceptions, only errors
-        - Invalid values are replaced by default
-    - __All__ properties are validated
+	- IsValid
+	- ModelStateEntry
+		- Errors
+	- No exceptions, only errors
+		- Invalid values are replaced by default
+	- __All__ properties are validated
 - Fills in arrays with query parameters
 - asp-for
 - asp-validation-summary
 - [Display]
 - [DataType]
 - asp-items
-    - @Html.GetEnumSelectList<MyEnum>()
+	- @Html.GetEnumSelectList<MyEnum>()
 - Client-side validation
-    - <partial name="_ValidationScriptsPartial" />
+	- <partial name="_ValidationScriptsPartial" />
 
 ## Workshop 1
 - DTO vs ViewModel
-    - DTO is used by services
-    - ViewModel is used by views
+	- DTO is used by services
+	- ViewModel is used by views
 - aps-append-version
-    - Cache invalidation
+	- Cache invalidation
 - Controller -> Service -> Repository -> Entity Framework
 - No tracking - EF stops tracking them
 
 ### Web
 #### Infrastructure
-    - TagHelpers
-    - Filters
-    - Middleware
-    - Validation attributes
-    - Not directly related to presentation, controllers, or views
+	- TagHelpers
+	- Filters
+	- Middleware
+	- Validation attributes
+	- Not directly related to presentation, controllers, or views
 #### Areas
 - Controllers and views
 - {MyArea}/Controller/Action
 ### Tests
 ### Data
-    - DbContext
-    - Migrations
+	- DbContext
+	- Migrations
 ### Services
-    - Business logic
+	- Business logic
 #### Data
-    - Services that deal with data
+	- Services that deal with data
 
 ## Web API
 ### Important JS Frameworks
@@ -445,31 +445,31 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 
 ### Misc
 - Fonts
-    - Icon only fonts
+	- Icon only fonts
 - RoleManager
 - db.Entry()
 - JWT
 
 ### JSON
 - Scripting language
-    - Executed line by line
+	- Executed line by line
 - JavaScript object notation
 - Open file format
 - Common
 - MIME
-    - application/json
+	- application/json
 - Extension
-    - .json
+	- .json
 - No schemas
 - No namespaces
 
 ### XML
 - Extensible markup language
 - MIME
-    - application/xml (current)
-    - text/xml (old)
+	- application/xml (current)
+	- text/xml (old)
 - Extension
-    - .xml
+	- .xml
 - Schemas
 - Namespaces
 - XHTML
@@ -482,32 +482,32 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 ### AJAX
 - Asynchronous JavaScript and XML
 - XHR
-    - XmlHttpRequest
+	- XmlHttpRequest
 
 ### ASP.NET Core Web API
 - [assembly: ApiController]
 - [ApiController]
-    - Filters
-    - Automatic validation and BadRequest(400) on bad data
-        - ModelStateInvalidFilter
-    - Automatic Binding
-    - Additional functionality
+	- Filters
+	- Automatic validation and BadRequest(400) on bad data
+		- ModelStateInvalidFilter
+	- Automatic Binding
+	- Additional functionality
 - Route("api/[controller]")
-    - Necessary
-    - API controller actions always execute on the same controller route
+	- Necessary
+	- API controller actions always execute on the same controller route
 - [HttpPost("{id}")]
 - Normal controllers inherit Controller
 - API controllers inherit ControllerBase
 - Validation attibutes on actions
 - Complex types
-    - Searched in body as json
+	- Searched in body as json
 - Primitive types
-    - Searched in query string
+	- Searched in query string
 - .AddXmlSerializerFormatters()
 - [Authorize]
 - [ProducesResponseType(200)]
 - OData
-    - [EnableQuery()]
+	- [EnableQuery()]
 - OpenApi
 - return this.CreatedAtAction(parameters...)
 
@@ -515,34 +515,34 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - SPA
 - PWA
 - Mobile (native)
-    - Cordova
-    - Ionic
+	- Cordova
+	- Ionic
 - Desktop
-    - Electron
+	- Electron
 - Two-way data-binding
 
 ### CORS
 - Cross-origin resource sharing
 - Browser only feature
 - Origin
-    - Address schema
-    - Domain/host
-    - Port
+	- Address schema
+	- Domain/host
+	- Port
 - Allows specific sites to make calls (Unlike SOP)
 - SOP
-    - Prevents making requests to domains other than the one that served the page
+	- Prevents making requests to domains other than the one that served the page
 - Configuration
-    - Startup.cs
+	- Startup.cs
 - Web app and web API on different addresses?
-    - Enable CORS
+	- Enable CORS
 
 ## Security and identity
 
 ### Misc
 - PageModel
 - IHttpContextAccessor
-    - Accessing user in service
-        - Not a good way. Avoid
+	- Accessing user in service
+		- Not a good way. Avoid
 
 ### Security
 
@@ -556,35 +556,35 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - [IgnoreAntiForgeryToken]
 - Never trust user data
 - When unescaped user data is accepted by the server
-    - Allows code to be sent
+	- Allows code to be sent
 - Avoid HTML.Raw()
 - Set cookie as HTTP only
 - Use Razor
 - Data should be:
-    - Encoded
-    - Parsed
-    - Validated
-    - Checked for malicious content
+	- Encoded
+	- Parsed
+	- Validated
+	- Checked for malicious content
 - Encoding
-    - Services
-        - HtmlEncoder
-        - JavaScriptEncoder
-        - UrlEncoder
-    - Static
-        - WebUtility.HtmlEncode & .HtmlDecode
-        - WebUtility.UrlEncode & .UrlDecode
+	- Services
+		- HtmlEncoder
+		- JavaScriptEncoder
+		- UrlEncoder
+	- Static
+		- WebUtility.HtmlEncode & .HtmlDecode
+		- WebUtility.UrlEncode & .UrlDecode
 - Libraries
-    - HtmlSanitizer
+	- HtmlSanitizer
 
 #### Parameter Tampering
 - Manipulation of parameters exchanged between client and server
-    - Example: Looping through all values for given parameter
+	- Example: Looping through all values for given parameter
 
 #### Cross-Site Request Forgery
 - SameSite cookie parameter
 - Request verification token
-    - [ValidateAntiForgeryToken]
-    - configure.Filters.Add(new AutoValidateAutoForgeryToken())
+	- [ValidateAntiForgeryToken]
+	- configure.Filters.Add(new AutoValidateAutoForgeryToken())
 
 #### DDoS
 
@@ -600,20 +600,20 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 ### Identity
 - [AllowAnonymous]
 - [Authorize(Roles = "Admin")]
-    - On action
-    - On controller
-    - On parent controller - all inheritors get the attribute
-    - Attribute on action is prioritized over attribute on controller
+	- On action
+	- On controller
+	- On parent controller - all inheritors get the attribute
+	- Attribute on action is prioritized over attribute on controller
 - GDPR
 - Microsoft.AspNetCore.Identity.EntityFrameworkCore
 - Microsoft.AspNetCore.Identity.UI
 - services.AddDefaultIdentity
 - UseAuthentication
 - Users
-    - SignInManager
-    - UserManager
-        - Use this when dealing with users
-    - RoleManager
+	- SignInManager
+	- UserManager
+		- Use this when dealing with users
+	- RoleManager
 - Roles are recorded in cookies, so re-login if you change their roles
 - .AddRoles<IdentityRole>()
 
@@ -631,24 +631,24 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 ### Authentication
 - UseAuthorization
 - Types
-    - Cookie-based
-    - Windows auth
-    - Cloud-based
+	- Cookie-based
+	- Windows auth
+	- Cloud-based
 
 ### JWT
 - JSON web token
 - ConfigureServices()
-    - Middleware
+	- Middleware
 - Header instead of cookie
 - Common in REST
 - Used for representing claims between two parties
 - Encrypted
 - Stateless
 - Structure
-    - Headers
-    - Payload (data)
-    - Verification signature
-    - Separated by "."
+	- Headers
+	- Payload (data)
+	- Verification signature
+	- Separated by "."
 
 ### Social Accounts
 - External login provider
@@ -664,63 +664,63 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Services are important
 - Different application components are tested differently
 - Test types
-    - Unit tests
-    - Integration testing
-    - End-to-End testing
+	- Unit tests
+	- Integration testing
+	- End-to-End testing
 - AAA
-    - Arrange
-    - Act
-    - Assert
+	- Arrange
+	- Act
+	- Assert
 
 ### Test levels
 #### Unit
-    - Specific code in a component
+	- Specific code in a component
 #### Component
-    - Specific component
+	- Specific component
 #### Integration
-    - Whether multiple components work together
+	- Whether multiple components work together
 #### System
-    - The system as a whole
+	- The system as a whole
 #### Regression
-    - Previously fixed bugs won't reappear
+	- Previously fixed bugs won't reappear
 #### Acceptance
-    - Client's requirements
+	- Client's requirements
 #### Performance / Load / Stress
-    - Performance
-        - Are queries executed in a given time
-    - Load
-        - App should work even under heavy stress
-    - Stress
-        - Abnormal situations
-        - App appears over our app
-        - Battery testing
-        - Server restarting
-        - Etc
+	- Performance
+		- Are queries executed in a given time
+	- Load
+		- App should work even under heavy stress
+	- Stress
+		- Abnormal situations
+		- App appears over our app
+		- Battery testing
+		- Server restarting
+		- Etc
 #### Security
-    - Security flaws
-    - Both automated and manual testing
+	- Security flaws
+	- Both automated and manual testing
 #### Other
-    - Manual
-    - Automation
-    - UI
-    - Smoke
-        - Happy path
-    - Black box
-        - Testing with no access to the code base
-    - End-to-End
-    - A/B
-        - Separate into groups
+	- Manual
+	- Automation
+	- UI
+	- Smoke
+		- Happy path
+	- Black box
+		- Testing with no access to the code base
+	- End-to-End
+	- A/B
+		- Separate into groups
 
 ### Approaches
 - Code-first
-    - Fast
-    - Flexible
+	- Fast
+	- Flexible
 - Test-first
-    - Tests based on code
-    - Quality
-    - Edge cases
-    - Complicated
-    - Initial delay
+	- Tests based on code
+	- Quality
+	- Edge cases
+	- Complicated
+	- Initial delay
 
 ### Unit Testing
 - xUnit
@@ -744,11 +744,11 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Web browser simulation
 - Headless
 - Drivers
-    - Chrome
-    - Firefox
-    - Edge
-    - Internet Explorer
-    - Etc
+	- Chrome
+	- Firefox
+	- Edge
+	- Internet Explorer
+	- Etc
 - Portable
 - Automates browsers
 - Verify browser and package version match
@@ -766,9 +766,9 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 
 ### Misc
 - Stateless service
-    - Takes data and returns response without reading or writing anywhere
+	- Takes data and returns response without reading or writing anywhere
 - Serverless
-    - One action
+	- One action
 
 ### Design
 - Web vs Desktop vs Mobile vs IoT
@@ -781,7 +781,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - UI and data code are combined
 - Simplest architecture
 - Easy deployment and maintenance
-    - Due to lack of modularity and complexity
+	- Due to lack of modularity and complexity
 - For small and mid-sized projects
 
 #### Service-Oriented
@@ -806,8 +806,8 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Single responsibility
 - For simple applications
 - Razor page
-    - View template (.cshtml)
-    - Code behind (.cs) as the controller
+	- View template (.cshtml)
+	- Code behind (.cs) as the controller
 
 ### Automapper
 - Works by matching property names and types
@@ -816,7 +816,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 ### Repository Pattern
 - Encapsulates data access logic
 - You define one repository per entity
-    - Example: StudentRepository
+	- Example: StudentRepository
 - Interface IRepository
 
 ### Database and ORM
@@ -830,70 +830,70 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 
 #### Dapper
 - Micro ORM
-    - Limited functionality
+	- Limited functionality
 - High performance
 - String queries
-    - Close to the metal
+	- Close to the metal
 
 #### Databases
 - Very important decision in development
 - Types
-    - Relational
-        - Use SQL
-        - Performance penalty due to checks
-    - Non-relational
-        - Faster
-        - Dynamic schema
-        - No triggers
-            - Data and type may differ from record to record
-        - No data validation
+	- Relational
+		- Use SQL
+		- Performance penalty due to checks
+	- Non-relational
+		- Faster
+		- Dynamic schema
+		- No triggers
+			- Data and type may differ from record to record
+		- No data validation
 
 ## Advanced Topics
 
 ### Misc
 - Post-Redirect-Get design pattern
-    - Should be used
+	- Should be used
 
 ### Host Class
 - At minimum, configures a server and request pipeline
 - Can also set up
-    - Logging
-    - Dependency injection
-    - Configuration
+	- Logging
+	- Dependency injection
+	- Configuration
 - Configured in entry point
 - Accepts the startup file
 - IHostBuilder
 - Kestrel
-    - ASP.NET Core integrated web server
-    - CreateDefaultBuilder()
+	- ASP.NET Core integrated web server
+	- CreateDefaultBuilder()
 
 ### Logging
 - Event log
 - Log filters
 - Minimum log level
 - Log levels
-    - Not technology specific
+	- Not technology specific
 - Logging providers
-    - Possibly multiple
+	- Possibly multiple
 - appsettings.json
 
 #### Structure
 - ILogger
-    - Create log messages
-    - ILoggerFactory
-    - Create ILogger instances
+	- Create log messages
+	- ILoggerFactory
+	- Create ILogger instances
 - ILoggerProvider
-    - How and where logs go
-    - Format of the logger
+	- How and where logs go
+	- Format of the logger
 
 ### Cache
 - ASP.NET Core supports different caches
 #### IMemoryCache
 - In-memory
 - Service
-    - services.AddMemoryCache()
+	- services.AddMemoryCache()
 - MemoryCacheEntryOptions
-    - SlidingExpiration
+	- SlidingExpiration
 - When running out of memory, the server will start to evict items from the cache regardless of expiration
 
 #### IDistributedCache
@@ -915,8 +915,8 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 
 ### TempData
 - Store data until reading
-    - Keep()
-    - Peek()
+	- Keep()
+	- Peek()
 - Cookies(default) or Session
 - TempData providers
 - This.TempData[]
@@ -926,9 +926,9 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Visual Studio -> Add -> Area
 - Order a large number of components into folders
 - Areas include:
-    - Controllers
-    - Models
-    - Views
+	- Controllers
+	- Models
+	- Views
 - [Area("...")]
 - >2:50 video
 - ViewImports
@@ -938,10 +938,10 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment environment)
 - Low-hanging fruit
 - Use async/await
 - Enable compression
-    - services.AddResponseCompression()
-    - app.UseResponseCompression()
+	- services.AddResponseCompression()
+	- app.UseResponseCompression()
 - Reduce HTTP Requests
-    - Bundling
+	- Bundling
 		- bundleconfig.json
 		- BuildBundlerMinifier
 - Minification
