@@ -24,9 +24,9 @@
 
         public int PortionsCount { get; set; }
 
-        public string CreatorUserId { get; set; }
+        public string AddedByUserId { get; set; }
 
-        public virtual ApplicationUser CreatorUser { get; set; }
+        public virtual ApplicationUser addedByUser { get; set; }
 
         public int CategoryId { get; set; }
 

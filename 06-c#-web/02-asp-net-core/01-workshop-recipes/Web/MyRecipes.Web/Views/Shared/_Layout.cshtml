@@ -26,11 +26,14 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Recipes" asp-action="Index">Create recipe</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Recipes" asp-action="All">All recipes</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
+                            @if (this.User.Identity.IsAuthenticated)
+                        {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Recipes" asp-action="Create">Create recipe</a>
+                                </li>
+                        }
                         </ul>
                     </div>
                 </div>

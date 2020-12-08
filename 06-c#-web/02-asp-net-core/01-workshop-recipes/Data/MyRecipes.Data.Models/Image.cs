@@ -13,6 +13,9 @@
 
         public string Extension { get; set; }
 
+
+        public string RemoteImageUrl { get; set; }
+
         public string AddedByUserId { get; set; }
 
         public ApplicationUser AddedByUser { get; set; }
@@ -21,6 +24,6 @@
 
         public Recipe Recipe { get; set; }
 
-        // In the file system
+        // In the file System
     }
 }

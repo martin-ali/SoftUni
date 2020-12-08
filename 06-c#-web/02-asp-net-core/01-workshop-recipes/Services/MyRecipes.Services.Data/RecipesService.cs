@@ -1,4 +1,4 @@
-namespace MyRecipes.Services.Data
+﻿namespace MyRecipes.Services.Data
 {
     using System;
     using System.Linq;
@@ -19,7 +19,7 @@ namespace MyRecipes.Services.Data
             this.recipesRepository = recipesRepository;
         }
 
-        public async Task CreateAsync(CreateRecipeInputModel input)
+        public async Task CreateAsync(CreateRecipeInputModel input, string userId)
         {
             var recipe = new Recipe
             {
@@ -28,7 +28,8 @@ namespace MyRecipes.Services.Data
                 Instructions = input.Instructions,
                 Name = input.Name,
                 PortionsCount = input.PortionsCount,
-                PreparationTime = TimeSpan.FromMinutes(input.PreparationTime)
+                PreparationTime = TimeSpan.FromMinutes(input.PreparationTime),
+                AddedByUserId = userId,
             };
 
             foreach (var inputIngredient in input.Ingredients)
@@ -42,7 +43,7 @@ namespace MyRecipes.Services.Data
                 recipe.Ingredients.Add(new RecipeIngredient
                 {
                     Ingredient = ingredient,
-                    Quantity = inputIngredient.Quantity
+                    Quantity = inputIngredient.Quantity,
                 });
             }
 

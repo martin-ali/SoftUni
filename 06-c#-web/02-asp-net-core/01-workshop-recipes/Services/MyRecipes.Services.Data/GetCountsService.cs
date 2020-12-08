@@ -1,4 +1,4 @@
-namespace MyRecipes.Services.Data
+﻿namespace MyRecipes.Services.Data
 {
     using System.Linq;
 

@@ -1,4 +1,4 @@
-namespace MyRecipes.Services.Data.Models
+﻿namespace MyRecipes.Services.Data.Models
 {
     public class CountsDto
     {

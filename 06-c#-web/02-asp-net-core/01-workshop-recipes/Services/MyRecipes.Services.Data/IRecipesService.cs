@@ -1,4 +1,4 @@
-namespace MyRecipes.Services.Data
+﻿namespace MyRecipes.Services.Data
 {
     using System.Threading.Tasks;
 
@@ -6,6 +6,8 @@ namespace MyRecipes.Services.Data
 
     public interface IRecipesService
     {
-        Task CreateAsync(CreateRecipeInputModel input);
+        Task CreateAsync(CreateRecipeInputModel input, string userId);
+
+
     }
 }
