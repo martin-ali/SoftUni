@@ -5,8 +5,10 @@
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
+
     using MyRecipes.Data.Models;
     using MyRecipes.Services.Data;
+    using MyRecipes.Web.ViewModels;
     using MyRecipes.Web.ViewModels.Recipes;
 
     public class RecipesController : BaseController
@@ -26,11 +28,22 @@
         }
 
         [HttpGet]
-        public IActionResult All(int id)
+        public IActionResult All(int id = 1)
         {
-            var viewModel = new RecipesListViewModel
+            var firstPage = 1;
+            var pageNumberIsValid = firstPage <= id && id <= this.recipesService.GetCount();
+            if (pageNumberIsValid == false)
             {
+                return this.NotFound();
+            }
+
+            const int ItemsPerPage = 12;
+            var viewModel = new PagingViewModel
+            {
+                ItemsPerPage = ItemsPerPage,
                 PageNumber = id,
+                RecipesCount = this.recipesService.GetCount(),
+                Recipes = this.recipesService.GetAll<RecipeInListViewModel>(id, 12),
             };
 
             return this.View(viewModel);

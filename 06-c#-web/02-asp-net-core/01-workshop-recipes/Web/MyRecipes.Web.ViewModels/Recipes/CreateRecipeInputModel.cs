@@ -4,6 +4,8 @@ namespace MyRecipes.Web.ViewModels.Recipes
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
+    using Microsoft.AspNetCore.Http;
+
     public class CreateRecipeInputModel
     {
         [Required]
@@ -25,6 +27,8 @@ namespace MyRecipes.Web.ViewModels.Recipes
         [Range(1, 100)]
         [Display(Name = "Portions count")]
         public int PortionsCount { get; set; }
+
+        public IFormFile Image { get; set; }
 
         [Display(Name = "Category")]
         public int CategoryId { get; set; }
