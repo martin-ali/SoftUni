@@ -33,3 +33,8 @@
 - Testing
     - Minimum desired: 80%
     - Best case: 95%
+- netcoreapp3.1 -> net5.0
+    - Afterwards update all NuGet packages
+    - 1:29 workshop 2
+- app.UseMigrationsEndPoint();
+- services.AddDatabaseDeveloperPageExceptionFilter();
