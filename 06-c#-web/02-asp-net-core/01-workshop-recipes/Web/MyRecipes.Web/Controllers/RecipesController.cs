@@ -37,15 +37,16 @@
                 return this.NotFound();
             }
 
-            const int ItemsPerPage = 12;
+            const int itemsPerPage = 12;
             var viewModel = new PagingViewModel
             {
-                ItemsPerPage = ItemsPerPage,
+                ItemsPerPage = itemsPerPage,
                 PageNumber = id,
                 RecipesCount = this.recipesService.GetCount(),
-                Recipes = this.recipesService.GetAll<RecipeInListViewModel>(id, 12),
+                Recipes = this.recipesService.GetAll<RecipeInListViewModel>(id, itemsPerPage),
             };
 
+            // return this.View();
             return this.View(viewModel);
         }
 

@@ -38,3 +38,4 @@
     - 1:29 workshop 2
 - app.UseMigrationsEndPoint();
 - services.AddDatabaseDeveloperPageExceptionFilter();
+- Generic ProductsService<T> -> Generic Repository<T>

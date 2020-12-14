@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -47,6 +48,18 @@
                     Ingredient = ingredient,
                     Quantity = inputIngredient.Quantity,
                 });
+            }
+
+            foreach (var image in input.Images)
+            {
+                var dbImage = new Image
+                {
+                    AddedByUserId = userId,
+                    Extension = Path.GetExtension(image.FileName),
+                };
+
+                var physicalPath = $"wwwroot/images/recipes/{dbImage.Id}.{dbImage.Extension}";
+                recipe.Images.Add(dbImage);
             }
 
             await this.recipesRepository.AddAsync(recipe);

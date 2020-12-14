@@ -28,10 +28,11 @@ namespace MyRecipes.Web.ViewModels.Recipes
         [Display(Name = "Portions count")]
         public int PortionsCount { get; set; }
 
-        public IFormFile Image { get; set; }
-
         [Display(Name = "Category")]
         public int CategoryId { get; set; }
+
+        [Range(1, 10)]
+        public IEnumerable<IFormFile> Images { get; set; }
 
         [Required]
         public IEnumerable<RecipeIngredientInputModel> Ingredients { get; set; }
