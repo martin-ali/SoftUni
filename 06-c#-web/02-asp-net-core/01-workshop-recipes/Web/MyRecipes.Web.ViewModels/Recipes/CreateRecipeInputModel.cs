@@ -8,6 +8,13 @@ namespace MyRecipes.Web.ViewModels.Recipes
 
     public class CreateRecipeInputModel
     {
+        // public CreateRecipeInputModel()
+        // {
+        //     this.Images = new HashSet<IFormFile>();
+        //     this.Ingredients = new HashSet<RecipeIngredientInputModel>();
+        //     this.CategoriesItems = new HashSet<KeyValuePair<string, string>>();
+        // }
+
         [Required]
         [MinLength(4)]
         public string Name { get; set; }

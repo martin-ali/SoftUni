@@ -15,6 +15,7 @@
     {
         private readonly IDeletableEntityRepository<Recipe> recipesRepository;
         private readonly IDeletableEntityRepository<Ingredient> ingredientsRepository;
+        private readonly string[] allowedExtensions = new[] { "jpg", "png", "gid" };
 
         public RecipesService(IDeletableEntityRepository<Recipe> recipesRepository, IDeletableEntityRepository<Ingredient> ingredientsRepository)
         {
@@ -22,7 +23,7 @@
             this.recipesRepository = recipesRepository;
         }
 
-        public async Task CreateAsync(CreateRecipeInputModel input, string userId)
+        public async Task CreateAsync(CreateRecipeInputModel input, string userId, string imagePath)
         {
             var recipe = new Recipe
             {
@@ -50,16 +51,27 @@
                 });
             }
 
+            Directory.CreateDirectory($"{imagePath}/recipes/");
             foreach (var image in input.Images)
             {
+                var extension = Path.GetExtension(image.FileName);
+                if (allowedExtensions.Contains(extension) == false)
+                {
+                    throw new Exception($"Invalid image extension {extension}. Allowed extensions are: {string.Join(", ", allowedExtensions)}");
+
+                }
+
                 var dbImage = new Image
                 {
                     AddedByUserId = userId,
-                    Extension = Path.GetExtension(image.FileName),
+                    Extension = extension,
                 };
 
-                var physicalPath = $"wwwroot/images/recipes/{dbImage.Id}.{dbImage.Extension}";
                 recipe.Images.Add(dbImage);
+
+                var physicalPath = $"{imagePath}/recipes/{dbImage.Id}{extension}";
+                using Stream fileStream = new FileStream(physicalPath, FileMode.Create);
+                await image.CopyToAsync(fileStream);
             }
 
             await this.recipesRepository.AddAsync(recipe);

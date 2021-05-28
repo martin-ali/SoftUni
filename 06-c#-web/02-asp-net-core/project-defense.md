@@ -39,3 +39,7 @@
 - app.UseMigrationsEndPoint();
 - services.AddDatabaseDeveloperPageExceptionFilter();
 - Generic ProductsService<T> -> Generic Repository<T>
+- form -> enctype="multipart/form-data"
+    - Can't send files otherwise
+- Product breadcrumbs
+    - Example: Laptops -> Acer -> A14
