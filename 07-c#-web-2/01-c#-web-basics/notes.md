@@ -2,7 +2,7 @@
 
 ## Web Server HTTP Protocol
 
-### Web Server Work Model
+### Web Server - Work Model
 - Web Client
 - Web Server
 
