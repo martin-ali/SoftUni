@@ -46,6 +46,15 @@
 - Encoding
     - Data translated to something the browser can understand
 
+## Web Server - Asynchronous Processing
+- [Video](https://www.youtube.com/watch?v=m5-hYdj40So)
+### Synchronous Programming
+### Asynchronous Programming
+### Threads
+### Tasks
+### Parallelism and Concurrency
+
+
 ## Project Ideas
 - Car Loans
 - Posts
