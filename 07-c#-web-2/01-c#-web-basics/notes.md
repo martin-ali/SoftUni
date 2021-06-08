@@ -48,11 +48,35 @@
 
 ## Web Server - Asynchronous Processing
 - [Video](https://www.youtube.com/watch?v=m5-hYdj40So)
+- [More information](https://github.com/ivaylokenov/C-Sharp-Async-Await-In-Detail)
+
 ### Synchronous Programming
 ### Asynchronous Programming
+- Asynchronous vs multithreaded programming
+
 ### Threads
+- System.Thread
+- Start()
+- Join()
+    - Await selected thread
+- Dedicated stack per thread
+- Race conditions
+- Thread safety
+    - Lock
+- Exceptions can only be handled in their respective threads
 ### Tasks
+- new Task()
+- Task.Run()
+- Task.Factory.StartNew()
+- Task.WhenAll()
+- async/await
 ### Parallelism and Concurrency
+- System.Collections.Concurrent
+- Parallel LINQ
+- Parallelism has overhead
+    - Pointless for small numbers of tasks
+### Misc
+- Enable Razor Runtime Compilation
 
 
 ## Project Ideas
