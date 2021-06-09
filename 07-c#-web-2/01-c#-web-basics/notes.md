@@ -86,7 +86,7 @@
 ### Misc
 - Enable Razor Runtime Compilation
 
-### State Management
+## State Management
 - [Video](https://www.youtube.com/watch?v=LBs_heQouUo)
 
 #### Cookies
