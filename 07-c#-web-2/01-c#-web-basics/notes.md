@@ -86,6 +86,26 @@
 ### Misc
 - Enable Razor Runtime Compilation
 
+### State Management
+- [Video](https://www.youtube.com/watch?v=LBs_heQouUo)
+
+#### Cookies
+- Dictionary
+    - Name, value, attributes
+    - Attributes not in requests
+- Permanent until explicitly deleted
+- Expiry date
+- Cookie header
+- Set-Cookie header
+- Third-party cookies
+
+##### Uses
+- State management
+- Personalization
+- Tracking
+
+#### Session
+- Saved on server, unlike cookie
 
 ## Project Ideas
 - Car Loans
