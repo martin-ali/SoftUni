@@ -7,13 +7,16 @@
 - Web Server
 
 ### HTTP
+
 #### Methods
+
 #### Status Codes
 - 1xx - Information
 - 2xx - Success
 - 3xx - Redirect
 - 4xx - Client Error
 - 5xx - Server Error
+
 #### Request
 - Request Line
     - Method
@@ -27,6 +30,7 @@
 - Data
     - Query string format
         - Unlimited data through HTTP
+
 #### Response
 - Data
     - Body
@@ -51,6 +55,7 @@
 - [More information](https://github.com/ivaylokenov/C-Sharp-Async-Await-In-Detail)
 
 ### Synchronous Programming
+
 ### Asynchronous Programming
 - Asynchronous vs multithreaded programming
 
@@ -64,17 +69,20 @@
 - Thread safety
     - Lock
 - Exceptions can only be handled in their respective threads
+
 ### Tasks
 - new Task()
 - Task.Run()
 - Task.Factory.StartNew()
 - Task.WhenAll()
 - async/await
+
 ### Parallelism and Concurrency
 - System.Collections.Concurrent
 - Parallel LINQ
 - Parallelism has overhead
     - Pointless for small numbers of tasks
+
 ### Misc
 - Enable Razor Runtime Compilation
 
