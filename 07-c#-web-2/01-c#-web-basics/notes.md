@@ -2,7 +2,7 @@
 
 ## Web Server HTTP Protocol
 
-### Web Server - Work Model
+### Work Model
 - Web Client
 - Web Server
 
@@ -46,7 +46,7 @@
 - Encoding
     - Data translated to something the browser can understand
 
-## Web Server - Asynchronous Processing
+## Asynchronous Processing
 - [Video](https://www.youtube.com/watch?v=m5-hYdj40So)
 - [More information](https://github.com/ivaylokenov/C-Sharp-Async-Await-In-Detail)
 
