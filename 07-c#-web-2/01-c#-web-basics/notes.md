@@ -107,6 +107,12 @@
 #### Session
 - Saved on server, unlike cookie
 
+## MVC Introduction
+- [Video](https://www.youtube.com/watch?v=EKdijAGEZI8)
+
+## Workshop 1
+- [Video](https://www.youtube.com/watch?v=4iF8bDURsMg)
+
 ## Project Ideas
 - Car Loans
 - Posts
