@@ -112,6 +112,11 @@
 
 ## Workshop 1
 - [Video](https://www.youtube.com/watch?v=4iF8bDURsMg)
+- Ivo's Github -> CSharp-Multithreading
+- Encoding
+    - Default ascii
+- Content length
+- Content type
 
 ## Project Ideas
 - Car Loans
