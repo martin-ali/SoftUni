@@ -107,9 +107,6 @@
 #### Session
 - Saved on server, unlike cookie
 
-## MVC Introduction
-- [Video](https://www.youtube.com/watch?v=EKdijAGEZI8)
-
 ## Workshop 1
 - [Video](https://www.youtube.com/watch?v=4iF8bDURsMg)
 - Ivo's Github -> CSharp-Multithreading
@@ -117,6 +114,32 @@
     - Default ascii
 - Content length
 - Content type
+- Browsers make 2 requests (site and favicon)
+- No reason to put "Async" in method names when *all* your methods are async
+
+## MVC Introduction
+- [Video](https://www.youtube.com/watch?v=EKdijAGEZI8)
+
+### MVC Components
+#### Model
+- Data Access Layer
+- Classes that describe the data works with
+- Primarily data representation
+#### View
+- Presentation Layer
+- Master views
+- Sub views
+#### Controller
+- Processes requests
+- Actions
+
+### CSHTML
+
+### Misc
+- Nullable
+
+## MVC Advanced - View Engine
+- [Video](https://www.youtube.com/watch?v=k1UKk5PLxVU)
 
 ## Project Ideas
 - Car Loans
