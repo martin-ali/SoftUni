@@ -141,6 +141,9 @@
 ## MVC Advanced - View Engine
 - [Video](https://www.youtube.com/watch?v=k1UKk5PLxVU)
 
+## Exam Practice
+- [Video](https://www.youtube.com/watch?v=HzRD2WE8qhk)
+- By default, don't put virtual on collections or foreign keys
 ## Project Ideas
 - Car Loans
 - Posts
