@@ -7,6 +7,8 @@ Register
 Login
 Profile
 Contacts
+Favorite recipes
+
 Newest recipes/hottest recipes
 Recipe of the day
 Weekly menu
@@ -21,6 +23,9 @@ Recipe type categories (vegan, vegetarian, fish, no meat, desserts, pasta, pizza
 Sort by rating, date added, most comments
 Rating 0-5
 Comments (top-level only, this isn't a discussion site)
+Chat? (SignalR)
+Images in the file system?
+Different front-end?
 
 # Pages
 # Controllers
