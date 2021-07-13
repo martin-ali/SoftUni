@@ -125,3 +125,16 @@
 - Image size limit
 - Constants for model annotations
 - Image extension validation in controller
+
+## Workshop 1
+- [Video](https://www.youtube.com/watch?v=JbBNt-Oz1lM)
+
+### Misc
+
+- UserManager
+- Repository pattern might be useless for the project
+- Bootstrap card title
+- Bootstrap carousel
+- Jumbotron
+- ListingViewModel
+- QueryModel
