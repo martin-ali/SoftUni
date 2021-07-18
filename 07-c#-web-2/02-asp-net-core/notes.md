@@ -60,6 +60,25 @@
 ### View Components
 
 - Like a partial view, but with code behind it
+
+## Application Flow
+- [Video](https://www.youtube.com/watch?v=Qqc5HmC4hUw)
+
+### Fundamentals
+
+- Pipeline
+    - Extensible and modifiable
+- Environment
+- Configuration
+
+### Misc
+
+- Don't unnecessarily write async methods
+    - Especially in ASP.NET Core
+- Controllers contain request-response-related logic
+- Services contain business logic
+- Services shouldn't return viewmodels - either return the base model or service models
+
 ## Working With Data
 - [Video](https://www.youtube.com/watch?v=nE5utQrOQiM)
 
@@ -79,8 +98,6 @@
 ### Model Validation
 
 - Server-side validation is mandatory
-
-### Working With Data
 
 ### Points of interest
 
