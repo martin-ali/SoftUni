@@ -155,3 +155,38 @@
 - Jumbotron
 - ListingViewModel
 - QueryModel
+
+## Web API
+
+### Formats
+
+- JSON
+- XML
+
+### AJAX
+
+- Set of development techniques
+- Common in SPAs
+
+### Web API
+
+- Attribute routing is mandatory
+- Inherits BaseController
+- Automatic ModelState.IsValid validation and status code return
+- ProblemDetails
+- IActionResult vs ActionResult<T>
+- [ProducesResponseType]
+    - Documentation generation metadata
+- CreatedAtAction
+
+### Angular
+
+### CORS
+
+- Has to be explicitly enabled
+- Fully configurable
+
+### Misc
+
+- SPA VS Server-Side Rendering Application
+- [Route("{id}")]
