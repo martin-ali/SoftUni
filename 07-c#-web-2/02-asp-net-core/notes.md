@@ -169,15 +169,7 @@
 - Common in SPAs
 
 ### Web API
-
-- Attribute routing is mandatory
-- Inherits BaseController
-- Automatic ModelState.IsValid validation and status code return
-- ProblemDetails
-- IActionResult vs ActionResult<T>
-- [ProducesResponseType]
-    - Documentation generation metadata
-- CreatedAtAction
+- [Video](https://www.youtube.com/watch?v=LKp4fZMepxk)
 
 ### Angular
 
@@ -188,5 +180,25 @@
 
 ### Misc
 
+- Attribute routing is mandatory
+- Inherits BaseController
+- Automatic ModelState.IsValid validation and status code return
+- ProblemDetails
+- IActionResult vs ActionResult<T>
+- [ProducesResponseType]
+    - Documentation generation metadata
+- CreatedAtAction
 - SPA VS Server-Side Rendering Application
 - [Route("{id}")]
+- ApiController
+- RequestModel
+- swapi.dev for json data
+- Seed users with UserManager
+- If the service model and view model are identical, the view model becomes redundant
+- 3:15 for UsersController
+
+### Structure
+
+- Controllers - web
+- Services - business logic
+- DbContext - data
