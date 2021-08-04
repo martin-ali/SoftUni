@@ -78,6 +78,7 @@
 - Controllers contain request-response-related logic
 - Services contain business logic
 - Services shouldn't return viewmodels - either return the base model or service models
+- No point in using repository pattern?
 
 ## Working With Data
 - [Video](https://www.youtube.com/watch?v=nE5utQrOQiM)
@@ -202,3 +203,89 @@
 - Controllers - web
 - Services - business logic
 - DbContext - data
+
+## Project Architecture
+- [Video](https://www.youtube.com/watch?v=X1nkLHJOgEg)
+
+### Monolithic
+- Services communicate over enterprise services bus
+- Just one application
+
+### SOA
+- Legacy
+
+### Microservices
+- Services communicate directly
+- Dedicated data store per server
+
+### Razor Pages
+- Model and controller in one place
+- Identity was uses it
+- Similar to viewcomponents
+- [BindProperty]
+
+### Area
+- MVC chunk in a folder
+- Endpoints.MapControllerRoute - 1:35
+- =Home or :exists
+- Admin - 1:43
+- EndpointRouteBuilderExtensions
+
+### Automapper
+
+### Repository Pattern
+- Might not be needed
+
+### Databases And ORM
+- ORM vs micro-ORM
+- Relational(SQL) vs non-relational(NoSQL)
+
+### Misc
+- WebConstants
+- AdminConstants
+- Hosted service/background tasks
+- Mailgun, Sendgrid
+- Default area
+
+## Testing
+- [VideO](https://www.youtube.com/watch?v=irzG1BH3WuI)
+
+### Types
+#### Unit
+#### Component
+#### Integration
+- Most bang for your buck
+### System
+### Regression
+### Acceptance
+### Load
+### Security
+#### End-to-End
+
+### Frameworks
+#### XUnit
+- [Fact]
+- [Theory]
+    - [InlineData()]
+#### MyTested (preferred)
+#### Selenium
+#### Playwright
+#### Cypress IO
+
+### Mocking
+- Moq
+- FakeItEasy (preferred)
+
+### Assertion libraries
+- Shouldly
+- Fluent Assertions
+
+### Misc
+- *AngleSharp* (for HTML)
+- In-memory provider / SQLite for database mocking
+- Arrange, Act, Assert (with comments)
+- **AutoValidateAntiForgeryTokenAttribute**
+- At the start, Ivo goes through the requirements
+- Use Azure
+- Should primarily use integration testing for the project
+- Test project structure follows web project structure
