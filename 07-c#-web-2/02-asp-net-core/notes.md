@@ -289,3 +289,60 @@
 - Use Azure
 - Should primarily use integration testing for the project
 - Test project structure follows web project structure
+
+## Advanced Topics
+
+### WebHost
+
+### Logging
+#### Categories
+- ILogger<Cars>
+#### Types
+- Trace
+- Debug
+- Information
+- Warning
+- Error
+- Critical
+
+### Cache
+- Large performance increase
+- Common target is home page
+- <cache> tag helper
+#### Types
+- In-memory - IMemoryCache
+- Distributed - IDistributedCache
+- HTTP cache - Cache-Control - [ResponseCache]
+
+### Sessions
+- Saved on client
+- String only
+
+### Temp Data
+- Saved until read, then deleted
+
+### Post-Redirect-Get
+- Reduce duplicate form submissions
+- Answer post with redirect
+- Redirect should trigger a get
+
+### Areas
+
+### Performance
+- Compression
+- Minification
+- Caching
+- CDN
+
+### SEO
+
+### GDPR
+
+### Misc
+- Home page with several categories - best, hottest, newest, etc...
+- RoleManager
+- ImageSharp
+- To() -> MapTo()
+- AdminAll view
+- 2:17 - 1:1 becoming 1:many (use fluent api instead)
+- No way to load an image into an input
