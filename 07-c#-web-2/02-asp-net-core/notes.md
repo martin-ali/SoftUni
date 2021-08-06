@@ -346,3 +346,38 @@
 - AdminAll view
 - 2:17 - 1:1 becoming 1:many (use fluent api instead)
 - No way to load an image into an input
+
+## Workshop 2
+
+- "View more" button
+- Delete view
+- If admin show buttons
+- Order all items in list views
+- CarsService -> Cars
+- By ingredient search
+- ViewModel naming
+- IWriterService
+- Add categories
+- If a form has no action, it defaults to the one it came from
+- Edit in service returns bool
+- RecipeIsAuthoredBy
+- Edit null check
+- SignInManager, UserManager, RolesManager
+- Try to make the viewcomponent for measurement units synchronous
+- Become author - get full name
+- Add some GitHub issues
+- Categories - appetizer, main course, dessert
+- Seed roles
+- 1:47 - how to do async in non-async method
+```C#
+Task
+.Run(async () => {})
+.GetAwaiter()
+.GetResult();
+```
+- Admin approves writer applications
+- 2:04 - validation scripts
+- Validation all
+- Partials don't have sections
+- Maybe make instance methods that don't require instance members into static ones?
+- FormModel is web logic, services shouldn't accept it (maybe AddCarServiceModel?)
