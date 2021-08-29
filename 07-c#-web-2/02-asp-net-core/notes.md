@@ -248,7 +248,7 @@
 - Default area
 
 ## Testing
-- [VideO](https://www.youtube.com/watch?v=irzG1BH3WuI)
+- [Video](https://www.youtube.com/watch?v=irzG1BH3WuI)
 
 ### Types
 #### Unit
@@ -381,3 +381,9 @@ Task
 - Partials don't have sections
 - Maybe make instance methods that don't require instance members into static ones?
 - FormModel is web logic, services shouldn't accept it (maybe AddCarServiceModel?)
+
+## Workshop 3
+- [Video](https://www.youtube.com/watch?v=wnGNkrHVats)
+
+- 0m -> 20m - Cycling parameters protection
+- General test if actions work adequately
