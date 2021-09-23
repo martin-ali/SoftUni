@@ -20,8 +20,22 @@
 
 ### ScrumBan
 
+## Project Introduction
+
 ## Misc
 
 - Keep to the task scope
 - Link your commits to the appropriate issue/task
 - Experiment with git squash, commit reorder, and fetch
+
+## Software
+
+- WSL 2
+- Entity Framework
+- Swagger
+- Swashbuckle
+- MAUI
+
+## Techniques
+
+- Persistence ignorance
